@@ -69,11 +69,32 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Grail Diary" id="8nW-da-OXj"/>
+                    <navigationItem key="navigationItem" title="Grail Diary" id="8nW-da-OXj">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="yGj-0s-y20">
+                            <connections>
+                                <segue destination="ID9-Wq-2Q4" kind="presentation" identifier="AddPOIModalSegue" id="3ae-Er-guA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1053.6231884057972" y="739.95535714285711"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fAf-2B-eVT">
+            <objects>
+                <viewController id="ID9-Wq-2Q4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gYI-Vh-u5R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lJV-bq-OAa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oYD-z9-ke0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1881" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="daq-0k-GVY">
