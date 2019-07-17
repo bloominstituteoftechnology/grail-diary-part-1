@@ -10,21 +10,18 @@ import UIKit
 
 class AddPOIViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var countryTextField: UITextField!
+    @IBOutlet weak var clues1TextField: UITextField!
+    @IBOutlet weak var clues2TextField: UITextField!
+    @IBOutlet weak var clues3TextField: UITextField!
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
     }
-    */
+    @IBAction func saveTapped(_ sender: UIBarButtonItem) {
+    }
+}
 
+extension AddPOIViewController: UITextFieldDelegate {
+    
 }

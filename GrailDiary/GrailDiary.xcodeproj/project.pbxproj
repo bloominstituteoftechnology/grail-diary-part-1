@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7709658022DFD0C100969B32 /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7709657F22DFD0C100969B32 /* POIsTableViewController.swift */; };
+		77238B9222DFC5C800180497 /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77238B9122DFC5C800180497 /* AddPOIViewController.swift */; };
+		77238B9422DFC60D00180497 /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77238B9322DFC60D00180497 /* POIDetailViewController.swift */; };
+		77238B9622DFC63100180497 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77238B9522DFC63100180497 /* POITableViewCell.swift */; };
+		77238B9822DFC64F00180497 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77238B9722DFC64F00180497 /* POI.swift */; };
 		77594ECB22DE873000C52636 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77594ECA22DE873000C52636 /* AppDelegate.swift */; };
-		77594ECD22DE873000C52636 /* CluesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77594ECC22DE873000C52636 /* CluesTableViewController.swift */; };
 		77594ED022DE873000C52636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77594ECE22DE873000C52636 /* Main.storyboard */; };
 		77594ED222DE873200C52636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77594ED122DE873200C52636 /* Assets.xcassets */; };
 		77594ED522DE873200C52636 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77594ED322DE873200C52636 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7709657F22DFD0C100969B32 /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
+		77238B9122DFC5C800180497 /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		77238B9322DFC60D00180497 /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		77238B9522DFC63100180497 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		77238B9722DFC64F00180497 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 		77594EC722DE872F00C52636 /* GrailDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrailDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77594ECA22DE873000C52636 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		77594ECC22DE873000C52636 /* CluesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluesTableViewController.swift; sourceTree = "<group>"; };
 		77594ECF22DE873000C52636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77594ED122DE873200C52636 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77594ED422DE873200C52636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +43,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77238B9922DFCF3D00180497 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				77238B9122DFC5C800180497 /* AddPOIViewController.swift */,
+				77238B9322DFC60D00180497 /* POIDetailViewController.swift */,
+				7709657F22DFD0C100969B32 /* POIsTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		77238B9A22DFCF5200180497 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				77238B9522DFC63100180497 /* POITableViewCell.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		77238B9B22DFCF8D00180497 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				77238B9722DFC64F00180497 /* POI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		77594EBE22DE872F00C52636 = {
 			isa = PBXGroup;
 			children = (
@@ -55,7 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				77594ECA22DE873000C52636 /* AppDelegate.swift */,
-				77594ECC22DE873000C52636 /* CluesTableViewController.swift */,
+				77238B9922DFCF3D00180497 /* View Controllers */,
+				77238B9A22DFCF5200180497 /* Custom Views */,
+				77238B9B22DFCF8D00180497 /* Models */,
 				77594ECE22DE873000C52636 /* Main.storyboard */,
 				77594ED122DE873200C52636 /* Assets.xcassets */,
 				77594ED322DE873200C52636 /* LaunchScreen.storyboard */,
@@ -135,8 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77594ECD22DE873000C52636 /* CluesTableViewController.swift in Sources */,
+				77238B9222DFC5C800180497 /* AddPOIViewController.swift in Sources */,
+				77238B9422DFC60D00180497 /* POIDetailViewController.swift in Sources */,
 				77594ECB22DE873000C52636 /* AppDelegate.swift in Sources */,
+				7709658022DFD0C100969B32 /* POIsTableViewController.swift in Sources */,
+				77238B9822DFC64F00180497 /* POI.swift in Sources */,
+				77238B9622DFC63100180497 /* POITableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
