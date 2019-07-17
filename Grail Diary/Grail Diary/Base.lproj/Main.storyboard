@@ -13,7 +13,7 @@
         <!--Grail Diary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CluesTableVC" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="POI_TableVC" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8Gt-hR-VfH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddPOIVCSegue" id="8Gt-hR-VfH" customClass="POI_Cell" customModule="Grail_Diary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Gt-hR-VfH" id="Pq6-Hb-WlK">
@@ -66,6 +66,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="clueCountLbl" destination="pbA-JO-CJg" id="fK8-ER-DgQ"/>
+                                            <outlet property="countryLbl" destination="D5T-ia-jt6" id="XJz-KQ-6z3"/>
+                                            <outlet property="locationLbl" destination="uIm-XV-CiU" id="r9f-9y-tmI"/>
                                             <segue destination="N7L-1c-FCX" kind="show" identifier="ShowPOIDetailSegue" id="VKt-AN-PSA"/>
                                         </connections>
                                     </tableViewCell>
@@ -88,15 +91,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableview" destination="VWi-sp-Xdk" id="7ac-Mv-gzH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Location DetailsVC-->
         <scene sceneID="15I-5G-U50">
             <objects>
-                <viewController id="N7L-1c-FCX" sceneMemberID="viewController">
+                <viewController id="N7L-1c-FCX" customClass="LocationDetailsVC" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1pX-Jf-BR9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,13 +146,13 @@
                                         <rect key="frame" x="0.0" y="271" width="372.66666666666669" height="271"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eN-kr-30S">
-                                                <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="27"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3gW-hf-zdE">
-                                                <rect key="frame" x="0.0" y="27" width="372.66666666666669" height="244"/>
+                                                <rect key="frame" x="0.0" y="20.3333333333333" width="372.66666666666669" height="250.66666666666663"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -166,15 +172,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2vJ-4z-K9o"/>
                     </view>
+                    <connections>
+                        <outlet property="cluesTextView" destination="3gW-hf-zdE" id="XNq-n8-mEV"/>
+                        <outlet property="countryLbl" destination="giv-Nz-LHC" id="ckz-Kh-pCn"/>
+                        <outlet property="locationLbl" destination="F5a-vF-fvz" id="zrR-C4-k2x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFa-Ao-p7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1890" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOIVC-->
         <scene sceneID="8BH-F0-gWY">
             <objects>
-                <viewController id="DZQ-5t-LrZ" sceneMemberID="viewController">
+                <viewController id="DZQ-5t-LrZ" customClass="AddPOI_VC" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cfi-Qa-fyX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,13 +223,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a91-Fp-kWG">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a91-Fp-kWG">
                                         <rect key="frame" x="0.0" y="221.66666666666669" width="331.33333333333331" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="edo-FX-523">
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="edo-FX-523">
                                         <rect key="frame" x="0.0" y="267.66666666666669" width="331.33333333333331" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -227,11 +238,19 @@
                                 </subviews>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nkn-XQ-KzY">
-                                <rect key="frame" x="0.0" y="1234" width="508" height="44"/>
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="save" id="4Nq-uC-KCf"/>
+                                    <barButtonItem systemItem="save" id="4Nq-uC-KCf">
+                                        <connections>
+                                            <action selector="saveAction:" destination="DZQ-5t-LrZ" id="eAd-8q-NC7"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="Yjf-BL-waX"/>
-                                    <barButtonItem systemItem="cancel" id="XUa-ds-TiB"/>
+                                    <barButtonItem systemItem="cancel" id="XUa-ds-TiB">
+                                        <connections>
+                                            <action selector="cancelAction:" destination="DZQ-5t-LrZ" id="0eB-c4-XEv"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -246,6 +265,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N9U-nj-cu7"/>
                     </view>
+                    <connections>
+                        <outlet property="countryTextField" destination="1AK-Fw-F4p" id="ZxX-M5-mtQ"/>
+                        <outlet property="locationTextField" destination="U48-1c-t3F" id="2IG-K0-1KE"/>
+                        <outletCollection property="hobbiesTextFieldCollection" destination="hVG-MB-vSt" collectionClass="NSMutableArray" id="Q8a-lm-8im"/>
+                        <outletCollection property="hobbiesTextFieldCollection" destination="a91-Fp-kWG" collectionClass="NSMutableArray" id="6ZY-xS-ROC"/>
+                        <outletCollection property="hobbiesTextFieldCollection" destination="edo-FX-523" collectionClass="NSMutableArray" id="Pbc-AE-XUk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OpN-QV-9WB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
