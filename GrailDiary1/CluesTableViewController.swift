@@ -36,6 +36,7 @@ extension POISTableViewController: UITableViewDataSource {
 		if segue.identifier == "AddPOIModalSegue" {
 			if let addClueVC = segue.destination as? AddPOIViewController {
 				addClueVC.delegate = self
+				}
 			} else if segue.identifier == "ShowPOIDetailSegue" {
 				if let indexPath =
 				tableView.indexPathForSelectedRow,
@@ -46,8 +47,6 @@ extension POISTableViewController: UITableViewDataSource {
 		}
 	}
 	
-	
-}
 
 extension POISTableViewController: AddPOIDelegate {
 	
