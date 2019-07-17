@@ -51,10 +51,19 @@ class AddPOIViewController: UIViewController {
 		delegate?.poiWasAdded(clue)
 		
 	}
+	
+	@IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+		locatinTextField.resignFirstResponder()
+		countryTextField.resignFirstResponder()
+		clue1TextField.resignFirstResponder()
+		clue2TextField.resignFirstResponder()
+		clue3TextField.resignFirstResponder()
+	}
 
 }
 
 extension AddPOIViewController: UITableViewDelegate {
+	
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		if let text = textField.text,
 			!text.isEmpty {

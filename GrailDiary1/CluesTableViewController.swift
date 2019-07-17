@@ -12,14 +12,7 @@ class POISTableViewController: UIViewController {
 	
 	var clues: [POI] = []
 	
-	
 	@IBOutlet weak var tableView: UITableView!
-	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		// Do any additional setup after loading the view.
-	}
-
 
 }
 
@@ -47,7 +40,7 @@ extension POISTableViewController: UITableViewDataSource {
 				if let indexPath =
 				tableView.indexPathForSelectedRow,
 					let poiDetailVC = segue.destination as? POIDetailViewController {
-						poiDetailVC.
+						poiDetailVC.poi = clues[indexPath.row]
 				}
 			}
 		}

@@ -62,12 +62,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="clueCountLabel" destination="4d3-Gx-uXW" id="kg7-FA-iNd"/>
+                                            <outlet property="countryLabel" destination="hWH-xq-J9U" id="1xr-QJ-rie"/>
+                                            <outlet property="locationLabel" destination="guH-In-Kxh" id="q7l-E7-JAX"/>
                                             <segue destination="l6U-zy-Vsn" kind="show" identifier="ShowPOIDetailSegue" id="EAD-Of-mpG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VrM-8p-Gbf"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Kda-mJ-nD5"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -156,6 +159,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="chW-IY-aMj"/>
                     </view>
+                    <connections>
+                        <outlet property="cluesLabel" destination="ALp-mO-shi" id="075-Z0-EKX"/>
+                        <outlet property="countryLabel" destination="CVB-GW-TQ2" id="hdz-id-632"/>
+                        <outlet property="locationLabel" destination="zRn-7J-9Pw" id="PSU-1I-EgF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jh6-vy-zed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
