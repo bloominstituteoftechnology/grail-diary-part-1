@@ -15,7 +15,22 @@ class POIsTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        poiTableView.dataSource = self
+    }
+    
+}
+
+extension POIsTableViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return poiList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
+        
+        let poi = poiList[indexPath.row]
+        cell.poi = poi
+        return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -23,19 +38,13 @@ class POIsTableViewController: UIViewController {
             guard let addPOIVC = segue.destination as? AddPOIViewController else { return }
             
             addPOIVC.delegate = self
+        } else if segue.identifier == "ShowPOIDetailSegue" {
+            if let poiDetailVC = segue.destination as? POIDetailViewController,
+                let indexPath = poiTableView.indexPathForSelectedRow {
+                poiDetailVC.poi = poiList[indexPath.row]
+            }
         }
     }
-}
-
-extension POIsTableViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-    
 }
 
 extension POIsTableViewController: AddPOIDelegate {
