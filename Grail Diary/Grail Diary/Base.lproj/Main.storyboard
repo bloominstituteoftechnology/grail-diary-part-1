@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
         </scene>
-        <!--Location DetailsVC-->
+        <!--DetalisVC-->
         <scene sceneID="15I-5G-U50">
             <objects>
-                <viewController id="N7L-1c-FCX" customClass="LocationDetailsVC" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="N7L-1c-FCX" customClass="POI_DetalisVC" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1pX-Jf-BR9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,7 +142,7 @@
                                             <constraint firstItem="hNd-Pz-7ot" firstAttribute="height" secondItem="COM-jd-b1V" secondAttribute="height" multiplier="0.5" id="4Hf-WT-esR"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="aj7-i9-UsU">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aj7-i9-UsU">
                                         <rect key="frame" x="0.0" y="271" width="372.66666666666669" height="271"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eN-kr-30S">
@@ -238,7 +238,7 @@
                                 </subviews>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nkn-XQ-KzY">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="save" id="4Nq-uC-KCf">
                                         <connections>

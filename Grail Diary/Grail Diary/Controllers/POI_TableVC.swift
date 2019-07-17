@@ -23,6 +23,9 @@ class POI_TableVC: UIViewController {
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if let addPOIVC = segue.destination as? AddPOI_VC {
 			addPOIVC.delegate = self
+		} else if let poiDetailsVC = segue.destination as? POI_DetalisVC {
+			guard let indexPath = tableview.indexPathForSelectedRow else {return}
+			poiDetailsVC.point = points[indexPath.row]
 		}
 	}
 
