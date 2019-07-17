@@ -37,13 +37,42 @@ class AddPOIViewController: UIViewController {
 			!clue1.isEmpty {
 			clue.clues.append(clue1)
 		}
+		
+		if let clue2 = clue2TextField.text,
+			!clue2.isEmpty {
+			clue.clues.append(clue2)
+		}
+		
+		if let clue3 = clue3TextField.text,
+			!clue3.isEmpty {
+			clue.clues.append(clue3)
+		}
+		
+		delegate?.poiWasAdded(clue)
+		
+		
 	}
-	
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-    }
-    
+}
 
-
+extension AddPOIViewController: UITableViewDelegate {
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		if let text = textField.text,
+			!text.isEmpty {
+			switch textField {
+			case locatinTextField:
+				countryTextField.becomeFirstResponder()
+			case countryTextField:
+				clue1TextField.becomeFirstResponder()
+			case clue1TextField:
+				clue2TextField.becomeFirstResponder()
+			case clue2TextField:
+				clue3TextField.becomeFirstResponder()
+			default:
+				textField.resignFirstResponder()
+			}
+		}
+		
+		return false
+	}
 }
