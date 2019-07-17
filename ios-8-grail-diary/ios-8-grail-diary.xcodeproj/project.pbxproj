@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A23F40C522DFBA9500E4CBF4 /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F40C422DFBA9500E4CBF4 /* AddPOIViewController.swift */; };
+		A23F40C722DFBAA800E4CBF4 /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F40C622DFBAA800E4CBF4 /* POIDetailViewController.swift */; };
+		A23F40CA22DFBDE900E4CBF4 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F40C922DFBDE900E4CBF4 /* POITableViewCell.swift */; };
+		A23F40CC22DFBE0000E4CBF4 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F40CB22DFBE0000E4CBF4 /* POI.swift */; };
 		A2593A8E22DE681200E42669 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2593A8D22DE681200E42669 /* AppDelegate.swift */; };
-		A2593A9022DE681200E42669 /* CluesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2593A8F22DE681200E42669 /* CluesTableViewController.swift */; };
+		A2593A9022DE681200E42669 /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2593A8F22DE681200E42669 /* POIsTableViewController.swift */; };
 		A2593A9322DE681200E42669 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2593A9122DE681200E42669 /* Main.storyboard */; };
 		A2593A9522DE681200E42669 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2593A9422DE681200E42669 /* Assets.xcassets */; };
 		A2593A9822DE681200E42669 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2593A9622DE681200E42669 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A23F40C422DFBA9500E4CBF4 /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		A23F40C622DFBAA800E4CBF4 /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		A23F40C922DFBDE900E4CBF4 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		A23F40CB22DFBE0000E4CBF4 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 		A2593A8A22DE681200E42669 /* ios-8-grail-diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-8-grail-diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2593A8D22DE681200E42669 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A2593A8F22DE681200E42669 /* CluesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluesTableViewController.swift; sourceTree = "<group>"; };
+		A2593A8F22DE681200E42669 /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
 		A2593A9222DE681200E42669 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2593A9422DE681200E42669 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2593A9722DE681200E42669 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +43,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A23F40C822DFBAB200E4CBF4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2593A8F22DE681200E42669 /* POIsTableViewController.swift */,
+				A23F40C422DFBA9500E4CBF4 /* AddPOIViewController.swift */,
+				A23F40C622DFBAA800E4CBF4 /* POIDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A23F40CD22DFBE0400E4CBF4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A23F40CB22DFBE0000E4CBF4 /* POI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A23F40CE22DFBE0A00E4CBF4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A23F40C922DFBDE900E4CBF4 /* POITableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A23F40CF22DFC16500E4CBF4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A2593A9122DE681200E42669 /* Main.storyboard */,
+				A2593A9622DE681200E42669 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		A2593A8122DE681200E42669 = {
 			isa = PBXGroup;
 			children = (
@@ -55,10 +98,11 @@
 			isa = PBXGroup;
 			children = (
 				A2593A8D22DE681200E42669 /* AppDelegate.swift */,
-				A2593A8F22DE681200E42669 /* CluesTableViewController.swift */,
-				A2593A9122DE681200E42669 /* Main.storyboard */,
+				A23F40CD22DFBE0400E4CBF4 /* Models */,
+				A23F40CE22DFBE0A00E4CBF4 /* Views */,
+				A23F40C822DFBAB200E4CBF4 /* View Controllers */,
+				A23F40CF22DFC16500E4CBF4 /* Storyboards */,
 				A2593A9422DE681200E42669 /* Assets.xcassets */,
-				A2593A9622DE681200E42669 /* LaunchScreen.storyboard */,
 				A2593A9922DE681200E42669 /* Info.plist */,
 			);
 			path = "ios-8-grail-diary";
@@ -135,8 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2593A9022DE681200E42669 /* CluesTableViewController.swift in Sources */,
+				A23F40CC22DFBE0000E4CBF4 /* POI.swift in Sources */,
+				A23F40C522DFBA9500E4CBF4 /* AddPOIViewController.swift in Sources */,
+				A2593A9022DE681200E42669 /* POIsTableViewController.swift in Sources */,
 				A2593A8E22DE681200E42669 /* AppDelegate.swift in Sources */,
+				A23F40CA22DFBDE900E4CBF4 /* POITableViewCell.swift in Sources */,
+				A23F40C722DFBAA800E4CBF4 /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
