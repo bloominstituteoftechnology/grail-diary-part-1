@@ -50,7 +50,6 @@ class AddPOIViewController: UIViewController {
 		
 		delegate?.poiWasAdded(clue)
 		
-		
 	}
 
 }
@@ -72,7 +71,6 @@ extension AddPOIViewController: UITableViewDelegate {
 				textField.resignFirstResponder()
 			}
 		}
-		
 		return false
 	}
 }

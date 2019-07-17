@@ -39,5 +39,28 @@ extension POISTableViewController: UITableViewDataSource {
 		return cell
 	}
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "AddPOIModalSegue" {
+			if let addClueVC = segue.destination as? AddPOIViewController {
+				addClueVC.delegate = self
+			} else if segue.identifier == "ShowPOIDetailSegue" {
+				if let indexPath =
+				tableView.indexPathForSelectedRow,
+					let poiDetailVC = segue.destination as? POIDetailViewController {
+						poiDetailVC.
+				}
+			}
+		}
+	}
 	
+	
+}
+
+extension POISTableViewController: AddPOIDelegate {
+	
+	func poiWasAdded(_ poi: POI) {
+		clues.append(poi)
+		dismiss(animated: true, completion: nil)
+		tableView.reloadData()
+	}
 }
