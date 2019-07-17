@@ -20,6 +20,11 @@ class POI_TableVC: UIViewController {
 		tableview.dataSource = self
 	}
 
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if let addPOIVC = segue.destination as? AddPOI_VC {
+			addPOIVC.delegate = self
+		}
+	}
 
 }
 
