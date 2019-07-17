@@ -25,7 +25,7 @@
                                 <color key="sectionIndexBackgroundColor" red="0.67843137249999996" green="0.51372549020000002" blue="0.31372549020000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.1647058824" green="0.1019607843" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="u2N-0S-AGu" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="u2N-0S-AGu" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u2N-0S-AGu" id="Crd-0I-UE8">
@@ -56,6 +56,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.67843137249999996" green="0.51372549020000002" blue="0.31372549020000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.67843137249999996" green="0.51372549020000002" blue="0.31372549020000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="vcP-XU-x9C" firstAttribute="centerY" secondItem="Crd-0I-UE8" secondAttribute="centerY" id="7fI-KA-foA"/>
                                                 <constraint firstItem="vcP-XU-x9C" firstAttribute="leading" secondItem="Crd-0I-UE8" secondAttribute="leadingMargin" id="XvL-vs-KFh"/>
@@ -65,7 +67,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.67843137249999996" green="0.51372549020000002" blue="0.31372549020000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.40000000000000002" green="0.38431372549999998" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="countryLabel" destination="wfm-8w-GBz" id="WW9-9m-iBn"/>
+                                            <outlet property="locationLabel" destination="jTs-CK-VbX" id="f8e-ST-qIa"/>
+                                            <outlet property="numberOfCluesLabel" destination="uoo-wX-NTS" id="hOB-sL-4LN"/>
                                             <segue destination="X0u-Va-foZ" kind="show" identifier="ShowPOIDetailSegue" id="Sl8-zv-ale"/>
                                         </connections>
                                     </tableViewCell>
@@ -161,6 +167,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KlA-4E-YUw"/>
                     </view>
+                    <connections>
+                        <outlet property="clueListTextView" destination="VS9-gs-CVa" id="JNl-qG-gVh"/>
+                        <outlet property="countryLabel" destination="uFY-Hi-qid" id="8o6-2i-yHI"/>
+                        <outlet property="locationLabel" destination="mSv-M5-bMO" id="3tG-km-1f6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Lq-bI-Wrq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
