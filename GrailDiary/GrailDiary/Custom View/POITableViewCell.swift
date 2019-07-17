@@ -9,16 +9,23 @@
 import UIKit
 
 class POITableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var numberOfCluesLabel: UILabel!
+    
+    var POI : POI?{
+        didSet{
+            updateView()
+        }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    private func updateView() {
+        guard let POI = POI else {return}
+        locationLabel.text = POI.location
+        countryLabel.text = POI.country
+        numberOfCluesLabel.text = "\(POI.clues.count) clues"
     }
+    
 
 }

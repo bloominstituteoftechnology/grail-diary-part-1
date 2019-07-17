@@ -15,6 +15,12 @@ class POIDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    private func updateView(){
+//        var cluesText = ""
+//        for clue in POI.clues{
+//            let clueString = ""
+//        }
+    }
     
 
     /*

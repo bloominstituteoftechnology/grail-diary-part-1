@@ -10,18 +10,21 @@ import UIKit
 
 class POIsTableViewController: UIViewController {
     var POIs : [POI] = []
-
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddPOIModalSegue" {
+            guard let addPOIVC = segue.destination as? AddPOIViewController else {return}
+            addPOIVC.delegate = self
+        }
     }
 
-    // MARK: - Table view data source
+  
 
    
  
@@ -51,4 +54,13 @@ extension POIsTableViewController : UITableViewDataSource, UITableViewDelegate{
         
         return cell
     }
+}
+extension POIsTableViewController : AddPOIDelegate{
+    func poiWasCreated(poi: POI) {
+        POIs.append(poi)
+        dismiss(animated: true, completion: nil)
+        tableView.reloadData()
+    }
+    
+
 }

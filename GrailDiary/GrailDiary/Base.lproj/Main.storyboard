@@ -91,6 +91,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="QXn-zn-4db" id="jIj-Xc-LIY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,12 +121,18 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bXA-4h-OIo" id="qB8-5X-bZa"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HyU-0m-6iz">
                                         <rect key="frame" x="0.0" y="82.5" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bXA-4h-OIo" id="7H7-7h-SCr"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcV-Zt-idm">
                                         <rect key="frame" x="0.0" y="128.5" width="374" height="20.5"/>
@@ -136,27 +145,44 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bXA-4h-OIo" id="pF7-m9-S2T"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S21-f8-wJl">
                                         <rect key="frame" x="0.0" y="211" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bXA-4h-OIo" id="ABJ-nw-qOx"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zv9-dF-CVx">
                                         <rect key="frame" x="0.0" y="257" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bXA-4h-OIo" id="g9D-4X-u3A"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kWV-h9-jg2">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="aFX-de-NC6"/>
+                                    <barButtonItem systemItem="cancel" id="aFX-de-NC6">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="bXA-4h-OIo" id="JKp-m7-ZKb"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="fcr-fr-wcj"/>
-                                    <barButtonItem systemItem="save" id="q6y-4w-4ln"/>
+                                    <barButtonItem systemItem="save" id="q6y-4w-4ln">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="bXA-4h-OIo" id="cH3-D2-PV6"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -171,6 +197,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KOP-dX-NF2"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1Textfield" destination="ubp-1R-jAT" id="PDy-Rj-QtK"/>
+                        <outlet property="clue2Textfield" destination="S21-f8-wJl" id="5Xy-S9-AkJ"/>
+                        <outlet property="clue3Textfield" destination="Zv9-dF-CVx" id="g2u-QF-YGv"/>
+                        <outlet property="countryTextfield" destination="HyU-0m-6iz" id="eRD-Vf-Fj0"/>
+                        <outlet property="locationTextfield" destination="F4G-sd-Ehs" id="b8t-c0-1Dr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qt7-mm-Qlh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
