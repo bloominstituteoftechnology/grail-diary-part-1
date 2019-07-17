@@ -35,6 +35,7 @@ class AddPOIViewController: UIViewController {
     //
     
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
+        
         guard let location = locationTextField.text,
             let country = countryTextField.text else { return }
         
@@ -50,9 +51,9 @@ class AddPOIViewController: UIViewController {
             poi.clues.append(clue2)
         }
         
-        if let clue2 = clue2TextField.text,
-            !clue2.isEmpty {
-            poi.clues.append(clue2)
+        if let clue3 = clue3TextField.text,
+            !clue3.isEmpty {
+            poi.clues.append(clue3)
         }
         
         delegate?.poiWasAdded(poi)
@@ -63,7 +64,9 @@ class AddPOIViewController: UIViewController {
     }
 } // <- end of AddPOITableView Class
 extension AddPOIViewController: UITextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         switch textField {
         case locationTextField:
             countryTextField.becomeFirstResponder()
