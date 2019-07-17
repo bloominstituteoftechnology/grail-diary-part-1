@@ -13,7 +13,7 @@
         <!--Grail Diary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CluesTableViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="POIsTableViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GrailCell" id="JBa-i5-Ytf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GrailCell" id="JBa-i5-Ytf" customClass="POITableViewCell" customModule="Grail_Diary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JBa-i5-Ytf" id="Uh4-iN-4I4">
@@ -62,6 +62,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesCountLabel" destination="e7c-Q3-uom" id="J5K-1f-XPp"/>
+                                            <outlet property="countryLabel" destination="v8D-Gx-qOh" id="J6l-gJ-kuk"/>
+                                            <outlet property="locationLabel" destination="rhU-em-Pj5" id="gaV-NO-fxa"/>
                                             <segue destination="yrw-nr-8MP" kind="show" identifier="ShowPOIDetailSegue" id="h3x-B8-bPJ"/>
                                         </connections>
                                     </tableViewCell>
@@ -84,15 +87,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="lqR-CU-UrG" id="u74-aW-cZW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="tKJ-eN-sBF">
             <objects>
-                <viewController id="yrw-nr-8MP" sceneMemberID="viewController">
+                <viewController id="yrw-nr-8MP" customClass="POIDetailViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jp0-Iq-Zgg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,15 +155,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9eD-7o-NSy"/>
                     </view>
+                    <connections>
+                        <outlet property="cluesTextView" destination="nTg-vW-RD8" id="iyz-sd-eBD"/>
+                        <outlet property="countryLabel" destination="MfU-Oc-P8y" id="XSd-ea-VWJ"/>
+                        <outlet property="imageView" destination="ItJ-vq-DZP" id="Sr5-dL-nHU"/>
+                        <outlet property="locationLabel" destination="RQg-aD-B3W" id="U64-Im-6hK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lkA-vQ-df4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1796" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="cZ6-FT-X7Z">
             <objects>
-                <viewController id="Yin-De-iRI" sceneMemberID="viewController">
+                <viewController id="Yin-De-iRI" customClass="AddPOIViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VR0-Lc-zDJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,13 +187,13 @@
                                         <rect key="frame" x="0.0" y="52" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XoM-AV-6ah">
                                         <rect key="frame" x="0.0" y="98" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kn-Jn-82t">
                                         <rect key="frame" x="0.0" y="144" width="374" height="24"/>
@@ -193,32 +205,41 @@
                                         <rect key="frame" x="0.0" y="184" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BXR-mY-7pc">
                                         <rect key="frame" x="0.0" y="230" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tL4-AT-Jfy">
                                         <rect key="frame" x="0.0" y="276" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dv-ST-hDK">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="Vyf-FG-fSr"/>
+                                    <barButtonItem systemItem="cancel" id="Vyf-FG-fSr">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="Yin-De-iRI" id="nFu-Uq-NVs"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="4DM-YJ-RgQ"/>
-                                    <barButtonItem systemItem="save" id="Ct1-Xy-43P"/>
+                                    <barButtonItem systemItem="save" id="Ct1-Xy-43P">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="Yin-De-iRI" id="UMU-uS-DVi"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="8dv-ST-hDK" firstAttribute="bottom" secondItem="ebV-3L-WJB" secondAttribute="bottom" id="3D8-3n-bq0"/>
                             <constraint firstItem="wqQ-cI-YTG" firstAttribute="top" secondItem="ebV-3L-WJB" secondAttribute="top" constant="20" id="7hb-tt-znD"/>
@@ -228,9 +249,24 @@
                             <constraint firstItem="wqQ-cI-YTG" firstAttribute="leading" secondItem="ebV-3L-WJB" secondAttribute="leading" constant="20" id="zGe-e4-foH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ebV-3L-WJB"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dO8-VB-3QP" appends="YES" id="QbA-kp-3Dk"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="iKv-RK-cSp" id="a89-ge-3jn"/>
+                        <outlet property="clue2TextField" destination="BXR-mY-7pc" id="Hdj-it-SgK"/>
+                        <outlet property="clue3TextField" destination="tL4-AT-Jfy" id="Fw9-rp-bmL"/>
+                        <outlet property="countryTextField" destination="XoM-AV-6ah" id="axH-tZ-YpG"/>
+                        <outlet property="locationTextField" destination="WMW-6g-soK" id="RsF-xL-SbU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztP-Zz-5Ev" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dO8-VB-3QP">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="Yin-De-iRI" id="IDW-wI-OP1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1048" y="828"/>
         </scene>
