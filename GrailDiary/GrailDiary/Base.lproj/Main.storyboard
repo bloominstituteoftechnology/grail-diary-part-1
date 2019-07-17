@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QXn-zn-4db">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QXn-zn-4db">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -267,6 +267,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gC3-Xt-EJe"/>
                     </view>
+                    <connections>
+                        <outlet property="cluesTextview" destination="l32-BL-YZd" id="Iv6-U2-Yxo"/>
+                        <outlet property="countryLabel" destination="9bc-Ny-HAJ" id="g1n-2g-whw"/>
+                        <outlet property="locationLabel" destination="hxM-x4-HdU" id="GZk-FU-RGy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qia-BY-fJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
