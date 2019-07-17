@@ -9,7 +9,7 @@
 import UIKit
 
 protocol addPOIDelegate {
-    func poiWasAdded(_ : POI)
+    func poiWasAdded(_ poi: POI)
 }
 
 class AddPOIViewController: UIViewController {
@@ -42,9 +42,9 @@ class AddPOIViewController: UIViewController {
             !clue2.isEmpty {
             poi.clues.append(clue2)
         }
-        if let clue2 = clue2TextField.text,
-            !clue2.isEmpty {
-            poi.clues.append(clue2)
+        if let clue3 = clue3TextField.text,
+            !clue3.isEmpty {
+            poi.clues.append(clue3)
         }
         delegate?.poiWasAdded(poi)
     }
