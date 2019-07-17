@@ -8,8 +8,13 @@
 
 import UIKit
 
-class CluesTableViewController: UIViewController {
-
+class POISTableViewController: UIViewController {
+	
+	var clues: [POI] = []
+	
+	
+	@IBOutlet weak var tableView: UITableView!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
@@ -18,3 +23,21 @@ class CluesTableViewController: UIViewController {
 
 }
 
+extension POISTableViewController: UITableViewDataSource {
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return clues.count
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
+		
+		let clue = clues[indexPath.row]
+		cell.clue = clue
+		
+		
+		return cell
+	}
+	
+	
+}
