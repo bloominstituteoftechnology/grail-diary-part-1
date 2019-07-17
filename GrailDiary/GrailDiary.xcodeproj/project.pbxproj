@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		389EB05422DE576100787DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389EB05322DE576100787DAB /* AppDelegate.swift */; };
-		389EB05622DE576100787DAB /* CluesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389EB05522DE576100787DAB /* CluesTableViewController.swift */; };
 		389EB05922DE576100787DAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 389EB05722DE576100787DAB /* Main.storyboard */; };
 		389EB05B22DE576100787DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 389EB05A22DE576100787DAB /* Assets.xcassets */; };
 		389EB05E22DE576100787DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 389EB05C22DE576100787DAB /* LaunchScreen.storyboard */; };
+		389EB09F22DFB27900787DAB /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389EB09E22DFB27900787DAB /* POIDetailViewController.swift */; };
+		389EB0A122DFB31900787DAB /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389EB0A022DFB31900787DAB /* AddPOIViewController.swift */; };
+		389EB0A522DFB39D00787DAB /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389EB0A422DFB39D00787DAB /* POI.swift */; };
+		389EB0A922DFB5C500787DAB /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389EB0A822DFB5C500787DAB /* POIsTableViewController.swift */; };
+		389EB0AB22DFB7A100787DAB /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389EB0AA22DFB7A100787DAB /* POITableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		389EB05022DE576100787DAB /* GrailDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrailDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		389EB05322DE576100787DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		389EB05522DE576100787DAB /* CluesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluesTableViewController.swift; sourceTree = "<group>"; };
 		389EB05822DE576100787DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		389EB05A22DE576100787DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		389EB05D22DE576100787DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		389EB05F22DE576100787DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		389EB09E22DFB27900787DAB /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		389EB0A022DFB31900787DAB /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		389EB0A422DFB39D00787DAB /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
+		389EB0A822DFB5C500787DAB /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
+		389EB0AA22DFB7A100787DAB /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,58 @@
 		389EB05222DE576100787DAB /* GrailDiary */ = {
 			isa = PBXGroup;
 			children = (
-				389EB05322DE576100787DAB /* AppDelegate.swift */,
-				389EB05522DE576100787DAB /* CluesTableViewController.swift */,
-				389EB05722DE576100787DAB /* Main.storyboard */,
-				389EB05A22DE576100787DAB /* Assets.xcassets */,
-				389EB05C22DE576100787DAB /* LaunchScreen.storyboard */,
 				389EB05F22DE576100787DAB /* Info.plist */,
+				389EB0A222DFB34D00787DAB /* View Controllers */,
+				389EB0AC22DFB7D000787DAB /* Custom Views */,
+				389EB0A322DFB36600787DAB /* Storyboard */,
+				389EB0A622DFB3A400787DAB /* Model */,
+				389EB0A722DFB3B100787DAB /* Extras */,
 			);
 			path = GrailDiary;
+			sourceTree = "<group>";
+		};
+		389EB0A222DFB34D00787DAB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				389EB05322DE576100787DAB /* AppDelegate.swift */,
+				389EB0A822DFB5C500787DAB /* POIsTableViewController.swift */,
+				389EB0A022DFB31900787DAB /* AddPOIViewController.swift */,
+				389EB09E22DFB27900787DAB /* POIDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		389EB0A322DFB36600787DAB /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				389EB05722DE576100787DAB /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		389EB0A622DFB3A400787DAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				389EB0A422DFB39D00787DAB /* POI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		389EB0A722DFB3B100787DAB /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				389EB05A22DE576100787DAB /* Assets.xcassets */,
+				389EB05C22DE576100787DAB /* LaunchScreen.storyboard */,
+			);
+			path = Extras;
+			sourceTree = "<group>";
+		};
+		389EB0AC22DFB7D000787DAB /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				389EB0AA22DFB7A100787DAB /* POITableViewCell.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				389EB05622DE576100787DAB /* CluesTableViewController.swift in Sources */,
+				389EB0A922DFB5C500787DAB /* POIsTableViewController.swift in Sources */,
+				389EB0A122DFB31900787DAB /* AddPOIViewController.swift in Sources */,
 				389EB05422DE576100787DAB /* AppDelegate.swift in Sources */,
+				389EB0A522DFB39D00787DAB /* POI.swift in Sources */,
+				389EB0AB22DFB7A100787DAB /* POITableViewCell.swift in Sources */,
+				389EB09F22DFB27900787DAB /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
