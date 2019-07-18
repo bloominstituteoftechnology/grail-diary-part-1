@@ -257,6 +257,7 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="YcC-xA-vSw" secondAttribute="bottom" id="4AX-mc-tbr"/>
                             <constraint firstItem="nSY-Tk-cyt" firstAttribute="top" secondItem="esy-wQ-tke" secondAttribute="top" id="Enz-F0-Fu3"/>
@@ -266,6 +267,9 @@
                             <constraint firstItem="YcC-xA-vSw" firstAttribute="leading" secondItem="esy-wQ-tke" secondAttribute="leading" id="zDJ-Zb-YTI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="esy-wQ-tke"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="uj7-mF-yQZ" appends="YES" id="wLq-A4-XZe"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="clue1TextField" destination="aCK-e5-Tzu" id="N3V-JW-oDN"/>
@@ -276,6 +280,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dw7-DE-h6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uj7-mF-yQZ">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="hUO-cO-6vh" id="22p-hS-JFE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2093" y="-607"/>
         </scene>

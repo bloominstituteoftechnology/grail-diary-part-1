@@ -62,7 +62,7 @@ class AddPOIViewController: UIViewController {
 
 }
 
-extension AddPOIViewController: UITableViewDelegate {
+extension AddPOIViewController: UITextFieldDelegate {
 	
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		if let text = textField.text,
