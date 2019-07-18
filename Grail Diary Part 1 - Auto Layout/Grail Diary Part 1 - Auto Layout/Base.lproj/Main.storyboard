@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="KAI-Zd-oLc">
             <objects>
-                <viewController id="kVh-yT-gZL" sceneMemberID="viewController">
+                <viewController id="kVh-yT-gZL" customClass="AddPOIViewController" customModule="Grail_Diary_Part_1___Auto_Layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aVQ-ci-2tM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="1706" y="-554"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="mNz-1R-bF0">
             <objects>
-                <viewController id="EQ7-3t-gpg" sceneMemberID="viewController">
+                <viewController id="EQ7-3t-gpg" customClass="POIDetailViewController" customModule="Grail_Diary_Part_1___Auto_Layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hVA-CT-2AM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,17 +141,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="1fA-Ty-hOw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="J7i-0o-bPm" secondAttribute="trailing" constant="8" symbolic="YES" id="17V-50-k66"/>
                             <constraint firstItem="XT9-WF-2Od" firstAttribute="leading" secondItem="J7i-0o-bPm" secondAttribute="leading" id="930-Xt-KI8"/>
-                            <constraint firstItem="pot-dG-SsH" firstAttribute="bottom" secondItem="kjy-gK-CbP" secondAttribute="bottom" constant="20" id="E5L-B8-OXi"/>
                             <constraint firstItem="CJG-Tp-CkI" firstAttribute="trailing" secondItem="1fA-Ty-hOw" secondAttribute="trailing" id="FgL-QY-laO"/>
                             <constraint firstItem="kjy-gK-CbP" firstAttribute="top" secondItem="XT9-WF-2Od" secondAttribute="bottom" constant="2" id="MOh-9d-XOl"/>
                             <constraint firstItem="CJG-Tp-CkI" firstAttribute="top" secondItem="1fA-Ty-hOw" secondAttribute="bottom" constant="8" id="QIr-Ng-2qa"/>
                             <constraint firstItem="1fA-Ty-hOw" firstAttribute="top" secondItem="pot-dG-SsH" secondAttribute="top" constant="20" id="Xlt-CM-bD9"/>
                             <constraint firstItem="J7i-0o-bPm" firstAttribute="top" secondItem="pot-dG-SsH" secondAttribute="top" constant="20" id="Xp2-xM-md7"/>
+                            <constraint firstItem="pot-dG-SsH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XT9-WF-2Od" secondAttribute="trailing" symbolic="YES" id="Yhh-uj-qWb"/>
                             <constraint firstItem="pot-dG-SsH" firstAttribute="trailing" secondItem="1fA-Ty-hOw" secondAttribute="trailing" constant="20" id="bbf-hh-WhO"/>
+                            <constraint firstItem="CJG-Tp-CkI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="J7i-0o-bPm" secondAttribute="trailing" constant="8" symbolic="YES" id="dOY-4D-h4k"/>
                             <constraint firstItem="XT9-WF-2Od" firstAttribute="leading" secondItem="kjy-gK-CbP" secondAttribute="leading" id="iII-c8-Zbo"/>
                             <constraint firstItem="J7i-0o-bPm" firstAttribute="leading" secondItem="pot-dG-SsH" secondAttribute="leading" constant="20" id="kDH-Vy-QPx"/>
-                            <constraint firstItem="kjy-gK-CbP" firstAttribute="firstBaseline" secondItem="XT9-WF-2Od" secondAttribute="baseline" constant="9" id="r6i-Dh-2xU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pot-dG-SsH"/>
                     </view>
@@ -163,7 +164,7 @@
         <!--Grail Diary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CluesTableViewController" customModule="Grail_Diary_Part_1___Auto_Layout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="POITableViewController" customModule="Grail_Diary_Part_1___Auto_Layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,7 +176,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="68" id="Qy5-6b-25U">
                                         <rect key="frame" x="0.0" y="28" width="414" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qy5-6b-25U" id="2gQ-ec-MLY">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qy5-6b-25U" id="2gQ-ec-MLY" customClass="POITableViewCell">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -230,7 +231,53 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="PoiTableViewController" destination="SBr-4A-b3K" id="GhI-Zt-KBP"/>
+                    </connections>
                 </viewController>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="V4Y-Uf-eiR">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <prototypes>
+                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="68" id="SKl-ru-FHf">
+                            <rect key="frame" x="0.0" y="28" width="414" height="68"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SKl-ru-FHf" id="bxq-KA-wA4" customClass="POITableViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="67.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="F07-4t-nzn">
+                                        <rect key="frame" x="10" y="9.5" width="64" height="41"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GI2-OJ-s6a" customClass="Location">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grn-qI-d43">
+                                                <rect key="frame" x="0.0" y="20.5" width="59" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="#clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ek5-xc-viF">
+                                        <rect key="frame" x="198" y="19.5" width="51" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ek5-xc-viF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="F07-4t-nzn" secondAttribute="trailing" constant="8" id="V9q-nP-ST6"/>
+                                </constraints>
+                            </tableViewCellContentView>
+                        </tableViewCell>
+                    </prototypes>
+                </tableView>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028.985507246377" y="-77.008928571428569"/>
@@ -251,7 +298,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dc-6Z-Qf3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167" y="-77"/>
+            <point key="canvasLocation" x="-81" y="-160"/>
         </scene>
     </scenes>
     <resources>
