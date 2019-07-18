@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Is Table View Controller-->
         <scene sceneID="Pec-yh-xEk">
             <objects>
-                <viewController id="TL9-KW-KiS" sceneMemberID="viewController">
+                <viewController id="TL9-KW-KiS" customClass="POIsTableViewController" customModule="Grail_Diary_Part_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GM9-lv-wFj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="60" id="9oc-o5-m5V">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="60" id="9oc-o5-m5V" customClass="POITableViewCell" customModule="Grail_Diary_Part_1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9oc-o5-m5V" id="2RU-h3-Q9g">
@@ -62,6 +62,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="clueCountLabel" destination="Fka-wp-S4d" id="XrJ-jo-gvr"/>
+                                            <outlet property="countryLabel" destination="uDl-3f-Iog" id="466-mV-nXY"/>
+                                            <outlet property="locationLabel" destination="nwj-1k-NGQ" id="IQ5-YC-Dzn"/>
                                             <segue destination="Mtw-O8-rjX" kind="show" identifier="ShowPOIDetailSegue" id="D37-5u-peU"/>
                                         </connections>
                                     </tableViewCell>
@@ -84,15 +87,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="sz4-sA-Ncn" id="WkI-iT-juX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y48-P8-4WK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1355" y="656"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="wZD-KE-GpW">
             <objects>
-                <viewController id="oxz-Q2-wRK" sceneMemberID="viewController">
+                <viewController id="oxz-Q2-wRK" customClass="AddPOIViewController" customModule="Grail_Diary_Part_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6DU-HV-Luz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,10 +175,10 @@
             </objects>
             <point key="canvasLocation" x="2271" y="118"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="MUH-yi-WXi">
             <objects>
-                <viewController id="Mtw-O8-rjX" sceneMemberID="viewController">
+                <viewController id="Mtw-O8-rjX" customClass="POIDetailViewController" customModule="Grail_Diary_Part_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2IZ-hV-fSZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
