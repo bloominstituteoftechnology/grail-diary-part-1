@@ -117,12 +117,18 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="oxz-Q2-wRK" id="TJI-Re-Ejw"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Country" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1l3-Qa-saa">
                                         <rect key="frame" x="0.0" y="82.5" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="oxz-Q2-wRK" id="T9e-3D-Rm4"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GF-0j-kct">
                                         <rect key="frame" x="0.0" y="128.5" width="374" height="20.5"/>
@@ -135,18 +141,27 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="oxz-Q2-wRK" id="zFU-mJ-bKj"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Clue 2" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iCM-vq-i05">
                                         <rect key="frame" x="0.0" y="211" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="oxz-Q2-wRK" id="dLG-Lt-aFh"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Clue 3" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vcd-Fr-9J2">
                                         <rect key="frame" x="0.0" y="257" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="oxz-Q2-wRK" id="XGg-77-cBY"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -170,6 +185,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pjq-b6-D8y"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="M7s-bI-ULm" id="iaz-el-Mja"/>
+                        <outlet property="clue2TextField" destination="iCM-vq-i05" id="lsx-1j-f07"/>
+                        <outlet property="clue3TextField" destination="Vcd-Fr-9J2" id="lnN-0X-xxg"/>
+                        <outlet property="countryTextField" destination="1l3-Qa-saa" id="sjI-Ka-hRg"/>
+                        <outlet property="locationTextField" destination="8vs-Cu-nDn" id="CqW-sQ-0P2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9h-yp-BrK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
