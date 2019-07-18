@@ -62,10 +62,17 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesCountLabel" destination="B57-e5-0sk" id="24t-fZ-YkY"/>
+                                            <outlet property="countryLabel" destination="NCL-SG-ohq" id="0kU-4s-Mdt"/>
+                                            <outlet property="locationLabel" destination="Q8g-nf-lG3" id="3aA-Tu-3i2"/>
                                             <segue destination="8ce-vK-8ed" kind="show" identifier="ShowPOIDetailSegue" id="x0a-E3-fnF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="dds-XJ-PTg"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jBr-wV-INr"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,7 +92,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="PoiTableView" destination="brN-Ok-vnG" id="Or8-eF-Dpj"/>
+                        <outlet property="tableview" destination="brN-Ok-vnG" id="NHd-fj-3zE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -100,7 +107,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQ6-C2-cHg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQ6-C2-cHg">
                                 <rect key="frame" x="286" y="140" width="128" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -112,7 +119,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="laa-o1-sEz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="laa-o1-sEz">
                                 <rect key="frame" x="20" y="160" width="150" height="231"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="laa-o1-sEz" secondAttribute="height" multiplier="50:77" id="gt1-qM-wr7"/>
@@ -153,6 +160,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pX2-Fk-K4J"/>
                     </view>
+                    <connections>
+                        <outlet property="cluesTextView" destination="Tp6-ge-W2v" id="cNf-e4-pGu"/>
+                        <outlet property="countryLabel" destination="SYg-sz-ly1" id="gO2-TX-MCP"/>
+                        <outlet property="locationNameLabel" destination="hQ6-C2-cHg" id="EQ7-hL-pmc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNO-Ot-BlE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,13 +203,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fg5-qO-T1T">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fg5-qO-T1T">
                                         <rect key="frame" x="0.0" y="52" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wkf-D8-DRR">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wkf-D8-DRR">
                                         <rect key="frame" x="0.0" y="98" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -209,19 +221,19 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V2P-7W-pV8">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="clues" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V2P-7W-pV8">
                                         <rect key="frame" x="0.0" y="184" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9lp-zs-aIR">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="clues" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9lp-zs-aIR">
                                         <rect key="frame" x="0.0" y="230" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JBl-rC-5DK">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="clues" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JBl-rC-5DK">
                                         <rect key="frame" x="0.0" y="276" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -246,7 +258,7 @@
                         <outlet property="clues2TextField" destination="9lp-zs-aIR" id="D4m-wt-lwq"/>
                         <outlet property="clues3TextField" destination="JBl-rC-5DK" id="09O-VA-pQy"/>
                         <outlet property="countryLabel" destination="Wkf-D8-DRR" id="Uwq-gl-zIx"/>
-                        <outlet property="locationLabel" destination="Wkf-D8-DRR" id="e5i-y1-dGi"/>
+                        <outlet property="locationLabel" destination="fg5-qO-T1T" id="gNw-YN-e8g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ex-TK-Y4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -272,4 +284,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="112.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="images" width="300" height="168"/>
+    </resources>
 </document>
