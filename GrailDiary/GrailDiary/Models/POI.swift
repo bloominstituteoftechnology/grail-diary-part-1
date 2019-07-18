@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct POI
+struct POI {
 let location: String
-let country:
-let clues: [String]
+let country: String
+var clues: [String]
+}
