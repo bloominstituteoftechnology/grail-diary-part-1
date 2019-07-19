@@ -45,7 +45,7 @@ extension POIsTableViewController: UITableViewDataSource {
             if let indexPath = tableView.indexPathForSelectedRow,
                 let poiDetailVC = segue.destination as? POIDetailViewController {
                 
-                poiDetailVC. = poi[indexPath.row]
+                poiDetailVC.poi = pois[indexPath.row]
             }
         }
     }
