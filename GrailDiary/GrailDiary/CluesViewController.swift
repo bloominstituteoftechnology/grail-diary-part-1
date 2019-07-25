@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CluesTableViewController: UIViewController {
+class CluesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
