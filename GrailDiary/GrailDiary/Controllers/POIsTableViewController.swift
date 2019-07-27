@@ -27,16 +27,19 @@ class POIsTableViewController: UIViewController {
             if let destinationVC = segue.destination as? AddPOIViewController {
                 destinationVC.delegate = self
             }
+        } else if segue.identifier == "ShowPOIDetailSegue" {
+            if let indexPath = tableView.indexPathForSelectedRow,
+                let destinationVC = segue.destination as? POIDetailViewController {
+                destinationVC.poi = pointsOfInterest[indexPath.row]
+            }
         }
     }
-    
-
 }
 
 extension POIsTableViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return pointsOfInterest.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

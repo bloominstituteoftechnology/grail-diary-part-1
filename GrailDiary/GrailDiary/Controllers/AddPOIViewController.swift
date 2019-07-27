@@ -31,8 +31,15 @@ class AddPOIViewController: UIViewController {
     }
     
     @IBAction func saveTapped(_ sender: UIBarButtonItem) {
-        guard let location = locationTextField.text,
-            let country = countryTextField.text else { return }
+        guard let location = locationTextField.text, !location.isEmpty,
+            let country = countryTextField.text, !country.isEmpty else {
+                let alert = UIAlertController(title: "Missing Information", message: "Please enter a location and a country before saving", preferredStyle: .alert)
+                let dismiss = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+                alert.addAction(dismiss)
+                present(alert, animated: true, completion: nil)
+                return
+                
+        }
         
         var poi = POI(location: location, country: country, clues: [])
         
