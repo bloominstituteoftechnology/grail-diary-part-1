@@ -73,18 +73,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Grail Diary" id="e3A-6M-eb6">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="Cyt-Mf-KSc">
-                                <connections>
-                                    <segue destination="ldr-WB-BMt" kind="presentation" identifier="AddPOIModalSegue" id="BWD-cV-gc3"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Item" id="Smj-qP-bBS">
-                                <connections>
-                                    <segue destination="8JY-QL-rEE" kind="show" id="Lz9-kX-Zv4"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Cyt-Mf-KSc">
+                            <connections>
+                                <segue destination="ldr-WB-BMt" kind="presentation" identifier="AddPOIModalSegue" id="BWD-cV-gc3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -257,7 +250,4 @@
     <resources>
         <image name="marsface_cydonia" width="256" height="256"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="SL1-1Y-1Zk"/>
-    </inferredMetricsTieBreakers>
 </document>
