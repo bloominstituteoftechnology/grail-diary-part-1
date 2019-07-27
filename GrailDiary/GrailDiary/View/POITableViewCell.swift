@@ -9,6 +9,16 @@
 import UIKit
 
 class POITableViewCell: UITableViewCell {
+    
+    @IBOutlet var locationLabel: UILabel!
+    @IBOutlet var countrylabel: UILabel!
+    @IBOutlet var numberOfCluesLabel: UILabel!
+    
+    var poi: POI? {
+        didSet {
+            updateViews()
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +29,14 @@ class POITableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    private func updateViews() {
+        if let poi = poi {
+            locationLabel.text = poi.location
+            countrylabel.text = poi.country
+            numberOfCluesLabel.text = "\(poi.clues.count) of clues"
+        }
     }
 
 }
