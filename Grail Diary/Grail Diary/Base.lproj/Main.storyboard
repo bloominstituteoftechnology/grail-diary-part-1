@@ -70,12 +70,73 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Grail Diary" id="UwE-8g-1YD">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hQ3-xE-NRA"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hQ3-xE-NRA">
+                            <connections>
+                                <segue destination="p7f-H4-Qkc" kind="presentation" identifier="AddPOIModalSegue" id="yA7-V4-4hc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="847.82608695652175" y="753.34821428571422"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="efF-hQ-evn">
+            <objects>
+                <viewController id="p7f-H4-Qkc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aez-ZL-akS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="a17-li-rAr">
+                                <rect key="frame" x="20" y="64" width="374" height="214"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kN0-o3-zvG">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X7o-nn-8f6">
+                                        <rect key="frame" x="0.0" y="46" width="374" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jAm-VH-dzR">
+                                        <rect key="frame" x="0.0" y="92" width="374" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUn-Jb-lPf">
+                                        <rect key="frame" x="0.0" y="138" width="374" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Sp-41-P66">
+                                        <rect key="frame" x="0.0" y="184" width="374" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="os2-ca-E5j" firstAttribute="trailing" secondItem="a17-li-rAr" secondAttribute="trailing" constant="20" id="3jI-QH-3Mf"/>
+                            <constraint firstItem="a17-li-rAr" firstAttribute="leading" secondItem="os2-ca-E5j" secondAttribute="leading" constant="20" id="6XT-Em-MLi"/>
+                            <constraint firstItem="a17-li-rAr" firstAttribute="top" secondItem="os2-ca-E5j" secondAttribute="top" constant="20" id="PKn-Kq-Ds2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="os2-ca-E5j"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kdG-xW-sWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1570" y="755"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vlZ-dS-YBG">
