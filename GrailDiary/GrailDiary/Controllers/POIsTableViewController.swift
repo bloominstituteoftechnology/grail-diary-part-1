@@ -43,7 +43,10 @@ extension POIsTableViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
+        
+        cell.poi = pointsOfInterest[indexPath.row]
+        
         return cell
     }
     

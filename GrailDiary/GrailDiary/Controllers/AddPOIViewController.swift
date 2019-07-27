@@ -43,8 +43,16 @@ class AddPOIViewController: UIViewController {
         
         var poi = POI(location: location, country: country, clues: [])
         
-        if let clue1 = clueOneTextField.text, let clue2 = clueTwoTextField.text, let clue3 = clueThreeTextField.text {
-            poi.clues.append(contentsOf: [clue1, clue2, clue3])
+        if let clue1 = clueOneTextField.text, !clue1.isEmpty {
+            poi.clues.append(clue1)
+        }
+        
+        if let clue2 = clueTwoTextField.text, !clue2.isEmpty {
+            poi.clues.append(clue2)
+        }
+        
+        if let clue3 = clueThreeTextField.text, !clue3.isEmpty {
+            poi.clues.append(clue3)
         }
         
         delegate?.poiWasAdded(poi)
