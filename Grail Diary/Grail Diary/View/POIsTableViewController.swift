@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class POIsTableViewController: UIViewController, UITableViewDelegate {
+class POIsTableViewController: UIViewController {
   
     var POIList: [POI] = []
 
@@ -22,41 +22,50 @@ class POIsTableViewController: UIViewController, UITableViewDelegate {
         // Do any additional setup after loading the view.
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? POITableViewCell else {fatalError("Something failed")}
-        
-        return cell
-    }
+   
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+   
+   
+    
+}
+extension POIsTableViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return POIList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return  UITableViewCell() }
+        
+        let poi = POIList[indexPath.row]
+        cell.poi = poi
+        
+        return cell
+    }
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddPOIModalSegue" {
             if let addPOIVC = segue.destination as? AddPOIViewController {
                 addPOIVC.delegate = self
             }else if segue.identifier == "ShowPOIDetailSegue" {
-               if let indexPath = TableViewOutlet.indexPathForSelectedRow,
-                let showDetailVC = segue.destination as? POIDetailViewController {
-                showDetailVC.
+                if let indexPath = TableViewOutlet.indexPathForSelectedRow,
+                    let showDetailVC = segue.destination as? POIDetailViewController {
+                    showDetailVC.mypoi = POIList[indexPath.row]
                 }
             }
         }
     }
-    
-}
-extension POIsTableViewController: UITableViewDataSource{
  
 }
+
 extension POIsTableViewController: AddPOIDelegate {
     func poiWasAdded(_ poi: POI) {
         POIList.append(poi)
-        dismiss(animated: true)
-       TableViewOutlet.reloadData()
+        dismiss(animated: true, completion: nil)
+        TableViewOutlet.reloadData()
     }
+    
+   
     }
 
