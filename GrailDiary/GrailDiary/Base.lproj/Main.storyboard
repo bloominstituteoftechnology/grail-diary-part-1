@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LdR-MH-ra8" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="LdR-MH-ra8" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LdR-MH-ra8" id="Wtp-9X-sdg">
@@ -47,8 +47,8 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N02-0U-f7x">
-                                                    <rect key="frame" x="323.33333333333331" y="20" width="70.666666666666686" height="20.333333333333329"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N02-0U-f7x">
+                                                    <rect key="frame" x="319" y="20" width="75" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -65,6 +65,9 @@
                                             <constraint firstItem="jM8-oP-Sku" firstAttribute="centerY" secondItem="LdR-MH-ra8" secondAttribute="centerY" id="deD-dy-pkz"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="clueCountLabel" destination="N02-0U-f7x" id="ykQ-FR-Udg"/>
+                                            <outlet property="countryLabel" destination="yiV-ro-v5P" id="i4F-lz-Eiu"/>
+                                            <outlet property="locationLabel" destination="yWC-bh-TVr" id="Zsd-NG-8EO"/>
                                             <segue destination="aiY-K9-5IK" kind="show" identifier="ShowPOIDetailSegue" id="R6V-am-ULa"/>
                                         </connections>
                                     </tableViewCell>
@@ -154,11 +157,26 @@
                         <viewLayoutGuide key="safeArea" id="HhP-QK-Ri5"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem systemItem="cancel" id="85y-8D-jSu"/>
+                        <barButtonItem systemItem="cancel" id="85y-8D-jSu">
+                            <connections>
+                                <action selector="cancelTapped:" destination="Fl4-RB-avC" id="lLQ-FO-A7e"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem systemItem="flexibleSpace" id="pWD-xC-FAF"/>
-                        <barButtonItem systemItem="save" id="CUb-RP-APZ"/>
+                        <barButtonItem systemItem="save" id="CUb-RP-APZ">
+                            <connections>
+                                <action selector="saveTapped:" destination="Fl4-RB-avC" id="YS4-kd-qUv"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="clue1TextField" destination="sod-1l-Edh" id="MMp-7G-6TV"/>
+                        <outlet property="clue2TextField" destination="wfV-MX-ydg" id="chR-Ma-kCq"/>
+                        <outlet property="clue3TextField" destination="LJA-cj-aQz" id="tOd-I4-dAq"/>
+                        <outlet property="countryTextField" destination="Jau-sM-bVZ" id="fBc-pm-POd"/>
+                        <outlet property="locationTextField" destination="rCo-2E-FL3" id="4HL-Ql-B1g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXv-9K-su8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
