@@ -16,6 +16,7 @@ class POIsTableViewController: UIViewController {
 
     @IBOutlet weak var TableViewOutlet: UITableView!
     
+
     
    
     
@@ -43,14 +44,15 @@ extension POIsTableViewController: UITableViewDataSource{
         if segue.identifier == "AddPOIModalSegue" {
             if let addPOIVC = segue.destination as? AddPOIViewController {
                 addPOIVC.delegate = self
-            }else if segue.identifier == "ShowPOIDetailSegue" {
+            }
+            
+        }else if segue.identifier == "ShowPOIDetailSegue" {
                 if let indexPath = TableViewOutlet.indexPathForSelectedRow,
                     let showDetailVC = segue.destination as? POIDetailViewController {
                     showDetailVC.poi = POIList[indexPath.row]
-                    
                 }
             }
-        }
+        
     }
  
 }
