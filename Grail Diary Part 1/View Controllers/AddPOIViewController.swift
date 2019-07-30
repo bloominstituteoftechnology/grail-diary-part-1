@@ -12,8 +12,6 @@ protocol AddPOIDelegate {
     func poiWasAdded(_ poi: POI)
 }
 
-var delegate: AddPOIDelegate?
-
 class AddPOIViewController: UIViewController {
 
     @IBOutlet weak var locationTextField: UITextField!
@@ -22,11 +20,16 @@ class AddPOIViewController: UIViewController {
     @IBOutlet weak var clue2TextField: UITextField!
     @IBOutlet weak var clue3TextField: UITextField!
     
-    
+    var delegate: AddPOIDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        locationTextField.delegate = self
+        countryTextField.delegate = self
+        clue1TextField.delegate = self
+        clue2TextField.delegate = self
+        clue3TextField.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -60,4 +63,24 @@ class AddPOIViewController: UIViewController {
         delegate?.poiWasAdded(poi)
     }
     
+}
+
+extension AddPOIViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text, !text.isEmpty {
+            switch textField {
+            case locationTextField:
+                countryTextField.becomeFirstResponder()
+            case countryTextField:
+                clue1TextField.becomeFirstResponder()
+            case clue1TextField:
+                clue2TextField.becomeFirstResponder()
+            case clue2TextField:
+                clue3TextField.becomeFirstResponder()
+            default:
+                textField.resignFirstResponder()
+            }
+        }
+        return false
+    }
 }
