@@ -18,12 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v0y-YZ-hfM">
-                                <rect key="frame" x="0.0" y="140" width="414" height="177"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v0y-YZ-hfM">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="Tex-ZD-ejI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="60" id="Tex-ZD-ejI" customClass="POITableViewCell" customModule="Grail_Diary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tex-ZD-ejI" id="NcJ-4P-Wfu">
@@ -63,16 +62,25 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesCountLabel" destination="LVt-ha-Kl7" id="Sl5-VD-78D"/>
+                                            <outlet property="countryLabel" destination="P8L-Bg-a7Z" id="Kkf-HU-Obg"/>
+                                            <outlet property="locationLabel" destination="Bs3-uM-XMH" id="EuM-hs-aKc"/>
                                             <segue destination="usJ-K5-eqB" kind="show" identifier="ShowPOIDetailSegue" id="cpP-we-GGL"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cKE-9x-4V4"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="zNw-dN-IL3"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="v0y-YZ-hfM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Hj-m9-fSL"/>
+                            <constraint firstItem="v0y-YZ-hfM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dtR-3n-KRE"/>
+                            <constraint firstItem="v0y-YZ-hfM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eXM-Hp-ju1"/>
+                            <constraint firstItem="v0y-YZ-hfM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mYY-FY-az6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Grail Diary" id="5iY-6v-VGn">
@@ -123,10 +131,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R63-mx-dQZ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R63-mx-dQZ">
                                 <rect key="frame" x="20" y="359" width="374" height="483"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -149,6 +156,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fMZ-EJ-ZF0"/>
                     </view>
+                    <connections>
+                        <outlet property="cluesText" destination="R63-mx-dQZ" id="SWy-Wh-Lb7"/>
+                        <outlet property="countryLabel" destination="HBT-hb-v6x" id="I6M-aZ-JyB"/>
+                        <outlet property="locationLabel" destination="b6c-EV-oZb" id="0IM-3K-g1M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtz-ro-2ac" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
