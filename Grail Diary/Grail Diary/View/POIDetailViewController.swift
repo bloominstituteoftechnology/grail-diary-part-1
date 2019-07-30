@@ -10,13 +10,24 @@ import UIKit
 
 class POIDetailViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var cluesTextView: UITextView!
+    
+    var mypoi: POI?
+  
+    private func updateViews(){
+        guard let updatepoi = mypoi else {return}
+        mypoi?.location = updatepoi.location
+        mypoi?.country = updatepoi.country
+        mypoi?.clues = ["\(updatepoi.clues.count) clues\n \(updatepoi.clues.indices[0])\n"]
     }
     
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateViews()
+        // Do any additional setup after loading the view.
+    }
     /*
     // MARK: - Navigation
 
@@ -26,5 +37,5 @@ class POIDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+   
 }

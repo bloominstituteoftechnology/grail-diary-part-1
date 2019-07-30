@@ -65,6 +65,9 @@
                                             <constraint firstItem="SUJ-3a-BqL" firstAttribute="centerY" secondItem="JNS-kG-vpG" secondAttribute="centerY" id="zFQ-m4-HbB"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="cluesTextView" destination="7EE-vQ-H01" id="saq-xo-Zt5"/>
+                                            <outlet property="countryLabel" destination="8Xm-nW-7DF" id="Y57-lr-oOB"/>
+                                            <outlet property="locationLabel" destination="W5G-ec-4cL" id="ect-RH-8ib"/>
                                             <segue destination="pLh-NU-w6d" kind="show" identifier="ShowPOIDetailSegue" id="wbm-AJ-Kpe"/>
                                         </connections>
                                     </tableViewCell>
@@ -153,6 +156,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AdA-lU-Kuf"/>
                     </view>
+                    <connections>
+                        <outlet property="cluesTextView" destination="HB1-Il-kGZ" id="s1D-Dc-Gtg"/>
+                        <outlet property="countryLabel" destination="w7t-Lc-JsG" id="LlN-4x-SgW"/>
+                        <outlet property="locationLabel" destination="U9g-P3-WrV" id="S3J-gu-3S5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7K4-yX-SD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

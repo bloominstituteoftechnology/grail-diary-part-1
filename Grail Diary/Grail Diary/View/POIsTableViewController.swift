@@ -8,35 +8,20 @@
 
 import UIKit
 
-var POIList: [POI] = []
+
 
 class POIsTableViewController: UIViewController, UITableViewDelegate {
   
-    
+    var POIList: [POI] = []
 
     @IBOutlet weak var TableViewOutlet: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        TableViewOutlet.delegate = self
+       
         // Do any additional setup after loading the view.
     }
     
- 
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddPOIModalSegue" {
-            if let addPOIVC = segue.destination as? AddPOIViewController {
-                addPOIVC.delegate = self
-            }
-        }
-    }
-    
-}
-extension POIsTableViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -46,6 +31,26 @@ extension POIsTableViewController: UITableViewDataSource{
         
         return cell
     }
+    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddPOIModalSegue" {
+            if let addPOIVC = segue.destination as? AddPOIViewController {
+                addPOIVC.delegate = self
+            }else if segue.identifier == "ShowPOIDetailSegue" {
+               if let indexPath = TableViewOutlet.indexPathForSelectedRow,
+                let showDetailVC = segue.destination as? POIDetailViewController {
+                showDetailVC.
+                }
+            }
+        }
+    }
+    
+}
+extension POIsTableViewController: UITableViewDataSource{
+ 
 }
 extension POIsTableViewController: AddPOIDelegate {
     func poiWasAdded(_ poi: POI) {
