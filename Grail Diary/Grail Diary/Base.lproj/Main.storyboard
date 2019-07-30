@@ -184,7 +184,7 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="zyw-oT-ojd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GrailDiaryCell" id="zyw-oT-ojd">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zyw-oT-ojd" id="XHc-Mq-zRR">
@@ -224,7 +224,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="NcJ-qt-APu" kind="show" id="l2i-bF-SaP"/>
+                                            <segue destination="NcJ-qt-APu" kind="show" identifier="ShowPOIDetailSegue" id="l2i-bF-SaP"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -240,9 +240,9 @@
                         <viewLayoutGuide key="safeArea" id="035-ER-Iaw"/>
                     </view>
                     <navigationItem key="navigationItem" title="Grail Diary " id="TaS-SA-peT">
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="af7-yJ-3HV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="af7-yJ-3HV">
                             <connections>
-                                <segue destination="f9b-X8-I8A" kind="presentation" id="By5-lR-FRJ"/>
+                                <segue destination="f9b-X8-I8A" kind="presentation" identifier="AddPOIModalSegue" id="By5-lR-FRJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
