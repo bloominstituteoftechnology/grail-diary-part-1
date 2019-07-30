@@ -14,7 +14,7 @@ class POIDetailViewController: UIViewController {
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var cluesTextView: UITextView!
     
-    var poi: POI?
+    var poi: POI?{
     
     override func viewDidLoad() {
         super.viewDidLoad()
