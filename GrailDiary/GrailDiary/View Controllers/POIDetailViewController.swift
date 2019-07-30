@@ -24,6 +24,7 @@ class POIDetailViewController: UIViewController {
     private func updateViews() {
         guard let poi = poi else { return }
         
+        self.title = poi.location
         locationLabel.text = poi.location
         countryLabel.text = poi.country
         
