@@ -16,6 +16,11 @@ class POIDetailViewController: UIViewController {
     
     var poi: POI? 
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateViews()
+    }
+    
     private func updateViews() {
         guard let poi = poi else { return }
         locationLabel.text = poi.location
