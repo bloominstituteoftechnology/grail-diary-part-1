@@ -12,7 +12,11 @@ class POIsTableViewController: UIViewController {
     
     @IBOutlet weak var poiTV: UITableView!
     
-    var pois: [POI] = []
+    var pois: [POI] = [POI(location: "Bali",
+                           country: "Indonesia",
+                           clues: ["Cheap food",
+                                   "Honeymoon Island",
+                                   "South East Asia"])]
 
     // MARK: - Navigation
 

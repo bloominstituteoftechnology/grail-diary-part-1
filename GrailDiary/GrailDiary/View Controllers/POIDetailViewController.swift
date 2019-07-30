@@ -33,8 +33,8 @@ class POIDetailViewController: UIViewController {
         let clues = poi.clues
         for clue in clues {
             cluesString.append(clue)
+            cluesString.append("\n")
         }
-        
         cluesTextView.text = cluesString
     }
     
