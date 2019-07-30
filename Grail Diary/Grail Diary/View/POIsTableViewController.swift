@@ -16,11 +16,6 @@ class POIsTableViewController: UIViewController {
 
     @IBOutlet weak var TableViewOutlet: UITableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       
-        // Do any additional setup after loading the view.
-    }
     
    
     
@@ -51,7 +46,8 @@ extension POIsTableViewController: UITableViewDataSource{
             }else if segue.identifier == "ShowPOIDetailSegue" {
                 if let indexPath = TableViewOutlet.indexPathForSelectedRow,
                     let showDetailVC = segue.destination as? POIDetailViewController {
-                    showDetailVC.mypoi = POIList[indexPath.row]
+                    showDetailVC.poi = POIList[indexPath.row]
+                    
                 }
             }
         }
