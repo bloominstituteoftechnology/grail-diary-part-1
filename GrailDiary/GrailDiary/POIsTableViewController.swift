@@ -24,15 +24,15 @@ class POIsTableViewController: UIViewController {
             }
         }
         
-//        if segue.identifier == "ShowPOIDetailSegue" {
-//            guard let detailPOIVC = segue.destination as? POIDetailViewController,
-//                  let indexPath = poiTV.indexPathForSelectedRow else {
-//                return
-//            }
-//
-//            let poi = pois[indexPath.row]
-//            detailPOIVC.
-//        }
+        else if segue.identifier == "ShowPOIDetailSegue" {
+            guard let detailPOIVC = segue.destination as? POIDetailViewController,
+                  let indexPath = poiTV.indexPathForSelectedRow else {
+                return
+            }
+
+            let poi = pois[indexPath.row]
+            detailPOIVC.poi = poi
+        }
     }
 
 }
