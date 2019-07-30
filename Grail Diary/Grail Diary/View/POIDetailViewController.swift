@@ -14,7 +14,7 @@ class POIDetailViewController: UIViewController {
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var cluesTextView: UITextView!
     
-    var poi: POI?{
+    var poi: POI?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +25,12 @@ class POIDetailViewController: UIViewController {
         guard let poi = poi else { return }
         locationLabel.text = poi.location
         countryLabel.text = poi.country
-        var trueText = ""
+        var clueText = ""
         for clue in poi.clues {
-            trueText += "∙ \(clue)\n"
+            clueText += "∙ \(clue)\n"
         }
         
-        cluesTextView.text = trueText
+        cluesTextView.text = clueText
     }
     
 }
