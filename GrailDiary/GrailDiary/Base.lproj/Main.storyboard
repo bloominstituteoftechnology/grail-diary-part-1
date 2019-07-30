@@ -30,7 +30,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pdv-9g-T6j">
-                                                    <rect key="frame" x="0.0" y="10.5" width="68.5" height="38.5"/>
+                                                    <rect key="frame" x="8" y="10.5" width="68.5" height="38.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pN2-iJ-CEL">
                                                             <rect key="frame" x="0.0" y="0.0" width="68.5" height="20.5"/>
@@ -47,7 +47,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiP-r8-PcY">
-                                                    <rect key="frame" x="346.5" y="21" width="67.5" height="18"/>
+                                                    <rect key="frame" x="338.5" y="21" width="67.5" height="18"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -55,8 +55,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="YiP-r8-PcY" firstAttribute="centerY" secondItem="OOM-vt-AAv" secondAttribute="centerY" id="Sqe-sr-DZP"/>
-                                                <constraint firstItem="pdv-9g-T6j" firstAttribute="leading" secondItem="OOM-vt-AAv" secondAttribute="leading" id="blz-hc-63H"/>
-                                                <constraint firstAttribute="trailing" secondItem="YiP-r8-PcY" secondAttribute="trailing" id="hDn-8K-qYm"/>
+                                                <constraint firstItem="pdv-9g-T6j" firstAttribute="leading" secondItem="OOM-vt-AAv" secondAttribute="leading" constant="8" id="blz-hc-63H"/>
+                                                <constraint firstAttribute="trailing" secondItem="YiP-r8-PcY" secondAttribute="trailing" constant="8" id="hDn-8K-qYm"/>
                                                 <constraint firstItem="pdv-9g-T6j" firstAttribute="centerY" secondItem="OOM-vt-AAv" secondAttribute="centerY" id="m1g-7V-3O5"/>
                                             </constraints>
                                         </tableViewCellContentView>
