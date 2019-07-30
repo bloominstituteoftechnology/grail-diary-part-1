@@ -62,18 +62,42 @@
 		E31134B322E6B251002CEF0B /* GrailDiary */ = {
 			isa = PBXGroup;
 			children = (
+				E32851A022F0DCF500DC30E6 /* Custom Views */,
+				E328519F22F0DCCA00DC30E6 /* View Controllers */,
+				E328519E22F0DCC200DC30E6 /* Models */,
 				E31134B422E6B251002CEF0B /* AppDelegate.swift */,
 				E31134B822E6B251002CEF0B /* Main.storyboard */,
 				E31134BB22E6B253002CEF0B /* Assets.xcassets */,
 				E31134BD22E6B253002CEF0B /* LaunchScreen.storyboard */,
 				E31134C022E6B253002CEF0B /* Info.plist */,
-				E34FE86522EFB9D700A8F936 /* POIsTableViewController.swift */,
-				E34FE86722EFB9F000A8F936 /* AddPOIViewController.swift */,
-				E34FE86922EFBA0200A8F936 /* POIDetailViewController.swift */,
-				E34FE86B22EFBA3700A8F936 /* POITableViewCell.swift */,
-				E34FE86D22EFBA4D00A8F936 /* POI.swift */,
 			);
 			path = GrailDiary;
+			sourceTree = "<group>";
+		};
+		E328519E22F0DCC200DC30E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E34FE86D22EFBA4D00A8F936 /* POI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E328519F22F0DCCA00DC30E6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E34FE86522EFB9D700A8F936 /* POIsTableViewController.swift */,
+				E34FE86922EFBA0200A8F936 /* POIDetailViewController.swift */,
+				E34FE86722EFB9F000A8F936 /* AddPOIViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E32851A022F0DCF500DC30E6 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				E34FE86B22EFBA3700A8F936 /* POITableViewCell.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

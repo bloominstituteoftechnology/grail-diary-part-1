@@ -44,11 +44,11 @@ class AddPOIViewController: UIViewController {
             poi.clues.append(clue1)
         }
         
-        if let clue2 = clue1TextField.text, !clue2.isEmpty {
+        if let clue2 = clue2TextField.text, !clue2.isEmpty {
             poi.clues.append(clue2)
         }
         
-        if let clue3 = clue1TextField.text, !clue3.isEmpty {
+        if let clue3 = clue3TextField.text, !clue3.isEmpty {
             poi.clues.append(clue3)
         }
         

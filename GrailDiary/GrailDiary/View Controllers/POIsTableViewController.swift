@@ -34,7 +34,6 @@ class POIsTableViewController: UIViewController {
             detailPOIVC.poi = poi
         }
     }
-
 }
 
 extension POIsTableViewController: UITableViewDataSource {
@@ -60,6 +59,4 @@ extension POIsTableViewController: AddPOIDelegate {
         dismiss(animated: true, completion: nil)
         poiTV.reloadData()
     }
-    
-    
 }
