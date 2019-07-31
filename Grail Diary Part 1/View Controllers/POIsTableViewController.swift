@@ -20,7 +20,6 @@ class POIsTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -30,6 +29,11 @@ class POIsTableViewController: UIViewController {
         if segue.identifier == "AddPOIModalSegue" {
             if let addPOIVC = segue.destination as? AddPOIViewController {
                 addPOIVC.delegate = self
+            } else if segue.identifier == "ShowPOIDetailSegue" {
+                if let indexPath = tableView.indexPathForSelectedRow, let detailPOIVC = segue.destination as? POIDetailViewController {
+                    let poi = pois[indexPath.row]
+                    detailPOIVC.poi = poi
+                }
             }
         }
     }

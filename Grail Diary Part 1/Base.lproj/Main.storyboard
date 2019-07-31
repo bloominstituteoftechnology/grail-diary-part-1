@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1zY-jb-znq">
-                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1zY-jb-znq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="POICell" id="ADo-xH-wVS" customClass="POITableViewCell" customModule="Grail_Diary_Part_1" customModuleProvider="target">
@@ -72,10 +71,17 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="DeB-2j-hS2"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="umt-xf-0Us"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1zY-jb-znq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="D45-Yj-G0j"/>
+                            <constraint firstItem="1zY-jb-znq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JPX-gU-1kB"/>
+                            <constraint firstItem="1zY-jb-znq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="deR-EN-ecE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1zY-jb-znq" secondAttribute="bottom" id="vdE-1B-x3x"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZEA-TU-lZ0">
@@ -158,6 +164,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cx1-Vo-DmC"/>
                     </view>
+                    <connections>
+                        <outlet property="cluesTextView" destination="POS-Tc-egf" id="UQZ-UQ-C8B"/>
+                        <outlet property="countryLabel" destination="oLE-9W-jOV" id="XP3-W4-UEH"/>
+                        <outlet property="locationLabel" destination="6sW-XZ-pha" id="6ce-RW-Mms"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="01Q-JO-imn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
