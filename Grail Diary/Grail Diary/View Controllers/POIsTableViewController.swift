@@ -13,11 +13,11 @@ class POIsTableViewController: UIViewController {
     var poiList: [POI] = []
     
     @IBOutlet weak var poiListTableView: UITableView!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        poiListTableView.dataSource = self
     }
     
     // MARK: - Navigation
@@ -26,15 +26,14 @@ class POIsTableViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "AddPOIModalSegue" {
-            
             if let addPOIVC = segue.destination as? AddPOIViewController {
-                
                 addPOIVC.delegate = self
             }
         } else if segue.identifier == "ShowPOIDetailSegue" {
             
             if let indexPath = self.poiListTableView.indexPathForSelectedRow?.row, let showDetailVC = segue.destination as? POIDetailViewController {
-               showDetailVC.poi = poiList[indexPath]
+                
+                showDetailVC.poi = poiList[indexPath]
             }
         }
     }
