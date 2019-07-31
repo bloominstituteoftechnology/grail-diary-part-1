@@ -18,6 +18,8 @@ class POIsTableViewController: UIViewController {
     
     var pois: [POI] = []
     
+    // MARK: - Functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -37,28 +39,29 @@ class POIsTableViewController: UIViewController {
             }
         }
     }
-
 }
 
-extension POIsTableViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pois.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
+    // MARK: - Protocols
+
+    extension POIsTableViewController: UITableViewDataSource {
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return pois.count
+        }
         
-        let poi = pois[indexPath.row]
-        cell.poi = poi
-        
-        return cell
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
+            
+            let poi = pois[indexPath.row]
+            cell.poi = poi
+            
+            return cell
+        }
     }
-}
 
-extension POIsTableViewController: AddPOIDelegate {
-    func poiWasAdded(_ poi: POI) {
-        pois.append(poi)
-        dismiss(animated: true, completion: nil)
-        tableView.reloadData()
+    extension POIsTableViewController: AddPOIDelegate {
+        func poiWasAdded(_ poi: POI) {
+            pois.append(poi)
+            dismiss(animated: true, completion: nil)
+            tableView.reloadData()
+        }
     }
-}
