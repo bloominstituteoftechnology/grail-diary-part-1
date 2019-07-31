@@ -1,5 +1,5 @@
 //
-//  AddPOIViewController.swift
+//  CluesDetailViewController.swift
 //  Grail Diary
 //
 //  Created by Jessie Ann Griffin on 7/28/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPOIViewController: UIViewController {
+class POIDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
