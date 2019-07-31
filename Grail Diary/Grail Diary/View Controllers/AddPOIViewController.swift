@@ -21,10 +21,6 @@ class AddPOIViewController: UIViewController {
     @IBOutlet weak var clue3TextField: UITextField!
     
     var delegate: AddPOIDelegate?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 
     @IBAction func saveTapped(_ sender: UIBarButtonItem) {
         

@@ -13,6 +13,11 @@ class POIsTableViewController: UIViewController {
     var poiArray: [POI] = []
     @IBOutlet weak var tableView: UITableView!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.rowHeight = 80
+    }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddPOIModalSegue" {
@@ -26,7 +31,6 @@ class POIsTableViewController: UIViewController {
             }
         }
     }
-
 }
 
 extension POIsTableViewController: UITableViewDataSource {

@@ -13,12 +13,12 @@ class POIDetailViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var cluesText: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
     
     var poi: POI?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         updateViews()
     }
     
