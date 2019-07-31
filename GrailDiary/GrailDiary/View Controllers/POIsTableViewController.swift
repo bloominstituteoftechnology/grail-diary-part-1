@@ -15,7 +15,7 @@ class POIsTableViewController: UIViewController {
     var pois: [POI] = [POI(location: "Bali",
                            country: "Indonesia",
                            clues: ["Cheap food",
-                                   "Honeymoon Island",
+                                   "Honeymoon island",
                                    "South East Asia"])]
 
     // MARK: - Navigation
