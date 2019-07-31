@@ -70,7 +70,11 @@
                                 <items>
                                     <barButtonItem systemItem="cancel" id="LYt-80-z3i"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="wbe-YD-2wP"/>
-                                    <barButtonItem systemItem="save" id="vYm-r8-ja9"/>
+                                    <barButtonItem systemItem="save" id="vYm-r8-ja9">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="kVh-yT-gZL" id="szG-y4-jg2"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -86,10 +90,7 @@
                         <viewLayoutGuide key="safeArea" id="kYC-0c-Bbo"/>
                     </view>
                     <connections>
-                        <outlet property="clue1TextField" destination="GSv-Y7-pZr" id="LVb-2q-V0K"/>
-                        <outlet property="clue2TextField" destination="99v-7s-wZO" id="jSa-c3-Qgb"/>
-                        <outlet property="clue3TextField" destination="75N-Uz-yQa" id="MNY-Jl-6vx"/>
-                        <outlet property="countryTextField" destination="DX0-0Z-hJp" id="i0S-hV-Ckr"/>
+                        <outlet property="cancelTapped" destination="OhW-TE-967" id="Egi-8V-Odw"/>
                         <outlet property="locationTextField" destination="cov-IX-agn" id="Ne1-ju-ESa"/>
                     </connections>
                 </viewController>

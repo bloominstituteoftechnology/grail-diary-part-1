@@ -24,19 +24,64 @@ class AddPOIViewController: UIViewController {
     @IBAction func cancelTapped(_sender:UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
-   
+    @IBOutlet weak var cancelTapped: UIToolbar!
+    
      @IBAction func saveTapped(_ sender: UIBarButtonItem) {
-     guard let location = locationTextField.text
-        let country = countryTextField.text
+        @IBAction func saveTapped(_ sender: Any) {
+        }
+        guard let location = locationTextField.text,
+        let country = countryTextField.text,
         !location.isEmpty,
         !country.isEmpty else { return }
         
+        if let clue1 = clue1TextField.text,
+            !clue1.isEmpty {
+            Poi.clues.append(clue1)
+
+       if let clue2 = clue2TextField.text,
+        !clue2.isEmpty, {
+        poi.clue.append(clue2)
+
+     if let clue3 = clue3TextField.text,
+            !clue3.isEmpty {
+            poi.clue.append(clue3)
+                
+  }
+
+ }       delegate?.poiWasAdded(POI)
         
-        if let
-        
-        
-        
-    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        locationTextField.resignFirstResponder()
+        countryTextField.resignFirstResponder()
+        clue1TextField.resignFirstResponder()
+        clue2TextField.resignFirstResponder()
+        clue3TextField.resignFirstResponder()
+  }
+}
+        extension AddPOIViewController: UITextFieldDelegate {
+            
+            func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+              if  let text = textField.text,
+                 !text.isEmpty {
+                switch textField {
+                case locationTextField:
+                    countryTextField.becomeFirstResponder()
+                case countryTextField:
+                    clue1TextField.becomeFirstResponder()
+                case clue1TextField:
+                    clue2TextField.becomeFirstResponder()
+                case clue2TextField:
+                    clue3TextField.becomeFirstResponder()
+                default:
+                    textField.resignFirstResponder()
+                    
+            }
+            }
+
+             return false
+   }
+}
+
 
 
 

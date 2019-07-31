@@ -14,10 +14,12 @@ class PoiTableViewCell: UITableViewCell {
     
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
-    @IBOutlet weak var hobbyListTextView: UITextView!
+    @IBOutlet weak var clueListTextView: UITextView!
     
    
     private func updateViews() {
+        guard let poi = POI else {return}
+        
         
         }
     
