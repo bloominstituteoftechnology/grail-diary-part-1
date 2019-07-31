@@ -16,20 +16,10 @@ class PoiTableViewCell: UITableViewCell {
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var hobbyListTextView: UITextView!
     
-    
-    var Poi: poi?{
-        didSet {
-            updateViews()
-        }
-    }
-    
+   
     private func updateViews() {
-        guard let Poi = Poi else { return }
         
-        nameLabel.text = Poi.name
-        hometownLabel.text = Poi.hometown
-        hobbyCountLabel.text = "\(Poi.hobbies.count) hobbies"
-    }
+        }
     
 }
 
