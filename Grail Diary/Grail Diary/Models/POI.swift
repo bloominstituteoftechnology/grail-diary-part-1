@@ -8,6 +8,7 @@
 
 import Foundation
 
+//MARK: - step 6 Created a Struct to Model my Place Of Interest. or POI as we will continue in our application
 struct POI {
     var location: String
     var country: String
