@@ -10,7 +10,7 @@ import UIKit
 
 class POIsTableViewController: UIViewController {
 
-    var poiList: [POI]?
+    var poiList: [POI] = []
     
     @IBOutlet weak var poiListTableView: UITableView!
     
@@ -69,6 +69,12 @@ extension POIsTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         <#code#>
     }
-    
-    
+}
+
+extension POIsTableViewController: AddPOIDelegate {
+    func poiWasAdded(_ poi: POI) {
+        poiList.append(poi)
+        dismiss(animated: true, completion: nil)
+        poiListTableView.reloadData()
+    }
 }
