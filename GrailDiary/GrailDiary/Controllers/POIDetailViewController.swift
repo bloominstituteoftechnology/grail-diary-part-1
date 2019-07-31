@@ -10,7 +10,6 @@ import UIKit
 
 class POIDetailViewController: UIViewController {
     
-    
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var countryLabel: UILabel!
     @IBOutlet var cluesTextView: UITextView!

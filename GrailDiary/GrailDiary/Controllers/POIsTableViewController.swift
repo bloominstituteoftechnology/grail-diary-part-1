@@ -16,7 +16,6 @@ class POIsTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.dataSource = self
     }
     
@@ -36,6 +35,8 @@ class POIsTableViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension POIsTableViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,13 +45,13 @@ extension POIsTableViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
-        
         cell.poi = pointsOfInterest[indexPath.row]
-        
         return cell
     }
     
 }
+
+// MARK: - AddPOIDelegate
 
 extension POIsTableViewController: AddPOIDelegate {
     func poiWasAdded(_ poi: POI) {

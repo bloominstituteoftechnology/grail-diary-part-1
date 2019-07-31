@@ -19,10 +19,6 @@ class POITableViewCell: UITableViewCell {
             updateViews()
         }
     }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
     
     private func updateViews() {
         if let poi = poi {
@@ -33,7 +29,6 @@ class POITableViewCell: UITableViewCell {
             } else {
                 numberOfCluesLabel.text = "\(poi.clues.count) clues"
             }
-            
         }
     }
 

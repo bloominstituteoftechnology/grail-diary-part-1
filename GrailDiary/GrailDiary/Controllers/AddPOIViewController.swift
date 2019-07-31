@@ -21,10 +21,6 @@ class AddPOIViewController: UIViewController {
     @IBOutlet var clueThreeTextField: UITextField!
     
     var delegate: AddPOIDelegate?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
@@ -38,7 +34,6 @@ class AddPOIViewController: UIViewController {
                 alert.addAction(dismiss)
                 present(alert, animated: true, completion: nil)
                 return
-                
         }
         
         var poi = POI(location: location, country: country, clues: [])
