@@ -21,7 +21,7 @@ class POIDetailViewController: UIViewController {
         
         locationLabel.text = poi.location
         countryLabel.text = poi.country
-        cluesTextView.text = "\(poi.clues)"
+        cluesTextView.text = "\(poi.clues.joined(separator: " "))"
     }
     
     
