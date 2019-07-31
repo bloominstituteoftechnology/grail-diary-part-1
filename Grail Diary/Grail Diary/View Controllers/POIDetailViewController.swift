@@ -28,7 +28,14 @@ class POIDetailViewController: UIViewController {
         
         locationLabel.text = poi.location
         countryLabel.text = poi.country
-        cluesTextView.text = "• \(poi.clues[0])\n• \(poi.clues[1])\n• \(poi.clues[2])"
+//        cluesTextView.text = "• \(poi.clues[0])\n• \(poi.clues[1])\n• \(poi.clues[2])"
+        var listOfClues: String = ""
+        
+        for clue in poi.clues {
+            listOfClues += "• \(clue)\n"
+            
+        }
+        cluesTextView.text = listOfClues
     }
 
 }
