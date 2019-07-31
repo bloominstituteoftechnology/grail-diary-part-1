@@ -9,7 +9,8 @@
 import UIKit
 
 class POIDetailViewController: UIViewController {
-    //MARK: step 34 -38 Declared the labels and text view. Added an optional variable of type POI. created the update views function for this page that passes all the data to the labels. had view did load updateViews within the detail view controller
+    //MARK: step 34 -38
+    //Declared the labels and text view. Added an optional variable of type POI. created the update views function for this page that passes all the data to the labels. had view did load updateViews within the detail view controller
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var cluesTextView: UITextView!
