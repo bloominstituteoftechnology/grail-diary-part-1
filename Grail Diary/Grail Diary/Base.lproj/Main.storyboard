@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="UNO-AF-qIY">
             <objects>
-                <viewController id="NcJ-qt-APu" sceneMemberID="viewController">
+                <viewController id="NcJ-qt-APu" customClass="POIDetailViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qRb-wb-uB3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,15 +71,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0iG-s1-5eu"/>
                     </view>
+                    <connections>
+                        <outlet property="cluesTextView" destination="PBp-wA-Tr1" id="POR-mV-vwz"/>
+                        <outlet property="countryLabel" destination="f3n-mE-U9T" id="W2c-JA-8jZ"/>
+                        <outlet property="locationNameLabel" destination="CWo-gp-4Ec" id="HGw-6h-7bn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Kd-5a-Qil" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1808.6956521739132" y="-636.16071428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="Re6-MI-wYq">
             <objects>
-                <viewController id="f9b-X8-I8A" sceneMemberID="viewController">
+                <viewController id="f9b-X8-I8A" customClass="AddPOIViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hLd-KN-rWZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,9 +139,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olE-Yo-Xrk">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="E2w-Pz-YcP"/>
+                                    <barButtonItem systemItem="cancel" id="E2w-Pz-YcP">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="f9b-X8-I8A" id="CTr-lY-WhM"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="QFp-Pu-QJI"/>
-                                    <barButtonItem systemItem="save" id="MKA-R9-po1"/>
+                                    <barButtonItem systemItem="save" id="MKA-R9-po1">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="f9b-X8-I8A" id="i36-cl-UAa"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -151,6 +164,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FxV-5N-ogY"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="gTe-Dl-2O2" id="kEJ-Si-Wb9"/>
+                        <outlet property="clue2TextField" destination="zLK-YE-TUm" id="Dsy-gl-SvP"/>
+                        <outlet property="clue3TextField" destination="LCb-Xa-vkM" id="QWN-nd-Vqd"/>
+                        <outlet property="countryTextField" destination="Avf-hM-mrg" id="NEK-pa-tQP"/>
+                        <outlet property="locationTextField" destination="ZBY-Nb-Uru" id="gwj-Q1-LZp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9zs-aw-GLn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,7 +195,7 @@
         <!--Grail Diary -->
         <scene sceneID="drd-yN-hko">
             <objects>
-                <viewController id="Iwb-jY-jMg" sceneMemberID="viewController">
+                <viewController id="Iwb-jY-jMg" customClass="POIsTableViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fRf-uh-apD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,7 +204,7 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GrailDiaryCell" id="zyw-oT-ojd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GrailDiaryCell" id="zyw-oT-ojd" customClass="POITableViewCell" customModule="Grail_Diary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zyw-oT-ojd" id="XHc-Mq-zRR">
@@ -224,10 +244,16 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="clueCountLabel" destination="ujb-mT-Uk6" id="gYc-yc-aDA"/>
+                                            <outlet property="countryLabel" destination="KGT-5e-6K1" id="K71-IQ-O89"/>
+                                            <outlet property="locationLabel" destination="DNa-w8-DDe" id="2Xy-Fi-6pX"/>
                                             <segue destination="NcJ-qt-APu" kind="show" identifier="ShowPOIDetailSegue" id="l2i-bF-SaP"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="Iwb-jY-jMg" id="WQK-L0-ACP"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -246,6 +272,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="t88-2n-RZs" id="4JR-SD-fE2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gFE-bu-OI0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
