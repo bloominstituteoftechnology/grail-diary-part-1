@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 struct Grail {
     var cityOrState: String
     var country: String
-    var clue: String
+    var clue: [String] = []
+    var image: UIImage?
 }

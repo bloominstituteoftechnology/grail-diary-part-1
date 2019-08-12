@@ -11,6 +11,7 @@ import UIKit
 class GrailTableViewController: UITableViewController {
     
     var grailController = GrailController()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,14 @@ class GrailTableViewController: UITableViewController {
 
   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      
+        if segue.identifier == "GrailDetailSegue" {
+            guard let grailDetailVC = segue.destination as? GrailDetailViewController else {return}
+            grailDetailVC.grailController = grailController
+        }
+        if segue.identifier == "AddGrailSegue" {
+            guard let addGrailVC = segue.destination as? AddGrailViewController else {return}
+            addGrailVC.grailController = grailController
+            addGrailVC.tableView = tableView
+        } 
     }
 }

@@ -7,9 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
 class GrailController {
     
     var grailArray: [Grail] = []
+    
+    func addGrail(city: String, country: String, clues: [String], image: UIImage?) {
+        let grail = Grail(cityOrState: city, country: country, clue: clues, image: image)
+        grailArray.append(grail)
+    }
 
 }
