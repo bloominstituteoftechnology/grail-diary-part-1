@@ -224,58 +224,46 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Iza-4G-QOL" secondAttribute="trailing" id="R6l-OQ-8cO"/>
+                                    <constraint firstAttribute="bottom" secondItem="Iza-4G-QOL" secondAttribute="bottom" id="TuG-z5-6QJ"/>
                                     <constraint firstItem="Iza-4G-QOL" firstAttribute="top" secondItem="ipZ-Rk-1gS" secondAttribute="top" id="ebU-Pj-g5h"/>
                                     <constraint firstItem="Iza-4G-QOL" firstAttribute="leading" secondItem="ipZ-Rk-1gS" secondAttribute="leading" id="el6-pK-4gX"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QGb-4K-VGa">
-                                <rect key="frame" x="30" y="354" width="354" height="49"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="City/StateLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1W-MU-KhK">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountryLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEx-MO-ZJN">
-                                        <rect key="frame" x="0.0" y="28.5" width="354" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CluesLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXy-c3-Nhk">
-                                <rect key="frame" x="46" y="438" width="323" height="20.5"/>
+                                <rect key="frame" x="46" y="438" width="85" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Clues" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XT3-zq-yFI">
-                                <rect key="frame" x="46" y="466.5" width="323" height="128.5"/>
+                                <rect key="frame" x="46" y="466" width="323" height="129"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="City/StateLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1W-MU-KhK">
+                                <rect key="frame" x="20" y="354" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QGb-4K-VGa" firstAttribute="top" secondItem="Iza-4G-QOL" secondAttribute="bottom" constant="8" id="0xk-IE-2p1"/>
+                            <constraint firstItem="hcK-mu-YM9" firstAttribute="trailing" secondItem="gXy-c3-Nhk" secondAttribute="trailing" constant="283" id="7z7-V7-WhL"/>
                             <constraint firstItem="hcK-mu-YM9" firstAttribute="trailing" secondItem="XT3-zq-yFI" secondAttribute="trailing" constant="45" id="B0H-g9-BbY"/>
-                            <constraint firstItem="QGb-4K-VGa" firstAttribute="leading" secondItem="hcK-mu-YM9" secondAttribute="leading" constant="30" id="CXZ-9L-5yG"/>
                             <constraint firstItem="XT3-zq-yFI" firstAttribute="leading" secondItem="hcK-mu-YM9" secondAttribute="leading" constant="46" id="Cnh-ck-YiX"/>
                             <constraint firstItem="hcK-mu-YM9" firstAttribute="bottom" secondItem="XT3-zq-yFI" secondAttribute="bottom" constant="267" id="EMX-0i-5VR"/>
                             <constraint firstItem="hcK-mu-YM9" firstAttribute="trailing" secondItem="ipZ-Rk-1gS" secondAttribute="trailing" constant="45" id="HmC-SM-3Nk"/>
                             <constraint firstAttribute="bottom" secondItem="ipZ-Rk-1gS" secondAttribute="bottom" constant="550" id="IBL-NA-LbX"/>
                             <constraint firstItem="ipZ-Rk-1gS" firstAttribute="leading" secondItem="hcK-mu-YM9" secondAttribute="leading" constant="46" id="MQ5-Tl-v5p"/>
-                            <constraint firstItem="gXy-c3-Nhk" firstAttribute="leading" secondItem="hcK-mu-YM9" secondAttribute="leading" constant="46" id="Sk2-8v-Mpj"/>
-                            <constraint firstItem="hcK-mu-YM9" firstAttribute="trailing" secondItem="QGb-4K-VGa" secondAttribute="trailing" constant="30" id="cXV-xJ-E4X"/>
-                            <constraint firstItem="QGb-4K-VGa" firstAttribute="top" secondItem="ipZ-Rk-1gS" secondAttribute="bottom" constant="8" symbolic="YES" id="fNo-KE-YsS"/>
-                            <constraint firstItem="gXy-c3-Nhk" firstAttribute="top" secondItem="QGb-4K-VGa" secondAttribute="bottom" constant="35" id="g4c-va-QaN"/>
+                            <constraint firstItem="gXy-c3-Nhk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XT3-zq-yFI" secondAttribute="leading" id="Pif-tO-ECE"/>
+                            <constraint firstItem="I1W-MU-KhK" firstAttribute="top" secondItem="ipZ-Rk-1gS" secondAttribute="bottom" constant="8" id="Tto-0B-Dy3"/>
+                            <constraint firstItem="hcK-mu-YM9" firstAttribute="trailing" secondItem="I1W-MU-KhK" secondAttribute="trailing" constant="20" id="dkG-GB-aPg"/>
                             <constraint firstItem="XT3-zq-yFI" firstAttribute="top" secondItem="gXy-c3-Nhk" secondAttribute="bottom" constant="8" id="n0U-6F-2zx"/>
                             <constraint firstItem="ipZ-Rk-1gS" firstAttribute="top" secondItem="hcK-mu-YM9" secondAttribute="top" constant="42" id="o0m-d4-NCZ"/>
                             <constraint firstItem="gXy-c3-Nhk" firstAttribute="centerY" secondItem="lmw-9m-1f7" secondAttribute="centerY" id="usz-Vr-ibb"/>
-                            <constraint firstItem="hcK-mu-YM9" firstAttribute="trailing" secondItem="gXy-c3-Nhk" secondAttribute="trailing" constant="45" id="zTq-bh-v6S"/>
+                            <constraint firstItem="I1W-MU-KhK" firstAttribute="leading" secondItem="hcK-mu-YM9" secondAttribute="leading" constant="20" id="wyn-ZC-JOf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hcK-mu-YM9"/>
                     </view>
@@ -283,7 +271,6 @@
                         <outlet property="cityStateLabel" destination="I1W-MU-KhK" id="2X2-nF-8kM"/>
                         <outlet property="cluesLabel" destination="gXy-c3-Nhk" id="K7S-Hq-ZHf"/>
                         <outlet property="cluesTextView" destination="XT3-zq-yFI" id="P8c-WY-MXj"/>
-                        <outlet property="countryLabel" destination="qEx-MO-ZJN" id="9kW-uk-6PT"/>
                         <outlet property="grailImageView" destination="Iza-4G-QOL" id="4U1-7Z-R8v"/>
                     </connections>
                 </viewController>

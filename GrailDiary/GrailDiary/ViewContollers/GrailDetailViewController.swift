@@ -23,12 +23,12 @@ class GrailDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setViews()
     }
     
     func setViews() {
         
-        guard let city = cityStateLabel.text, let country = countryLabel.text else {return}
+        guard let city = grail?.cityOrState, let country = grail?.country else {return}
         cityStateLabel.text = "\(city), \(country)"
         cityStateLabel.font = UIFont(name: "System Bold", size: 12)
         
