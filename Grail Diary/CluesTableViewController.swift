@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CluesTableViewController.swift
 //  Grail Diary
 //
 //  Created by William Chen on 8/13/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CluesTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
