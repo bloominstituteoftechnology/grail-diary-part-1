@@ -8,13 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class CluesTableViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        setupNavBar()
+        
     }
-
+    
+    
+    func setupNavBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
 
 }
 
