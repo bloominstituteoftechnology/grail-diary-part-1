@@ -13,7 +13,7 @@
         <!--Grail Diary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Grail Diary" id="BYZ-38-t0r" customClass="CluesTableViewController" sceneMemberID="viewController">
+                <viewController title="Grail Diary" id="BYZ-38-t0r" customClass="POIsTableViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3Rd-D8-gmM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3Rd-D8-gmM" customClass="POITableViewCell" customModule="Grail_Diary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Rd-D8-gmM" id="6WS-V2-bnA">
@@ -62,6 +62,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="clueCountLabel" destination="EIy-Dn-K0o" id="BSk-Hg-FCq"/>
+                                            <outlet property="countryLabel" destination="zjL-WE-fov" id="fr2-9h-gWg"/>
+                                            <outlet property="locationLabel" destination="ciQ-vf-74Q" id="cth-QR-mIS"/>
                                             <segue destination="4zw-SW-qIT" kind="show" identifier="ShowPOIDetailSegue" trigger="accessoryAction" id="0vp-LV-SXD"/>
                                         </connections>
                                     </tableViewCell>
@@ -84,15 +87,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="53S-TV-Ppq" id="03x-QF-C0M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="fbx-CE-ILT">
             <objects>
-                <viewController id="4zw-SW-qIT" sceneMemberID="viewController">
+                <viewController id="4zw-SW-qIT" customClass="POIDetailViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oya-iv-4Is">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,7 +110,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O89-OS-VbL">
-                                <rect key="frame" x="20" y="266" width="45.5" height="21"/>
+                                <rect key="frame" x="20" y="288" width="45.5" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -115,7 +121,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="17511" translatesAutoresizingMaskIntoConstraints="NO" id="VUU-Ng-MVy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hogwarts castle" translatesAutoresizingMaskIntoConstraints="NO" id="VUU-Ng-MVy">
                                 <rect key="frame" x="20" y="108" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="VUU-Ng-MVy" secondAttribute="height" multiplier="1:1" id="ZWD-2t-4V4"/>
@@ -123,7 +129,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OWr-Z3-rgK">
-                                <rect key="frame" x="20" y="295" width="374" height="547"/>
+                                <rect key="frame" x="20" y="329" width="374" height="513"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -133,10 +139,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="kBh-2f-GwO" firstAttribute="trailing" secondItem="zJS-K4-uUa" secondAttribute="trailing" id="6ok-Mz-xHw"/>
-                            <constraint firstItem="O89-OS-VbL" firstAttribute="top" secondItem="VUU-Ng-MVy" secondAttribute="bottom" constant="8" id="Emx-8I-gDv"/>
+                            <constraint firstItem="O89-OS-VbL" firstAttribute="top" secondItem="VUU-Ng-MVy" secondAttribute="bottom" constant="30" id="Emx-8I-gDv"/>
                             <constraint firstItem="kBh-2f-GwO" firstAttribute="top" secondItem="zJS-K4-uUa" secondAttribute="bottom" constant="8" id="G6P-SR-s2g"/>
                             <constraint firstItem="VUU-Ng-MVy" firstAttribute="top" secondItem="Oya-iv-4Is" secondAttribute="topMargin" constant="20" id="Gzy-6h-LI9"/>
-                            <constraint firstItem="OWr-Z3-rgK" firstAttribute="top" secondItem="O89-OS-VbL" secondAttribute="bottom" constant="8" id="HrQ-IW-g2I"/>
+                            <constraint firstItem="OWr-Z3-rgK" firstAttribute="top" secondItem="O89-OS-VbL" secondAttribute="bottom" constant="20" id="HrQ-IW-g2I"/>
                             <constraint firstItem="O89-OS-VbL" firstAttribute="leading" secondItem="VUU-Ng-MVy" secondAttribute="leading" id="NeL-lc-PX9"/>
                             <constraint firstItem="nbO-Ou-2La" firstAttribute="trailing" secondItem="OWr-Z3-rgK" secondAttribute="trailing" constant="20" id="Xz0-vN-CL1"/>
                             <constraint firstItem="nbO-Ou-2La" firstAttribute="trailing" secondItem="zJS-K4-uUa" secondAttribute="trailing" constant="20" id="bWL-wN-iQN"/>
@@ -152,10 +158,10 @@
             </objects>
             <point key="canvasLocation" x="1892.753623188406" y="126.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="soy-LB-ZXU">
             <objects>
-                <viewController id="dw4-sN-IpM" sceneMemberID="viewController">
+                <viewController id="dw4-sN-IpM" customClass="AddPOIViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jud-Ts-ckH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -252,6 +258,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="17511" width="1920" height="1200"/>
+        <image name="hogwarts castle" width="1920" height="1200"/>
     </resources>
 </document>
