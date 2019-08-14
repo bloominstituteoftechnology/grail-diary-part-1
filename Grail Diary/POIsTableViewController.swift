@@ -9,13 +9,14 @@
 import UIKit
 
 class POIsTableViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableViewCell!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+
 
     /*
     // MARK: - Navigation
@@ -27,4 +28,16 @@ class POIsTableViewController: UIViewController {
     }
     */
 
+}
+
+extension POIsTableViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
 }
