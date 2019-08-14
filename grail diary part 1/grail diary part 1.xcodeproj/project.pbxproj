@@ -12,6 +12,10 @@
 		DD6FF03F230371CC00B4AB8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6FF03D230371CC00B4AB8A /* Main.storyboard */; };
 		DD6FF041230371CD00B4AB8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD6FF040230371CD00B4AB8A /* Assets.xcassets */; };
 		DD6FF044230371CD00B4AB8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6FF042230371CD00B4AB8A /* LaunchScreen.storyboard */; };
+		DDB8AEF12304993200237EFD /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8AEF02304993200237EFD /* AddPOIViewController.swift */; };
+		DDB8AEF32304994600237EFD /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8AEF22304994600237EFD /* POIDetailViewController.swift */; };
+		DDB8AEF62304999B00237EFD /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8AEF52304999B00237EFD /* POITableViewCell.swift */; };
+		DDB8AEF8230499AE00237EFD /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB8AEF7230499AE00237EFD /* POI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		DD6FF040230371CD00B4AB8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD6FF043230371CD00B4AB8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD6FF045230371CD00B4AB8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDB8AEF02304993200237EFD /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		DDB8AEF22304994600237EFD /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		DDB8AEF52304999B00237EFD /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		DDB8AEF7230499AE00237EFD /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,58 @@
 		DD6FF038230371CC00B4AB8A /* grail diary part 1 */ = {
 			isa = PBXGroup;
 			children = (
-				DD6FF039230371CC00B4AB8A /* AppDelegate.swift */,
-				DD6FF03B230371CC00B4AB8A /* CluesTableViewController.swift */,
-				DD6FF03D230371CC00B4AB8A /* Main.storyboard */,
-				DD6FF040230371CD00B4AB8A /* Assets.xcassets */,
-				DD6FF042230371CD00B4AB8A /* LaunchScreen.storyboard */,
-				DD6FF045230371CD00B4AB8A /* Info.plist */,
+				DDB8AEEE230498C300237EFD /* StoryBoards */,
+				DDB8AEED230498B800237EFD /* Model */,
+				DDB8AEF42304994F00237EFD /* View */,
+				DDB8AEEC230498A100237EFD /* controller */,
+				DDB8AEEF230498DA00237EFD /* Resources */,
 			);
 			path = "grail diary part 1";
+			sourceTree = "<group>";
+		};
+		DDB8AEEC230498A100237EFD /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD6FF03B230371CC00B4AB8A /* CluesTableViewController.swift */,
+				DDB8AEF02304993200237EFD /* AddPOIViewController.swift */,
+				DDB8AEF22304994600237EFD /* POIDetailViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		DDB8AEED230498B800237EFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DDB8AEF7230499AE00237EFD /* POI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DDB8AEEE230498C300237EFD /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				DD6FF03D230371CC00B4AB8A /* Main.storyboard */,
+				DD6FF042230371CD00B4AB8A /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		DDB8AEEF230498DA00237EFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DD6FF040230371CD00B4AB8A /* Assets.xcassets */,
+				DD6FF039230371CC00B4AB8A /* AppDelegate.swift */,
+				DD6FF045230371CD00B4AB8A /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DDB8AEF42304994F00237EFD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDB8AEF52304999B00237EFD /* POITableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +188,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD6FF03C230371CC00B4AB8A /* CluesTableViewController.swift in Sources */,
+				DDB8AEF12304993200237EFD /* AddPOIViewController.swift in Sources */,
+				DDB8AEF32304994600237EFD /* POIDetailViewController.swift in Sources */,
 				DD6FF03A230371CC00B4AB8A /* AppDelegate.swift in Sources */,
+				DDB8AEF8230499AE00237EFD /* POI.swift in Sources */,
+				DDB8AEF62304999B00237EFD /* POITableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8P7A77YCZV;
-				INFOPLIST_FILE = "grail diary part 1/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/grail diary part 1/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8P7A77YCZV;
-				INFOPLIST_FILE = "grail diary part 1/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/grail diary part 1/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
