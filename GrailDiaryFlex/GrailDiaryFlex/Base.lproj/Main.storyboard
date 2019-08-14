@@ -66,10 +66,14 @@
                                             <outlet property="countryLabel" destination="7V9-zg-kO4" id="YZw-ru-zkb"/>
                                             <outlet property="locationLabel" destination="A7g-sS-B2h" id="jKK-Ye-nuy"/>
                                             <outlet property="numberOfCluesLabel" destination="W7g-L3-cRM" id="pgD-gy-4DQ"/>
-                                            <segue destination="d5p-6U-2H4" kind="show" identifier="ShowPOIDetailSegue" id="Mxq-6P-N4y"/>
+                                            <segue destination="d5p-6U-2H4" kind="show" identifier="POIDetailSegue" id="xA0-Ul-OSV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="FUl-JW-Kzh"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="tBe-IW-wAG"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -84,7 +88,7 @@
                     <navigationItem key="navigationItem" title="Grail Diary" id="5Ob-Uz-1Tk">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Doh-LR-pIo">
                             <connections>
-                                <segue destination="HVI-XJ-V7u" kind="presentation" identifier="AddPOIModalSegue" id="BID-g6-pFE"/>
+                                <segue destination="HVI-XJ-V7u" kind="presentation" identifier="AddPOISegue" id="YK0-tk-d3K"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -156,7 +160,7 @@
                         <viewLayoutGuide key="safeArea" id="HW1-WZ-0I0"/>
                     </view>
                     <connections>
-                        <outlet property="cluesTextView" destination="ArA-ix-2J0" id="xXz-Qj-69X"/>
+                        <outlet property="cluesTextView" destination="Rst-TZ-Ze6" id="Zum-qG-XPa"/>
                         <outlet property="countryLabel" destination="8xu-N7-sxs" id="s25-c3-GDF"/>
                         <outlet property="locationLabel" destination="Lru-Nd-Vq1" id="K1A-26-0Kg"/>
                     </connections>
