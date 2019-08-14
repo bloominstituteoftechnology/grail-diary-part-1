@@ -28,13 +28,20 @@ class GrailDetailViewController: UIViewController {
     
     func setViews() {
         
-        guard let city = grail?.cityOrState, let country = grail?.country else {return}
+        guard let city = grail?.cityOrState, let country = grail?.country, let grail = grail else {return}
         cityStateLabel.text = "\(city), \(country)"
         cityStateLabel.font = UIFont(name: "System Bold", size: 12)
         
-        grailImageView.image = grail?.image
+        grailImageView.image = grail.image
         
-        cluesTextView.text = grail?.clue.description
+        var clueString = ""
+        let clues = grail.clue
+        
+        for clue in clues {
+            clueString.append(clue)
+            clueString.append("\n")
+        }
+        cluesTextView.text = clueString
         
         cluesLabel.text = "CLUES"
         cluesLabel.font = UIFont(name: "System Heavy", size: 30)
