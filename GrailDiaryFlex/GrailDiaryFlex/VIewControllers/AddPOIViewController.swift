@@ -70,7 +70,7 @@ class AddPOIViewController: UIViewController {
     */
 
 }
-
+// not done, check 19, 20, 21
 extension AddPOIViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

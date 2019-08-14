@@ -34,6 +34,14 @@ class POIsTableViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddPOIModalSegue" {
+            if let addPOIVC = segue.destination as? AddPOIViewController {
+                addPOIVC.delegate = self
+            }
+        }
+    }
 
 }
 
@@ -49,6 +57,16 @@ extension POIsTableViewController: UITableViewDataSource {
         cell.poi = poi
         
         return cell
+    }
+    
+    
+}
+
+extension POIsTableViewController: AddPOIDelegate {
+    func poiWasAdded(_ poi: POI) {
+        pois.append(poi)
+        dismiss(animated: true, completion: nil)
+        tableView.reloadData()
     }
     
     
