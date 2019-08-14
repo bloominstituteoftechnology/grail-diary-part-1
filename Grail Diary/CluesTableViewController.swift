@@ -9,6 +9,10 @@
 import UIKit
 
 class CluesTableViewController: UIViewController {
+    
+    class POITableViewCell: UITableViewCell{
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
