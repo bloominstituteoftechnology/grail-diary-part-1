@@ -12,7 +12,7 @@ class POIsTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-
+    
     var pois: [POI] = []
     
     
@@ -20,35 +20,35 @@ class POIsTableViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.dataSource = self
-
+        
         // Do any additional setup after loading the view.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddPOIModalSegue" {
-            if let addPOIVC = segue.destination as? AddPOIViewController {
-                addPOIVC.delegate = self
-            } else if  segue.identifier == "ShowPOIDetailSegue" {
-                if let indexPath = tableView.indexPathForSelectedRow,
-                    let poiDetailVC = segue.destination as? POIDetailViewController {
-                    poiDetailVC.poi = pois[indexPath.row]
-                }
-            }
+            guard let addPOIVC = segue.destination as? AddPOIViewController else {return}
+            addPOIVC.delegate = self }
+        
+        if segue.identifier == "ShowPOIDetailSegue" {
+            guard let indexPath = tableView.indexPathForSelectedRow,
+                let poiDetailVC = segue.destination as? POIDetailViewController else {return}
+            poiDetailVC.poi = pois[indexPath.row]
+            
         }
     }
-
 }
+
 
 extension POIsTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

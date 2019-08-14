@@ -24,6 +24,12 @@ class AddPOIViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationTextField.delegate = self
+        countryTextField.delegate = self
+        clue1TextField.delegate = self
+        clue2TextField.delegate = self
+        clue3TextField.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -74,8 +80,23 @@ class AddPOIViewController: UIViewController {
 extension AddPOIViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text, !text.isEmpty {
+            switch textField{
+            case locationTextField:
+                textField.resignFirstResponder()
+            case countryTextField:
+                textField.resignFirstResponder()
+            case clue1TextField:
+                textField.resignFirstResponder()
+            case clue2TextField:
+                textField.resignFirstResponder()
+            case clue3TextField:
+                textField.resignFirstResponder()
+            default:
+                textField.resignFirstResponder()
+            }
+        }
         
-        textField.resignFirstResponder()
         return true
     }
     

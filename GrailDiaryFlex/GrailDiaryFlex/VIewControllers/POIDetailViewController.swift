@@ -19,6 +19,7 @@ class POIDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         updateViews()
 
         // Do any additional setup after loading the view.
@@ -41,9 +42,11 @@ class POIDetailViewController: UIViewController {
         locationLabel.text = poi.location
         countryLabel.text = poi.country
         var cluesText = ""
-        for clue in poi.clues {
-            cluesText += "\(clue)"
+        for clue in cluesText {
+            cluesText.append(clue)
+            cluesText.append("\n ")
         }
+        cluesTextView.text = cluesText
         
     }
 
