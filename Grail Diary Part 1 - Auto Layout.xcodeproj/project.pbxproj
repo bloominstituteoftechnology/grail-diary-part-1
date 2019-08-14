@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		86ED152C23034CAA0007368D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED152B23034CAA0007368D /* AppDelegate.swift */; };
-		86ED152E23034CAA0007368D /* CluesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED152D23034CAA0007368D /* CluesTableViewController.swift */; };
 		86ED153123034CAA0007368D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86ED152F23034CAA0007368D /* Main.storyboard */; };
 		86ED153323034CAC0007368D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86ED153223034CAC0007368D /* Assets.xcassets */; };
 		86ED153623034CAC0007368D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86ED153423034CAC0007368D /* LaunchScreen.storyboard */; };
@@ -22,7 +21,6 @@
 /* Begin PBXFileReference section */
 		86ED152823034CAA0007368D /* Grail Diary Part 1 - Auto Layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grail Diary Part 1 - Auto Layout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86ED152B23034CAA0007368D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		86ED152D23034CAA0007368D /* CluesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluesTableViewController.swift; sourceTree = "<group>"; };
 		86ED153023034CAA0007368D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86ED153223034CAC0007368D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86ED153523034CAC0007368D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,11 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				86ED152B23034CAA0007368D /* AppDelegate.swift */,
-				86ED152D23034CAA0007368D /* CluesTableViewController.swift */,
 				86ED152F23034CAA0007368D /* Main.storyboard */,
-				86ED15472304AA9C0007368D /* POIsTableViewController.swift */,
-				86ED15492304AAB10007368D /* AddPOIViewController.swift */,
-				86ED154B2304AABD0007368D /* POIDetailViewController.swift */,
+				86ED15512304ABD60007368D /* View Controllers */,
 				86ED154D2304AACE0007368D /* POITableViewCell.swift */,
 				86ED154F2304AAD60007368D /* POI.swift */,
 				86ED153223034CAC0007368D /* Assets.xcassets */,
@@ -77,6 +72,16 @@
 				86ED153723034CAC0007368D /* Info.plist */,
 			);
 			path = "Grail Diary Part 1 - Auto Layout";
+			sourceTree = "<group>";
+		};
+		86ED15512304ABD60007368D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				86ED15472304AA9C0007368D /* POIsTableViewController.swift */,
+				86ED15492304AAB10007368D /* AddPOIViewController.swift */,
+				86ED154B2304AABD0007368D /* POIDetailViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +158,6 @@
 				86ED15502304AAD60007368D /* POI.swift in Sources */,
 				86ED15482304AA9C0007368D /* POIsTableViewController.swift in Sources */,
 				86ED154A2304AAB10007368D /* AddPOIViewController.swift in Sources */,
-				86ED152E23034CAA0007368D /* CluesTableViewController.swift in Sources */,
 				86ED152C23034CAA0007368D /* AppDelegate.swift in Sources */,
 				86ED154E2304AACE0007368D /* POITableViewCell.swift in Sources */,
 				86ED154C2304AABD0007368D /* POIDetailViewController.swift in Sources */,

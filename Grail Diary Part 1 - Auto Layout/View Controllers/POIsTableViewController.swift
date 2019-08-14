@@ -9,6 +9,10 @@
 import UIKit
 
 class POIsTableViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var pois : [POI] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,3 +32,15 @@ class POIsTableViewController: UIViewController {
     */
 
 }
+    
+    extension POIsTableViewController : UITableViewDataSource {
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            <#code#>
+        }
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            <#code#>
+        }
+        
+        
+    }
