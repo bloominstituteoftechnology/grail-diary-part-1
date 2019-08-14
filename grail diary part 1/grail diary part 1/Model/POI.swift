@@ -7,6 +7,25 @@
 //
 
 import Foundation
-struct POI {
-    
+protocol CreatePOI  {
+    func createPOI(poi: POI)
 }
+
+
+/// data model
+struct POI {
+   
+    let location: String
+    let country:String
+    var clues:[String]
+    
+    init(location:String, country:String) {
+        self.location = location
+        self.country = country
+        clues = []
+    }
+ 
+}
+
+
+
