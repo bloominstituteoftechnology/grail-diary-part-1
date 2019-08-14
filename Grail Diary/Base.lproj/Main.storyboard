@@ -108,6 +108,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="CZF-3h-6yA" id="FwC-mA-PGv"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Hm-FE-mPS">
                                         <rect key="frame" x="0.0" y="46" width="374" height="30"/>
@@ -149,9 +152,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0oQ-B1-G8E">
                                 <rect key="frame" x="0.0" y="847" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="dCc-EQ-MD5"/>
+                                    <barButtonItem systemItem="cancel" id="dCc-EQ-MD5">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="CZF-3h-6yA" id="bDM-AX-NqG"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="TgX-gO-ffj"/>
-                                    <barButtonItem systemItem="save" id="p87-Tj-8k9"/>
+                                    <barButtonItem systemItem="save" id="p87-Tj-8k9">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="CZF-3h-6yA" id="hUo-nl-Ue1"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
