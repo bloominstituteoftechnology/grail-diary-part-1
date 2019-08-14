@@ -13,7 +13,7 @@
         <!--Grail Diary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CluesTableViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="POIsTableViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xjU-iw-RVO">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LocationCell" id="xjU-iw-RVO" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xjU-iw-RVO" id="RMp-UR-iq9">
@@ -89,28 +89,28 @@
             </objects>
             <point key="canvasLocation" x="1160.8695652173915" y="-536.38392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="DWs-Cd-kOc">
             <objects>
-                <viewController id="YND-xJ-V2e" sceneMemberID="viewController">
+                <viewController id="YND-xJ-V2e" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sY7-Ss-y6g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D87-N6-USC">
-                                <rect key="frame" x="279" y="108" width="115" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D87-N6-USC">
+                                <rect key="frame" x="190" y="108" width="204" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnn-2Y-uKT">
-                                <rect key="frame" x="332" y="149" width="62" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnn-2Y-uKT">
+                                <rect key="frame" x="190" y="149" width="204" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wF-cr-gsG">
-                                <rect key="frame" x="20" y="278" width="44" height="21"/>
+                                <rect key="frame" x="20" y="278" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -132,14 +132,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="D87-N6-USC" firstAttribute="leading" secondItem="oF1-R8-0QC" secondAttribute="trailing" constant="20" id="2mp-GH-o3d"/>
                             <constraint firstItem="lnn-2Y-uKT" firstAttribute="top" secondItem="D87-N6-USC" secondAttribute="bottom" constant="20" id="A7e-GA-dKr"/>
                             <constraint firstItem="dYy-5n-5of" firstAttribute="trailing" secondItem="D87-N6-USC" secondAttribute="trailing" constant="20" id="FFM-rl-9PE"/>
                             <constraint firstItem="7wF-cr-gsG" firstAttribute="top" secondItem="oF1-R8-0QC" secondAttribute="bottom" constant="20" id="FcJ-6B-jTz"/>
                             <constraint firstItem="OiO-nT-mqP" firstAttribute="leading" secondItem="7wF-cr-gsG" secondAttribute="leading" id="MWn-PQ-tl1"/>
+                            <constraint firstItem="dYy-5n-5of" firstAttribute="trailing" secondItem="7wF-cr-gsG" secondAttribute="trailing" constant="20" id="Mkn-1E-IYT"/>
                             <constraint firstItem="dYy-5n-5of" firstAttribute="bottom" secondItem="OiO-nT-mqP" secondAttribute="bottom" constant="20" id="SeB-fh-99v"/>
                             <constraint firstItem="oF1-R8-0QC" firstAttribute="leading" secondItem="dYy-5n-5of" secondAttribute="leading" constant="20" id="Tx5-m9-GWn"/>
                             <constraint firstItem="oF1-R8-0QC" firstAttribute="top" secondItem="dYy-5n-5of" secondAttribute="top" constant="20" id="U0T-EZ-nsf"/>
                             <constraint firstItem="7wF-cr-gsG" firstAttribute="leading" secondItem="oF1-R8-0QC" secondAttribute="leading" id="UPW-a3-TnV"/>
+                            <constraint firstItem="lnn-2Y-uKT" firstAttribute="leading" secondItem="oF1-R8-0QC" secondAttribute="trailing" constant="20" id="W1P-Sd-361"/>
                             <constraint firstItem="lnn-2Y-uKT" firstAttribute="trailing" secondItem="D87-N6-USC" secondAttribute="trailing" id="Wn8-6o-Z3n"/>
                             <constraint firstItem="D87-N6-USC" firstAttribute="top" secondItem="dYy-5n-5of" secondAttribute="top" constant="20" id="ekb-zP-CKI"/>
                             <constraint firstItem="OiO-nT-mqP" firstAttribute="top" secondItem="7wF-cr-gsG" secondAttribute="bottom" constant="20" id="fKC-Ou-2Cx"/>
@@ -152,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="2012" y="-536"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="PVQ-lT-RzL">
             <objects>
-                <viewController id="d2s-6j-sFh" sceneMemberID="viewController">
+                <viewController id="d2s-6j-sFh" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cEn-xm-d88">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
