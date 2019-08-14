@@ -32,22 +32,24 @@ extension CluesTableViewController: UITableViewDataSource {
         return cell
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "" {
-            guard let selectedPath = tableview.indexPathForSelectedRow,
-                let AddPOiVC = segue.destination as? AddPOIViewController else {return}
+        if segue.identifier == "AddPOIModalSegue" {
+            guard let AddPOiVC = segue.destination as? AddPOIViewController else {return}
+            AddPOiVC.POIDelegate = self
             
-        } else if segue.identifier == "" {
-            guard let POiDetailVC = segue.destination as? POIDetailViewController else {return}
+        } else if segue.identifier == "ShowPOIDetailSegue" {
+            guard let selectedIndexPath = tableview.indexPathForSelectedRow,
+                let POiDetailVC = segue.destination as? POIDetailViewController else {return}
+                let poi = POIS[selectedIndexPath.row]
+                POiDetailVC.poi = poi
         }
     }
     
 }
+
 extension CluesTableViewController: CreatePOI {
     func createPOI(poi: POI) {
         POIS.append(poi)
         dismiss(animated: true, completion: nil)
         tableview.reloadData()
     }
-    
-    
 }
