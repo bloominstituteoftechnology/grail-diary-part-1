@@ -27,7 +27,7 @@ extension CluesTableViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else {return UITableViewCell()}
-        let POI = POIS[indexPath.row]
+        let poi = POIS[indexPath.row]
         cell.poi = poi
         return cell
     }
