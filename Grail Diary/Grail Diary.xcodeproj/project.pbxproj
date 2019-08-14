@@ -12,6 +12,11 @@
 		DD532AC52302A70E00F10960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD532AC32302A70E00F10960 /* Main.storyboard */; };
 		DD532AC72302A70F00F10960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD532AC62302A70F00F10960 /* Assets.xcassets */; };
 		DD532ACA2302A70F00F10960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD532AC82302A70F00F10960 /* LaunchScreen.storyboard */; };
+		DD87F16D2304991900F5E604 /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD87F16C2304991900F5E604 /* POIsTableViewController.swift */; };
+		DD87F16F2304993E00F5E604 /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD87F16E2304993E00F5E604 /* AddPOIViewController.swift */; };
+		DD87F1712304995200F5E604 /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD87F1702304995200F5E604 /* POIDetailViewController.swift */; };
+		DD87F1752304998C00F5E604 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD87F1742304998C00F5E604 /* POI.swift */; };
+		DD87F1782304A36D00F5E604 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD87F1772304A36D00F5E604 /* POITableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		DD532AC62302A70F00F10960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD532AC92302A70F00F10960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD532ACB2302A70F00F10960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD87F16C2304991900F5E604 /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
+		DD87F16E2304993E00F5E604 /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		DD87F1702304995200F5E604 /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		DD87F1742304998C00F5E604 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
+		DD87F1772304A36D00F5E604 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,43 @@
 		DD532ABE2302A70E00F10960 /* Grail Diary */ = {
 			isa = PBXGroup;
 			children = (
-				DD532ABF2302A70E00F10960 /* AppDelegate.swift */,
-				DD532AC12302A70E00F10960 /* CluesTableViewController.swift */,
 				DD532AC32302A70E00F10960 /* Main.storyboard */,
+				DD87F1792304A38D00F5E604 /* Models */,
+				DD87F17A2304A39700F5E604 /* Custom Views */,
+				DD87F1762304999F00F5E604 /* ViewController */,
+				DD532ABF2302A70E00F10960 /* AppDelegate.swift */,
 				DD532AC62302A70F00F10960 /* Assets.xcassets */,
 				DD532AC82302A70F00F10960 /* LaunchScreen.storyboard */,
 				DD532ACB2302A70F00F10960 /* Info.plist */,
 			);
 			path = "Grail Diary";
+			sourceTree = "<group>";
+		};
+		DD87F1762304999F00F5E604 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD87F1702304995200F5E604 /* POIDetailViewController.swift */,
+				DD87F16E2304993E00F5E604 /* AddPOIViewController.swift */,
+				DD87F16C2304991900F5E604 /* POIsTableViewController.swift */,
+				DD532AC12302A70E00F10960 /* CluesTableViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DD87F1792304A38D00F5E604 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD87F1742304998C00F5E604 /* POI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD87F17A2304A39700F5E604 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD87F1772304A36D00F5E604 /* POITableViewCell.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD87F1782304A36D00F5E604 /* POITableViewCell.swift in Sources */,
+				DD87F1752304998C00F5E604 /* POI.swift in Sources */,
+				DD87F16D2304991900F5E604 /* POIsTableViewController.swift in Sources */,
+				DD87F16F2304993E00F5E604 /* AddPOIViewController.swift in Sources */,
 				DD532AC22302A70E00F10960 /* CluesTableViewController.swift in Sources */,
 				DD532AC02302A70E00F10960 /* AppDelegate.swift in Sources */,
+				DD87F1712304995200F5E604 /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
