@@ -9,7 +9,8 @@
 import UIKit
 
 class POIDetailViewController: UIViewController {
-
+    @IBOutlet weak var locatuonLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

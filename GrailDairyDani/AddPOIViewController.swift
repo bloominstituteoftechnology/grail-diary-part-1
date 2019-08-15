@@ -52,12 +52,8 @@ class AddPOIViewController: UIViewController {
         poi.clues.append(clue3)
         }
         
-//        delegate?.POICreated(poi)
+        delegate?.POICreated(poi)
         
     }
 
-}
-
-extension UITextFieldDelegate {
-    
 }
