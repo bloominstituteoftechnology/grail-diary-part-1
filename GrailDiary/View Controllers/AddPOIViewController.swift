@@ -71,12 +71,17 @@ class AddPOIViewController: UIViewController {
 }
 
 extension AddPOIViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard let text = textField.text,
-        !text.isEmpty else { return false }
-        textField.resignFirstResponder()
+    // Step 21 ---- Stuck
+    func textFieldShouldReturn(textfield: UITextField!) -> Bool
+    {
+        if textfield != nil {
+        textfield.resignFirstResponder()
+        }
+        
+        
         return true
-       
+        
+        
     }
 }
 
