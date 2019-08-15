@@ -87,6 +87,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="alA-Aa-hN8" id="xtD-Sf-CSn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -149,9 +152,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0oQ-B1-G8E">
                                 <rect key="frame" x="0.0" y="847" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="dCc-EQ-MD5"/>
+                                    <barButtonItem systemItem="cancel" id="dCc-EQ-MD5">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="CZF-3h-6yA" id="mHW-ci-WX7"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="TgX-gO-ffj"/>
-                                    <barButtonItem systemItem="save" id="p87-Tj-8k9"/>
+                                    <barButtonItem systemItem="save" id="p87-Tj-8k9">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="CZF-3h-6yA" id="axo-rO-XLV"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

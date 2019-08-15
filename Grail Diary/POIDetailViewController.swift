@@ -34,8 +34,14 @@ class POIDetailViewController: UIViewController {
         for clue in poi.clues{
             cluesText += "• \(clue)\n"
         }
+<<<<<<< HEAD
+        cluesTextView.text = cluesText
+    }
+}
+=======
     }
 
+>>>>>>> edda7f8c4e5e80b5ef2c829fd4d7aa9df2288061
     /*
     // MARK: - Navigation
 
@@ -46,4 +52,8 @@ class POIDetailViewController: UIViewController {
     }
     */
 
+<<<<<<< HEAD
+
+=======
 }
+>>>>>>> edda7f8c4e5e80b5ef2c829fd4d7aa9df2288061

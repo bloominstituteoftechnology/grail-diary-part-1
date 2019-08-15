@@ -20,6 +20,9 @@ class POITableViewCell: UITableViewCell {
             updateViews()
         }
     }
+<<<<<<< HEAD
+ 
+=======
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,6 +34,7 @@ class POITableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+>>>>>>> edda7f8c4e5e80b5ef2c829fd4d7aa9df2288061
     private func updateViews(){
         guard let poi = poi else {return}
         

@@ -49,13 +49,20 @@ class AddPOIViewController: UIViewController {
         }
         if let clue2 = clue2TextField.text, !clue2.isEmpty {
             poi.clues.append(clue2)
+<<<<<<< HEAD
+             }
+=======
             
+>>>>>>> edda7f8c4e5e80b5ef2c829fd4d7aa9df2288061
         if let clue3 = clue3TextField.text, !clue3.isEmpty {
             poi.clues.append(clue3)
             }
         delegate?.poiWasCreated(poi)
             
+<<<<<<< HEAD
+=======
         }
+>>>>>>> edda7f8c4e5e80b5ef2c829fd4d7aa9df2288061
     }
     
    

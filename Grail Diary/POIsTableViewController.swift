@@ -15,7 +15,14 @@ class POIsTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
+        
+        tableView.dataSource = self
+        
+        
+=======
 
+>>>>>>> edda7f8c4e5e80b5ef2c829fd4d7aa9df2288061
         // Do any additional setup after loading the view.
     }
     
@@ -23,16 +30,39 @@ class POIsTableViewController: UIViewController {
         if segue.identifier == "AddPOIModalSegue"{
             if let addPOIVC = segue.destination as? AddPOIViewController{
                 addPOIVC.delegate = self
+<<<<<<< HEAD
+            }
+        }else if segue.identifier == "ShowPOIDetailSegue" {
+            if let indexPath = tableView.indexPathForSelectedRow,
+                let poiDetailVC = segue.destination as? POIDetailViewController{
+                poiDetailVC.poi = pois[indexPath.row]
+                
+            }
+=======
             }else if segue.identifier == "ShowPOIDetailSegue" {
                 if let indexPath = tableView.indexPathForSelectedRow,
                     let poiDetailVC = segue.destination as? POIDetailViewController{
                     poiDetailVC.poi = pois[indexPath.row]
                     
                 }
+>>>>>>> edda7f8c4e5e80b5ef2c829fd4d7aa9df2288061
         }
         
     }
     
+<<<<<<< HEAD
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+=======
     }
 
 
@@ -46,6 +76,7 @@ class POIsTableViewController: UIViewController {
     }
     */
 
+>>>>>>> edda7f8c4e5e80b5ef2c829fd4d7aa9df2288061
 }
 
 extension POIsTableViewController: UITableViewDataSource{
@@ -55,6 +86,16 @@ extension POIsTableViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "POI Cell", for: indexPath) as? POITableViewCell else {return UITableViewCell()}
+<<<<<<< HEAD
+        
+        let poi = pois[indexPath.row]
+        cell.poi = poi
+        return cell
+    }
+    
+    
+}
+=======
     
         let poi = pois[indexPath.row]
        
@@ -63,6 +104,7 @@ extension POIsTableViewController: UITableViewDataSource{
     
     
     }
+>>>>>>> edda7f8c4e5e80b5ef2c829fd4d7aa9df2288061
 
 extension POIsTableViewController: AddPOIDelegate{
     func poiWasCreated (_ poi: POI ){
