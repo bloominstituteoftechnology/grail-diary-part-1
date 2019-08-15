@@ -148,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VX1-a9-9S2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2709" y="859"/>
+            <point key="canvasLocation" x="2470" y="850"/>
         </scene>
         <!--AddPOI View Controller-->
         <scene sceneID="Kl4-Gi-1MI">
@@ -208,9 +208,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swl-sU-W7m">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="save" id="U1W-hb-7Tg"/>
+                                    <barButtonItem systemItem="cancel" id="U1W-hb-7Tg">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="ngL-mN-byJ" id="k6n-jT-73b"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="6xM-kc-sVn"/>
-                                    <barButtonItem systemItem="cancel" id="5dU-WU-cDQ"/>
+                                    <barButtonItem systemItem="save" id="5dU-WU-cDQ">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="ngL-mN-byJ" id="BFP-RL-WjP"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -231,6 +239,8 @@
                         <outlet property="ClueLabel3" destination="D6x-22-LR9" id="ZYm-z8-qL0"/>
                         <outlet property="CountryLabel" destination="ElX-TW-xiT" id="ASE-pP-yNp"/>
                         <outlet property="LocationLabel" destination="kLs-j3-cFc" id="oKB-3T-XXC"/>
+                        <outlet property="cancelTapped" destination="swl-sU-W7m" id="iRg-S7-tlv"/>
+                        <outlet property="saveTapped" destination="swl-sU-W7m" id="I8I-qc-4Km"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OfM-ds-Nq4" userLabel="First Responder" sceneMemberID="firstResponder"/>
