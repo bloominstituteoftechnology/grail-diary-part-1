@@ -76,7 +76,13 @@ class AddPOIViewController: UIViewController {
 extension AddPOIViewController: UITextFieldDelegate{
     private func textFieldShouldReturn(_ textField: UITextField){
         if let textFieldShouldReturn = textField.text, !textFieldShouldReturn.isEmpty{
-            
+            switch textField{
+            case locationTextField:
+                locationTextField.isFirstResponder = true
+            case countryTextField:
+                countryTextField.isFirstResponder = true
+                
+            }
         }
         
     

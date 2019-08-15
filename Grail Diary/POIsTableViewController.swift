@@ -40,9 +40,20 @@ extension POIsTableViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "POI Cell", for: indexPath) as? POITableViewCell else {return UITableViewCell()}
     
-        let poi = pois[indexPath.row] 
+        let poi = pois[indexPath.row]
     
     }
     
+    
+    }
+
+extension POIsTableViewController: AddPOIDelegate{
+    func poiWasAdded(_ poi: POI) {
+        <#code#>
+    }
+    
+    func poiWasCreated (_: ){
+        
+    }
     
 }
