@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AddPOIDelegate {
-    func poiWasAdded(_ poi: POI)
+    func poiWasCreated(_ poi: POI)
    
 }
 
@@ -53,7 +53,7 @@ class AddPOIViewController: UIViewController {
         if let clue3 = clue3TextField.text, !clue3.isEmpty {
             poi.clues.append(clue3)
             }
-        delegate?.poiWasAdded(poi)
+        delegate?.poiWasCreated(poi)
             
         }
     }
@@ -73,13 +73,13 @@ class AddPOIViewController: UIViewController {
 
 }
 
+/*
 extension AddPOIViewController: UITextFieldDelegate{
     private func textFieldShouldReturn(_ textField: UITextField){
         if let textFieldShouldReturn = textField.text, !textFieldShouldReturn.isEmpty{
             switch textField{
-            case locationTextField:
-                locationTextField.isFirstResponder = true
-            case countryTextField:
+            case locationTextField.becomeFirstResponder()
+            case countryTextField.becomeFirstResponder()
                 countryTextField.isFirstResponder = true
                 
             }
@@ -90,3 +90,4 @@ extension AddPOIViewController: UITextFieldDelegate{
 
 }
 
+ */
