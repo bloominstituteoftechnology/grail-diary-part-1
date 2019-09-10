@@ -12,7 +12,7 @@ Grail Diary is an app that allows the user to track locations of interest (POIs)
 
 ## Instructions
 
-Please fork and clone this repository. Create a new Xcode project inside of the cloned repository. Use the single view app template and name it "GrailDairy"
+Please fork and clone this repository. Create a new Xcode project inside of the cloned repository. Use the single view app template and name it "GrailDiary"
 
 ### Storyboard Tasks
 
