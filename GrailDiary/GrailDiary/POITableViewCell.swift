@@ -24,7 +24,8 @@ class POITableViewCell: UITableViewCell {
         if let poi = poi {
             locationLabel.text = poi.location
             countryLabel.text = poi.country
-            cluesCountLabel.text = "\(poi.clues.count) clues"
+            let clueCount = poi.clues.count
+            cluesCountLabel.text = "\(clueCount) clue\(clueCount == 1 ? "" : "s")"
         }
     }
     
