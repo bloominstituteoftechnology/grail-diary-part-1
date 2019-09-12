@@ -66,11 +66,12 @@
                                             <outlet property="cluesCountLabel" destination="axy-jY-i01" id="DNu-at-oPg"/>
                                             <outlet property="countryLabel" destination="7ks-Bo-dUB" id="c3x-jN-L7K"/>
                                             <outlet property="locationLabel" destination="uRu-YH-VnX" id="wOf-Hc-UPB"/>
-                                            <segue destination="UDT-D1-7uW" kind="show" id="kfY-nq-V3q"/>
+                                            <segue destination="UDT-D1-7uW" kind="show" identifier="ShowGrailDetail" id="kfY-nq-V3q"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
+                                    <outlet property="dataSource" destination="kbn-AQ-sLP" id="6RX-4X-e6Y"/>
                                     <outlet property="delegate" destination="kbn-AQ-sLP" id="zfG-QY-7lG"/>
                                 </connections>
                             </tableView>
@@ -132,6 +133,13 @@
                                 <rect key="frame" x="0.0" y="167" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpo-fQ-sIW">
+                                <rect key="frame" x="283" y="137" width="111" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -141,6 +149,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="47T-tO-QRh"/>
                     </view>
+                    <connections>
+                        <outlet property="GrailListTextView" destination="YNj-Hd-BqD" id="QqP-Uh-CEP"/>
+                        <outlet property="countryNameLabel" destination="Cpo-fQ-sIW" id="QWY-mg-V2O"/>
+                        <outlet property="locationLabel" destination="OSh-7Z-fFH" id="1o3-lc-nha"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VX1-a9-9S2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

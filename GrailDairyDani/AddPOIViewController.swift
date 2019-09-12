@@ -55,9 +55,7 @@ class AddPOIViewController: UIViewController {
         delegate?.poiWasAdded(poi)
         
     }
-
 }
-
 
 extension AddPOIViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
