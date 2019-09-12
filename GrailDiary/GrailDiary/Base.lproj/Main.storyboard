@@ -13,7 +13,7 @@
         <!--Grail Diary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CluesTableViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="POIsTableViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="60" id="UXA-O2-fb4">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="60" id="UXA-O2-fb4" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UXA-O2-fb4" id="4UU-ub-SPh">
@@ -62,10 +62,17 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="countryLabel" destination="EW4-Lt-487" id="BCy-Np-sXS"/>
+                                            <outlet property="locationLabel" destination="KyY-VL-L20" id="8ek-Jq-qaR"/>
+                                            <outlet property="numberClueLabel" destination="Yq8-ap-hwK" id="Wzz-C5-IlH"/>
                                             <segue destination="K7q-SF-P27" kind="show" identifier="ShowPOIDetailSegue" id="UPr-Qz-TRJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="OwN-VF-Z9p"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="B4Y-s4-7do"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -84,15 +91,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Fwd-wv-ntE" id="JZK-8a-EcT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="18.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="Ikr-ju-hTr">
             <objects>
-                <viewController id="K7q-SF-P27" sceneMemberID="viewController">
+                <viewController id="K7q-SF-P27" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eaM-b7-VXy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,7 +135,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n8z-0d-XOC">
                                 <rect key="frame" x="20" y="337.5" width="374" height="524.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -149,15 +159,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qix-M9-Ok9"/>
                     </view>
+                    <connections>
+                        <outlet property="clueTextView" destination="n8z-0d-XOC" id="iQ5-yu-X7Q"/>
+                        <outlet property="countryLabel" destination="ul0-4b-CnW" id="HL1-Hk-fHC"/>
+                        <outlet property="locationLabel" destination="1zO-YJ-vDA" id="Bkh-cP-6O1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbT-P8-8ZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1969.5652173913045" y="18.75"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="06Y-r7-BAb">
             <objects>
-                <viewController id="TW3-tJ-Ga6" sceneMemberID="viewController">
+                <viewController id="TW3-tJ-Ga6" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QYJ-LO-ltD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,9 +227,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUp-h3-TeG">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Cancel" id="Agk-gc-y1m"/>
+                                    <barButtonItem title="Cancel" id="Agk-gc-y1m">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="TW3-tJ-Ga6" id="crj-42-JmX"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="iuF-6o-zUl"/>
-                                    <barButtonItem title="Save" id="Lq5-Ao-WOc"/>
+                                    <barButtonItem title="Save" id="Lq5-Ao-WOc">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="TW3-tJ-Ga6" id="tJ1-k5-5Zh"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem id="UAB-Co-bkx"/>
                                 </items>
                             </toolbar>
@@ -230,6 +253,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JC5-BY-yrg"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="gDm-uS-CAv" id="tEK-ec-0wb"/>
+                        <outlet property="clue2TextField" destination="RYx-lC-KBc" id="HvO-2o-VhQ"/>
+                        <outlet property="clue3TextField" destination="Qax-ms-51y" id="KOZ-gm-rqd"/>
+                        <outlet property="countryTextField" destination="IBb-PI-psN" id="N5W-Ni-E2j"/>
+                        <outlet property="locationTextField" destination="nil-51-5Ba" id="PuE-hM-tCF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38P-kJ-Ifr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
