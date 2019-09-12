@@ -26,15 +26,15 @@ class POIsTableViewController: UIViewController {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell () }
+        guard tableView.dequeueReusableCell(withIdentifier: "GrailDiaryCell", for: indexPath) is POITableViewCell else { return UITableViewCell () }
         
-        let newpoi = 
-        
+//        let newpoi =
+//
         return UITableViewCell()
     }
 }
 
-extension POIsTableViewController: UITableViewDataSource {
-    func tableView
-    
-}
+//extension POIsTableViewController: UITableViewDataSource {
+//    func tableView
+//
+

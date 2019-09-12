@@ -27,10 +27,10 @@ class AddPOIViewController: UIViewController {
 
         
     }
-    @IBAction func cancelTapped(_ sender: Any) {
+    @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
-    @IBAction func saveTapped(_ sender: Any) {
+    @IBAction func saveTapped(_ sender: UIBarButtonItem) {
         
         guard let location = LocationLabel.text,
         let country = CountryLabel.text,
@@ -52,8 +52,30 @@ class AddPOIViewController: UIViewController {
         poi.clues.append(clue3)
         }
         
-        delegate?.POICreated(poi)
+        delegate?.poiWasAdded(poi)
         
     }
 
 }
+
+
+extension AddPOIViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text,
+            !text.isEmpty {
+            switch textField {
+            case LocationLabel:
+                CountryLabel.becomeFirstResponder()
+            case CountryLabel:
+                ClueLabel.becomeFirstResponder()
+            case ClueLabel:
+                ClueLabel2.becomeFirstResponder()
+            case ClueLabel2:
+                ClueLabel3.becomeFirstResponder()
+            default:
+                textField.resignFirstResponder()
+            }
+        }
+         return false
+            }
+        }
