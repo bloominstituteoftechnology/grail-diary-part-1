@@ -50,6 +50,8 @@ extension POIsTableViewController: UITableViewDataSource {
             POITableViewCell else {return UITableViewCell ()}
         
 //
+        let poi = models[indexPath.row]
+        cell.poi = poi
         
         return cell
     }
