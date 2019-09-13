@@ -10,11 +10,11 @@ import UIKit
 
 class POIsTableViewController: UIViewController {
     
-    var poiArray: [POI] = []
+    var POIs: [POI] = []
     
     @IBOutlet weak var tableView: UITableView!
     
-
+    // ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,52 +32,47 @@ class POIsTableViewController: UIViewController {
             if let addPoiVC = segue.destination as? AddPOIViewController {
                 addPoiVC.delegate = self
             }
+                
+        } else if segue.identifier == "ShowPOIDetailSegue" {
+                if let indexPath = tableView.indexPathForSelectedRow,
+                    let poiDetailVC = segue.destination as? POIDetailViewController {
+                    poiDetailVC.poi = POIs[indexPath.row]
+                }
+            }
             
         } 
         
-        
-//        if segue.identifier == "AddFriendModalSegue" {
-//            if let addFriendVC = segue.destination as? AddFriendViewController {
-//                addFriendVC.delegate = self
-//            }
-//        } else if segue.identifier == "ShowFriendDetailSegue" {
-//            if let indexPath = tableView.indexPathForSelectedRow,
-//                let friendDetailVC = segue.destination as? FriendDetailViewController {
-//                friendDetailVC.friend = friends[indexPath.row]
-//            }
-//
-        
-        
-        
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
- 
 
-}
 
+
+// Extension to conform to the UITableViewDataSource protocol
 extension POIsTableViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return POIs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
+        
+        let poi = POIs[indexPath.row]
+        cell.poi = poi
+        
+        return cell
     }
     
     
 }
 
+
+// Extension to conform to the AddPOIDelegateprotocol
 extension POIsTableViewController: AddPOIDelegate {
     func poiWasAdded(_ poi: POI) {
-        poiArray.append(poi)
+        POIs.append(poi)
         dismiss(animated: true, completion: nil)
         tableView.reloadData()
     }
     
-    
 }
 
-
-//Wire up the delegate property of the tableview in the storyboard to the view controller

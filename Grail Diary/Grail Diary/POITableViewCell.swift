@@ -21,6 +21,8 @@ class POITableViewCell: UITableViewCell {
         }
     }
     
+    
+    // private func updateViews
     private func updateViews() {
         guard let poi = poi else { return }
         
@@ -28,16 +30,5 @@ class POITableViewCell: UITableViewCell {
         countryLabel.text = poi.country
         cluesCountLabel.text = "\(poi.clues.count) clues"
     }
-
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        // Initialization code
-//    }
-
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
 
 }

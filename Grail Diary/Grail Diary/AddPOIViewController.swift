@@ -9,10 +9,9 @@
 import UIKit
 
 
+// AddPOIDelegate protocol
 protocol AddPOIDelegate {
     func poiWasAdded(_ poi: POI)
-    
-    
 }
 
 
@@ -29,13 +28,15 @@ class AddPOIViewController: UIViewController {
     
     
     
-    
-
+    // ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    // IBActions to cancelTapped & saveTapped
     
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
@@ -69,20 +70,12 @@ class AddPOIViewController: UIViewController {
         
         delegate?.poiWasAdded(poi)
         
-        
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
+
+// Extension to conform to UITextFieldDelegate
 extension AddPOIViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -102,8 +95,6 @@ extension AddPOIViewController: UITextFieldDelegate {
                 textField.resignFirstResponder()
             }
         }
+        return false
     }
-    
-    
-    
 }

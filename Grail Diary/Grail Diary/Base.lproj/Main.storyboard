@@ -70,6 +70,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="aVB-Vo-Inf"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="p9d-jK-NUe"/>
                                 </connections>
                             </tableView>
@@ -125,13 +126,6 @@
                                     <constraint firstAttribute="width" secondItem="0sJ-Q5-HRZ" secondAttribute="height" multiplier="1:1" id="v7K-En-D0Y"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qCT-0s-tJp">
-                                <rect key="frame" x="20" y="379" width="374" height="463"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tmo-21-Gg9">
                                 <rect key="frame" x="20" y="350" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -143,9 +137,7 @@
                         <constraints>
                             <constraint firstItem="tEf-iz-zzn" firstAttribute="trailing" secondItem="3GH-y7-YxK" secondAttribute="trailing" id="2dO-Pc-OU0"/>
                             <constraint firstItem="3GH-y7-YxK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0sJ-Q5-HRZ" secondAttribute="trailing" constant="8" id="4QA-P7-MaK"/>
-                            <constraint firstItem="O2X-dM-yYI" firstAttribute="bottom" secondItem="qCT-0s-tJp" secondAttribute="bottom" constant="20" id="CjM-h4-8YO"/>
                             <constraint firstItem="Tmo-21-Gg9" firstAttribute="leading" secondItem="0sJ-Q5-HRZ" secondAttribute="leading" id="E3c-W3-OPM"/>
-                            <constraint firstItem="qCT-0s-tJp" firstAttribute="trailing" secondItem="tEf-iz-zzn" secondAttribute="trailing" id="Gh1-P8-ktI"/>
                             <constraint firstItem="O2X-dM-yYI" firstAttribute="trailing" secondItem="3GH-y7-YxK" secondAttribute="trailing" constant="20" id="IRW-lI-xOE"/>
                             <constraint firstItem="Tmo-21-Gg9" firstAttribute="top" secondItem="0sJ-Q5-HRZ" secondAttribute="bottom" constant="40" id="Se4-3f-VCl"/>
                             <constraint firstItem="tEf-iz-zzn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0sJ-Q5-HRZ" secondAttribute="trailing" constant="8" id="UAb-pa-kek"/>
@@ -153,11 +145,13 @@
                             <constraint firstItem="0sJ-Q5-HRZ" firstAttribute="top" secondItem="3GH-y7-YxK" secondAttribute="top" id="bf6-93-d8h"/>
                             <constraint firstItem="tEf-iz-zzn" firstAttribute="top" secondItem="3GH-y7-YxK" secondAttribute="bottom" constant="8" id="cQK-I8-e7b"/>
                             <constraint firstItem="0sJ-Q5-HRZ" firstAttribute="leading" secondItem="O2X-dM-yYI" secondAttribute="leading" constant="20" id="fjU-yo-3Rz"/>
-                            <constraint firstItem="qCT-0s-tJp" firstAttribute="leading" secondItem="Tmo-21-Gg9" secondAttribute="leading" id="gfy-kD-fHD"/>
-                            <constraint firstItem="qCT-0s-tJp" firstAttribute="top" secondItem="Tmo-21-Gg9" secondAttribute="bottom" constant="8" id="t9L-N8-mgm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O2X-dM-yYI"/>
                     </view>
+                    <connections>
+                        <outlet property="countryLabel" destination="tEf-iz-zzn" id="EjU-mT-gpG"/>
+                        <outlet property="locationLabel" destination="3GH-y7-YxK" id="zuj-Ct-SBj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1AI-Tk-Xrm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
