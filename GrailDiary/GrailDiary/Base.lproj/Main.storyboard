@@ -29,7 +29,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="XcE-xG-Pgm">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="XcE-xG-Pgm" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XcE-xG-Pgm" id="Esu-cx-8jc">
@@ -70,6 +70,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="countryLabel" destination="PQc-0A-pPo" id="7MH-RW-wyf"/>
+                                            <outlet property="locationLabel" destination="gJG-Sd-pF1" id="95x-ME-ZAh"/>
+                                            <outlet property="numberOfCluesLabel" destination="jhT-Je-704" id="YCt-cq-FjV"/>
                                             <segue destination="EO6-XL-Xgh" kind="show" identifier="ShowPOIDetailSegue" id="o1i-Oy-7tK"/>
                                         </connections>
                                     </tableViewCell>
