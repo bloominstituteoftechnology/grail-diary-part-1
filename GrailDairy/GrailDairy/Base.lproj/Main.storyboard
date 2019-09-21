@@ -59,6 +59,9 @@
                                                 <constraint firstItem="D1O-li-vKB" firstAttribute="centerY" secondItem="nrx-2R-FqW" secondAttribute="centerY" id="xEG-5B-38C"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="dkY-9a-Ne4" kind="show" identifier="ShowPOIDetailSegue" id="277-UF-qkY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -85,6 +88,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="852.17391304347836" y="97.767857142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BDk-bE-b1n">
+            <objects>
+                <viewController id="dkY-9a-Ne4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nIb-RM-azE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="piQ-gb-p2m"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XiB-bY-o14"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHs-uK-dpD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1584" y="505"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UAT-Ip-ahl">
