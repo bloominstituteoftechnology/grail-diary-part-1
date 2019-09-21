@@ -96,14 +96,41 @@
                     <view key="view" contentMode="scaleToFill" id="nIb-RM-azE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8L5-Pr-ej7">
+                                <rect key="frame" x="279" y="160" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAL-5c-Cg9">
+                                <rect key="frame" x="332" y="189" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Lk-BK-AFM">
+                                <rect key="frame" x="20" y="316" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lAL-5c-Cg9" firstAttribute="trailing" secondItem="8L5-Pr-ej7" secondAttribute="trailing" id="297-ae-mgZ"/>
+                            <constraint firstItem="piQ-gb-p2m" firstAttribute="trailing" secondItem="8L5-Pr-ej7" secondAttribute="trailing" constant="20" id="Dnv-5l-thX"/>
+                            <constraint firstItem="8L5-Pr-ej7" firstAttribute="top" secondItem="piQ-gb-p2m" secondAttribute="top" constant="20" id="Rn5-g8-usD"/>
+                            <constraint firstItem="lAL-5c-Cg9" firstAttribute="top" secondItem="8L5-Pr-ej7" secondAttribute="bottom" constant="8" id="ak2-Th-z95"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="piQ-gb-p2m"/>
                     </view>
                     <navigationItem key="navigationItem" id="XiB-bY-o14"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHs-uK-dpD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1584" y="505"/>
+            <point key="canvasLocation" x="1582.608695652174" y="504.91071428571428"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UAT-Ip-ahl">
