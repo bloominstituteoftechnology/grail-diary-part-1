@@ -53,7 +53,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbx-fN-F8r">
-                                                    <rect key="frame" x="284.5" y="14" width="109.5" height="31.5"/>
+                                                    <rect key="frame" x="678.5" y="14" width="109.5" height="31.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -146,7 +146,7 @@
                                 </subviews>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yd4-g4-WJb">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Cancel" id="jq7-TY-HNw"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="2FA-ts-IJA"/>
@@ -190,14 +190,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Place to relax" translatesAutoresizingMaskIntoConstraints="NO" id="azm-JG-Xse">
-                                <rect key="frame" x="20" y="64" width="150" height="152"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Place to relax" translatesAutoresizingMaskIntoConstraints="NO" id="azm-JG-Xse">
+                                <rect key="frame" x="20" y="64" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="OoF-AV-4Ny"/>
+                                    <constraint firstAttribute="width" secondItem="azm-JG-Xse" secondAttribute="height" multiplier="1:1" id="cVw-NB-iUt"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRx-8f-2XT">
-                                <rect key="frame" x="20" y="224" width="44" height="21"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Kfm-w7-F6E">
+                                <rect key="frame" x="20" y="283" width="374" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRx-8f-2XT">
+                                <rect key="frame" x="20" y="254" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -207,14 +215,21 @@
                         <constraints>
                             <constraint firstItem="fL2-0c-dYQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="azm-JG-Xse" secondAttribute="trailing" constant="8" id="6ag-zI-Ryj"/>
                             <constraint firstItem="fL2-0c-dYQ" firstAttribute="top" secondItem="S7N-Lr-Ilw" secondAttribute="bottom" constant="8" id="8Xi-7y-4Ot"/>
+                            <constraint firstItem="Kfm-w7-F6E" firstAttribute="leading" secondItem="rzy-EU-bGU" secondAttribute="leading" constant="20" id="9GJ-OG-SXv"/>
                             <constraint firstItem="fL2-0c-dYQ" firstAttribute="trailing" secondItem="S7N-Lr-Ilw" secondAttribute="trailing" id="CAP-Ep-9jz"/>
+                            <constraint firstItem="xRx-8f-2XT" firstAttribute="top" secondItem="azm-JG-Xse" secondAttribute="bottom" constant="40" id="CSU-gd-8be"/>
                             <constraint firstItem="xRx-8f-2XT" firstAttribute="leading" secondItem="azm-JG-Xse" secondAttribute="leading" id="DSO-aQ-Pmg"/>
+                            <constraint firstItem="rzy-EU-bGU" firstAttribute="bottom" secondItem="Kfm-w7-F6E" secondAttribute="bottom" constant="20" id="DYd-uF-Zv5"/>
                             <constraint firstItem="azm-JG-Xse" firstAttribute="top" secondItem="S7N-Lr-Ilw" secondAttribute="top" id="KVq-VL-xTe"/>
+                            <constraint firstItem="Kfm-w7-F6E" firstAttribute="top" secondItem="xRx-8f-2XT" secondAttribute="bottom" constant="8" id="Lyu-CP-4vb"/>
                             <constraint firstItem="xRx-8f-2XT" firstAttribute="top" secondItem="azm-JG-Xse" secondAttribute="bottom" constant="40" id="QWe-dt-S9R"/>
                             <constraint firstItem="S7N-Lr-Ilw" firstAttribute="top" secondItem="rzy-EU-bGU" secondAttribute="top" constant="20" id="hQo-iA-2ne"/>
                             <constraint firstItem="rzy-EU-bGU" firstAttribute="trailing" secondItem="S7N-Lr-Ilw" secondAttribute="trailing" constant="20" id="iW7-Yj-4af"/>
                             <constraint firstItem="S7N-Lr-Ilw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="azm-JG-Xse" secondAttribute="trailing" constant="8" id="im2-nS-8IJ"/>
+                            <constraint firstItem="rzy-EU-bGU" firstAttribute="bottom" secondItem="Kfm-w7-F6E" secondAttribute="bottom" constant="20" id="nGE-yY-eq5"/>
                             <constraint firstItem="azm-JG-Xse" firstAttribute="leading" secondItem="rzy-EU-bGU" secondAttribute="leading" constant="20" id="qAa-KF-0Ws"/>
+                            <constraint firstItem="rzy-EU-bGU" firstAttribute="trailing" secondItem="Kfm-w7-F6E" secondAttribute="trailing" constant="20" id="scy-zP-EKW"/>
+                            <constraint firstItem="Kfm-w7-F6E" firstAttribute="trailing" secondItem="fL2-0c-dYQ" secondAttribute="trailing" id="zFj-gC-Wb3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rzy-EU-bGU"/>
                     </view>
