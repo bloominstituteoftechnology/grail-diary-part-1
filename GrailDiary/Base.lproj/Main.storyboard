@@ -95,29 +95,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJM-B0-QQA">
-                                <rect key="frame" x="51" y="178" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJM-B0-QQA">
+                                <rect key="frame" x="279" y="160" width="115" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66O-8t-r4r">
-                                <rect key="frame" x="51" y="272" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66O-8t-r4r">
+                                <rect key="frame" x="332" y="189" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abO-qI-rOt">
-                                <rect key="frame" x="51" y="348" width="42" height="21"/>
+                                <rect key="frame" x="48" y="462" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpaceNeedle" translatesAutoresizingMaskIntoConstraints="NO" id="Gwz-qr-PrP">
+                                <rect key="frame" x="20" y="160" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="JSR-tW-bwL"/>
+                                    <constraint firstAttribute="width" secondItem="Gwz-qr-PrP" secondAttribute="height" multiplier="1:1" id="QUm-QD-3iX"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Gwz-qr-PrP" firstAttribute="leading" secondItem="amh-go-0VJ" secondAttribute="leading" constant="20" id="0uz-jS-tck"/>
+                            <constraint firstItem="MJM-B0-QQA" firstAttribute="top" secondItem="amh-go-0VJ" secondAttribute="top" constant="20" id="8Ha-VC-nPa"/>
+                            <constraint firstItem="MJM-B0-QQA" firstAttribute="leading" secondItem="Gwz-qr-PrP" secondAttribute="trailing" constant="109" id="B1Z-fu-10P"/>
+                            <constraint firstItem="66O-8t-r4r" firstAttribute="top" secondItem="MJM-B0-QQA" secondAttribute="bottom" constant="8" id="Msd-AK-miJ"/>
+                            <constraint firstItem="66O-8t-r4r" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MJM-B0-QQA" secondAttribute="trailing" constant="8" id="UDn-uo-G5B"/>
+                            <constraint firstItem="Gwz-qr-PrP" firstAttribute="top" secondItem="MJM-B0-QQA" secondAttribute="top" id="Z3n-ra-4kj"/>
+                            <constraint firstItem="amh-go-0VJ" firstAttribute="trailing" secondItem="MJM-B0-QQA" secondAttribute="trailing" constant="20" id="gbN-g7-xFg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="amh-go-0VJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="ess-xj-BUe"/>
@@ -220,4 +234,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="752.67857142857144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SpaceNeedle" width="500" height="500"/>
+    </resources>
 </document>
