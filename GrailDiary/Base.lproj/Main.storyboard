@@ -27,8 +27,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Eod-dB-hca">
-                                                    <rect key="frame" x="20" y="9.2644892537191481" width="77.5" height="43"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Eod-dB-hca">
+                                                    <rect key="frame" x="20" y="8.5" width="77.5" height="43"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQt-cX-wEM">
                                                             <rect key="frame" x="0.0" y="0.0" width="77.5" height="20.5"/>
@@ -44,17 +44,19 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XO7-4A-bUq">
-                                                    <rect key="frame" x="319" y="20.618026589737838" width="75" height="21.000000000000114"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XO7-4A-bUq">
+                                                    <rect key="frame" x="319" y="20" width="75" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="XO7-4A-bUq" firstAttribute="centerY" secondItem="DFi-Xa-wOT" secondAttribute="centerY" id="Bhg-1V-4xX"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="XO7-4A-bUq" secondAttribute="trailing" id="Opc-Nz-EI9"/>
                                                 <constraint firstItem="XO7-4A-bUq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Eod-dB-hca" secondAttribute="trailing" constant="8" id="hXs-on-TLJ"/>
                                                 <constraint firstItem="Eod-dB-hca" firstAttribute="leading" secondItem="DFi-Xa-wOT" secondAttribute="leadingMargin" id="v3T-UE-nKf"/>
+                                                <constraint firstItem="Eod-dB-hca" firstAttribute="centerY" secondItem="DFi-Xa-wOT" secondAttribute="centerY" id="zGL-rI-cl0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -71,12 +73,31 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Grail Diary" id="b6Y-fo-WYE">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="U8s-OM-rSU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="U8s-OM-rSU">
+                            <connections>
+                                <segue destination="ZJd-k0-SbV" kind="presentation" id="FpS-l0-OET"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="752.67857142857144"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="P77-bt-ISp">
+            <objects>
+                <viewController id="ZJd-k0-SbV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bVc-Z1-Cfw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="LZi-TY-z43"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="is4-AE-OXo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1651" y="602"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mZE-pY-GFf">
