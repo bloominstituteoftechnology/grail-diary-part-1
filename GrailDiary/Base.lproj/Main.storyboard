@@ -96,21 +96,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJM-B0-QQA">
-                                <rect key="frame" x="279" y="160" width="115" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="274.5" y="160" width="119.5" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66O-8t-r4r">
-                                <rect key="frame" x="332" y="189" width="62" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abO-qI-rOt">
-                                <rect key="frame" x="48" y="462" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66O-8t-r4r">
+                                <rect key="frame" x="339" y="188.5" width="55" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -121,16 +114,37 @@
                                     <constraint firstAttribute="width" secondItem="Gwz-qr-PrP" secondAttribute="height" multiplier="1:1" id="QUm-QD-3iX"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0PC-D5-aAp">
+                                <rect key="frame" x="20" y="389.5" width="374" height="452.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abO-qI-rOt">
+                                <rect key="frame" x="20" y="350" width="64.5" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Gwz-qr-PrP" firstAttribute="leading" secondItem="amh-go-0VJ" secondAttribute="leading" constant="20" id="0uz-jS-tck"/>
                             <constraint firstItem="MJM-B0-QQA" firstAttribute="top" secondItem="amh-go-0VJ" secondAttribute="top" constant="20" id="8Ha-VC-nPa"/>
-                            <constraint firstItem="MJM-B0-QQA" firstAttribute="leading" secondItem="Gwz-qr-PrP" secondAttribute="trailing" constant="109" id="B1Z-fu-10P"/>
+                            <constraint firstItem="66O-8t-r4r" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gwz-qr-PrP" secondAttribute="trailing" constant="8" id="8tw-ji-3kw"/>
+                            <constraint firstItem="abO-qI-rOt" firstAttribute="top" secondItem="Gwz-qr-PrP" secondAttribute="bottom" constant="40" id="KFS-aF-bnQ"/>
                             <constraint firstItem="66O-8t-r4r" firstAttribute="top" secondItem="MJM-B0-QQA" secondAttribute="bottom" constant="8" id="Msd-AK-miJ"/>
-                            <constraint firstItem="66O-8t-r4r" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MJM-B0-QQA" secondAttribute="trailing" constant="8" id="UDn-uo-G5B"/>
+                            <constraint firstItem="66O-8t-r4r" firstAttribute="trailing" secondItem="MJM-B0-QQA" secondAttribute="trailing" id="UDn-uo-G5B"/>
+                            <constraint firstItem="abO-qI-rOt" firstAttribute="leading" secondItem="Gwz-qr-PrP" secondAttribute="leading" id="XQD-ba-vie"/>
+                            <constraint firstItem="0PC-D5-aAp" firstAttribute="top" secondItem="abO-qI-rOt" secondAttribute="bottom" constant="8" id="Y9j-ne-1LK"/>
                             <constraint firstItem="Gwz-qr-PrP" firstAttribute="top" secondItem="MJM-B0-QQA" secondAttribute="top" id="Z3n-ra-4kj"/>
                             <constraint firstItem="amh-go-0VJ" firstAttribute="trailing" secondItem="MJM-B0-QQA" secondAttribute="trailing" constant="20" id="gbN-g7-xFg"/>
+                            <constraint firstItem="MJM-B0-QQA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gwz-qr-PrP" secondAttribute="trailing" constant="8" id="jTH-l1-7qk"/>
+                            <constraint firstItem="0PC-D5-aAp" firstAttribute="leading" secondItem="abO-qI-rOt" secondAttribute="leading" id="rrK-Tm-o1P"/>
+                            <constraint firstItem="0PC-D5-aAp" firstAttribute="trailing" secondItem="66O-8t-r4r" secondAttribute="trailing" id="v80-ti-MDH"/>
+                            <constraint firstItem="amh-go-0VJ" firstAttribute="bottom" secondItem="0PC-D5-aAp" secondAttribute="bottom" constant="20" id="z2W-h8-5Ub"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="amh-go-0VJ"/>
                     </view>
