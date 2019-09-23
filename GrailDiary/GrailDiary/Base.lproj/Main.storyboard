@@ -61,6 +61,9 @@
                                                 <constraint firstItem="GWE-ws-kSz" firstAttribute="leading" secondItem="PTx-vH-k5X" secondAttribute="leadingMargin" id="yG0-9Z-6tV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="v1w-rR-96o" kind="show" identifier="ShowPOIDetailSegue" id="lpP-4Q-wDa"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -87,6 +90,70 @@
             <point key="canvasLocation" x="1042.0289855072465" y="89.732142857142847"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="5dY-ai-QnD">
+            <objects>
+                <viewController id="v1w-rR-96o" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mJP-ok-VSH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lM9-ra-ihC">
+                                <rect key="frame" x="279" y="160" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7c-dV-mlU">
+                                <rect key="frame" x="332" y="189" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IrelandImage" translatesAutoresizingMaskIntoConstraints="NO" id="ThU-g9-4xc">
+                                <rect key="frame" x="20" y="160" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Iu7-gu-Bv7"/>
+                                    <constraint firstAttribute="width" secondItem="ThU-g9-4xc" secondAttribute="height" multiplier="1:1" id="duq-86-M1P"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IYw-x8-PsD">
+                                <rect key="frame" x="20" y="379" width="374" height="463"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ec5-fm-DHY">
+                                <rect key="frame" x="20" y="350" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IYw-x8-PsD" firstAttribute="top" secondItem="Ec5-fm-DHY" secondAttribute="bottom" constant="8" id="BOl-53-fEw"/>
+                            <constraint firstItem="mWx-pm-Kkz" firstAttribute="bottom" secondItem="IYw-x8-PsD" secondAttribute="bottom" constant="20" id="BcZ-SP-6q7"/>
+                            <constraint firstItem="Ec5-fm-DHY" firstAttribute="top" secondItem="ThU-g9-4xc" secondAttribute="bottom" constant="40" id="C04-iD-GmR"/>
+                            <constraint firstItem="IYw-x8-PsD" firstAttribute="trailing" secondItem="G7c-dV-mlU" secondAttribute="trailing" id="KIy-TM-9Xp"/>
+                            <constraint firstItem="IYw-x8-PsD" firstAttribute="leading" secondItem="Ec5-fm-DHY" secondAttribute="leading" id="NNr-nO-9t2"/>
+                            <constraint firstItem="lM9-ra-ihC" firstAttribute="top" secondItem="mWx-pm-Kkz" secondAttribute="top" constant="20" id="NjH-3G-UZW"/>
+                            <constraint firstItem="G7c-dV-mlU" firstAttribute="trailing" secondItem="lM9-ra-ihC" secondAttribute="trailing" id="PKd-yd-ydb"/>
+                            <constraint firstItem="ThU-g9-4xc" firstAttribute="leading" secondItem="mWx-pm-Kkz" secondAttribute="leading" constant="20" id="amr-5Q-MLf"/>
+                            <constraint firstItem="mWx-pm-Kkz" firstAttribute="trailing" secondItem="lM9-ra-ihC" secondAttribute="trailing" constant="20" id="mKV-dC-HnZ"/>
+                            <constraint firstItem="ThU-g9-4xc" firstAttribute="top" secondItem="lM9-ra-ihC" secondAttribute="top" id="rQl-HR-Jxc"/>
+                            <constraint firstItem="G7c-dV-mlU" firstAttribute="top" secondItem="lM9-ra-ihC" secondAttribute="bottom" constant="8" id="vIQ-Im-T7C"/>
+                            <constraint firstItem="lM9-ra-ihC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ThU-g9-4xc" secondAttribute="trailing" constant="8" id="vsY-yl-ypT"/>
+                            <constraint firstItem="Ec5-fm-DHY" firstAttribute="leading" secondItem="ThU-g9-4xc" secondAttribute="leading" id="yNc-Uv-obx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mWx-pm-Kkz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d7p-vi-lbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800" y="412"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="8rA-NF-iEJ">
             <objects>
                 <viewController id="N5B-Oh-zUZ" sceneMemberID="viewController">
@@ -103,13 +170,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Location" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AgE-uq-4ot">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AgE-uq-4ot">
                                         <rect key="frame" x="0.0" y="52" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Country" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gKd-7F-ikA">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gKd-7F-ikA">
                                         <rect key="frame" x="0.0" y="98" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -121,19 +188,19 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Clue 1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uiT-4w-Hdc">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uiT-4w-Hdc">
                                         <rect key="frame" x="0.0" y="180.5" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Clue 2" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PJh-9u-U0b">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PJh-9u-U0b">
                                         <rect key="frame" x="0.0" y="226.5" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Clue 3" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9zn-16-y1N">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9zn-16-y1N">
                                         <rect key="frame" x="0.0" y="272.5" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -164,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEz-Be-Uin" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1687" y="90"/>
+            <point key="canvasLocation" x="1801" y="-248"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UVd-ZG-WG1">
@@ -185,4 +252,7 @@
             <point key="canvasLocation" x="77" y="90"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="IrelandImage" width="256" height="256"/>
+    </resources>
 </document>
