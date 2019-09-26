@@ -212,9 +212,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ln8-XG-FBQ">
                                 <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="4dL-b6-WGt"/>
+                                    <barButtonItem systemItem="cancel" id="4dL-b6-WGt">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="47Q-vO-68b" id="yW4-E7-OjG"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="mab-6P-oO7"/>
-                                    <barButtonItem systemItem="save" id="mW8-c8-JRE"/>
+                                    <barButtonItem systemItem="save" id="mW8-c8-JRE">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="47Q-vO-68b" id="Lrb-2V-fxP"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

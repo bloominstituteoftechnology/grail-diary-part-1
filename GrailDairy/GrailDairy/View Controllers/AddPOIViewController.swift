@@ -28,14 +28,37 @@ class AddPOIViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+     @IBAction func cancelTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-    */
 
+    @IBAction func saveTapped(_ sender: Any) {
+        guard let location = locationTextField.text, !location.isEmpty,
+        let country = countryTextField.text, !country.isEmpty else {
+            return
+        }
+        var poi = POI(location: location, country: country)
+        
+        if let clue1 = clueOneTextField.text, !clue1.isEmpty {
+            poi.clues.append(clue1)
+        }
+        if let clue2 = clueTwoTextField.text, !clue2.isEmpty {
+            poi.clues.append(clue2)
+        }
+        if let clue3 = clueThreeTextField.text, !clue3.isEmpty {
+            poi.clues.append(clue3)
+        }
+        
+        delegate?.poiWasAdded(poi)
+        
+    }
 }
+    // MARK: - Text Field Delegation
+
+extension AddPOIViewController: UITextFieldDelegate {
+    
+}
+
+
