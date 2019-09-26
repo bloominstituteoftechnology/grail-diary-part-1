@@ -35,10 +35,12 @@ class AddPOIViewController: UIViewController {
     }
 
     @IBAction func saveTapped(_ sender: Any) {
+        
         guard let location = locationTextField.text, !location.isEmpty,
-        let country = countryTextField.text, !country.isEmpty else {
-            return
+            let country = countryTextField.text, !country.isEmpty else {
+                return
         }
+        
         var poi = POI(location: location, country: country)
         
         if let clue1 = clueOneTextField.text, !clue1.isEmpty {
@@ -58,7 +60,27 @@ class AddPOIViewController: UIViewController {
     // MARK: - Text Field Delegation
 
 extension AddPOIViewController: UITextFieldDelegate {
+//    ?? In the storyboard, for each textfield in this view, connect the delegate property of the textfield to this class
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+         if let text = textField.text, !text.isEmpty {
+                   switch textField {
+                   case locationTextField:
+                    countryTextField.becomeFirstResponder()
+                    case countryTextField:
+                    clueOneTextField.becomeFirstResponder()
+                    case clueOneTextField:
+                    clueTwoTextField.becomeFirstResponder()
+                    case clueTwoTextField:
+                    clueThreeTextField.becomeFirstResponder()
+                   default:
+                    textField.resignFirstResponder()
+            }
+        } else {
+                   view.endEditing(false)
+    }
+    return false
+    }
 }
 
 
