@@ -60,6 +60,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesCountLabel" destination="UxY-fF-Gug" id="Yxw-Kb-SRU"/>
+                                            <outlet property="countryLabel" destination="qX4-bN-Cud" id="mWM-1u-eH0"/>
+                                            <outlet property="locationLabel" destination="GKI-kt-HkB" id="ecW-sB-7e5"/>
                                             <segue destination="0ww-Tr-k4k" kind="show" identifier="ShowPOIDetailSegue" id="Wr5-rW-Vdd"/>
                                         </connections>
                                     </tableViewCell>
@@ -153,6 +156,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pVE-3S-VdM"/>
                     </view>
+                    <connections>
+                        <outlet property="cluesTextView" destination="yCe-kU-Qd6" id="4qE-tf-qul"/>
+                        <outlet property="countryLabel" destination="8Fq-bc-t2K" id="4zY-oQ-8L9"/>
+                        <outlet property="locationLabel" destination="QaI-zj-M6c" id="OhJ-wr-2Us"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ph-t1-64h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
