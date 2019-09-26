@@ -21,7 +21,9 @@ class POIsTableViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddPOIModalSegue" {
-            // TODO begin step 29 here
+            guard let addPOIVC = segue.destination as? AddPOIViewController
+                else { fatalError() }
+            addPOIVC.delegate = self
         }
     }
 
