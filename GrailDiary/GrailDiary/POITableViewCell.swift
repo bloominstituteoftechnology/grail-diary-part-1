@@ -26,5 +26,8 @@ class POITableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    private func updateViews() {
+        
+    }
 
 }
