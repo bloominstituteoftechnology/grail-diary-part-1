@@ -21,17 +21,19 @@ class POIDetailViewController: UIViewController {
         super.viewDidLoad()
         updateViews()
     }
-    
+   
     private func updateViews() {
         guard let poi = poi else { return }
         locationLabel.text = poi.location
         countryLabel.text = poi.country
-        var clueText = ""
+        var clueText: [String] = []
         for clue in poi.clues {
-            clueText += "∙ \(clue)\n"
+            clueText.append(" \(clue.description)\n")
+//            clueText.append("∙ \(clue)")
+            print(clue)
         }
         
-        cluesTextView.text = clueText
+      cluesTextView.text = "\(clueText[0])\n\(clueText[1])\n\(clueText[2])"
+        
     }
 }
-

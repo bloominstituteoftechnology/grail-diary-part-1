@@ -5,18 +5,18 @@
 //  Created by Joseph Rogers on 7/29/19.
 //  Copyright © 2019 Joe Rogers. All rights reserved.
 //
-
+// MARK: - steps 1-8 UI 
 import UIKit
 
 class POIsTableViewController: UIViewController {
     
-    //MARK: - step 7 Created a Variable of type Array to store my [POI] models
+    //MARK: - step 7-8 Created a Variable of type Array to store my [POI] models
     var POIList: [POI] = []
     //MARK: - step 8 This is my wired up outlet to link my Table View Controller to my code.
     @IBOutlet weak var TableViewOutlet: UITableView!
     
 }
-    //MARK: step 9
+    //MARK: step 9-10 extensions
     //I am creating an extension now that will cause the table view controller to be the spot I am getting my data from FOR my tableview.
     //MARK: step 10
     //I am adding the function stubs. At which point numberOfRowsInSection returns POILIST's count. The Table view function for cellForRowAt is dequeing to POICell, downcasting it as the custom table view I have made, or else if this does not work correcting, the tableview deques to a blank UITableViewCell. --------> can we make a default cell for this scnenario or is that redundant?
@@ -34,7 +34,7 @@ extension POIsTableViewController: UITableViewDataSource {
         
         return cell
     }
-    //MARK: step 27 - 30
+    //MARK: step 27 - 30 segues
     //Prepares for segue. 39 - 41 Prepare For Detail Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddPOIModalSegue" {
@@ -52,7 +52,7 @@ extension POIsTableViewController: UITableViewDataSource {
         }
     }
 }
-    //MARK: - step 22-26
+    //MARK: - step 22-26 conformance
     //I made the POITable conform to the ADDPOIDelegate. so I can append poi to my POIList that is on this file. This is essentially the modular view passing me back the data I asked for! then it is dismissing the view, and reloading the tableviewoutlets data. Which it needs done i believe because its a custom data set we made.
 extension POIsTableViewController: AddPOIDelegate {
     func poiWasAdded(_ poi: POI) {

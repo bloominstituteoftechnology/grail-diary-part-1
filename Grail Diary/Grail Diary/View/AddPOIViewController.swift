@@ -6,6 +6,9 @@
 //  Copyright © 2019 Joe Rogers. All rights reserved.
 //
 
+//MARK: - step 11
+//Wire up the delegate property of the tableview in the storyboard to the view controller
+
 import UIKit
     //MARK: - step 13
     //Created my protocol that has the function poiWasAdded that is part of the protocol.
@@ -41,11 +44,11 @@ class AddPOIViewController: UIViewController {
             !clue1.isEmpty {
             poi.clues.append(clue1)
         }
-        if let clue2 = clue1TextField.text,
+        if let clue2 = clue2TextField.text,
             !clue2.isEmpty {
             poi.clues.append(clue2)
         }
-        if let clue3 = clue1TextField.text,
+        if let clue3 = clue3TextField.text,
             !clue3.isEmpty {
             poi.clues.append(clue3)
         }
