@@ -19,9 +19,20 @@ class POIsTableViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "AddPOIModalSegue":
+            guard let addPoiVC = segue.destination as? AddPOIViewController else { fatalError() }
+            
+            addPoiVC.delegate = self
+        default:
+            fatalError("An unknown segue was encountered: \(segue.identifier ?? "<No ID>")")
+        }
+    }
 
 }
-
+// ?? #11 Wire up the delegate property of the tableview in the storyboard to the view controller
 extension POIsTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pois.count
@@ -32,11 +43,24 @@ extension POIsTableViewController: UITableViewDataSource {
             fatalError()
         }
         
-        let poi = pois[indexPath.row]
-        cell.p = poi
+//        let poi = pois[indexPath.row]
+//        cell.poi = poi
         
         return cell
     }
+    
+    
+}
+
+extension POIsTableViewController: AddPOIDelegate{
+    func poiWasAdded(_ poi: POI) {
+        pois.append(poi)
+        
+        dismiss(animated: true, completion: nil)
+        tableView.reloadData()
+    }
+    
+    
     
     
 }
