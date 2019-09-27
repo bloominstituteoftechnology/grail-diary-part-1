@@ -24,7 +24,6 @@ class AddPOIViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 
@@ -60,7 +59,7 @@ class AddPOIViewController: UIViewController {
     // MARK: - Text Field Delegation
 
 extension AddPOIViewController: UITextFieldDelegate {
-//    ?? In the storyboard, for each textfield in this view, connect the delegate property of the textfield to this class
+// ?? #20 In the storyboard, for each textfield in this view, connect the delegate property of the textfield to this class
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
          if let text = textField.text, !text.isEmpty {

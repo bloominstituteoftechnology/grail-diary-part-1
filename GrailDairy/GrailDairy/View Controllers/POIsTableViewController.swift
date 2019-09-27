@@ -26,6 +26,12 @@ class POIsTableViewController: UIViewController {
             guard let addPoiVC = segue.destination as? AddPOIViewController else { fatalError() }
             
             addPoiVC.delegate = self
+        case "ShowPOIDetailSegue":
+            guard let indexPath = tableView.indexPathForSelectedRow,
+                let showPoiDetailVC = segue.destination as? POIDetailViewController else { fatalError() }
+            
+            showPoiDetailVC.poi = pois[indexPath.row]
+
         default:
             fatalError("An unknown segue was encountered: \(segue.identifier ?? "<No ID>")")
         }
