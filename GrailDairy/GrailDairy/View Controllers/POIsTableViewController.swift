@@ -22,10 +22,12 @@ class POIsTableViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
+            
         case "AddPOIModalSegue":
             guard let addPoiVC = segue.destination as? AddPOIViewController else { fatalError() }
             
             addPoiVC.delegate = self
+            
         case "ShowPOIDetailSegue":
             guard let indexPath = tableView.indexPathForSelectedRow,
                 let showPoiDetailVC = segue.destination as? POIDetailViewController else { fatalError() }
@@ -38,19 +40,24 @@ class POIsTableViewController: UIViewController {
     }
 
 }
-// ?? #11 Wire up the delegate property of the tableview in the storyboard to the view controller
+
 extension POIsTableViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pois.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POIcell", for: indexPath) as? POITableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else {
             fatalError()
         }
         
-//        let poi = pois[indexPath.row]
-//        cell.poi = poi
+        
+        cell.poi = pois[indexPath.row]
         
         return cell
     }

@@ -29,7 +29,7 @@ class AddPOIViewController: UIViewController {
 
     // MARK: - Navigation
 
-     @IBAction func cancelTapped(_ sender: Any) {
+    @IBAction func cancelTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 
@@ -59,8 +59,7 @@ class AddPOIViewController: UIViewController {
     // MARK: - Text Field Delegation
 
 extension AddPOIViewController: UITextFieldDelegate {
-// ?? #20 In the storyboard, for each textfield in this view, connect the delegate property of the textfield to this class
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
          if let text = textField.text, !text.isEmpty {
                    switch textField {

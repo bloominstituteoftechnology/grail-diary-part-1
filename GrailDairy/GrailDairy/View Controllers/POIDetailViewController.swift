@@ -11,9 +11,14 @@ import UIKit
 class POIDetailViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
-    @IBOutlet weak var cluesTextView: UITextView!
+   // @IBOutlet weak var cluesTextView: UITextView!
     
-    var poi: POI?
+    @IBOutlet weak var cluesTextView: UITextView!
+    var poi: POI? {
+        didSet {
+            updateViews()
+        }
+    }
     
     private func updateViews() {
         guard let poi = poi, isViewLoaded else { return }
