@@ -13,10 +13,28 @@ class POIsTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var pois: [POI] = []
+    
+    var persistentStoreURL: URL! {
+        if let documentURL = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true) {
+            let persistentStoreURL = documentURL.appendingPathComponent("grailPOIList.plist")
+            return persistentStoreURL
+        }
+        return nil
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        if let data = try? Data(contentsOf: persistentStoreURL),
+            let savedPOIs = try? PropertyListDecoder().decode([POI].self, from: data) {
+            pois = savedPOIs
+        }
+    }
+    
+    func save() {
+        if let data = try? PropertyListEncoder().encode(pois) {
+            try? data.write(to: persistentStoreURL)
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -34,6 +52,7 @@ class POIsTableViewController: UIViewController {
 
 }
 
+// MARK: Table View Data Source
 extension POIsTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         pois.count
@@ -51,7 +70,7 @@ extension POIsTableViewController: UITableViewDataSource {
 
 }
 
-// MARK Table View Delegate (Swipe to delete)
+// MARK: Table View Delegate (Swipe to delete)
 extension POIsTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
@@ -60,17 +79,23 @@ extension POIsTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         pois.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
+        
+        save()
+        
     }
-    
-    
+        
 }
 
-
+// MARK: Add POI Delegate
+// this is the intern; the add poi VC is the boss
 extension POIsTableViewController: AddPOIDelegate {
     func poiWasAdded(_ poi: POI) {
         pois.append(poi)
         tableView.reloadData()
         dismiss(animated: true, completion: nil)
+        
+        save()
+        
     }
 }
 

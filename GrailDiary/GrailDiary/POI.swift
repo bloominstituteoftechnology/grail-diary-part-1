@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct POI {
+struct POI: Codable {
     let location: String
     let country: String
     var clues: [String] = []
