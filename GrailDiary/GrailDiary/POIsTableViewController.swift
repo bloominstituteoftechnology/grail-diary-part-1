@@ -51,6 +51,21 @@ extension POIsTableViewController: UITableViewDataSource {
 
 }
 
+// MARK Table View Delegate (Swipe to delete)
+extension POIsTableViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        pois.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+    
+    
+}
+
+
 extension POIsTableViewController: AddPOIDelegate {
     func poiWasAdded(_ poi: POI) {
         pois.append(poi)
