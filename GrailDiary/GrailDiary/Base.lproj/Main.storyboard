@@ -60,6 +60,9 @@
                                                 <constraint firstItem="Df9-6G-KQa" firstAttribute="leading" secondItem="0Ej-vc-n4j" secondAttribute="leadingMargin" id="r3y-9V-l8n"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="c0L-77-P6A" kind="show" identifier="ShowPOIDetailSegue" id="egd-W5-zC9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -74,7 +77,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Grail Diary" largeTitleDisplayMode="always" id="aRh-EI-DaW">
+                    <navigationItem key="navigationItem" title="Grail Diary" id="aRh-EI-DaW">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3yV-FH-usr">
                             <connections>
                                 <segue destination="7xW-OR-KPF" kind="presentation" identifier="AddPOIModalSegue" id="eLb-eE-2ea"/>
@@ -86,13 +89,81 @@
             </objects>
             <point key="canvasLocation" x="1952.1739130434785" y="102.45535714285714"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="dpf-af-Bli">
+            <objects>
+                <viewController id="c0L-77-P6A" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5E0-aR-ltw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgU-iI-vZT">
+                                <rect key="frame" x="250.5" y="108" width="143.5" height="26.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKd-Yb-D0e">
+                                <rect key="frame" x="324" y="142.5" width="70" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dG-Rj-P9V">
+                                <rect key="frame" x="20" y="298" width="45.5" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JapanShrine" translatesAutoresizingMaskIntoConstraints="NO" id="1Af-xg-DEO">
+                                <rect key="frame" x="20" y="108" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="CNg-Pe-vyj"/>
+                                    <constraint firstAttribute="width" secondItem="1Af-xg-DEO" secondAttribute="height" multiplier="1:1" id="KNj-KJ-x43"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qJO-Qj-mbr">
+                                <rect key="frame" x="20" y="327" width="374" height="515"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RQC-GU-IpF" firstAttribute="trailing" secondItem="3dG-Rj-P9V" secondAttribute="trailing" constant="348.5" id="0LH-17-IAD"/>
+                            <constraint firstItem="qJO-Qj-mbr" firstAttribute="trailing" secondItem="LKd-Yb-D0e" secondAttribute="trailing" id="1VI-DX-xbD"/>
+                            <constraint firstItem="RQC-GU-IpF" firstAttribute="trailing" secondItem="WgU-iI-vZT" secondAttribute="trailing" constant="20" id="DWB-E9-ODX"/>
+                            <constraint firstItem="3dG-Rj-P9V" firstAttribute="top" secondItem="1Af-xg-DEO" secondAttribute="bottom" constant="40" id="E0l-sv-L8n"/>
+                            <constraint firstItem="3dG-Rj-P9V" firstAttribute="leading" secondItem="1Af-xg-DEO" secondAttribute="leading" id="FpN-nc-52J"/>
+                            <constraint firstItem="RQC-GU-IpF" firstAttribute="bottom" secondItem="qJO-Qj-mbr" secondAttribute="bottom" constant="20" id="MzV-jc-PH9"/>
+                            <constraint firstItem="LKd-Yb-D0e" firstAttribute="trailing" secondItem="WgU-iI-vZT" secondAttribute="trailing" id="ZVR-kP-tJl"/>
+                            <constraint firstItem="LKd-Yb-D0e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1Af-xg-DEO" secondAttribute="trailing" constant="8" id="ZXj-9K-mE5"/>
+                            <constraint firstItem="WgU-iI-vZT" firstAttribute="top" secondItem="RQC-GU-IpF" secondAttribute="top" constant="20" id="ZqU-RG-cvQ"/>
+                            <constraint firstItem="LKd-Yb-D0e" firstAttribute="top" secondItem="WgU-iI-vZT" secondAttribute="bottom" constant="8" id="bzh-5v-4Sx"/>
+                            <constraint firstItem="1Af-xg-DEO" firstAttribute="leading" secondItem="RQC-GU-IpF" secondAttribute="leading" constant="20" id="gQz-O5-2TQ"/>
+                            <constraint firstItem="WgU-iI-vZT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1Af-xg-DEO" secondAttribute="trailing" constant="8" id="gwd-4X-P3f"/>
+                            <constraint firstItem="1Af-xg-DEO" firstAttribute="top" secondItem="WgU-iI-vZT" secondAttribute="top" id="nce-b8-sEk"/>
+                            <constraint firstItem="qJO-Qj-mbr" firstAttribute="leading" secondItem="3dG-Rj-P9V" secondAttribute="leading" id="qqo-lP-WJ4"/>
+                            <constraint firstItem="qJO-Qj-mbr" firstAttribute="top" secondItem="3dG-Rj-P9V" secondAttribute="bottom" constant="8" id="zoG-Vk-TOF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RQC-GU-IpF"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4p4-uZ-HgB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFR-Zn-am1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2877" y="102"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vet-AY-o7a">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y6w-Fi-QTP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="xAH-l0-e5O">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xAH-l0-e5O">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -180,4 +251,7 @@
             <point key="canvasLocation" x="2876.811594202899" y="-539.0625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="JapanShrine" width="16" height="16"/>
+    </resources>
 </document>
