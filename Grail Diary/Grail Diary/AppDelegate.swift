@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  GrailDiary
+//  Grail Diary
 //
-//  Created by Niranjan Kumar on 9/10/19.
+//  Created by Niranjan Kumar on 10/8/19.
 //  Copyright © 2019 Lambda School. All rights reserved.
 //
 
