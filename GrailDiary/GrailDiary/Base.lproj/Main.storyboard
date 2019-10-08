@@ -27,7 +27,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="yvb-ji-IBB">
-                                                    <rect key="frame" x="20" y="10" width="68.5" height="40.5"/>
+                                                    <rect key="frame" x="20" y="8.5" width="68.5" height="43"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rC-Hb-GUb">
                                                             <rect key="frame" x="0.0" y="0.0" width="68.5" height="20.5"/>
@@ -36,12 +36,16 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5t-HF-WJS">
-                                                            <rect key="frame" x="0.0" y="22.5" width="55" height="18"/>
+                                                            <rect key="frame" x="0.0" y="22.5" width="55" height="20.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="U5t-HF-WJS" firstAttribute="height" secondItem="9rC-Hb-GUb" secondAttribute="height" id="Vaf-ic-Yqd"/>
+                                                        <constraint firstItem="U5t-HF-WJS" firstAttribute="leading" secondItem="9rC-Hb-GUb" secondAttribute="leading" id="ZsW-5D-lWm"/>
+                                                    </constraints>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNm-V3-BIc">
                                                     <rect key="frame" x="338" y="23" width="56" height="14.5"/>
