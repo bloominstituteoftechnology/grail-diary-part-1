@@ -8,9 +8,9 @@
 
 import UIKit
 
-class POIsTableViewController: UIViewController, UITableViewDataSource {
+class POIsTableViewController: UIViewController {
     
-    @IBOutlet var POITableView: UITableView!
+    @IBOutlet var tableView: UITableView!
     
     struct PropertyKeys {
         static let addPOIModalSegue = "AddPOIModalSegue"
@@ -26,18 +26,41 @@ class POIsTableViewController: UIViewController, UITableViewDataSource {
 //        tableView.dataSource = self
     }
     
-    // MARK: - TableViewDataSource
+    // MARK: - navigation
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1//POIs.count
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == PropertyKeys.addPOIModalSegue {
+            if let poiVC = segue.destination as? AddPOIViewController {
+                poiVC.delegate = self
+            }
+        } else if segue.identifier == PropertyKeys.showPOIDetailSegue {
+            if let poiDetailVC = segue.destination as? POIDetailViewController,
+                let indexPath = tableView.indexPathForSelectedRow {
+                poiDetailVC.poi = POIs[indexPath.row]
+            }
+        }
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.POICell, for: indexPath) as? POITableViewCell else { fatalError("no cell") }
-        cell.textLabel?.text = "hi"
-        return cell
-    }
-
 
 }
 
+extension POIsTableViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return POIs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.POICell, for: indexPath) as? POITableViewCell else { return UITableViewCell() }
+        let poi = POIs[indexPath.row]
+        cell.poi = poi
+        return cell
+    }
+}
+
+extension POIsTableViewController: AddPOIDelegate {
+    func poiWasAdded(_ poi: POI) {
+        POIs.append(poi)
+        dismiss(animated: true, completion: nil)
+        tableView.reloadData()
+    }
+}
