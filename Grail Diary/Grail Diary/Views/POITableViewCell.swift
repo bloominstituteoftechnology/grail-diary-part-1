@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class POITableViewCell: UITableViewCell {
     
     @IBOutlet weak var locationLabel: UILabel!
@@ -16,7 +18,7 @@ class POITableViewCell: UITableViewCell {
 
     var poi: POI? {
         didSet {
-            
+            updateViews()
         }
     }
     

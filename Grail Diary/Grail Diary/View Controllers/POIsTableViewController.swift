@@ -56,7 +56,7 @@ extension POIsTableViewController: UITableViewDataSource {
         
         let poi = pois[indexPath.row]
         cell.poi = poi
-        // you cannot implement this method until TableViewCell has the optional variable ready (Step 9 & 10) (Need to complete step 33)
+    // you cannot implement this method until TableViewCell has the optional variable ready (Step 9 & 10) (Need to complete step 33)
         
         return cell
     }

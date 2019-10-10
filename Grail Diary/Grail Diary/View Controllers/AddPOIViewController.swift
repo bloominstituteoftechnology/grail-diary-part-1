@@ -48,6 +48,7 @@ class AddPOIViewController: UIViewController {
               }
         
         delegate?.poiWasAdded(newPOI)
+        // calling the delegate and passing the newPOI back to the TableViewController
     }
 
 }
