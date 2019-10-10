@@ -24,11 +24,11 @@ class POIDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         updateViews()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         delegate?.detailViewWasDismissed()
     }
     
