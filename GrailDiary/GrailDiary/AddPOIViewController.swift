@@ -29,7 +29,22 @@ class AddPOIViewController: UIViewController {
     }
     
     @IBAction func saveTapped(_ sender: Any) {
+        guard let location = locationTextField.text, let country = countryTextField.text else { return }
         
+        var newPOI = POI(location: location, country: country, clues: [])
+        
+        if let clue1 = clue1TextField.text {
+            newPOI.clues.append(clue1)
+        }
+        if let clue2 = clue2TextField.text {
+            newPOI.clues.append(clue2)
+        }
+            
+        if let clue3 = clue3TextField.text {
+            newPOI.clues.append(clue3)
+        }
+        
+        delegate?.poiWasAdded(newPOI)
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
@@ -48,4 +63,13 @@ class AddPOIViewController: UIViewController {
     }
     */
 
+}
+
+extension AddPOIViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        guard let text = textField.text else { return false }
+        return !text.isEmpty
+    }
+    
 }
