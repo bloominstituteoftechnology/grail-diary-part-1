@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol POIDetailDelegate {
+    func detailViewWasDismissed()
+}
+
 class POIDetailViewController: UIViewController {
+    
+    var delegate: POIDetailDelegate?
     
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
@@ -20,6 +26,10 @@ class POIDetailViewController: UIViewController {
         super.viewDidLoad()
 
         updateViews()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        delegate?.detailViewWasDismissed()
     }
     
     private func updateViews() {

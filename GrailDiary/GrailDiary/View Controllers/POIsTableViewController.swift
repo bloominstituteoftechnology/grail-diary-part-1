@@ -12,11 +12,6 @@ class POIsTableViewController: UIViewController {
     var pois: [POI] = []
     
     @IBOutlet weak var tableView: UITableView!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddPOIModalSegue" {
@@ -29,6 +24,7 @@ class POIsTableViewController: UIViewController {
                 let indexPath = tableView.indexPathForSelectedRow
             {
                 poiDetailVC.poi = pois[indexPath.row]
+                poiDetailVC.delegate = self
             }
         }
     }
@@ -56,5 +52,12 @@ extension POIsTableViewController: AddPOIDelegate {
         pois.append(poi)
         dismiss(animated: true, completion: nil)
         tableView.reloadData()
+    }
+}
+
+extension POIsTableViewController: POIDetailDelegate {
+    func detailViewWasDismissed() {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
