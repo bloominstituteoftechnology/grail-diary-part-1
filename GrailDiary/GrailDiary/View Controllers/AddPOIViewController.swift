@@ -79,7 +79,7 @@ class AddPOIViewController: UIViewController {
 
 extension AddPOIViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let text = textField.text, !text.isEmpty,
+        if let text = textField.text, text.isEmpty,
             (textField == locationTextField || textField == countryTextField) {
                 showEmptyFieldAlert()
                 return false
