@@ -63,6 +63,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Q6J-qV-CzP"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Pja-54-GsL"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -82,7 +86,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="POITableView" destination="MY0-7S-CHO" id="r0K-XQ-vdG"/>
+                        <outlet property="POITableView" destination="MY0-7S-CHO" id="XsM-hD-6AR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
