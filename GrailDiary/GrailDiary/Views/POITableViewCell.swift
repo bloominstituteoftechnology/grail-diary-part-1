@@ -36,6 +36,6 @@ class POITableViewCell: UITableViewCell {
         
         locationLabel.text = poi.location
         countryLabel.text = poi.country
-        cluesCountLabel.text = "\(poi.clues.count) clues"
+        cluesCountLabel.text = "\(poi.clues.count) " + (poi.clues.count == 1 ? "clue" : "clues")
     }
 }
