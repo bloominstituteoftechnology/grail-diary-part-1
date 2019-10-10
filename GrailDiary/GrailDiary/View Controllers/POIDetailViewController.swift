@@ -9,6 +9,8 @@
 import UIKit
 
 class POIDetailViewController: UIViewController {
+    
+    var poi: POI?
 
     override func viewDidLoad() {
         super.viewDidLoad()
