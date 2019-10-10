@@ -70,7 +70,11 @@ class AddPOIViewController: UIViewController {
             title: "OK",
             style: .cancel,
             handler: { (_: UIAlertAction) in
-                self.locationTextField.becomeFirstResponder()
+                if let locationEmpty = self.locationTextField.text?.isEmpty, locationEmpty {
+                    self.locationTextField.becomeFirstResponder()
+                } else {
+                    self.countryTextField.becomeFirstResponder()
+                }
         }))
         
         present(emptyFieldAlert, animated: true, completion: nil)
