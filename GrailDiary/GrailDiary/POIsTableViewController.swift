@@ -23,18 +23,18 @@ class POIsTableViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.d = self
+//        tableView.dataSource = self
     }
     
     // MARK: - TableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return POIs.count
+        return 1//POIs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.POICell, for: indexPath) as? POITableViewCell else { fatalError("no cell") }
-        
+        cell.textLabel?.text = "hi"
         return cell
     }
 
