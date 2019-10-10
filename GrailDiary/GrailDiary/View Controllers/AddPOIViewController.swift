@@ -25,6 +25,7 @@ class AddPOIViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        locationTextField.becomeFirstResponder()
     }
     
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
