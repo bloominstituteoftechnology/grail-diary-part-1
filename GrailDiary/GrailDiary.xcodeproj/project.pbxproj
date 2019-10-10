@@ -15,6 +15,7 @@
 		85216277234D18B0004F2D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85216275234D18B0004F2D43 /* LaunchScreen.storyboard */; };
 		852ED27F234FBCE9001ABA0E /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852ED27E234FBCE9001ABA0E /* AddPOIViewController.swift */; };
 		852ED281234FBD0F001ABA0E /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852ED280234FBD0F001ABA0E /* POIDetailViewController.swift */; };
+		852ED284234FBE94001ABA0E /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852ED283234FBE94001ABA0E /* POI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		85216278234D18B0004F2D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		852ED27E234FBCE9001ABA0E /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
 		852ED280234FBD0F001ABA0E /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		852ED283234FBE94001ABA0E /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +64,9 @@
 			children = (
 				8521626A234D18AD004F2D43 /* AppDelegate.swift */,
 				8521626C234D18AD004F2D43 /* SceneDelegate.swift */,
-				852ED282234FBD1A001ABA0E /* View Controllers */,
 				85216270234D18AD004F2D43 /* Main.storyboard */,
+				852ED282234FBD1A001ABA0E /* View Controllers */,
+				852ED285234FBF27001ABA0E /* Models */,
 				85216273234D18B0004F2D43 /* Assets.xcassets */,
 				85216275234D18B0004F2D43 /* LaunchScreen.storyboard */,
 				85216278234D18B0004F2D43 /* Info.plist */,
@@ -79,6 +82,14 @@
 				852ED27E234FBCE9001ABA0E /* AddPOIViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		852ED285234FBF27001ABA0E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				852ED283234FBE94001ABA0E /* POI.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +167,7 @@
 				852ED27F234FBCE9001ABA0E /* AddPOIViewController.swift in Sources */,
 				8521626B234D18AD004F2D43 /* AppDelegate.swift in Sources */,
 				8521626D234D18AD004F2D43 /* SceneDelegate.swift in Sources */,
+				852ED284234FBE94001ABA0E /* POI.swift in Sources */,
 				852ED281234FBD0F001ABA0E /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
