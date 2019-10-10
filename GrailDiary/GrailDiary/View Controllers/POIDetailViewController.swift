@@ -38,6 +38,8 @@ class POIDetailViewController: UIViewController {
         locationLabel.text = poi.location
         countryLabel.text = poi.country
         cluesTextView.text = {
+            if poi.clues.isEmpty { return "(none)" }
+            
             var cluesText = ""
             for clue in poi.clues {
                 cluesText += "• \(clue)\n"

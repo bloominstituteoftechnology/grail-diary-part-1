@@ -17,12 +17,12 @@ class POIsTableViewController: UIViewController {
         if segue.identifier == "AddPOIModalSegue" {
             guard let addPOIVC = segue.destination as? AddPOIViewController
                 else { return }
+            
             addPOIVC.delegate = self
             
         } else if segue.identifier == "ShowPOIDetailSegue" {
             if let poiDetailVC = segue.destination as? POIDetailViewController,
-                let indexPath = tableView.indexPathForSelectedRow
-            {
+                let indexPath = tableView.indexPathForSelectedRow {
                 poiDetailVC.poi = pois[indexPath.row]
                 poiDetailVC.delegate = self
             }
@@ -36,9 +36,7 @@ extension POIsTableViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell =
-            tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath)
-                as? POITableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell
             else { return UITableViewCell() }
         
         cell.poi = pois[indexPath.row]
@@ -48,7 +46,7 @@ extension POIsTableViewController: UITableViewDataSource {
 }
 
 extension POIsTableViewController: AddPOIDelegate {
-    func poiWasAdded(_ poi: POI) {
+    func poiWasSaved(_ poi: POI) {
         pois.append(poi)
         dismiss(animated: true, completion: nil)
         tableView.reloadData()

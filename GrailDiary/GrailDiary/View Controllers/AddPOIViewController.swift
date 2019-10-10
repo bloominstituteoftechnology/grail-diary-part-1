@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AddPOIDelegate {
-    func poiWasAdded(_ poi: POI)
+    func poiWasSaved(_ poi: POI)
 }
 
 class AddPOIViewController: UIViewController {
@@ -56,7 +56,7 @@ class AddPOIViewController: UIViewController {
             poi.clues.append(clue3)
         }
         
-        delegate?.poiWasAdded(poi)
+        delegate?.poiWasSaved(poi)
     }
     
     private func showEmptyFieldAlert() {
@@ -85,8 +85,8 @@ extension AddPOIViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let text = textField.text, text.isEmpty,
             (textField == locationTextField || textField == countryTextField) {
-                showEmptyFieldAlert()
-                return false
+            showEmptyFieldAlert()
+            return false
         }
         
         switch textField {
