@@ -10,8 +10,8 @@ import Foundation
 
 struct POI {
     
-    var location: String
-    var country: String
-    var hobbies: [String]
+    let location: String
+    let country: String
+    var clues: [String]
 }
  
