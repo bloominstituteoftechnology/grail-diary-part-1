@@ -27,15 +27,15 @@ class POIsTableViewController: UIViewController, UITableViewDataSource {
     
     // MARK: - TableViewDataSource
     
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return POIs.count
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.POICell, for: indexPath) as? POITableViewCell else { fatalError("no cell") }
-//        
-//        return cell
-//    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return POIs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.POICell, for: indexPath) as? POITableViewCell else { fatalError("no cell") }
+        
+        return cell
+    }
 
 
 }
