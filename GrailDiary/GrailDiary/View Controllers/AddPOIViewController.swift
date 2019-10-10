@@ -59,7 +59,20 @@ class AddPOIViewController: UIViewController {
     }
     
     private func showEmptyFieldAlert() {
-        print("ERROR (AddPOIViewController): Empty text in 'location' or 'country' on return!")
+        let emptyFieldAlert = UIAlertController(
+            title: "Required field(s) empty!",
+            message: "'Location' and 'country' fields must be non-empty.",
+            preferredStyle: .alert
+        )
+        
+        emptyFieldAlert.addAction(UIAlertAction(
+            title: "OK",
+            style: .cancel,
+            handler: { (_: UIAlertAction) in
+                self.locationTextField.becomeFirstResponder()
+        }))
+        
+        present(emptyFieldAlert, animated: true, completion: nil)
     }
 }
 
