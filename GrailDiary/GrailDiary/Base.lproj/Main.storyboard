@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="dGQ-b6-Co0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="dGQ-b6-Co0" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dGQ-b6-Co0" id="Rcm-y6-bFG">
@@ -63,6 +63,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesCountLabel" destination="GNm-V3-BIc" id="NYW-eJ-UnC"/>
+                                            <outlet property="countryLabel" destination="U5t-HF-WJS" id="YRu-r0-4PF"/>
+                                            <outlet property="locationLabel" destination="9rC-Hb-GUb" id="d7U-zy-Adt"/>
                                             <segue destination="8GN-Tj-Rga" kind="show" identifier="ShowPOIDetailSegue" id="u7M-Hs-TqW"/>
                                         </connections>
                                     </tableViewCell>
@@ -89,7 +92,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="poiTableView" destination="uGG-3D-flY" id="n9A-vJ-Dyt"/>
+                        <outlet property="tableView" destination="uGG-3D-flY" id="CIj-tR-qrW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
