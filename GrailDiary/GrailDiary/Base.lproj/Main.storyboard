@@ -132,7 +132,7 @@
                                     <constraint firstAttribute="width" constant="150" id="Ohk-lK-H3f"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hOi-Ii-qLo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hOi-Ii-qLo">
                                 <rect key="frame" x="20" y="384.5" width="354" height="457.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -162,6 +162,11 @@
                         <viewLayoutGuide key="safeArea" id="0qg-nF-xHZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="MeT-CQ-Eaf"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="hOi-Ii-qLo" id="L46-mr-Br8"/>
+                        <outlet property="countryLabel" destination="kGJ-y9-pp1" id="28W-0g-26F"/>
+                        <outlet property="locationLabel" destination="GtD-0h-hed" id="sV9-8x-5PY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLT-zA-GMb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
