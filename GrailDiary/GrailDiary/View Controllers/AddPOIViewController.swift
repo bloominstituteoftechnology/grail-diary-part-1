@@ -64,7 +64,8 @@ class AddPOIViewController: UIViewController {
             title: "Required field(s) empty!",
             message: "'Location' and 'country' fields must be non-empty.",
             preferredStyle: .alert
-        )
+            )
+        emptyFieldAlert.view.layoutIfNeeded()
         
         emptyFieldAlert.addAction(UIAlertAction(
             title: "OK",
@@ -72,8 +73,10 @@ class AddPOIViewController: UIViewController {
             handler: { (_: UIAlertAction) in
                 self.moveCursorToFirstEmptyReqField()
         }))
+        emptyFieldAlert.view.layoutIfNeeded()
         
         present(emptyFieldAlert, animated: true, completion: nil)
+        emptyFieldAlert.view.layoutIfNeeded()
     }
     
     func moveCursorToFirstEmptyReqField() {
