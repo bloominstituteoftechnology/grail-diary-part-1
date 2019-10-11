@@ -70,11 +70,7 @@ class AddPOIViewController: UIViewController {
             title: "OK",
             style: .cancel,
             handler: { (_: UIAlertAction) in
-                if let locationEmpty = self.locationTextField.text?.isEmpty, locationEmpty {
-                    self.locationTextField.becomeFirstResponder()
-                } else {
-                    self.countryTextField.becomeFirstResponder()
-                }
+                self.moveCursorToFirstEmptyReqField()
         }))
         
         present(emptyFieldAlert, animated: true, completion: nil)
@@ -83,28 +79,27 @@ class AddPOIViewController: UIViewController {
 
 extension AddPOIViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let text = textField.text, text.isEmpty,
-            (textField == locationTextField || textField == countryTextField) {
+        guard let text = textField.text else { return false }
+        
+        if (textField == locationTextField || textField == countryTextField) && text.isEmpty {
             showEmptyFieldAlert()
             return false
         }
-        
-        switch textField {
-        case locationTextField:
-            countryTextField.becomeFirstResponder()
-        case countryTextField:
-            clue1TextField.becomeFirstResponder()
-        case clue1TextField:
-            clue2TextField.becomeFirstResponder()
-        case clue2TextField:
-            clue3TextField.becomeFirstResponder()
-        case clue3TextField:
+        if ((textField == clue1TextField || textField == clue2TextField) && text.isEmpty)
+            || textField == clue3TextField {
             resignFirstResponder()
             saveNewPOI()
-        default:
-            print("ERROR (AddPOIViewController): Unknown text field!")
         }
         
+        textField.superview?.viewWithTag(textField.tag + 1)?.becomeFirstResponder()
         return false
+    }
+    
+    func moveCursorToFirstEmptyReqField() {
+        if let locationEmpty = self.locationTextField.text?.isEmpty, locationEmpty {
+            self.locationTextField.becomeFirstResponder()
+        } else {
+            self.countryTextField.becomeFirstResponder()
+        }
     }
 }
