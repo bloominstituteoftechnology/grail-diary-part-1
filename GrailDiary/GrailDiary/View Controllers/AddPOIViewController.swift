@@ -75,6 +75,14 @@ class AddPOIViewController: UIViewController {
         
         present(emptyFieldAlert, animated: true, completion: nil)
     }
+    
+    func moveCursorToFirstEmptyReqField() {
+        if let locationEmpty = self.locationTextField.text?.isEmpty, locationEmpty {
+            self.locationTextField.becomeFirstResponder()
+        } else {
+            self.countryTextField.becomeFirstResponder()
+        }
+    }
 }
 
 extension AddPOIViewController: UITextFieldDelegate {
@@ -93,13 +101,5 @@ extension AddPOIViewController: UITextFieldDelegate {
         
         textField.superview?.viewWithTag(textField.tag + 1)?.becomeFirstResponder()
         return false
-    }
-    
-    func moveCursorToFirstEmptyReqField() {
-        if let locationEmpty = self.locationTextField.text?.isEmpty, locationEmpty {
-            self.locationTextField.becomeFirstResponder()
-        } else {
-            self.countryTextField.becomeFirstResponder()
-        }
     }
 }
