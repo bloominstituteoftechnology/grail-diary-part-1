@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="Jig-5Y-OSC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="Jig-5Y-OSC" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jig-5Y-OSC" id="dhO-69-Chv">
@@ -59,13 +59,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="aZz-ez-KsY" kind="show" identifier="ShowPOIDetailSegue" id="tVh-8C-9Ay"/>
+                                            <outlet property="cluesCountLabel" destination="sYf-e3-siH" id="8ig-ea-wqA"/>
+                                            <outlet property="countryLabel" destination="pE5-uq-4fg" id="BCq-KJ-l0y"/>
+                                            <outlet property="locationLabel" destination="Ffh-Xz-Nuw" id="AbS-Pj-j4o"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="L7E-xS-rjo"/>
-                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="lOU-d1-p3l"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="UeF-vr-NyM"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -86,7 +87,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="3Jq-sN-46c" id="AYG-dR-o7a"/>
+                        <outlet property="tableView" destination="3Jq-sN-46c" id="Uhg-oA-J2N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -102,32 +103,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pm-2V-7lI">
-                                <rect key="frame" x="279" y="160" width="115" height="21"/>
+                                <rect key="frame" x="279" y="64" width="115" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pi3-Dh-YbW">
-                                <rect key="frame" x="332" y="189" width="62" height="21"/>
+                                <rect key="frame" x="332" y="93" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HOT" translatesAutoresizingMaskIntoConstraints="NO" id="MdZ-S1-aWe">
-                                <rect key="frame" x="20" y="160" width="150" height="150"/>
+                                <rect key="frame" x="20" y="64" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="AbR-t7-kNn"/>
                                     <constraint firstAttribute="width" secondItem="MdZ-S1-aWe" secondAttribute="height" multiplier="1:1" id="xGq-2K-3v1"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCg-HJ-ow9">
-                                <rect key="frame" x="20" y="350" width="44" height="21"/>
+                                <rect key="frame" x="20" y="254" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZxW-rS-xwz">
-                                <rect key="frame" x="20" y="379" width="374" height="463"/>
+                                <rect key="frame" x="20" y="283" width="374" height="559"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -219,7 +220,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="bp4-Dh-19I"/>
-                                    <barButtonItem systemItem="save" id="Uzr-jc-JcO"/>
+                                    <barButtonItem systemItem="save" id="Uzr-jc-JcO">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="leG-47-hFT" id="MFQ-Yo-4uv"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
