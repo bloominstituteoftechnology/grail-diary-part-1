@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jeL-03-uAw">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -58,6 +58,9 @@
                                         <constraint firstItem="W5a-MG-v1w" firstAttribute="leading" secondItem="UOx-yW-S8K" secondAttribute="leadingMargin" id="SM8-a9-hzR"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Q93-DB-aM2" kind="show" identifier="ShowPOIDetailSegue" id="QaG-kd-MCT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -155,7 +158,72 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NO6-ov-EZ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2746" y="-42"/>
+            <point key="canvasLocation" x="2632" y="-785"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="J5i-Qq-aop">
+            <objects>
+                <viewController id="Q93-DB-aM2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Zo-WZ-kxf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Madrid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSD-yQ-m6s">
+                                <rect key="frame" x="337.5" y="108" width="56.5" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kay-tj-1tm">
+                                <rect key="frame" x="355" y="137" width="39" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spain-madrid-city-centre" translatesAutoresizingMaskIntoConstraints="NO" id="ZnC-NY-2n9" userLabel="Madrid city centre">
+                                <rect key="frame" x="20" y="108" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZnC-NY-2n9" secondAttribute="height" multiplier="1:1" id="Nzj-hP-ukq"/>
+                                    <constraint firstAttribute="width" constant="150" id="XO8-Dp-WFO"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rqe-cJ-g5o">
+                                <rect key="frame" x="20" y="337.5" width="374" height="544.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FH-ST-SzD">
+                                <rect key="frame" x="20" y="298" width="64.5" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kay-tj-1tm" firstAttribute="trailing" secondItem="kSD-yQ-m6s" secondAttribute="trailing" id="0iE-wm-Kp9"/>
+                            <constraint firstItem="rqe-cJ-g5o" firstAttribute="trailing" secondItem="kay-tj-1tm" secondAttribute="trailing" id="16e-B3-a0m"/>
+                            <constraint firstItem="ZnC-NY-2n9" firstAttribute="top" secondItem="kSD-yQ-m6s" secondAttribute="top" id="2aD-pk-Q7T"/>
+                            <constraint firstItem="kay-tj-1tm" firstAttribute="top" secondItem="kSD-yQ-m6s" secondAttribute="bottom" constant="8" id="AyU-ys-wGT"/>
+                            <constraint firstItem="rqe-cJ-g5o" firstAttribute="leading" secondItem="9FH-ST-SzD" secondAttribute="leading" id="BNo-w9-nQb"/>
+                            <constraint firstItem="kSD-yQ-m6s" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZnC-NY-2n9" secondAttribute="trailing" constant="8" id="CBh-Ey-hIt"/>
+                            <constraint firstItem="kay-tj-1tm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZnC-NY-2n9" secondAttribute="trailing" constant="8" id="Jto-SK-42P"/>
+                            <constraint firstItem="kSD-yQ-m6s" firstAttribute="top" secondItem="xRo-dF-piZ" secondAttribute="top" constant="20" id="PNF-ZA-zu8"/>
+                            <constraint firstItem="rqe-cJ-g5o" firstAttribute="bottom" secondItem="2Zo-WZ-kxf" secondAttribute="bottomMargin" constant="20" id="QGb-iE-TPM"/>
+                            <constraint firstItem="rqe-cJ-g5o" firstAttribute="top" secondItem="9FH-ST-SzD" secondAttribute="bottom" constant="8" id="Tp9-vr-Scb"/>
+                            <constraint firstItem="ZnC-NY-2n9" firstAttribute="leading" secondItem="xRo-dF-piZ" secondAttribute="leading" constant="20" id="b7b-wx-Tjs"/>
+                            <constraint firstItem="xRo-dF-piZ" firstAttribute="trailing" secondItem="kSD-yQ-m6s" secondAttribute="trailing" constant="20" id="cD3-YG-cgB"/>
+                            <constraint firstItem="9FH-ST-SzD" firstAttribute="top" secondItem="ZnC-NY-2n9" secondAttribute="bottom" constant="40" id="hbo-9v-yQj"/>
+                            <constraint firstItem="9FH-ST-SzD" firstAttribute="leading" secondItem="ZnC-NY-2n9" secondAttribute="leading" id="y4F-4D-AJL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xRo-dF-piZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PS9-jw-jPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2628.985507246377" y="-42.1875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N1P-VZ-XDc">
@@ -176,4 +244,7 @@
             <point key="canvasLocation" x="824.63768115942037" y="-42.1875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="spain-madrid-city-centre" width="128" height="128"/>
+    </resources>
 </document>
