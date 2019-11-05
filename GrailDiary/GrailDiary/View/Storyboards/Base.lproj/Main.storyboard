@@ -26,8 +26,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="wgX-kv-Wet">
-                                                    <rect key="frame" x="20" y="10" width="68.5" height="40.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" axis="vertical" distribution="fillEqually" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="wgX-kv-Wet">
+                                                    <rect key="frame" x="20" y="8.5" width="68.5" height="43"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMm-L0-gsy">
                                                             <rect key="frame" x="0.0" y="0.0" width="68.5" height="20.5"/>
@@ -36,7 +36,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLJ-j0-USC">
-                                                            <rect key="frame" x="0.0" y="22.5" width="55" height="18"/>
+                                                            <rect key="frame" x="0.0" y="22.5" width="55" height="20.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -58,6 +58,9 @@
                                                 <constraint firstItem="wgX-kv-Wet" firstAttribute="centerY" secondItem="24f-Kh-uuj" secondAttribute="centerY" id="vnh-hS-c6L"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="MIc-ym-6P5" kind="show" identifier="ShowPOIDetailSegue" id="pk7-s0-h6E"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -82,6 +85,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="802.89855072463774" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1UW-Hx-6gz">
+            <objects>
+                <viewController id="MIc-ym-6P5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V9u-6v-Ljr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNN-kp-it1">
+                                <rect key="frame" x="279" y="160" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxe-05-3q0">
+                                <rect key="frame" x="20" y="350" width="43.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="piazza_navona" translatesAutoresizingMaskIntoConstraints="NO" id="gNa-7i-wwT">
+                                <rect key="frame" x="20" y="160" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Tjy-la-dyc"/>
+                                    <constraint firstAttribute="width" secondItem="gNa-7i-wwT" secondAttribute="height" multiplier="1:1" id="qaT-N8-KsZ"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="List of clues" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8HY-tT-oOl">
+                                <rect key="frame" x="20" y="379" width="374" height="463"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alV-vj-XRi">
+                                <rect key="frame" x="332.5" y="189" width="61.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gNa-7i-wwT" firstAttribute="top" secondItem="MNN-kp-it1" secondAttribute="top" id="9Gf-Dt-CVG"/>
+                            <constraint firstItem="Hxe-05-3q0" firstAttribute="leading" secondItem="gNa-7i-wwT" secondAttribute="leading" id="KJm-wN-DEV"/>
+                            <constraint firstItem="hiV-Cg-nwU" firstAttribute="bottom" secondItem="8HY-tT-oOl" secondAttribute="bottom" constant="20" id="Pjm-Bl-FDz"/>
+                            <constraint firstItem="hiV-Cg-nwU" firstAttribute="trailing" secondItem="MNN-kp-it1" secondAttribute="trailing" constant="20" id="Qhc-Fi-FSt"/>
+                            <constraint firstItem="hiV-Cg-nwU" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Hxe-05-3q0" secondAttribute="trailing" constant="8" id="S02-2T-iA7"/>
+                            <constraint firstItem="8HY-tT-oOl" firstAttribute="trailing" secondItem="alV-vj-XRi" secondAttribute="trailing" id="Ysi-Va-LJ6"/>
+                            <constraint firstItem="alV-vj-XRi" firstAttribute="top" secondItem="MNN-kp-it1" secondAttribute="bottom" constant="8" id="abQ-cc-k0j"/>
+                            <constraint firstItem="MNN-kp-it1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gNa-7i-wwT" secondAttribute="trailing" constant="8" id="cnz-UE-lOY"/>
+                            <constraint firstItem="8HY-tT-oOl" firstAttribute="top" secondItem="Hxe-05-3q0" secondAttribute="bottom" constant="8" id="d4z-bx-ifa"/>
+                            <constraint firstItem="8HY-tT-oOl" firstAttribute="leading" secondItem="Hxe-05-3q0" secondAttribute="leading" id="eFd-eR-ktV"/>
+                            <constraint firstItem="Hxe-05-3q0" firstAttribute="top" secondItem="gNa-7i-wwT" secondAttribute="bottom" constant="40" id="jgw-WF-Tx2"/>
+                            <constraint firstItem="MNN-kp-it1" firstAttribute="top" secondItem="hiV-Cg-nwU" secondAttribute="top" constant="20" id="lRe-mN-Nre"/>
+                            <constraint firstItem="gNa-7i-wwT" firstAttribute="leading" secondItem="hiV-Cg-nwU" secondAttribute="leading" constant="20" id="lzO-2n-OFm"/>
+                            <constraint firstItem="alV-vj-XRi" firstAttribute="trailing" secondItem="MNN-kp-it1" secondAttribute="trailing" id="nsM-dG-MAh"/>
+                            <constraint firstItem="alV-vj-XRi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gNa-7i-wwT" secondAttribute="trailing" constant="8" id="oGu-n3-zNX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hiV-Cg-nwU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vQU-tb-hw6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQp-ff-Ohb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1502.8985507246377" y="137.94642857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="JBq-vg-5sT">
@@ -177,4 +247,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="piazza_navona" width="112.5" height="112.5"/>
+    </resources>
 </document>

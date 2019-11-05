@@ -15,4 +15,5 @@ struct Cells {
 
 struct Segues {
     static let addPOIModalSegue = "AddPOIModalSegue"
+    static let showPOIDetailSegue = "ShowPOIDetailSegue"
 }
