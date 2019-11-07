@@ -209,9 +209,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v69-ru-cWP">
                                 <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="gwt-BH-0Je"/>
+                                    <barButtonItem systemItem="cancel" id="gwt-BH-0Je">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="oAn-DV-heG" id="ylf-eG-EdH"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="apa-hD-1hj"/>
-                                    <barButtonItem systemItem="save" id="T6W-yt-06I"/>
+                                    <barButtonItem systemItem="save" id="T6W-yt-06I">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="oAn-DV-heG" id="5az-I4-zPR"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -226,6 +234,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wIp-hb-2QQ"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="Gmu-iK-Fsc" id="3RD-JD-m96"/>
+                        <outlet property="clue2TextField" destination="NIP-EG-nQE" id="skm-n1-FWw"/>
+                        <outlet property="clue3TextField" destination="gyX-ND-JW7" id="BRl-q2-ai2"/>
+                        <outlet property="countryTextField" destination="iFt-XD-wNk" id="UQf-Ht-5po"/>
+                        <outlet property="locationTextField" destination="6FI-c4-aKu" id="jof-YZ-hG3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEN-gv-lzC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
