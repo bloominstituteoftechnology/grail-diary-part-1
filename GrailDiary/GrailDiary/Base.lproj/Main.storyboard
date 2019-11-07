@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I2L-xd-CUo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -10,7 +10,7 @@
         <!--POisTableViewController-->
         <scene sceneID="Oz7-fK-7ws">
             <objects>
-                <viewController title="POisTableViewController" id="0bO-N1-0PA" sceneMemberID="viewController">
+                <viewController title="POisTableViewController" id="0bO-N1-0PA" customClass="POIsTableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MAf-UK-00h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="Xvn-SF-KXl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="Xvn-SF-KXl" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xvn-SF-KXl" id="ijb-YU-NHg">
@@ -94,11 +94,11 @@
             </objects>
             <point key="canvasLocation" x="807.24637681159425" y="-280.58035714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="j7G-KE-x0O">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSR-Lx-CEf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="caB-XV-Zqo" sceneMemberID="viewController">
+                <viewController id="caB-XV-Zqo" customClass="POIDetailViewController" customModule="GrailDiary" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFill" id="4a7-D6-ohb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,12 +160,12 @@
                     <navigationItem key="navigationItem" id="0TB-3t-GB1"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1582.608695652174" y="33.482142857142854"/>
+            <point key="canvasLocation" x="1614" y="66"/>
         </scene>
-        <!--View Controller-->
+        <!--AddaPOI View Controller-->
         <scene sceneID="NzI-so-80s">
             <objects>
-                <viewController id="BoK-30-Tlg" sceneMemberID="viewController">
+                <viewController id="BoK-30-Tlg" customClass="AddaPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WEf-aw-ABy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
