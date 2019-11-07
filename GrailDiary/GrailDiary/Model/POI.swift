@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Model Data. Blueprint for the data saved and passed around inside the app.
 struct POI {
     let location: String
     let country: String

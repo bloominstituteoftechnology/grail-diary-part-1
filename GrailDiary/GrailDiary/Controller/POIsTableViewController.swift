@@ -32,8 +32,12 @@ class POIsTableViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
+            /// Selects the "ShowPOIDetailSegue" and sets the value on the destination ViewController
         case Segues.showPOIDetailSegue:
-            print("Show POI Detail")
+            guard let showPOIDetailVC = segue.destination as? POIDetailViewController, let indexPath = tableView.indexPathForSelectedRow else { return }
+            let point = points[indexPath.row]
+            showPOIDetailVC.point = point
+            /// Selects the "AddPOIModalSegue and sets the delegate == self on the destination ViewController
         case Segues.addPOIModalSegue:
             guard let addPOIVC = segue.destination as? AddPOIViewController else { return }
             addPOIVC.delegate = self
@@ -55,14 +59,21 @@ extension POIsTableViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.poiCell, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Cells.poiCell, for: indexPath) as? POITableViewCell else { return UITableViewCell() }
+        let point = points[indexPath.row]
+        cell.point = point
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 // MARK: - AddPOIDelegate Extension
 extension POIsTableViewController: AddPOIDelegate {
+    /// Takes the POI passed by the delegate and appends it to the points array.
     func poiWasAdded(_ poi: POI) {
         points.append(poi)
         tableView.reloadData()

@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Delegate utilized to enable the easy passing of data from one ViewController to the next.
 protocol AddPOIDelegate: AnyObject {
     func poiWasAdded(_ poi: POI)
 }
