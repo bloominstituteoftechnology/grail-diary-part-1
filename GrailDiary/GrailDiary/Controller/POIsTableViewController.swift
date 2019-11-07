@@ -27,8 +27,24 @@ class POIsTableViewController: UIViewController {
         tableView.dataSource = self
         points.append(point)
     }
+    
+    // --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case Segues.showPOIDetailSegue:
+            print("Show POI Detail")
+        case Segues.addPOIModalSegue:
+            guard let addPOIVC = segue.destination as? AddPOIViewController else { return }
+            addPOIVC.delegate = self
+        default:
+            break
+        }
+    }
 }
 
+// --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+// MARK: - TableView Delegate and DataSource Extension
 extension POIsTableViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -41,5 +57,14 @@ extension POIsTableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cells.poiCell, for: indexPath)
         return cell
+    }
+}
+
+// --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+// MARK: - AddPOIDelegate Extension
+extension POIsTableViewController: AddPOIDelegate {
+    func poiWasAdded(_ poi: POI) {
+        points.append(poi)
+        tableView.reloadData()
     }
 }

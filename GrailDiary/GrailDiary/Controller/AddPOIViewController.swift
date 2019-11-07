@@ -57,6 +57,7 @@ class AddPOIViewController: UIViewController {
         }
         
         delegate?.poiWasAdded(newPoint)
+        dismiss(animated: true)
     }
 }
 
