@@ -1,14 +1,14 @@
 //
-//  POIsTableViewController.swift
+//  AddPOIViewController.swift
 //  GrailDiary
 //
-//  Created by Chad Rutherford on 11/5/19.
+//  Created by Chad Rutherford on 11/7/19.
 //  Copyright © 2019 Chad Rutherford. All rights reserved.
 //
 
 import UIKit
 
-class POIsTableViewController: UIViewController {
+class AddPOIViewController: UIViewController {
     
     // --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
     // MARK: - View Controller Life Cycle
@@ -16,4 +16,3 @@ class POIsTableViewController: UIViewController {
         super.viewDidLoad()
     }
 }
-

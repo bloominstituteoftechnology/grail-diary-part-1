@@ -14,6 +14,10 @@
 		634BAD42237206F70005A670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634BAD41237206F70005A670 /* Assets.xcassets */; };
 		634BAD45237206F70005A670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634BAD43237206F70005A670 /* LaunchScreen.storyboard */; };
 		634BAD4E237209AC0005A670 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634BAD4D237209AC0005A670 /* Constants.swift */; };
+		634D82162374AC7D006D1897 /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634D82152374AC7D006D1897 /* AddPOIViewController.swift */; };
+		634D82182374ACBD006D1897 /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634D82172374ACBD006D1897 /* POIDetailViewController.swift */; };
+		634D821B2374ACFE006D1897 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634D821A2374ACFE006D1897 /* POITableViewCell.swift */; };
+		634D821D2374AD1F006D1897 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634D821C2374AD1F006D1897 /* POI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		634BAD44237206F70005A670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		634BAD46237206F70005A670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		634BAD4D237209AC0005A670 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		634D82152374AC7D006D1897 /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		634D82172374ACBD006D1897 /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		634D821A2374ACFE006D1897 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		634D821C2374AD1F006D1897 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				634BAD4D237209AC0005A670 /* Constants.swift */,
+				634D821C2374AD1F006D1897 /* POI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				634BAD3C237206F60005A670 /* POIsTableViewController.swift */,
+				634D82152374AC7D006D1897 /* AddPOIViewController.swift */,
+				634D82172374ACBD006D1897 /* POIDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -105,9 +116,18 @@
 		634BAD5223720B560005A670 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				634D82192374ACEB006D1897 /* Cells */,
 				634BAD5023720B380005A670 /* Storyboards */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		634D82192374ACEB006D1897 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				634D821A2374ACFE006D1897 /* POITableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,9 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				634D821B2374ACFE006D1897 /* POITableViewCell.swift in Sources */,
+				634D82162374AC7D006D1897 /* AddPOIViewController.swift in Sources */,
 				634BAD3D237206F60005A670 /* POIsTableViewController.swift in Sources */,
 				634BAD39237206F60005A670 /* AppDelegate.swift in Sources */,
+				634D821D2374AD1F006D1897 /* POI.swift in Sources */,
 				634BAD3B237206F60005A670 /* SceneDelegate.swift in Sources */,
+				634D82182374ACBD006D1897 /* POIDetailViewController.swift in Sources */,
 				634BAD4E237209AC0005A670 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
