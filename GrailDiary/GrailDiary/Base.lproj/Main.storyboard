@@ -81,15 +81,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="POITableViewOutlet" destination="ud7-K4-XSF" id="joc-5U-IZI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="biL-Wf-GJs">
             <objects>
-                <viewController id="aoZ-sV-hUs" sceneMemberID="viewController">
+                <viewController id="aoZ-sV-hUs" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Mv-De-2Yv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,10 +158,10 @@
             </objects>
             <point key="canvasLocation" x="1887" y="217"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="I1v-pE-FLV">
             <objects>
-                <viewController id="5CD-p0-9Ez" sceneMemberID="viewController">
+                <viewController id="5CD-p0-9Ez" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OkY-L3-IME">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -215,11 +218,26 @@
                         <viewLayoutGuide key="safeArea" id="ieg-7g-bkp"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Cancel" id="5pw-Ep-8pY"/>
+                        <barButtonItem title="Cancel" id="5pw-Ep-8pY">
+                            <connections>
+                                <action selector="cancelTapped:" destination="5CD-p0-9Ez" id="dmb-39-E5D"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="w1G-i5-cFK"/>
-                        <barButtonItem title="Save" id="34W-VI-HFo"/>
+                        <barButtonItem title="Save" id="34W-VI-HFo">
+                            <connections>
+                                <action selector="saveTapped:" destination="5CD-p0-9Ez" id="xeq-zq-pya"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="clue1Outlet" destination="vZ1-u5-esh" id="tLK-tT-e14"/>
+                        <outlet property="clue2Outlet" destination="c1O-Ac-laY" id="F8O-ys-BSb"/>
+                        <outlet property="clue3Outlet" destination="1mx-3a-7gb" id="8Zz-KH-yiw"/>
+                        <outlet property="countryOutlet" destination="Ca0-m2-GtM" id="Lba-Bg-1km"/>
+                        <outlet property="locationOutlet" destination="rFf-bn-bSN" id="ZS1-zG-lri"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMN-R6-UDw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
