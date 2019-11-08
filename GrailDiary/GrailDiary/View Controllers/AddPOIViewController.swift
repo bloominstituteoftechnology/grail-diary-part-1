@@ -32,9 +32,7 @@ class AddPOIViewController: UIViewController {
         clue3TextField.delegate = self
     }
     
-    @IBAction func cancelTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
+
     @IBAction func saveTapped(_ sender: Any) {
         
         if let location = locationTextField.text,
@@ -62,13 +60,31 @@ class AddPOIViewController: UIViewController {
             delegate?.poiWasAdded(poi)
         }
     }
+    
+    @IBAction func cancelTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension AddPOIViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        
+        if let text = textField.text, !text.isEmpty {
+        switch textField {
+        case locationTextField:
+            countryTextField.becomeFirstResponder()
+        case countryTextField:
+            clue1TextField.becomeFirstResponder()
+        case clue1TextField:
+            clue2TextField.becomeFirstResponder()
+        case clue2TextField:
+            clue3TextField.becomeFirstResponder()
+        case clue3TextField:
+            textField.resignFirstResponder()
+        default:
+            saveTapped(UIBarButtonItem())
+            }
+        }
         return true
     }
 }
