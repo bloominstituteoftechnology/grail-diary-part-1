@@ -90,10 +90,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="countryLabel" destination="Mrg-c9-ukL" id="EZc-Q1-5Dh"/>
+                        <outlet property="locationLabel" destination="B6v-fq-556" id="uoI-Vg-ooz"/>
+                        <outlet property="numberOfCluesLabel" destination="Sfl-bh-FFn" id="IaJ-oG-LaI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="830" y="116"/>
+            <point key="canvasLocation" x="828.98550724637687" y="115.84821428571428"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="KdL-ts-w5z">
@@ -241,7 +246,6 @@
         <!--Navigation Controller-->
         <scene sceneID="et0-O3-RWI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BT9-m4-lII" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JA3-cZ-1dy" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="iRy-bV-fkm">
@@ -253,6 +257,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DBD-Vx-1QQ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BT9-m4-lII" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
         </scene>
