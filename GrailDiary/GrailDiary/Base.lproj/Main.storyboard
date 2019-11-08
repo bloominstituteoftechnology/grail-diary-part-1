@@ -7,16 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--POisTableViewController-->
-        <scene sceneID="Oz7-fK-7ws">
+        <!--Is Table View Controller-->
+        <scene sceneID="EIK-XY-pZ6">
             <objects>
-                <viewController title="POisTableViewController" id="0bO-N1-0PA" customClass="POIsTableViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MAf-UK-00h">
+                <viewController id="r4d-mg-59T" customClass="POIsTableViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cjg-fb-CfC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0vy-Iw-dEX">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="842"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="Xvn-SF-KXl" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
@@ -71,33 +71,38 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="r4d-mg-59T" id="ey3-Dl-92F"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="0vy-Iw-dEX" firstAttribute="leading" secondItem="GOj-HN-CfQ" secondAttribute="leading" id="8HW-vg-3QC"/>
-                            <constraint firstItem="GOj-HN-CfQ" firstAttribute="bottom" secondItem="0vy-Iw-dEX" secondAttribute="bottom" id="T83-7E-jc3"/>
-                            <constraint firstItem="GOj-HN-CfQ" firstAttribute="trailing" secondItem="0vy-Iw-dEX" secondAttribute="trailing" id="lKl-QX-bSs"/>
-                            <constraint firstItem="0vy-Iw-dEX" firstAttribute="top" secondItem="GOj-HN-CfQ" secondAttribute="top" id="qk3-pF-l53"/>
+                            <constraint firstItem="0vy-Iw-dEX" firstAttribute="trailing" secondItem="GIV-P2-njS" secondAttribute="trailing" id="9On-BR-pvh"/>
+                            <constraint firstItem="0vy-Iw-dEX" firstAttribute="leading" secondItem="GIV-P2-njS" secondAttribute="leading" id="IyG-9s-Mxg"/>
+                            <constraint firstItem="0vy-Iw-dEX" firstAttribute="top" secondItem="Cjg-fb-CfC" secondAttribute="top" constant="20" id="S8S-SI-wWc"/>
+                            <constraint firstItem="GIV-P2-njS" firstAttribute="bottom" secondItem="0vy-Iw-dEX" secondAttribute="bottom" id="hEx-Vo-zdB"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="GOj-HN-CfQ"/>
+                        <viewLayoutGuide key="safeArea" id="GIV-P2-njS"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Grail Diary" largeTitleDisplayMode="always" id="etG-8H-R0p">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="JfH-gV-oQx">
+                    <navigationItem key="navigationItem" id="dCu-k7-iH3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0tg-dp-scV">
                             <connections>
-                                <segue destination="BoK-30-Tlg" kind="presentation" identifier="AddPOIModalSegue" id="h9Q-no-VBl"/>
+                                <segue destination="BoK-30-Tlg" kind="presentation" id="4KG-Dj-Fhe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="0vy-Iw-dEX" id="IGU-kN-kBu"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KvB-bf-6pD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xm6-f7-Vah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807.24637681159425" y="-280.58035714285711"/>
+            <point key="canvasLocation" x="733" y="-281"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="j7G-KE-x0O">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CSR-Lx-CEf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="caB-XV-Zqo" customClass="POIDetailViewController" customModule="GrailDiary" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFill" id="4a7-D6-ohb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -159,6 +164,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="0TB-3t-GB1"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CSR-Lx-CEf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1614" y="66"/>
         </scene>
@@ -209,15 +215,26 @@
                                         <rect key="frame" x="0.0" y="293.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="addClue3:" destination="BoK-30-Tlg" eventType="editingDidEnd" id="Ap2-pL-cfH"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0y-a4-vey">
                                 <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="cancel" id="bgD-zf-vI8"/>
+                                    <barButtonItem title="cancel" id="bgD-zf-vI8">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="BoK-30-Tlg" id="Xh3-As-GDh"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Lhw-M2-XO9"/>
-                                    <barButtonItem title="save" id="Qjg-jv-Wmc"/>
+                                    <barButtonItem title="save" id="Qjg-jv-Wmc">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="BoK-30-Tlg" id="6MW-xd-ayH"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -232,6 +249,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BOG-Hm-DYI"/>
                     </view>
+                    <connections>
+                        <outlet property="addClue1" destination="Zsj-Pa-8lJ" id="B78-gi-6Z8"/>
+                        <outlet property="addClue2" destination="rbZ-J7-G7U" id="FDP-x3-hm2"/>
+                        <outlet property="addClue3" destination="a8b-pf-9Gh" id="rjI-vc-uWg"/>
+                        <outlet property="addCountry" destination="7G0-eH-4hZ" id="b5N-p7-JOI"/>
+                        <outlet property="addLocationCell" destination="wXr-34-nlv" id="HNK-UP-a3Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHM-YG-fdP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -248,7 +272,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="0bO-N1-0PA" kind="relationship" relationship="rootViewController" id="jsX-VY-Sbm"/>
+                        <segue destination="r4d-mg-59T" kind="relationship" relationship="rootViewController" id="bM7-ce-rRR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfO-1v-2lK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -258,6 +282,5 @@
     </scenes>
     <resources>
         <image name="Interesting Pictures" width="297" height="170"/>
-        <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
 </document>
