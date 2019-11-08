@@ -12,9 +12,10 @@
 		678F632423721A08003B10CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678F632223721A08003B10CD /* Main.storyboard */; };
 		678F632623721A0B003B10CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 678F632523721A0B003B10CD /* Assets.xcassets */; };
 		678F632923721A0B003B10CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678F632723721A0B003B10CD /* LaunchScreen.storyboard */; };
-		678F633323722492003B10CD /* POIsTableVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F633223722492003B10CD /* POIsTableVIewController.swift */; };
-		678F6335237240B1003B10CD /* Unknown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 678F6334237240B1003B10CD /* Unknown.jpg */; };
 		E1DFF75C23724DF000BE675B /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DFF75B23724DF000BE675B /* POIDetailViewController.swift */; };
+		E1DFF7752374CCD400BE675B /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DFF7742374CCD400BE675B /* POIsTableViewController.swift */; };
+		E1DFF7772374CD0B00BE675B /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DFF7762374CD0B00BE675B /* AddPOIViewController.swift */; };
+		E1DFF7792374CDC900BE675B /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DFF7782374CDC900BE675B /* POI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +26,10 @@
 		678F632523721A0B003B10CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		678F632823721A0B003B10CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		678F632A23721A0B003B10CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		678F633223722492003B10CD /* POIsTableVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableVIewController.swift; sourceTree = "<group>"; };
-		678F6334237240B1003B10CD /* Unknown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Unknown.jpg; sourceTree = "<group>"; };
 		E1DFF75B23724DF000BE675B /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		E1DFF7742374CCD400BE675B /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
+		E1DFF7762374CD0B00BE675B /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		E1DFF7782374CDC900BE675B /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				678F631C23721A08003B10CD /* AppDelegate.swift */,
+				E1DFF7742374CCD400BE675B /* POIsTableViewController.swift */,
+				E1DFF7762374CD0B00BE675B /* AddPOIViewController.swift */,
 				678F631E23721A08003B10CD /* SceneDelegate.swift */,
 				678F632223721A08003B10CD /* Main.storyboard */,
 				E1DFF75B23724DF000BE675B /* POIDetailViewController.swift */,
+				E1DFF7782374CDC900BE675B /* POI.swift */,
 				678F632523721A0B003B10CD /* Assets.xcassets */,
 				678F632723721A0B003B10CD /* LaunchScreen.storyboard */,
 				678F632A23721A0B003B10CD /* Info.plist */,
-				678F633223722492003B10CD /* POIsTableVIewController.swift */,
-				678F6334237240B1003B10CD /* Unknown.jpg */,
 			);
 			path = GrailDiary;
 			sourceTree = "<group>";
@@ -133,7 +136,6 @@
 			files = (
 				678F632923721A0B003B10CD /* LaunchScreen.storyboard in Resources */,
 				678F632623721A0B003B10CD /* Assets.xcassets in Resources */,
-				678F6335237240B1003B10CD /* Unknown.jpg in Resources */,
 				678F632423721A08003B10CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,10 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1DFF7772374CD0B00BE675B /* AddPOIViewController.swift in Sources */,
 				678F631D23721A08003B10CD /* AppDelegate.swift in Sources */,
 				678F631F23721A08003B10CD /* SceneDelegate.swift in Sources */,
+				E1DFF7752374CCD400BE675B /* POIsTableViewController.swift in Sources */,
+				E1DFF7792374CDC900BE675B /* POI.swift in Sources */,
 				E1DFF75C23724DF000BE675B /* POIDetailViewController.swift in Sources */,
-				678F633323722492003B10CD /* POIsTableVIewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

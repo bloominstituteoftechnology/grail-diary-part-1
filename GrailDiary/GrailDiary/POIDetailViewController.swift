@@ -3,7 +3,7 @@
 //  GrailDiary
 //
 //  Created by Ufuk Türközü on 06.11.19.
-//  Copyright © 2019 Özgün Yildiz. All rights reserved.
+//  Copyright © 2019 Ufuk Türközü. All rights reserved.
 //
 
 import UIKit

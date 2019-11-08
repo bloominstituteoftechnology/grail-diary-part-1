@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  GrailDiary
 //
-//  Created by Sezen Bozdogan on 05.11.19.
-//  Copyright © 2019 Özgün Yildiz. All rights reserved.
+//  Created by Ufuk Türközü on 05.11.19.
+//  Copyright © 2019 Ufuk Türközü. All rights reserved.
 //
 
 import UIKit
