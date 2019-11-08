@@ -141,20 +141,21 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rCm-lf-0FH" firstAttribute="top" secondItem="nTJ-Rl-lFr" secondAttribute="bottom" constant="13" id="3WL-QI-kiQ"/>
-                            <constraint firstItem="nTJ-Rl-lFr" firstAttribute="top" secondItem="l7a-J8-TbL" secondAttribute="bottom" constant="40" id="6LF-ng-p1H"/>
+                            <constraint firstItem="nTJ-Rl-lFr" firstAttribute="top" secondItem="l7a-J8-TbL" secondAttribute="bottom" constant="40" id="0EF-2g-PQo"/>
                             <constraint firstItem="cyA-hq-pHD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="l7a-J8-TbL" secondAttribute="trailing" constant="8" id="7ws-0s-TNp"/>
+                            <constraint firstItem="nTJ-Rl-lFr" firstAttribute="leading" secondItem="rCm-lf-0FH" secondAttribute="leading" id="CNb-KE-Ny8"/>
                             <constraint firstItem="al1-3t-ObV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="l7a-J8-TbL" secondAttribute="trailing" constant="8" id="D3p-cW-5j4"/>
                             <constraint firstItem="W64-Dl-ijH" firstAttribute="bottom" secondItem="rCm-lf-0FH" secondAttribute="bottom" constant="20" id="DQ3-5V-MDF"/>
-                            <constraint firstItem="nTJ-Rl-lFr" firstAttribute="leading" secondItem="l7a-J8-TbL" secondAttribute="leading" id="FqM-Zw-XZS"/>
+                            <constraint firstItem="W64-Dl-ijH" firstAttribute="trailing" secondItem="nTJ-Rl-lFr" secondAttribute="trailing" constant="350" id="GRv-w8-C28"/>
+                            <constraint firstItem="nTJ-Rl-lFr" firstAttribute="leading" secondItem="l7a-J8-TbL" secondAttribute="leading" id="Ghf-ka-17f"/>
                             <constraint firstItem="l7a-J8-TbL" firstAttribute="leading" secondItem="W64-Dl-ijH" secondAttribute="leading" constant="20" id="HXG-Pw-p8z"/>
                             <constraint firstItem="l7a-J8-TbL" firstAttribute="top" secondItem="W64-Dl-ijH" secondAttribute="top" constant="20" id="JrN-Wl-G26"/>
-                            <constraint firstItem="rCm-lf-0FH" firstAttribute="leading" secondItem="nTJ-Rl-lFr" secondAttribute="leading" id="MBj-l0-hrd"/>
                             <constraint firstItem="cyA-hq-pHD" firstAttribute="trailing" secondItem="al1-3t-ObV" secondAttribute="trailing" id="UEy-hL-qHl"/>
                             <constraint firstItem="rCm-lf-0FH" firstAttribute="trailing" secondItem="cyA-hq-pHD" secondAttribute="trailing" id="ZuY-Xw-KfV"/>
                             <constraint firstItem="al1-3t-ObV" firstAttribute="top" secondItem="W64-Dl-ijH" secondAttribute="top" constant="20" id="b37-QN-gT4"/>
                             <constraint firstItem="W64-Dl-ijH" firstAttribute="trailing" secondItem="al1-3t-ObV" secondAttribute="trailing" constant="20" id="bxb-cn-7O3"/>
                             <constraint firstItem="cyA-hq-pHD" firstAttribute="top" secondItem="al1-3t-ObV" secondAttribute="bottom" constant="8" id="lUk-oJ-rq6"/>
+                            <constraint firstItem="rCm-lf-0FH" firstAttribute="top" secondItem="nTJ-Rl-lFr" secondAttribute="bottom" constant="13" id="mp7-YO-VRv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W64-Dl-ijH"/>
                     </view>
@@ -217,9 +218,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="47N-x1-taU">
                                 <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Cancel" id="ucb-oh-Kno"/>
+                                    <barButtonItem title="Cancel" id="ucb-oh-Kno">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="3ig-hH-aCP" id="LgL-XE-vIG"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="0xO-Pp-1JZ"/>
-                                    <barButtonItem title="Save" id="NKr-rz-ypF"/>
+                                    <barButtonItem title="Save" id="NKr-rz-ypF">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="3ig-hH-aCP" id="OiK-J7-T7h"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -236,6 +245,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4W1-u5-ti9"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="oDN-oT-ezb" id="HQ2-i5-LGh"/>
+                        <outlet property="clue2TextField" destination="cTp-Zh-w2z" id="6km-gy-2yI"/>
+                        <outlet property="clue3TextField" destination="902-eu-qHh" id="idf-Cy-3Ym"/>
+                        <outlet property="countryTextField" destination="JSu-ue-KR0" id="Jxe-Rq-Iiv"/>
+                        <outlet property="locationTextField" destination="oFm-rr-3On" id="Uit-WF-otb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c8j-Ov-z9P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
