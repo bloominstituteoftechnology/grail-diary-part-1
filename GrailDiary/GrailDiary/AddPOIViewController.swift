@@ -1,5 +1,5 @@
 //
-//  POIsTableViewController.swift
+//  AddPOIViewController.swift
 //  GrailDiary
 //
 //  Created by Donella Barcelo on 11/7/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class POIsTableViewController: UIViewController {
+class AddPOIViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

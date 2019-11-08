@@ -1,5 +1,5 @@
 //
-//  POIsTableViewController.swift
+//  POIDetailViewController.swift
 //  GrailDiary
 //
 //  Created by Donella Barcelo on 11/7/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class POIsTableViewController: UIViewController {
+class POIDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
