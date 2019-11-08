@@ -13,6 +13,12 @@ class POIsTableViewController: UITableViewController, UIViewController {
     var pois: [POI] = [
         POI(location: "", country: "", clues: [])
         ]
+    
+    func poiWasCreated(_ pois: POI) {
+        pois.append(pois)
+        tableView.reloadData()
+        dismiss(animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +41,8 @@ class POIsTableViewController: UITableViewController, UIViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
+        return pois.count
+        
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,27 +89,47 @@ class POIsTableViewController: UITableViewController, UIViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "AddPOIModalSegue" {
+            
+            if let contactPOIDetailVC = segue.destination as? AddPOIViewController {
+                contactPOIDetailVC.delegate = self
+             
+            } else if segue.identifier == "ShowPOIDetailSegue" {
+                // We know that we are segueing to the FriendDetailViewController
+                
+                // What friend do we need to pass over?
+                if let POIDetailVC = segue.destination as? POIDetailViewController,
+                    let indexPath = tableView.indexPathForSelectedRow {
+                            
+                    let poi = pois[indexPath.row]
+                    POIDetailVC.poi = poi
+                }
+            }
+                // Hey I'm (the tble view controller) going to be the person you tell when a new friend is created
+        
+            }
+        }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
     }
-    */
 
-}
 
-/*extension POIsTableViewController: UITableViewDataSource, {
-    func tableView(_:numberOfRowsInSection:) {
+extension POIsTableViewController: UITableViewDataSource, {
+    func tableView(table View: UITableView, numberOfRowsInSection:) {
         
     }
     func tableView(_:cellForRowAt:indexPath:) {
         
     }
     
-}*/
+}
 extension POIsTableViewController: AddPOIDelegate {
     
     func poiWasCreated(_ pois: POI) {
