@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AddPOIDelegate {
-    func poiWasAdded(_ poi: POI)
+    func poiWasAdded(poi: POI)
 }
 
 class AddPOIViewController: UIViewController {
@@ -22,15 +22,18 @@ class AddPOIViewController: UIViewController {
     
     var delegate: AddPOIDelegate?
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        locationOutlet.delegate = self
+        countryOutlet.delegate = self
+        clue1Outlet.delegate = self
+        clue2Outlet.delegate = self
+        clue3Outlet.delegate = self
     }
     
     @IBAction func saveTapped(_ sender: Any) {
+        
         guard let location = locationOutlet.text, let country = countryOutlet.text, !location.isEmpty, !country.isEmpty else {return}
         
         var poi = POI(location: location, country: country, clues: [])
@@ -45,7 +48,7 @@ class AddPOIViewController: UIViewController {
             poi.clues.append(clue3)
         }
         
-        delegate?.poiWasAdded(poi)
+        delegate?.poiWasAdded(poi: poi)
     }
     
     
@@ -72,6 +75,7 @@ class AddPOIViewController: UIViewController {
                     clue3Outlet.becomeFirstResponder()
                 default:
                     textField.resignFirstResponder()
+                    
                 }
             }
             return false

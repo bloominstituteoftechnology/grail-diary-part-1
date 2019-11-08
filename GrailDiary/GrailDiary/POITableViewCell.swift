@@ -1,5 +1,5 @@
 //
-//  POIDetailViewController.swift
+//  POITableViewCell.swift
 //  GrailDiary
 //
 //  Created by Patrick Millet on 11/7/19.
@@ -8,24 +8,24 @@
 
 import UIKit
 
-class POIDetailViewController: UIViewController {
+class POITableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
-    @IBOutlet weak var cluesTextView: UITextView!
-    
-    var poi: POI?
+    @IBOutlet weak var cluesCountLabel: UILabel!
+
+    var poi: POI? {
+        didSet {
+            updateViews()
+        }
+    }
     
     private func updateViews() {
         guard let poi = poi else { return }
         
         locationLabel.text = poi.location
         countryLabel.text = poi.country
-        var cluesText = ""
-        for clue in poi.clues {
-            cluesText += "\(clue)\n"
-        }
-        cluesTextView.text = cluesText
+        cluesCountLabel.text = "\(poi.clues.count) clues"
     }
 }
