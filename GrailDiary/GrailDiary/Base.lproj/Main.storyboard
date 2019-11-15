@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="JHt-oX-8DE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShowPOIDetailSegue" id="JHt-oX-8DE">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JHt-oX-8DE" id="NkG-Te-CJt">
@@ -59,6 +59,9 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="ciA-jk-vJd" secondAttribute="trailing" id="kf8-z2-rL5"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="kFU-eD-vLu" kind="show" id="cVv-Id-pbE"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -82,6 +85,73 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="842.02898550724649" y="138.61607142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BX3-gY-aeq">
+            <objects>
+                <viewController id="kFU-eD-vLu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l8F-19-XlI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFD-yR-pz3">
+                                <rect key="frame" x="279" y="160" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCu-iy-F4y">
+                                <rect key="frame" x="20" y="350" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vt-jl-9a8">
+                                <rect key="frame" x="332" y="189" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="hVb-X1-yFi">
+                                <rect key="frame" x="20" y="160" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hVb-X1-yFi" secondAttribute="height" multiplier="1:1" id="tXU-5H-JhM"/>
+                                    <constraint firstAttribute="width" constant="150" id="xAC-Ju-xKz"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qZ9-j2-oz8">
+                                <rect key="frame" x="20" y="379" width="374" height="463"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0Vt-jl-9a8" firstAttribute="top" secondItem="iFD-yR-pz3" secondAttribute="bottom" constant="8" id="1kT-Rm-ncY"/>
+                            <constraint firstItem="vCu-iy-F4y" firstAttribute="top" secondItem="hVb-X1-yFi" secondAttribute="bottom" constant="40" id="1pI-LM-rB4"/>
+                            <constraint firstItem="hVb-X1-yFi" firstAttribute="top" secondItem="PEE-ad-kFy" secondAttribute="top" constant="20" id="420-Ps-fzC"/>
+                            <constraint firstItem="vCu-iy-F4y" firstAttribute="leading" secondItem="hVb-X1-yFi" secondAttribute="leading" id="5Uf-Qy-ZTu"/>
+                            <constraint firstItem="iFD-yR-pz3" firstAttribute="top" secondItem="PEE-ad-kFy" secondAttribute="top" constant="20" id="7A5-8u-nl8"/>
+                            <constraint firstItem="PEE-ad-kFy" firstAttribute="trailing" secondItem="iFD-yR-pz3" secondAttribute="trailing" constant="20" id="AJ1-i4-SBb"/>
+                            <constraint firstItem="hVb-X1-yFi" firstAttribute="leading" secondItem="PEE-ad-kFy" secondAttribute="leading" constant="20" id="ERC-1H-tRH"/>
+                            <constraint firstItem="0Vt-jl-9a8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hVb-X1-yFi" secondAttribute="trailing" constant="8" id="LNF-5K-18D"/>
+                            <constraint firstItem="qZ9-j2-oz8" firstAttribute="leading" secondItem="vCu-iy-F4y" secondAttribute="leading" id="QuP-oH-lcG"/>
+                            <constraint firstItem="qZ9-j2-oz8" firstAttribute="top" secondItem="vCu-iy-F4y" secondAttribute="bottom" constant="8" id="XJN-vT-70m"/>
+                            <constraint firstItem="0Vt-jl-9a8" firstAttribute="trailing" secondItem="iFD-yR-pz3" secondAttribute="trailing" id="ccf-5c-bOl"/>
+                            <constraint firstItem="qZ9-j2-oz8" firstAttribute="trailing" secondItem="0Vt-jl-9a8" secondAttribute="trailing" id="fvm-Gi-bDI"/>
+                            <constraint firstItem="PEE-ad-kFy" firstAttribute="bottom" secondItem="qZ9-j2-oz8" secondAttribute="bottom" constant="20" id="gqh-SN-Q1T"/>
+                            <constraint firstItem="iFD-yR-pz3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hVb-X1-yFi" secondAttribute="trailing" constant="8" id="qAi-a1-YbQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PEE-ad-kFy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lxa-Gk-sjA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sga-jw-NI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1608.6956521739132" y="499.55357142857139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4rH-dp-LPD">
@@ -177,4 +247,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Beach.jpeg" width="138" height="138"/>
+    </resources>
 </document>
