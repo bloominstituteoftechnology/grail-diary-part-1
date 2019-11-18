@@ -44,7 +44,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lI-YV-bsp">
                                                             <rect key="frame" x="0.0" y="26" width="55" height="18"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -58,6 +58,9 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="tEh-uC-p5M" secondAttribute="trailing" id="oN0-Vc-aOd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Gqt-Ef-Y4s" kind="show" identifier="ShowPOIDetailSegue" id="nyl-UR-jAC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -84,6 +87,73 @@
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="9VB-nj-eXG">
+            <objects>
+                <viewController id="Gqt-Ef-Y4s" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vfx-cy-aH2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibK-xe-Ada">
+                                <rect key="frame" x="263" y="160" width="131" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8T-no-1c4">
+                                <rect key="frame" x="339" y="192" width="55" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="julia-pfeiffer-burns-state-park" translatesAutoresizingMaskIntoConstraints="NO" id="zZU-xw-2fY">
+                                <rect key="frame" x="20" y="160" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="QqX-po-uu4"/>
+                                    <constraint firstAttribute="width" secondItem="zZU-xw-2fY" secondAttribute="height" multiplier="1:1" id="hUE-MJ-mTq"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="37c-DB-Ki4">
+                                <rect key="frame" x="20" y="379" width="374" height="463"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tD8-XY-Fya">
+                                <rect key="frame" x="20" y="350" width="45.5" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="37c-DB-Ki4" firstAttribute="leading" secondItem="tD8-XY-Fya" secondAttribute="leading" id="3GV-QA-Jpm"/>
+                            <constraint firstItem="WFI-Ib-xDE" firstAttribute="trailing" secondItem="ibK-xe-Ada" secondAttribute="trailing" constant="20" id="5ak-Pc-bHc"/>
+                            <constraint firstItem="y8T-no-1c4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zZU-xw-2fY" secondAttribute="trailing" constant="8" id="5sU-rj-vN3"/>
+                            <constraint firstItem="ibK-xe-Ada" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zZU-xw-2fY" secondAttribute="trailing" constant="8" id="7ak-4E-apw"/>
+                            <constraint firstItem="37c-DB-Ki4" firstAttribute="trailing" secondItem="y8T-no-1c4" secondAttribute="trailing" id="Cbq-GL-w7g"/>
+                            <constraint firstItem="tD8-XY-Fya" firstAttribute="leading" secondItem="zZU-xw-2fY" secondAttribute="leading" id="DRF-jv-iob"/>
+                            <constraint firstItem="y8T-no-1c4" firstAttribute="top" secondItem="ibK-xe-Ada" secondAttribute="bottom" constant="8" id="HgH-k0-aMm"/>
+                            <constraint firstItem="ibK-xe-Ada" firstAttribute="top" secondItem="WFI-Ib-xDE" secondAttribute="top" constant="20" id="Mz0-wc-13N"/>
+                            <constraint firstItem="zZU-xw-2fY" firstAttribute="top" secondItem="ibK-xe-Ada" secondAttribute="top" id="NyC-Ru-h20"/>
+                            <constraint firstItem="y8T-no-1c4" firstAttribute="trailing" secondItem="ibK-xe-Ada" secondAttribute="trailing" id="cWP-us-eXk"/>
+                            <constraint firstItem="37c-DB-Ki4" firstAttribute="top" secondItem="tD8-XY-Fya" secondAttribute="bottom" constant="8" id="d2t-Aq-9Zr"/>
+                            <constraint firstItem="zZU-xw-2fY" firstAttribute="leading" secondItem="WFI-Ib-xDE" secondAttribute="leading" constant="20" id="g1w-e6-N8b"/>
+                            <constraint firstItem="WFI-Ib-xDE" firstAttribute="bottom" secondItem="37c-DB-Ki4" secondAttribute="bottom" constant="20" id="nuI-Ap-oHR"/>
+                            <constraint firstItem="tD8-XY-Fya" firstAttribute="top" secondItem="zZU-xw-2fY" secondAttribute="bottom" constant="40" id="uWk-CK-qH2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WFI-Ib-xDE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cyA-3E-pWa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UPp-2C-xYx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912" y="387"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="Lq4-bK-FP5">
             <objects>
                 <viewController id="ObG-Mx-wRn" sceneMemberID="viewController">
@@ -100,22 +170,22 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXK-h2-KMY">
-                                        <rect key="frame" x="0.0" y="57" width="374" height="20.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9uu-Bq-RuL">
-                                        <rect key="frame" x="0.0" y="93.5" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="57" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kaH-f2-oxZ">
-                                        <rect key="frame" x="0.0" y="143.5" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="107" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXK-h2-KMY">
+                                        <rect key="frame" x="0.0" y="157" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ap-ur-ciE">
                                         <rect key="frame" x="0.0" y="193.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -156,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7e-sp-16M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="137"/>
+            <point key="canvasLocation" x="1912" y="-259"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gbA-7p-56t">
@@ -177,4 +247,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="julia-pfeiffer-burns-state-park" width="1367" height="1362"/>
+    </resources>
 </document>
