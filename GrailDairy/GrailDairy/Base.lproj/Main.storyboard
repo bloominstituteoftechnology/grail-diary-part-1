@@ -76,7 +76,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Grail Diary" id="FJI-pa-nJW">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="LrX-JM-vLk">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2AM-Pk-Mba">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2AM-Pk-Mba">
                                 <rect key="frame" x="302" y="2.5" width="92" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -125,9 +125,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e7g-0O-Wp5">
-                                <rect key="frame" x="20" y="413" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e7g-0O-Wp5">
+                                <rect key="frame" x="20" y="327" width="374" height="515"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -137,11 +136,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="e7g-0O-Wp5" firstAttribute="leading" secondItem="thK-hd-ZrI" secondAttribute="leading" id="DeR-MR-qMO"/>
                             <constraint firstItem="NcA-gu-dBi" firstAttribute="top" secondItem="YQp-rO-LDr" secondAttribute="bottom" constant="8" id="E1m-3e-s1u"/>
                             <constraint firstItem="NcA-gu-dBi" firstAttribute="trailing" secondItem="YQp-rO-LDr" secondAttribute="trailing" id="F4u-2y-7pu"/>
+                            <constraint firstItem="e7g-0O-Wp5" firstAttribute="top" secondItem="thK-hd-ZrI" secondAttribute="bottom" constant="8" id="G4h-hZ-qA8"/>
                             <constraint firstItem="YQp-rO-LDr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HFd-YT-fNZ" secondAttribute="trailing" constant="8" id="Jqj-bn-GzB"/>
+                            <constraint firstItem="e7g-0O-Wp5" firstAttribute="trailing" secondItem="NcA-gu-dBi" secondAttribute="trailing" id="NN5-c8-36I"/>
                             <constraint firstItem="foP-AR-5TM" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="thK-hd-ZrI" secondAttribute="trailing" symbolic="YES" id="PFj-Kf-lug"/>
                             <constraint firstItem="HFd-YT-fNZ" firstAttribute="leading" secondItem="foP-AR-5TM" secondAttribute="leading" constant="20" id="PPV-lD-cbO"/>
+                            <constraint firstItem="foP-AR-5TM" firstAttribute="bottom" secondItem="e7g-0O-Wp5" secondAttribute="bottom" constant="20" id="RHb-Cp-0wy"/>
                             <constraint firstItem="thK-hd-ZrI" firstAttribute="top" secondItem="HFd-YT-fNZ" secondAttribute="bottom" constant="40" id="cuW-1b-2l7"/>
                             <constraint firstItem="HFd-YT-fNZ" firstAttribute="top" secondItem="YQp-rO-LDr" secondAttribute="top" id="dEx-mP-fQe"/>
                             <constraint firstItem="NcA-gu-dBi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HFd-YT-fNZ" secondAttribute="trailing" constant="8" id="eGb-oG-4pb"/>
