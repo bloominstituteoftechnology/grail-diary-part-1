@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="112" id="RFb-Kw-5oS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="112" id="RFb-Kw-5oS" customClass="POITableViewCell" customModule="GrailDairy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RFb-Kw-5oS" id="nUZ-Jn-Aof">
@@ -65,6 +65,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2kO-kV-9F0"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -83,6 +86,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="jsR-Ph-iKT" id="vob-dm-Q8D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -158,6 +164,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4hQ-qe-qbg"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="toi-VI-xHH" id="fDB-yH-9zd"/>
+                        <outlet property="clue2TextField" destination="GpY-ZN-voZ" id="xnW-uG-kXH"/>
+                        <outlet property="clue3TextField" destination="aqJ-iU-AoO" id="q9x-20-1i8"/>
+                        <outlet property="countryTextField" destination="Wrs-jp-mmM" id="bCK-fk-HOu"/>
+                        <outlet property="locationTextField" destination="r9K-ow-5P8" id="FGL-wY-qfc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ll-bi-rnk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
