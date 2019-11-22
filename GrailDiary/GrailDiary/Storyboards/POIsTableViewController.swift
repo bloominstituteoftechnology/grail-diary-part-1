@@ -37,16 +37,16 @@ class POIsTableViewController: UIViewController {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.POICell, for: indexPath) as? POITableViewCell else { return UITableViewCell() }
             
             let poi = POIs[indexPath.row]
-            cell.poi = poi
+//            cell.poi = poi
             return cell
         }
     }
     
-    extension POIsTableViewController: AddPOIDelegate {
-        func poiWasAdded(_ poi: POI) {
-            POIs.append(poi)
-            dismiss(animated: true, completion: nil)
-            tableView.reloadData()
+//    extension POIsTableViewController: AddPOIDelegate {
+//        func poiWasAdded(_ poi: POI) {
+//            POIs.append(poi)
+//            dismiss(animated: true, completion: nil)
+//            tableView.reloadData()
         }
     }
     
