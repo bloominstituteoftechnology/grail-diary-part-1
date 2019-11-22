@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="L6a-lr-rjr">
             <objects>
-                <viewController id="ZHu-TO-sNU" sceneMemberID="viewController">
+                <viewController id="ZHu-TO-sNU" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K7o-pM-Cbe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,10 +161,10 @@
             </objects>
             <point key="canvasLocation" x="2039" y="-312"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="P7V-UD-ylY">
             <objects>
-                <viewController id="8Of-VA-VOc" sceneMemberID="viewController">
+                <viewController id="8Of-VA-VOc" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KLc-lI-37i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,8 +206,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="B6h-CH-Wlq" firstAttribute="top" secondItem="ZfQ-BR-9Hc" secondAttribute="bottom" constant="8" id="2dG-pa-hc7"/>
+                            <constraint firstItem="Dng-lV-xm5" firstAttribute="trailing" secondItem="ZfQ-BR-9Hc" secondAttribute="trailing" constant="348" id="AuO-v7-Szk"/>
+                            <constraint firstItem="B6h-CH-Wlq" firstAttribute="leading" secondItem="ZfQ-BR-9Hc" secondAttribute="leading" id="FaS-EA-yiF"/>
                             <constraint firstItem="R3J-FA-h0O" firstAttribute="leading" secondItem="Dng-lV-xm5" secondAttribute="leading" constant="20" id="GnW-dG-6gA"/>
-                            <constraint firstItem="B6h-CH-Wlq" firstAttribute="leading" secondItem="ZfQ-BR-9Hc" secondAttribute="leading" id="HG3-nd-FQc"/>
+                            <constraint firstItem="B6h-CH-Wlq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZfQ-BR-9Hc" secondAttribute="leading" id="HG3-nd-FQc"/>
                             <constraint firstItem="D4Q-3y-Sys" firstAttribute="trailing" secondItem="JUZ-KH-0sn" secondAttribute="trailing" id="IOA-zU-Hnx"/>
                             <constraint firstItem="ZfQ-BR-9Hc" firstAttribute="top" secondItem="R3J-FA-h0O" secondAttribute="bottom" constant="40" id="JR9-nc-OF4"/>
                             <constraint firstItem="D4Q-3y-Sys" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="R3J-FA-h0O" secondAttribute="trailing" constant="8" id="L0F-ve-RuY"/>
