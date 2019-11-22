@@ -215,13 +215,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tc7-OM-QIs">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Cancel" id="MO3-Pf-kQL"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="TLj-nN-3j2"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="aG1-m5-caE"/>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2M-ru-84u">
-                                <rect key="frame" x="322" y="827" width="37" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2M-ru-84u">
+                                <rect key="frame" x="357" y="827.5" width="37" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daW-jD-xzs">
+                                <rect key="frame" x="20" y="827.5" width="53" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -232,12 +236,23 @@
                             <constraint firstItem="e6g-QL-0E9" firstAttribute="trailing" secondItem="ObS-S7-MZG" secondAttribute="trailing" constant="20" id="0cN-hb-DkL"/>
                             <constraint firstItem="ObS-S7-MZG" firstAttribute="leading" secondItem="e6g-QL-0E9" secondAttribute="leading" constant="20" id="6fh-Qo-V1g"/>
                             <constraint firstItem="e6g-QL-0E9" firstAttribute="bottom" secondItem="tc7-OM-QIs" secondAttribute="bottom" id="Fmd-hD-IOk"/>
+                            <constraint firstItem="daW-jD-xzs" firstAttribute="leading" secondItem="e6g-QL-0E9" secondAttribute="leading" constant="20" id="Mno-UQ-oUJ"/>
+                            <constraint firstItem="e6g-QL-0E9" firstAttribute="trailing" secondItem="p2M-ru-84u" secondAttribute="trailing" constant="20" id="Nmz-dO-629"/>
                             <constraint firstItem="tc7-OM-QIs" firstAttribute="trailing" secondItem="e6g-QL-0E9" secondAttribute="trailing" id="Tc8-6W-VWu"/>
+                            <constraint firstItem="daW-jD-xzs" firstAttribute="centerY" secondItem="tc7-OM-QIs" secondAttribute="centerY" id="htt-yK-3LY"/>
                             <constraint firstItem="tc7-OM-QIs" firstAttribute="leading" secondItem="e6g-QL-0E9" secondAttribute="leading" id="nH4-Rb-sqq"/>
+                            <constraint firstItem="p2M-ru-84u" firstAttribute="centerY" secondItem="tc7-OM-QIs" secondAttribute="centerY" id="tdA-I0-XyP"/>
                             <constraint firstItem="ObS-S7-MZG" firstAttribute="top" secondItem="e6g-QL-0E9" secondAttribute="top" constant="20" id="yMw-Dv-jIL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e6g-QL-0E9"/>
                     </view>
+                    <connections>
+                        <outlet property="CountryTextField" destination="ghq-hp-b4s" id="wdH-wB-KdD"/>
+                        <outlet property="clue1TextField" destination="Rms-Sp-09Q" id="2Qf-t2-fVb"/>
+                        <outlet property="clue2TextField" destination="N0x-o2-Cze" id="znW-8A-Cd8"/>
+                        <outlet property="clue3TextField" destination="ylF-O5-xqK" id="4k9-dR-mc5"/>
+                        <outlet property="locationTextField" destination="UHm-33-BTu" id="XQJ-8H-KLS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gn5-kI-2Su" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
