@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="DJU-ft-cxz">
             <objects>
-                <viewController id="WEj-Dv-Yok" sceneMemberID="viewController">
+                <viewController id="WEj-Dv-Yok" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l0L-A0-Vwl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,9 +60,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kgr-bd-feo">
                                 <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Cancel" id="fYU-mt-xPb"/>
+                                    <barButtonItem title="Cancel" id="fYU-mt-xPb">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="WEj-Dv-Yok" id="v0o-Ma-CAx"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="wdA-Ip-gTw"/>
-                                    <barButtonItem title="save" id="I1J-2s-ZL3"/>
+                                    <barButtonItem title="save" id="I1J-2s-ZL3">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="WEj-Dv-Yok" id="X1s-pa-xFl"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -77,6 +85,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rkf-36-mck"/>
                     </view>
+                    <connections>
+                        <outlet property="cancelTapped" destination="Kgr-bd-feo" id="9sE-oK-L4A"/>
+                        <outlet property="clue1TextField" destination="mCh-op-NBZ" id="DCt-kD-fJF"/>
+                        <outlet property="clue2TextField" destination="Oux-jN-kUT" id="ua2-TJ-Hee"/>
+                        <outlet property="clue3TextField" destination="QA6-z3-gEz" id="nK3-rd-DKI"/>
+                        <outlet property="countryTextField" destination="XBc-R6-DBg" id="eGu-Wa-Hbo"/>
+                        <outlet property="locationTextField" destination="wqx-gV-VjU" id="61G-pr-j8P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fO5-jx-N8l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,7 +110,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="tIZ-0i-5xY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="tIZ-0i-5xY" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tIZ-0i-5xY" id="3Vz-Oq-g1U">
@@ -104,13 +120,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="m7m-8H-MdZ">
                                                     <rect key="frame" x="20" y="10" width="68.5" height="40.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23X-xQ-uYB">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23X-xQ-uYB">
                                                             <rect key="frame" x="0.0" y="0.0" width="68.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV6-GN-MAi">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV6-GN-MAi">
                                                             <rect key="frame" x="0.0" y="22.5" width="55" height="18"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <nil key="textColor"/>
@@ -134,6 +150,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="clueCountLabel" destination="wM2-vK-nBO" id="r0n-7M-dNe"/>
+                                            <outlet property="countryLabel" destination="sV6-GN-MAi" id="CNC-gj-g5H"/>
+                                            <outlet property="locationLabel" destination="23X-xQ-uYB" id="ycI-DI-Bqm"/>
                                             <segue destination="muO-Qq-Td5" kind="show" identifier="ShowPOIDetailSegue" id="fsf-cb-WdL"/>
                                         </connections>
                                     </tableViewCell>
@@ -156,15 +175,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="PaS-VC-Tfa" id="jGo-81-GJM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="104.46428571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="43h-YM-5AK">
             <objects>
-                <viewController id="muO-Qq-Td5" sceneMemberID="viewController">
+                <viewController id="muO-Qq-Td5" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="279-fW-ri1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,6 +246,11 @@
                         <viewLayoutGuide key="safeArea" id="V4v-Fl-Mea"/>
                     </view>
                     <navigationItem key="navigationItem" id="kQ5-9d-RyJ"/>
+                    <connections>
+                        <outlet property="clueListTextView" destination="Txq-ed-oi9" id="P4R-Zh-4Nd"/>
+                        <outlet property="countryLabel" destination="hlx-HT-4tE" id="BqB-uA-OJB"/>
+                        <outlet property="locationLabel" destination="Cnv-ce-Y9y" id="g1d-Mg-HDd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nT-Ys-pTi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
