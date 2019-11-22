@@ -9,6 +9,8 @@
 import UIKit
 
 class POIsTableViewController: UIViewController {
+    
+    let model: [POI] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
