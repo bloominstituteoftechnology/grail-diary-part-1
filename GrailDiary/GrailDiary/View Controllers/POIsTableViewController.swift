@@ -8,7 +8,7 @@
 
 import UIKit
 
-class POIsTableViewController: UIViewController {
+class POIsTableViewController: UIViewController, UITableViewDelegate {
 
     // MARK: - IBOutlets
     @IBOutlet var tableView: UITableView!
@@ -18,13 +18,21 @@ class POIsTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
 
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddPOIModalSegue" {
             if let addPOIVC = segue.destination as? AddPOIViewController {
                 addPOIVC.delegate = self
+            }
+        } else if segue.identifier == "ShowPOIDetailSegue" {
+            if let cell = tableView.indexPathForSelectedRow,
+                let poiDetailVC = segue.destination as? POIDetailViewController {
+                poiDetailVC.poi = pois[cell.row]
             }
         }
     }

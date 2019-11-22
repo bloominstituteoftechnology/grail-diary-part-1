@@ -24,16 +24,22 @@ class POIDetailViewController: UIViewController {
         locationLabel.text = poi.location
         countryLabel.text = poi.country
         
-        var clueCount = 0
-        var clues = ""
-        for clue in poi.clues {
-            clueCount += 1
-            clues += "\(clueCount). \(clue)"
-            if clueCount < poi.clues.count {
-                clues += "\n\n"
+        if poi.clues.isEmpty {
+            cluesTextView.text = "none"
+        } else {
+            var clueCount = 0
+            var clues = ""
+            
+            for clue in poi.clues {
+                clueCount += 1
+                clues += "\(clueCount). \(clue)"
+                if clueCount < poi.clues.count {
+                    clues += "\n\n"
+                }
             }
+            cluesTextView.text = clues
         }
-        cluesTextView.text = clues
+        
     }
     
     override func viewDidLoad() {
