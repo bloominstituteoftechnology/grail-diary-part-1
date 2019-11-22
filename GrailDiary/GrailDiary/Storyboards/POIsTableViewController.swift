@@ -26,6 +26,20 @@ class POIsTableViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    // Mark: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == PropertyKeys.addPOIModalSegue {
+            if let poiVC = segue.destination as? AddPOIViewController {
+                poiVC.delegate = self
+            }
+        } else if segue.identifier == PropertyKeys.showPOIDetailSegue {
+            if let poiDetailVC = segue.destination as? POIDetailViewController,
+                let indexPath = tableView.indexPathForSelectedRow {
+                poiDetailVC.poi = POIs[indexPath.row]
+            }
+        }
+    }
+    
 }
     extension POIsTableViewController: UITableViewDataSource {
         
@@ -42,11 +56,11 @@ class POIsTableViewController: UIViewController {
         }
     }
     
-//    extension POIsTableViewController: AddPOIDelegate {
-//        func poiWasAdded(_ poi: POI) {
-//            POIs.append(poi)
-//            dismiss(animated: true, completion: nil)
-//            tableView.reloadData()
+    extension POIsTableViewController: AddPOIDelegate {
+        func poiWasAdded(_ poi: POI) {
+            POIs.append(poi)
+            dismiss(animated: true, completion: nil)
+            tableView.reloadData()
         }
     }
     
