@@ -10,21 +10,44 @@ import UIKit
 
 class POIsTableViewController: UIViewController {
 
+    //MARK: - IBOutlets
+    @IBOutlet var tableView: UITableView!
+    
+    //Properties
+    var POIs: [POI] = []
+    
+    struct PropertyKeys {
+        static let addPOIModalSegue = "AddPOIModalSegue"
+        static let showPOIDetailSegue = "ShowPOIDetailSegue"
+        static let POICell = "POICell"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+}
+    extension POIsTableViewController: UITableViewDataSource {
+        
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return POIs.count
+        }
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.POICell, for: indexPath) as? POITableViewCell else { return UITableViewCell() }
+            
+            let poi = POIs[indexPath.row]
+            cell.poi = poi
+            return cell
+        }
+    }
+    
+    extension POIsTableViewController: AddPOIDelegate {
+        func poiWasAdded(_ poi: POI) {
+            POIs.append(poi)
+            dismiss(animated: true, completion: nil)
+            tableView.reloadData()
+        }
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
