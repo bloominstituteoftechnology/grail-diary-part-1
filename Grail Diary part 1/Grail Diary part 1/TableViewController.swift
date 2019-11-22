@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  UITableViewController.swift
 //  Grail Diary part 1
 //
 //  Created by Osha Washington on 11/19/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
