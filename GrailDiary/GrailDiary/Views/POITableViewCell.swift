@@ -10,6 +10,8 @@ import UIKit
 
 class POITableViewCell: UITableViewCell {
 
+    var poi: POI?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
