@@ -10,13 +10,34 @@ import UIKit
 
 class POIsTableViewController: UIViewController {
 
+    var POIArray: [POI] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func kldlksd(_ sender: Any) {
+    @IBOutlet var tableView: UITableView!
+    
+    
+
+    
+}
+
+extension POIsTableViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        POIArray.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
+        let poi = POIArray[indexPath.row]
+        cell.poi = poi
+        return cell
+        
+    }
+    
     
 }
 

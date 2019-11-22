@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="POICell" rowHeight="60" id="veS-TP-Wu1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="POICell" rowHeight="60" id="veS-TP-Wu1" customClass="POITableViewCell" customModule="GrailDairy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="veS-TP-Wu1" id="pta-CF-hDZ">
@@ -59,10 +59,16 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesLabel" destination="dmT-18-6pF" id="abs-zv-wJx"/>
+                                            <outlet property="countryLabel" destination="Ole-wc-gjY" id="bIw-eD-TYh"/>
+                                            <outlet property="locationLabel" destination="OxJ-lW-Tfi" id="PIT-XQ-4rq"/>
                                             <segue destination="No0-zU-2m9" kind="show" identifier="ShowPOIDetailSegue" id="qWX-xx-2fU"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zMP-kv-Oet"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -87,15 +93,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="029-4h-tgQ" id="hoD-hj-hmj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="v1M-uZ-Mxk">
             <objects>
-                <viewController id="No0-zU-2m9" sceneMemberID="viewController">
+                <viewController id="No0-zU-2m9" customClass="POIDetailViewController" customModule="GrailDairy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nWZ-qn-G5t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,10 +169,10 @@
             </objects>
             <point key="canvasLocation" x="1864" y="130"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="kp4-Z7-b7K">
             <objects>
-                <viewController id="iRy-Br-FOH" sceneMemberID="viewController">
+                <viewController id="iRy-Br-FOH" customClass="AddPOIViewController" customModule="GrailDairy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4A0-LD-nT6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,11 +190,17 @@
                                         <rect key="frame" x="0.0" y="57" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="iRy-Br-FOH" id="Yds-7B-nTv"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6sK-4d-CH3">
                                         <rect key="frame" x="0.0" y="107" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="iRy-Br-FOH" id="FWI-cJ-V0A"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsE-f5-MbH">
                                         <rect key="frame" x="0.0" y="157" width="374" height="20.5"/>
@@ -197,25 +212,42 @@
                                         <rect key="frame" x="0.0" y="193.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="iRy-Br-FOH" id="ZSf-12-txw"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n3G-3Z-Ca7">
                                         <rect key="frame" x="0.0" y="243.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="iRy-Br-FOH" id="8p8-8L-alK"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aA8-Bc-CBl">
                                         <rect key="frame" x="0.0" y="293.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="iRy-Br-FOH" id="p23-CK-tg2"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebf-w8-J23">
                                 <rect key="frame" x="0.0" y="793" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Cancel" id="HuQ-ze-afK"/>
+                                    <barButtonItem title="Cancel" id="HuQ-ze-afK">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="iRy-Br-FOH" id="75B-g2-sG2"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="AAe-Xm-LEs"/>
-                                    <barButtonItem title="Save" id="Sgt-DZ-Ox1"/>
+                                    <barButtonItem title="Save" id="Sgt-DZ-Ox1">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="iRy-Br-FOH" id="7WA-zz-V2g"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -230,6 +262,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="beG-ha-Lmf"/>
                     </view>
+                    <connections>
+                        <outlet property="cancelButtonTapped" destination="ebf-w8-J23" id="P2u-UO-60L"/>
+                        <outlet property="clue1Label" destination="SAf-5Z-roD" id="VRO-OX-wKn"/>
+                        <outlet property="clue2Label" destination="n3G-3Z-Ca7" id="Kfu-NL-2qh"/>
+                        <outlet property="clue3Label" destination="aA8-Bc-CBl" id="NkZ-Md-ATh"/>
+                        <outlet property="countryLabel" destination="6sK-4d-CH3" id="FTa-TH-tnS"/>
+                        <outlet property="locationLabel" destination="PvJ-lU-f51" id="Uaw-5w-gQE"/>
+                        <outlet property="saveTapped" destination="Sgt-DZ-Ox1" id="cpa-4n-KuZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xj5-n1-Yxt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
