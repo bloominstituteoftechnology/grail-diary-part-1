@@ -73,9 +73,6 @@ extension AddPOIViewController: UITextFieldDelegate {
             default:  textField.resignFirstResponder()
             }
         }
-        
         return false
-        
-        
     }
 }
