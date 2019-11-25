@@ -23,10 +23,10 @@ Please fork and clone this repository. Create a new Xcode project inside of the 
 4. Set the navigation bar to show large titles
 5. Give the View Controller scene a title of "Grail Diary"
 6. Add constraints with margins disabled to the Table View:
-    * Top = `0`
-    * Leading = `0`
-    * Trailing = `0`
-    * Bottom = `0`
+* Top = `0`
+* Leading = `0`
+* Trailing = `0`
+* Bottom = `0`
 7. Set the Table View to show 1 prototype cell (select the Table View and look in the attributes inspector); set the prototype cell identifier to "POICell"
 8. Set the Table View to show 60 pt rows (row height in the Table View's size inspector)
 9. Drag 3 labels into the cell prototype
@@ -47,51 +47,51 @@ Please fork and clone this repository. Create a new Xcode project inside of the 
     * horizontal spacing
     * change the relationship to `>=`
     * constant = `8`
-17. Add a bar button item to the right side of the navigation bar and set the system item value to "Add"
+    17. Add a bar button item to the right side of the navigation bar and set the system item value to "Add"
 
 #### Add New POI View
-18. Drag a View Controller scene onto the canvas
-19. Control-click from the add bar button item in the list of clues view to the new scene; choose "present modally" for the segue kind and use "AddPOIModalSegue" for the identifier
-20. Drag 5 text fields into the new View Controller scene; use these placeholders: "Location", "Country", "Clue 1", "Clue 2", "Clue 3"
-21. Place the 5 text fields into a vertical Stack View with the following Stack View attributes:
+    18. Drag a View Controller scene onto the canvas
+    19. Control-click from the add bar button item in the list of clues view to the new scene; choose "present modally" for the segue kind and use "AddPOIModalSegue" for the identifier
+    20. Drag 5 text fields into the new View Controller scene; use these placeholders: "Location", "Country", "Clue 1", "Clue 2", "Clue 3"
+    21. Place the 5 text fields into a vertical Stack View with the following Stack View attributes:
     * `fill` for both alignment and distribution
     * spacing = `16`
-22. Add the following constraints to the Stack View:
-    * leading = `20`
-    * trailing = `20`
-    * top = `20`
-23. Insert a label into the top of the Stack View and give it a value of "New POI"; set the font text style to "Large Title"
-24. Insert a label above the first clue Text Field in the Stack View and give it a value of "Clues"; set the font text style to "Headline"
-25. Add a toolbar to the bottom of the scene
-26. Constrain the toolbar to the view with the following:
-    * leading = `0`
-    * trailing = `0`
-    * bottom = `0`
-27. Add 3 bar button items: 1 set to "cancel", 1 to "flexible space", and 1 to "save"; this should separate the two buttons to the left and right edges
+    22. Add the following constraints to the Stack View:
+        * leading = `20`
+        * trailing = `20`
+        * top = `20`
+        23. Insert a label into the top of the Stack View and give it a value of "New POI"; set the font text style to "Large Title"
+        24. Insert a label above the first clue Text Field in the Stack View and give it a value of "Clues"; set the font text style to "Headline"
+        25. Add a toolbar to the bottom of the scene
+    26. Constrain the toolbar to the view with the following:
+        * leading = `0`
+        * trailing = `0`
+        * bottom = `0`
+    27. Add 3 bar button items: 1 set to "cancel", 1 to "flexible space", and 1 to "save"; this should separate the two buttons to the left and right edges
 
 #### POI Detail View
-28. Drag in a View Controller scene to the canvas
-29. Control-drag from the location cell to the new scene; select "show" for the segue kind and enter "ShowPOIDetailSegue" for the identifier
-30. Drag 3 labels into the new scene
-31. Set one to "Location Name" and use the following constraints:
+    28. Drag in a View Controller scene to the canvas
+    29. Control-drag from the location cell to the new scene; select "show" for the segue kind and enter "ShowPOIDetailSegue" for the identifier
+    30. Drag 3 labels into the new scene
+    31. Set one to "Location Name" and use the following constraints:
     * top = `20`
     * trailing = `20`
-32. Place another label below that and set it to "Country"; control-drag from this label to the location name label above and add these constraints:
+    32. Place another label below that and set it to "Country"; control-drag from this label to the location name label above and add these constraints:
     * trailing alignment (trailing edges of both labels are aligned)
     * vertical spacing = `8`
-33. Drag an Image View into the scene
-34. Constrain it with the following:
-    * `1:1` aspect ratio (check the box and then edit the value to make it 1:1)
-    * width = `150`
-    * leading = `20`
-    * align the top of the image with the top of the location name label
-35. Find a square image of an interesting location on Google and drag it into your asset catalog; set a sensible name and set the name as the image in the Image View attributes
-36. Add a horizontal distance constraint between the location label and the Image View
-    * set the constant value to `8`
-    * make it a `>=` constraint
-37. Add a horizontal distance constraint between the country label and the Image View
-    * set the constant value to `8`
-    * make it a `>=` constraint
+    33. Drag an Image View into the scene
+    34. Constrain it with the following:
+        * `1:1` aspect ratio (check the box and then edit the value to make it 1:1)
+        * width = `150`
+        * leading = `20`
+        * align the top of the image with the top of the location name label
+    35. Find a square image of an interesting location on Google and drag it into your asset catalog; set a sensible name and set the name as the image in the Image View attributes
+    36. Add a horizontal distance constraint between the location label and the Image View
+        * set the constant value to `8`
+        * make it a `>=` constraint
+    37. Add a horizontal distance constraint between the country label and the Image View
+        * set the constant value to `8`
+        * make it a `>=` constraint
 38. Place the third label below; set the value to "Clues"; use the following constraints:
     * align the leading with the Image View
     * set a top distance to the Image View = `40`
