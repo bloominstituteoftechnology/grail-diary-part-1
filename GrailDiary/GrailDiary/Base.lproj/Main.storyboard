@@ -55,6 +55,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="2wr-fO-MRh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Nxp-Lz-M2H" secondAttribute="leadingMargin" constant="8" id="0bO-W4-xsH"/>
+                                                <constraint firstItem="2wr-fO-MRh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="abH-qv-QD3" secondAttribute="trailing" constant="8" id="3Co-Zy-4l4"/>
                                                 <constraint firstItem="2wr-fO-MRh" firstAttribute="centerY" secondItem="Nxp-Lz-M2H" secondAttribute="centerY" id="VL9-MB-Csn"/>
                                                 <constraint firstItem="abH-qv-QD3" firstAttribute="centerY" secondItem="Nxp-Lz-M2H" secondAttribute="centerY" id="b6A-PO-C26"/>
                                                 <constraint firstItem="2wr-fO-MRh" firstAttribute="trailing" secondItem="Nxp-Lz-M2H" secondAttribute="trailingMargin" id="u8h-Y8-yfA"/>
@@ -62,6 +63,9 @@
                                                 <constraint firstItem="abH-qv-QD3" firstAttribute="leading" secondItem="Nxp-Lz-M2H" secondAttribute="leadingMargin" id="zxr-GU-50c"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="s0n-3u-yKa" kind="show" identifier="ShowPOIDetailSegue" id="9zz-lZ-wF8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -167,6 +171,71 @@
             </objects>
             <point key="canvasLocation" x="1533" y="-54"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="KGR-fk-6vJ">
+            <objects>
+                <viewController id="s0n-3u-yKa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0a6-Z0-2pn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wF5-a6-nhh">
+                                <rect key="frame" x="279" y="160" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4W-bI-Ta2">
+                                <rect key="frame" x="332" y="200" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forest" translatesAutoresizingMaskIntoConstraints="NO" id="XQa-MT-06F">
+                                <rect key="frame" x="20" y="160" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XQa-MT-06F" secondAttribute="height" multiplier="1:1" id="Vi5-xl-q1X"/>
+                                    <constraint firstAttribute="width" constant="150" id="k1s-Li-aib"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fDM-8v-6rJ">
+                                <rect key="frame" x="20" y="378.5" width="374" height="497.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9av-cC-1Nv">
+                                <rect key="frame" x="20" y="350" width="44" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9av-cC-1Nv" firstAttribute="leading" secondItem="XQa-MT-06F" secondAttribute="leading" id="1yw-JL-Mkl"/>
+                            <constraint firstItem="XQa-MT-06F" firstAttribute="top" secondItem="wF5-a6-nhh" secondAttribute="top" id="2Js-po-0iO"/>
+                            <constraint firstItem="XQa-MT-06F" firstAttribute="leading" secondItem="X8r-aY-ZOn" secondAttribute="leading" constant="20" id="745-xx-L91"/>
+                            <constraint firstItem="X8r-aY-ZOn" firstAttribute="trailing" secondItem="wF5-a6-nhh" secondAttribute="trailing" constant="20" id="9Fc-5c-ySO"/>
+                            <constraint firstItem="9av-cC-1Nv" firstAttribute="top" secondItem="XQa-MT-06F" secondAttribute="bottom" constant="40" id="E6T-FX-GgR"/>
+                            <constraint firstItem="wF5-a6-nhh" firstAttribute="top" secondItem="X8r-aY-ZOn" secondAttribute="top" constant="20" id="Vfl-0F-g7z"/>
+                            <constraint firstItem="fDM-8v-6rJ" firstAttribute="leading" secondItem="9av-cC-1Nv" secondAttribute="leading" id="WMR-aO-9cw"/>
+                            <constraint firstItem="U4W-bI-Ta2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XQa-MT-06F" secondAttribute="trailing" constant="8" id="Z4f-EA-9Qo"/>
+                            <constraint firstItem="fDM-8v-6rJ" firstAttribute="trailing" secondItem="U4W-bI-Ta2" secondAttribute="trailing" id="aLc-Ta-LJY"/>
+                            <constraint firstItem="wF5-a6-nhh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XQa-MT-06F" secondAttribute="trailing" constant="8" id="fCa-C9-ph9"/>
+                            <constraint firstItem="fDM-8v-6rJ" firstAttribute="top" secondItem="9av-cC-1Nv" secondAttribute="bottom" constant="8" id="kgh-9Y-WFZ"/>
+                            <constraint firstAttribute="bottom" secondItem="fDM-8v-6rJ" secondAttribute="bottom" constant="20" id="kzN-Xq-gTO"/>
+                            <constraint firstItem="U4W-bI-Ta2" firstAttribute="trailing" secondItem="wF5-a6-nhh" secondAttribute="trailing" id="lXM-VK-zU5"/>
+                            <constraint firstItem="U4W-bI-Ta2" firstAttribute="top" secondItem="wF5-a6-nhh" secondAttribute="bottom" constant="19" id="wUz-Bf-B5N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X8r-aY-ZOn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TE0-Mn-x6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824.63768115942037" y="603.34821428571422"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="cee-pJ-6u0">
             <objects>
@@ -186,4 +255,7 @@
             <point key="canvasLocation" x="80" y="-54"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="forest" width="275" height="183"/>
+    </resources>
 </document>
