@@ -58,6 +58,9 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="3Xv-3E-Vec" secondAttribute="trailing" id="zGQ-bA-slp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="5AN-zg-FaX" kind="show" identifier="ShowPOIDetailSegue" id="a3P-Pd-Jv9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -78,6 +81,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="202.89855072463769" y="606.69642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Uc4-HJ-KeN">
+            <objects>
+                <viewController id="5AN-zg-FaX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0MZ-oh-WJH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnk-gp-Sfe">
+                                <rect key="frame" x="279" y="108" width="115" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kus-JG-7Hg">
+                                <rect key="frame" x="332.5" y="136.5" width="61.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5A-Ij-DdJ">
+                                <rect key="frame" x="124" y="482" width="157" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pdY-Hg-HFv">
+                                <rect key="frame" x="20" y="108" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pdY-Hg-HFv" secondAttribute="height" multiplier="1:1" id="2Hf-8b-CEK"/>
+                                    <constraint firstAttribute="width" constant="150" id="p7Z-7U-jUX"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pdY-Hg-HFv" firstAttribute="top" secondItem="Vnk-gp-Sfe" secondAttribute="top" id="B6q-ZN-vwh"/>
+                            <constraint firstItem="Kus-JG-7Hg" firstAttribute="top" secondItem="Vnk-gp-Sfe" secondAttribute="bottom" constant="8" id="Chp-1y-IgL"/>
+                            <constraint firstItem="pdY-Hg-HFv" firstAttribute="leading" secondItem="YTh-zp-AR8" secondAttribute="leading" constant="20" id="JE4-3a-zvP"/>
+                            <constraint firstItem="Vnk-gp-Sfe" firstAttribute="top" secondItem="YTh-zp-AR8" secondAttribute="top" constant="20" id="Lcp-y2-1Hk"/>
+                            <constraint firstItem="Kus-JG-7Hg" firstAttribute="trailing" secondItem="Vnk-gp-Sfe" secondAttribute="trailing" id="ihE-9q-HGE"/>
+                            <constraint firstItem="YTh-zp-AR8" firstAttribute="trailing" secondItem="Vnk-gp-Sfe" secondAttribute="trailing" constant="20" id="uM0-eG-R9j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YTh-zp-AR8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="H5M-tC-JwG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d4a-d0-Hon" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.57971014492762" y="-144.64285714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bET-A3-r72">
