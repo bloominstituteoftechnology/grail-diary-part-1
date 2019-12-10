@@ -26,28 +26,37 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEa-VJ-24D">
-                                                    <rect key="frame" x="20" y="11" width="66" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7A-Jy-Tat">
-                                                    <rect key="frame" x="20" y="37" width="62" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxS-XU-uTF">
-                                                    <rect key="frame" x="319" y="24" width="75" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="EMk-Pp-dVp">
+                                                    <rect key="frame" x="20" y="10" width="82.5" height="49"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEa-VJ-24D">
+                                                            <rect key="frame" x="0.0" y="0.0" width="82.5" height="26.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7A-Jy-Tat">
+                                                            <rect key="frame" x="0.0" y="28.5" width="61.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxS-XU-uTF">
+                                                    <rect key="frame" x="316" y="24.5" width="78" height="20.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OxS-XU-uTF" firstAttribute="centerY" secondItem="bzq-qy-gGc" secondAttribute="centerY" id="ECK-J1-gka"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="OxS-XU-uTF" secondAttribute="trailing" id="XeQ-Kn-BtZ"/>
+                                                <constraint firstItem="OxS-XU-uTF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EMk-Pp-dVp" secondAttribute="trailing" constant="8" id="deM-s9-3pk"/>
+                                                <constraint firstItem="EMk-Pp-dVp" firstAttribute="leading" secondItem="bzq-qy-gGc" secondAttribute="leadingMargin" id="lQN-kf-nti"/>
+                                                <constraint firstItem="EMk-Pp-dVp" firstAttribute="centerY" secondItem="bzq-qy-gGc" secondAttribute="centerY" id="onl-FB-hxf"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -62,7 +71,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D1j-wS-eyc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Grail Diary" id="zrT-Av-IZk"/>
+                    <navigationItem key="navigationItem" title="Grail Diary" id="zrT-Av-IZk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3tk-Eb-1Sl"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6f-ie-Ezn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
