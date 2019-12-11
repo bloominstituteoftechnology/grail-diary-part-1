@@ -8,14 +8,12 @@
 
 import UIKit
 
-class POIsTableViewController: UITableViewController, UIViewController {
+class POIsTableViewController: UITableViewController {
     
-    var pois: [POI] = [
-        POI(location: "", country: "", clues: [])
-        ]
+    var pois: [POI] = [POI(location: "", country: "", clues: [])]
     
-    func poiWasCreated(_ pois: POI) {
-        pois.append(pois)
+    func poiWasCreated(pois: POI) {
+        self.pois.append(pois)
         tableView.reloadData()
         dismiss(animated: true, completion: nil)
     }
@@ -23,8 +21,6 @@ class POIsTableViewController: UITableViewController, UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -119,7 +115,7 @@ class POIsTableViewController: UITableViewController, UIViewController {
         // Pass the selected object to the new view controller.
         
     }
-
+}
 
 extension POIsTableViewController: UITableViewDataSource, {
     func tableView(table View: UITableView, numberOfRowsInSection:) {
@@ -128,8 +124,8 @@ extension POIsTableViewController: UITableViewDataSource, {
     func tableView(_:cellForRowAt:indexPath:) {
         
     }
-    
 }
+
 extension POIsTableViewController: AddPOIDelegate {
     
     func poiWasCreated(_ pois: POI) {
