@@ -2,7 +2,7 @@
 //  POIsTableViewController.swift
 //  GrailDiary
 //
-//  Created by Lambda_School_Loaner_220 on 11/5/19.
+//  Created by Lambda_School_loaner_226 on 12/10/19.
 //  Copyright © 2019 Lambda School. All rights reserved.
 //
 
