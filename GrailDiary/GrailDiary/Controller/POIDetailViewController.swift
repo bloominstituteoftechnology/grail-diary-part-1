@@ -13,6 +13,7 @@ class POIDetailViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var cluesTextView: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
     
     var poi: POI?
 
@@ -28,10 +29,11 @@ class POIDetailViewController: UIViewController {
         guard let poi = poi else {return}
         locationLabel.text = poi.location
         countryLabel.text = poi.country
+        var cluesText = ""
         for clue in poi.clues {
-            cluesTextView.text += "\(clue)\n\n"
-            print(cluesTextView.text)
+            cluesText += "\(clue)\n\n"
         }
+        cluesTextView.text = cluesText
     }
     /*
     // MARK: - Navigation
