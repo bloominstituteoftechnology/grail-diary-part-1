@@ -81,6 +81,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="l9M-4q-gfk" id="eUx-ep-wLA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,7 +92,7 @@
         <!--Add New POI View-->
         <scene sceneID="6Hb-Yf-UZJ">
             <objects>
-                <viewController id="buk-iP-iO1" userLabel="Add New POI View" sceneMemberID="viewController">
+                <viewController id="buk-iP-iO1" userLabel="Add New POI View" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VLl-ZG-CCN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,7 +168,7 @@
         <!--POI Detail-->
         <scene sceneID="Uc4-HJ-KeN">
             <objects>
-                <viewController id="5AN-zg-FaX" userLabel="POI Detail" sceneMemberID="viewController">
+                <viewController id="5AN-zg-FaX" userLabel="POI Detail" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0MZ-oh-WJH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
