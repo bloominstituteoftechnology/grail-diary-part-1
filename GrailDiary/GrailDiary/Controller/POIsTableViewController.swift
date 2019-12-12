@@ -43,7 +43,7 @@ extension POIsTableViewController: UITableViewDataSource {
             cell.selectionStyle = .none
             
             guard let thisPoi = self.poiModels?[indexPath.row] else {return cell}
-            cell.configureCell(poi: thisPoi)
+            cell.poi = thisPoi
             return cell
         }
         return UITableViewCell()

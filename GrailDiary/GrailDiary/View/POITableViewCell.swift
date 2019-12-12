@@ -15,25 +15,19 @@ class POITableViewCell: UITableViewCell {
     
 
 //  add a didSet observer that calls a function named updateViews
-    var poi: POI?
+    var poi: POI? {
+        //Observer (called when poi is set)
+        didSet {
+            configureCell()
+        }
+    }
     
     //TODO: Add didSet Observer
     
-    func configureCell(poi: POI) { //updateViews()
-        locationLbl.text = poi.location
-        countryLbl.text = poi.country
-        cluesLbl.text = "\(poi.clues.count) clues!"
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configureCell() { //updateViews()
+        locationLbl.text = poi?.location
+        countryLbl.text = poi?.country
+        cluesLbl.text = "\(poi?.clues.count ?? 0) clues!"
     }
 
 }
