@@ -10,7 +10,7 @@
         <!--Grail Diary-->
         <scene sceneID="h5B-ZJ-UK9">
             <objects>
-                <viewController id="BFD-6I-d1K" sceneMemberID="viewController">
+                <viewController id="BFD-6I-d1K" customClass="POIsTableViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m7m-uE-sFz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="69" id="nDM-xZ-shN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="69" id="nDM-xZ-shN" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nDM-xZ-shN" id="bzq-qy-gGc">
@@ -81,15 +81,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="7Tq-gA-C2b" id="DNu-Ir-TuL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6f-ie-Ezn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="970" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="O4s-Xt-jas">
             <objects>
-                <viewController id="N2k-ZH-eLL" sceneMemberID="viewController">
+                <viewController id="N2k-ZH-eLL" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7WW-Mf-AFj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,11 +173,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="WGL-Rj-PnA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1wb-6O-Byx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="RNs-Qu-PEL" sceneMemberID="viewController">
+                <viewController id="RNs-Qu-PEL" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xH1-G8-RSy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -241,7 +243,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jOK-4J-044"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="dLx-f4-uUq" id="zZ3-W0-cDT"/>
+                        <outlet property="clue2TextField" destination="w3y-Yc-taz" id="kyk-Sw-FLT"/>
+                        <outlet property="clue3TextField" destination="bEK-cb-n5E" id="Rfg-OI-lDO"/>
+                        <outlet property="countryTextField" destination="MaF-tQ-UL8" id="Uim-bL-bft"/>
+                        <outlet property="locationTextField" destination="1aT-9t-7JR" id="f4l-3Y-Tws"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1wb-6O-Byx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1742" y="-294"/>
         </scene>

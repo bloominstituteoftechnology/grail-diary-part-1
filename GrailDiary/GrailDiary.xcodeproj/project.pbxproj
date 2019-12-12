@@ -13,6 +13,10 @@
 		2C9F633A23A043E9001C2B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F633923A043E9001C2B9B /* Assets.xcassets */; };
 		2C9F633D23A043E9001C2B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F633B23A043E9001C2B9B /* LaunchScreen.storyboard */; };
 		2C9F634823A0448A001C2B9B /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F634723A0448A001C2B9B /* POIsTableViewController.swift */; };
+		2CF554EF23A2E8A100D4EDD7 /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF554EE23A2E8A100D4EDD7 /* AddPOIViewController.swift */; };
+		2CF554F123A2E8F100D4EDD7 /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF554F023A2E8F100D4EDD7 /* POIDetailViewController.swift */; };
+		2CF554F323A2E91100D4EDD7 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF554F223A2E91100D4EDD7 /* POITableViewCell.swift */; };
+		2CF554F523A2E92200D4EDD7 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF554F423A2E92200D4EDD7 /* POI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		2C9F633C23A043E9001C2B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C9F633E23A043E9001C2B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C9F634723A0448A001C2B9B /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
+		2CF554EE23A2E8A100D4EDD7 /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		2CF554F023A2E8F100D4EDD7 /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		2CF554F223A2E91100D4EDD7 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		2CF554F423A2E92200D4EDD7 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 			children = (
 				2C9F633623A043E8001C2B9B /* Main.storyboard */,
 				2C9F634723A0448A001C2B9B /* POIsTableViewController.swift */,
+				2CF554EE23A2E8A100D4EDD7 /* AddPOIViewController.swift */,
+				2CF554F023A2E8F100D4EDD7 /* POIDetailViewController.swift */,
+				2CF554F223A2E91100D4EDD7 /* POITableViewCell.swift */,
+				2CF554F423A2E92200D4EDD7 /* POI.swift */,
 				2C9F634423A0440E001C2B9B /* Resources */,
 				2C9F633E23A043E9001C2B9B /* Info.plist */,
 			);
@@ -146,9 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF554F523A2E92200D4EDD7 /* POI.swift in Sources */,
 				2C9F634823A0448A001C2B9B /* POIsTableViewController.swift in Sources */,
+				2CF554EF23A2E8A100D4EDD7 /* AddPOIViewController.swift in Sources */,
 				2C9F633123A043E8001C2B9B /* AppDelegate.swift in Sources */,
 				2C9F633323A043E8001C2B9B /* SceneDelegate.swift in Sources */,
+				2CF554F323A2E91100D4EDD7 /* POITableViewCell.swift in Sources */,
+				2CF554F123A2E8F100D4EDD7 /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
