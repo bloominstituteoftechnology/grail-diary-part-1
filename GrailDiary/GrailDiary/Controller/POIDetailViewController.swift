@@ -10,13 +10,29 @@ import UIKit
 
 class POIDetailViewController: UIViewController {
 
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var cluesTextView: UITextView!
+    
+    var poi: POI?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateViews()
         // Do any additional setup after loading the view.
     }
     
-
+    private func updateViews() {
+//        In updateViews, unwrap the poi property with guard and set the various model properties to the text of the labels and the textview; you'll have to do a little formatting to show the clues as a list in the cluesTextView
+        cluesTextView.text = ""
+        guard let poi = poi else {return}
+        locationLabel.text = poi.location
+        countryLabel.text = poi.country
+        for clue in poi.clues {
+            cluesTextView.text += "\(clue)\n\n"
+            print(cluesTextView.text)
+        }
+    }
     /*
     // MARK: - Navigation
 

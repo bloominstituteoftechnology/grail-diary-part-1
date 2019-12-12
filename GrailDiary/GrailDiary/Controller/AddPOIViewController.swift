@@ -27,7 +27,7 @@ class AddPOIViewController: UIViewController {
         guard let locationText = locationTextField.text else { return }
         
         guard let countryText = countryTextField.text else { return }
-        var poi = POI(location: locationText, country: countryText, clues: [""])
+        var poi = POI(location: locationText, country: countryText, clues: [])
         if let clue1 = clue1TextField.text {
             poi.clues.append(clue1)
         }

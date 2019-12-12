@@ -22,7 +22,7 @@ class POITableViewCell: UITableViewCell {
     func configureCell(poi: POI) { //updateViews()
         locationLbl.text = poi.location
         countryLbl.text = poi.country
-        cluesLbl.text = "\(poi.clues.count)"
+        cluesLbl.text = "\(poi.clues.count) clues!"
     }
     
     override func awakeFromNib() {
