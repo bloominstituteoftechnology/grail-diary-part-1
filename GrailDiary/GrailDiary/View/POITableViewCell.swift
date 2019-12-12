@@ -13,7 +13,13 @@ class POITableViewCell: UITableViewCell {
     @IBOutlet weak var countryLbl: UILabel!
     @IBOutlet weak var cluesLbl: UILabel!
     
-    func configureCell(poi: POI) {
+
+//  add a didSet observer that calls a function named updateViews
+    var poi: POI?
+    
+    //TODO: Add didSet Observer
+    
+    func configureCell(poi: POI) { //updateViews()
         locationLbl.text = poi.location
         countryLbl.text = poi.country
         cluesLbl.text = "\(poi.clues.count)"
