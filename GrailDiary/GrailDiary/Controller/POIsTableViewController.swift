@@ -8,14 +8,14 @@
 
 import UIKit
 
-class POIsTableViewController: UIViewController {
+class POIsTableViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     var poiModels: [POI]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
     }
 
 
@@ -23,11 +23,14 @@ class POIsTableViewController: UIViewController {
 
 extension POIsTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0 //TODO: Implement
+        return poiModels?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell() //TODO: Implement
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "POICell") {
+            return cell
+        }
+        return UITableViewCell()
     }
     
     
