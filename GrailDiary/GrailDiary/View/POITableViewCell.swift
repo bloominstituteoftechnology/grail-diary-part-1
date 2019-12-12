@@ -9,7 +9,16 @@
 import UIKit
 
 class POITableViewCell: UITableViewCell {
-
+    @IBOutlet weak var locationLbl: UILabel!
+    @IBOutlet weak var countryLbl: UILabel!
+    @IBOutlet weak var cluesLbl: UILabel!
+    
+    func configureCell(poi: POI) {
+        locationLbl.text = poi.location
+        countryLbl.text = poi.country
+        cluesLbl.text = "\(poi.clues.count)"
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
