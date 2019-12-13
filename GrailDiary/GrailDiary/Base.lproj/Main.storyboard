@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="POICell" id="IPH-bd-7mh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="POICell" id="IPH-bd-7mh" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IPH-bd-7mh" id="Mzl-ot-nib">
@@ -63,6 +63,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesCountLabel" destination="dfG-aX-hCQ" id="WTc-Za-5wO"/>
+                                            <outlet property="countryLabel" destination="Jzk-b4-B9e" id="K1G-vO-WSR"/>
+                                            <outlet property="locationLabel" destination="6kE-pl-5WO" id="FPG-8e-oeH"/>
                                             <segue destination="320-kz-pL3" kind="show" identifier="ShowPOIDetailSegue" id="vg5-kf-19D"/>
                                         </connections>
                                     </tableViewCell>
@@ -80,18 +83,11 @@
                         <viewLayoutGuide key="safeArea" id="pe1-tC-fzi"/>
                     </view>
                     <navigationItem key="navigationItem" id="cZc-nx-emy">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="XEY-uX-rDS">
-                                <connections>
-                                    <segue destination="Q1E-E3-P1U" kind="presentation" identifier="AddPOIModelSegue" id="CKx-Oj-LUj"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Test" id="9Ro-3d-7e3">
-                                <connections>
-                                    <segue destination="320-kz-pL3" kind="show" id="ycS-ER-Ibm"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XEY-uX-rDS">
+                            <connections>
+                                <segue destination="Q1E-E3-P1U" kind="presentation" identifier="AddPOIModelSegue" id="CKx-Oj-LUj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="LlS-BT-zlc" id="7dD-mV-pbB"/>
@@ -173,6 +169,12 @@
                         <viewLayoutGuide key="safeArea" id="Rnk-wT-Jgb"/>
                     </view>
                     <navigationItem key="navigationItem" id="AeB-si-rv2"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="4NZ-E3-auE" id="37W-BO-aSQ"/>
+                        <outlet property="countryLabel" destination="sBO-lk-aNT" id="Cjv-PB-90b"/>
+                        <outlet property="locationLabel" destination="93h-ts-YlR" id="vrO-x0-qX9"/>
+                        <outlet property="pictureImageView" destination="PFc-Ky-Gud" id="fch-dF-4MZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qci-nd-xoD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,7 +295,4 @@
     <resources>
         <image name="borabora" width="962" height="1024"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="vg5-kf-19D"/>
-    </inferredMetricsTieBreakers>
 </document>
