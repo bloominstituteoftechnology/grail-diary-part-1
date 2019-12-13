@@ -152,9 +152,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15t-xR-Y1n">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="nPh-Sw-BlT"/>
+                                    <barButtonItem systemItem="cancel" id="nPh-Sw-BlT">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="QCp-t5-qCx" id="rUI-a1-cSm"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="EbJ-Ug-yqZ"/>
-                                    <barButtonItem systemItem="save" id="VH4-0j-U3O"/>
+                                    <barButtonItem systemItem="save" id="VH4-0j-U3O">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="QCp-t5-qCx" id="AhZ-Gj-x4C"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -169,6 +177,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2sG-So-4Tw"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="hIz-VZ-TwI" id="szd-H2-Btb"/>
+                        <outlet property="clue2TextField" destination="hQN-GX-reg" id="8ra-gp-flu"/>
+                        <outlet property="clue3TextField" destination="caj-Qc-hKl" id="duM-Fe-2RS"/>
+                        <outlet property="countryTextField" destination="auF-r3-zFi" id="euy-Ts-7K5"/>
+                        <outlet property="locationTextField" destination="8mR-Vf-Cjm" id="PxV-n2-Eud"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MME-68-NC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
