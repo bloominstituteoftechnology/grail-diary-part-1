@@ -1,5 +1,5 @@
 //
-//  POIsTableViewController.swift
+//  POIDetailViewController.swift
 //  GrailDiary
 //
 //  Created by Aaron Cleveland on 12/12/19.
@@ -8,18 +8,15 @@
 
 import UIKit
 
-class POIsTableViewController: UIViewController {
-    
-    var poi = [POI] = []
-    
-    @IBOutlet weak var tableView: UITableView!
-    
+class POIDetailViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+
     /*
     // MARK: - Navigation
 
@@ -30,16 +27,4 @@ class POIsTableViewController: UIViewController {
     }
     */
 
-}
-
-extension POIsTableViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return poi.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-    
-    
 }

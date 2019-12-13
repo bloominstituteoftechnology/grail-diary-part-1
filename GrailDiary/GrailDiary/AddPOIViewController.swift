@@ -1,5 +1,5 @@
 //
-//  POIsTableViewController.swift
+//  AddPOIViewController.swift
 //  GrailDiary
 //
 //  Created by Aaron Cleveland on 12/12/19.
@@ -8,16 +8,30 @@
 
 import UIKit
 
-class POIsTableViewController: UIViewController {
-    
-    var poi = [POI] = []
-    
-    @IBOutlet weak var tableView: UITableView!
+protocol AddPOIDelegate {
+    func poiWasAdded(_ poi: POI)
+}
+
+class AddPOIViewController: UIViewController {
+
+    @IBOutlet weak var locationLabel: UITextField!
+    @IBOutlet weak var countryLabel: UITextField!
+    @IBOutlet weak var clue1Label: UITextField!
+    @IBOutlet weak var clue2Label: UITextField!
+    @IBOutlet weak var clue3Label: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
+        
+    }
+    
+    @IBAction func saveTapped(_ sender: UIBarButtonItem) {
+        
     }
     
     /*
@@ -30,16 +44,4 @@ class POIsTableViewController: UIViewController {
     }
     */
 
-}
-
-extension POIsTableViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return poi.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-    
-    
 }
