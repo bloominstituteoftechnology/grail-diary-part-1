@@ -24,7 +24,13 @@ class AddPOIViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        locationLabel.delegate = self
+        countryLabel.delegate = self
+        clue1Label.delegate = self
+        clue2Label.delegate = self
+        clue3Label.delegate = self
+        
         // Do any additional setup after loading the view.
     }
     

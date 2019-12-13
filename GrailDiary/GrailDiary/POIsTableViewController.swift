@@ -16,7 +16,8 @@ class POIsTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.delegate = self
+        tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
@@ -46,7 +47,20 @@ class POIsTableViewController: UIViewController {
     }
 }
 
-extension POIsTableViewController: AddPOIDelegate {
+extension POIsTableViewController: UITableViewDelegate, UITableViewDataSource, AddPOIDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return pois.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as?
+            POITableViewCell else { fatalError("The cell is not a POITableViewCell") }
+        
+        let poi = pois[indexPath.row]
+        cell.poi = poi
+        return cell
+    }
+    
     func poiWasAdded(poi: POI) {
         pois.append(poi)
         tableView.reloadData()
