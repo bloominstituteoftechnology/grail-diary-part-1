@@ -12,8 +12,6 @@ protocol AddPOIDelegate {
     func poiWasAdded(_ poi: POI)
 }
 
-var delegate: AddPOIDelegate?
-
 class AddPOIViewController: UIViewController {
     
     @IBOutlet weak var locationTextField: UITextField!
@@ -21,6 +19,8 @@ class AddPOIViewController: UIViewController {
     @IBOutlet weak var clue1TextField: UITextField!
     @IBOutlet weak var clue2TextField: UITextField!
     @IBOutlet weak var clue3TextField: UITextField!
+    
+    var delegate: AddPOIDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
