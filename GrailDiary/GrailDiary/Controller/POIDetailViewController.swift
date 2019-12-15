@@ -12,7 +12,8 @@ class POIDetailViewController: UIViewController {
 
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
-    @IBOutlet weak var cluesTextView: UILabel!
+    @IBOutlet weak var cluesTextView: UITextView!
+    
     
     var poi: POI?
     

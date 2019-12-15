@@ -78,7 +78,6 @@ extension POIsTableViewController: AddPOIDelegate
     func poiWasAdded(_ poi: POI)
     {
         poiArray.append(poi)
-        self.dismiss(animated: true, completion: nil)
         tableView.reloadData()
     }
 }

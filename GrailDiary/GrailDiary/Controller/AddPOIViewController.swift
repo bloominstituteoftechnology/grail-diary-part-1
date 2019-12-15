@@ -79,8 +79,7 @@ class AddPOIViewController: UIViewController
         }
         
         delegate?.poiWasAdded(newPOI)
-        self.dismiss(animated: true, completion: nil)
-        
+        navigationController?.popViewController(animated: true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
