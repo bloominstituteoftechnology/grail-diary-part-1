@@ -58,7 +58,6 @@ class AddPOIViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 20 done ?"in the storyboard, for each textfield in this view, connect the delegate property of the textfield to this class"?
         locationTextField.delegate = self
         countryTextField.delegate = self
         clue1TextField.delegate = self
