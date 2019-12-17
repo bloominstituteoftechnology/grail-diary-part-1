@@ -70,10 +70,11 @@ class AddPOIViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
 
 extension AddPOIViewController: UITextFieldDelegate {
+    
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField.text != "" {
             switch textField.placeholder {
