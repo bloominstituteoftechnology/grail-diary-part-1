@@ -58,6 +58,9 @@
                                                 <constraint firstItem="OFo-fp-kyc" firstAttribute="centerY" secondItem="g6O-90-PuM" secondAttribute="centerY" id="tMW-DO-9D3"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="M0k-ta-ReJ" kind="show" identifier="ShowPOIDetailSegue" id="XEY-RS-DA2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -156,6 +159,70 @@
             </objects>
             <point key="canvasLocation" x="1867" y="102"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="bUb-mc-WHE">
+            <objects>
+                <viewController id="M0k-ta-ReJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6AA-Ma-CMV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kw-1U-Tue">
+                                <rect key="frame" x="279" y="108" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXg-n3-85p">
+                                <rect key="frame" x="332.5" y="137" width="61.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oY6-nc-Vnq">
+                                <rect key="frame" x="20" y="298" width="43.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kyoto location" translatesAutoresizingMaskIntoConstraints="NO" id="ZB7-ma-k8F">
+                                <rect key="frame" x="20" y="108" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZB7-ma-k8F" secondAttribute="height" multiplier="1:1" id="4k7-ZH-4nz"/>
+                                    <constraint firstAttribute="width" constant="150" id="GRh-cb-kiK"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LE6-Dm-dSK">
+                                <rect key="frame" x="20" y="326.5" width="374" height="515.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0Tp-cX-85r" firstAttribute="trailing" secondItem="5Kw-1U-Tue" secondAttribute="trailing" constant="20" id="E7O-pB-b5e"/>
+                            <constraint firstItem="LE6-Dm-dSK" firstAttribute="leading" secondItem="oY6-nc-Vnq" secondAttribute="leading" id="GJt-py-ipk"/>
+                            <constraint firstItem="0Tp-cX-85r" firstAttribute="bottom" secondItem="LE6-Dm-dSK" secondAttribute="bottom" constant="20" id="H1a-ru-Wdu"/>
+                            <constraint firstItem="oY6-nc-Vnq" firstAttribute="leading" secondItem="0Tp-cX-85r" secondAttribute="leading" constant="20" id="Hqw-49-aa4"/>
+                            <constraint firstItem="ZB7-ma-k8F" firstAttribute="leading" secondItem="0Tp-cX-85r" secondAttribute="leading" constant="20" id="LzE-ZO-PxZ"/>
+                            <constraint firstItem="LE6-Dm-dSK" firstAttribute="trailing" secondItem="RXg-n3-85p" secondAttribute="trailing" id="Pru-8W-Yfz"/>
+                            <constraint firstItem="RXg-n3-85p" firstAttribute="leading" secondItem="ZB7-ma-k8F" secondAttribute="trailing" constant="162.5" id="Qs1-Yf-nj3"/>
+                            <constraint firstItem="5Kw-1U-Tue" firstAttribute="top" secondItem="0Tp-cX-85r" secondAttribute="top" constant="20" id="RFr-Yl-OHw"/>
+                            <constraint firstItem="oY6-nc-Vnq" firstAttribute="top" secondItem="ZB7-ma-k8F" secondAttribute="bottom" constant="40" id="Wtj-0R-glV"/>
+                            <constraint firstItem="5Kw-1U-Tue" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZB7-ma-k8F" secondAttribute="trailing" constant="8" id="h1t-p5-0JI"/>
+                            <constraint firstItem="LE6-Dm-dSK" firstAttribute="top" secondItem="oY6-nc-Vnq" secondAttribute="bottom" constant="8" id="kha-Di-emg"/>
+                            <constraint firstItem="ZB7-ma-k8F" firstAttribute="top" secondItem="0Tp-cX-85r" secondAttribute="top" constant="20" id="n7k-EF-Yi8"/>
+                            <constraint firstItem="RXg-n3-85p" firstAttribute="trailing" secondItem="5Kw-1U-Tue" secondAttribute="trailing" id="qTA-NJ-vZv"/>
+                            <constraint firstItem="RXg-n3-85p" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5Kw-1U-Tue" secondAttribute="bottom" constant="8" id="yaX-1K-I13"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Tp-cX-85r"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="27S-h8-Jla"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Km9-fQ-ZET" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1866.6666666666667" y="762.72321428571422"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="hgo-IB-tDh">
             <objects>
@@ -175,4 +242,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="102.45535714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kyoto location" width="2600" height="1735"/>
+    </resources>
 </document>
