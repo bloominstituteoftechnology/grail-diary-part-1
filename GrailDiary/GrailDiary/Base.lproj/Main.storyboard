@@ -27,45 +27,35 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFo-fp-kyc">
-                                                    <rect key="frame" x="319" y="11" width="75" height="38"/>
+                                                    <rect key="frame" x="319" y="20" width="75" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Pi2-CP-Me8">
-                                                    <rect key="frame" x="38" y="0.0" width="65.5" height="40"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Pi2-CP-Me8">
+                                                    <rect key="frame" x="20" y="8.5" width="65.5" height="43"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lf-Xd-1g1">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lf-Xd-1g1">
                                                             <rect key="frame" x="0.0" y="0.0" width="65.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXe-d0-HcD">
-                                                            <rect key="frame" x="0.0" y="22.5" width="61.5" height="17.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXe-d0-HcD">
+                                                            <rect key="frame" x="0.0" y="22.5" width="61.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="4lf-Xd-1g1" firstAttribute="leading" secondItem="Pi2-CP-Me8" secondAttribute="leadingMargin" id="9UN-zx-R60"/>
-                                                        <constraint firstItem="4lf-Xd-1g1" firstAttribute="centerY" secondItem="Pi2-CP-Me8" secondAttribute="centerY" id="VoU-wk-KQ2"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Pi2-CP-Me8" firstAttribute="top" secondItem="g6O-90-PuM" secondAttribute="top" id="3uH-gf-Gt9"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="OFo-fp-kyc" secondAttribute="trailing" id="6R8-Xr-mqQ"/>
-                                                <constraint firstItem="OFo-fp-kyc" firstAttribute="top" secondItem="g6O-90-PuM" secondAttribute="topMargin" id="A9H-Ic-mff"/>
-                                                <constraint firstItem="OFo-fp-kyc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pi2-CP-Me8" secondAttribute="trailing" constant="8" id="Elb-Qv-WqO"/>
-                                                <constraint firstItem="OFo-fp-kyc" firstAttribute="bottom" secondItem="g6O-90-PuM" secondAttribute="bottomMargin" id="Gyu-V4-sx0"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="OFo-fp-kyc" secondAttribute="trailing" id="Jho-Om-Fvf"/>
-                                                <constraint firstItem="OFo-fp-kyc" firstAttribute="top" secondItem="g6O-90-PuM" secondAttribute="topMargin" id="Ovm-2W-cu3"/>
-                                                <constraint firstItem="Pi2-CP-Me8" firstAttribute="centerY" secondItem="g6O-90-PuM" secondAttribute="centerY" id="Qg8-iM-WNt"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="OFo-fp-kyc" secondAttribute="trailing" constant="172" id="ScY-Ze-Qi4"/>
-                                                <constraint firstItem="OFo-fp-kyc" firstAttribute="centerY" secondItem="g6O-90-PuM" secondAttribute="centerY" id="YpZ-OI-9X5"/>
-                                                <constraint firstAttribute="bottom" secondItem="Pi2-CP-Me8" secondAttribute="bottom" constant="20" symbolic="YES" id="a1y-Wx-Ety"/>
+                                                <constraint firstItem="Pi2-CP-Me8" firstAttribute="centerY" secondItem="g6O-90-PuM" secondAttribute="centerY" id="Kl4-7w-PeK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="OFo-fp-kyc" secondAttribute="trailing" id="lHK-rc-XbL"/>
+                                                <constraint firstItem="Pi2-CP-Me8" firstAttribute="leading" secondItem="g6O-90-PuM" secondAttribute="leading" constant="20" symbolic="YES" id="o67-yE-ZiM"/>
+                                                <constraint firstItem="OFo-fp-kyc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pi2-CP-Me8" secondAttribute="trailing" constant="8" id="qiT-ug-vTM"/>
+                                                <constraint firstItem="OFo-fp-kyc" firstAttribute="centerY" secondItem="g6O-90-PuM" secondAttribute="centerY" id="tMW-DO-9D3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
