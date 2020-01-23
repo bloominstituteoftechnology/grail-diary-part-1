@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="9ts-8C-0ex">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="9ts-8C-0ex">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9ts-8C-0ex" id="Imb-qh-16Y">
@@ -27,13 +27,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QpB-fH-siR">
-                                                    <rect key="frame" x="33" y="3" width="110" height="224.5"/>
+                                                    <rect key="frame" x="33" y="3" width="110" height="226"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="leA-Rh-LrW">
-                                                            <rect key="frame" x="0.0" y="0.0" width="110" height="224.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="110" height="226"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgw-Hr-Xd5">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="71.5" height="22.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="75.5" height="24"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Location">
                                                                             <attributes>
@@ -44,7 +44,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yZU-Pu-nB2">
-                                                                    <rect key="frame" x="0.0" y="24.5" width="110" height="200"/>
+                                                                    <rect key="frame" x="0.0" y="26" width="110" height="200"/>
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
@@ -98,15 +98,18 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="grailTableView" destination="avt-hT-lkY" id="EHV-99-CcJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="XJw-ni-QBs">
             <objects>
-                <viewController id="0DQ-6u-M3D" sceneMemberID="viewController">
+                <viewController id="0DQ-6u-M3D" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f1W-2G-v8T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,7 +161,11 @@
                                 <items>
                                     <barButtonItem systemItem="cancel" id="UOs-VZ-fZM"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WOV-KN-hCs"/>
-                                    <barButtonItem systemItem="save" id="0Bu-KD-Kem"/>
+                                    <barButtonItem systemItem="save" id="0Bu-KD-Kem">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="0DQ-6u-M3D" id="YQh-DS-1LL"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -173,15 +180,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vlt-FH-dC4"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="hVi-bn-k7a" id="76O-jE-hWM"/>
+                        <outlet property="clue2TextField" destination="CAn-SG-moq" id="9Fh-NN-XSR"/>
+                        <outlet property="clue3TextField" destination="hbV-ms-1V2" id="G9e-xn-i30"/>
+                        <outlet property="countryTextField" destination="zg8-TB-8bo" id="M47-bV-N1a"/>
+                        <outlet property="locationTextField" destination="MP5-rx-qK8" id="6a5-eC-PPb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iY2-7u-bT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1819" y="48"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="x2A-56-Jko">
             <objects>
-                <viewController id="DMc-av-Xoe" sceneMemberID="viewController">
+                <viewController id="DMc-av-Xoe" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p87-PV-6aD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
