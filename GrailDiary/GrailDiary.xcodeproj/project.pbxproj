@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		722CFDBE23D78D98004C7344 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722CFDBD23D78D98004C7344 /* AppDelegate.swift */; };
 		722CFDC023D78D98004C7344 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722CFDBF23D78D98004C7344 /* SceneDelegate.swift */; };
-		722CFDC223D78D98004C7344 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722CFDC123D78D98004C7344 /* ViewController.swift */; };
+		722CFDC223D78D98004C7344 /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722CFDC123D78D98004C7344 /* POIsTableViewController.swift */; };
 		722CFDC523D78D98004C7344 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 722CFDC323D78D98004C7344 /* Main.storyboard */; };
 		722CFDC723D78D98004C7344 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 722CFDC623D78D98004C7344 /* Assets.xcassets */; };
 		722CFDCA23D78D98004C7344 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 722CFDC823D78D98004C7344 /* LaunchScreen.storyboard */; };
+		7267255923DA048C0052D3CB /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267255823DA048C0052D3CB /* AddPOIViewController.swift */; };
+		7267255B23DA04A60052D3CB /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267255A23DA04A60052D3CB /* POIDetailViewController.swift */; };
+		7267255D23DA04C90052D3CB /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267255C23DA04C90052D3CB /* POITableViewCell.swift */; };
+		7267256023DA04F80052D3CB /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267255F23DA04F80052D3CB /* POI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		722CFDBA23D78D98004C7344 /* GrailDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrailDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		722CFDBD23D78D98004C7344 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		722CFDBF23D78D98004C7344 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		722CFDC123D78D98004C7344 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		722CFDC123D78D98004C7344 /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
 		722CFDC423D78D98004C7344 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		722CFDC623D78D98004C7344 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		722CFDC923D78D98004C7344 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		722CFDCB23D78D98004C7344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7267255823DA048C0052D3CB /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		7267255A23DA04A60052D3CB /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		7267255C23DA04C90052D3CB /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		7267255F23DA04F80052D3CB /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,27 @@
 		722CFDBC23D78D98004C7344 /* GrailDiary */ = {
 			isa = PBXGroup;
 			children = (
-				722CFDBD23D78D98004C7344 /* AppDelegate.swift */,
-				722CFDBF23D78D98004C7344 /* SceneDelegate.swift */,
-				722CFDC123D78D98004C7344 /* ViewController.swift */,
+				7267255E23DA04DD0052D3CB /* New Group */,
+				722CFDC123D78D98004C7344 /* POIsTableViewController.swift */,
 				722CFDC323D78D98004C7344 /* Main.storyboard */,
+				7267255F23DA04F80052D3CB /* POI.swift */,
+				7267255823DA048C0052D3CB /* AddPOIViewController.swift */,
+				7267255A23DA04A60052D3CB /* POIDetailViewController.swift */,
+				7267255C23DA04C90052D3CB /* POITableViewCell.swift */,
 				722CFDC623D78D98004C7344 /* Assets.xcassets */,
-				722CFDC823D78D98004C7344 /* LaunchScreen.storyboard */,
 				722CFDCB23D78D98004C7344 /* Info.plist */,
 			);
 			path = GrailDiary;
+			sourceTree = "<group>";
+		};
+		7267255E23DA04DD0052D3CB /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				722CFDBD23D78D98004C7344 /* AppDelegate.swift */,
+				722CFDBF23D78D98004C7344 /* SceneDelegate.swift */,
+				722CFDC823D78D98004C7344 /* LaunchScreen.storyboard */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				722CFDC223D78D98004C7344 /* ViewController.swift in Sources */,
+				7267256023DA04F80052D3CB /* POI.swift in Sources */,
+				722CFDC223D78D98004C7344 /* POIsTableViewController.swift in Sources */,
+				7267255923DA048C0052D3CB /* AddPOIViewController.swift in Sources */,
 				722CFDBE23D78D98004C7344 /* AppDelegate.swift in Sources */,
 				722CFDC023D78D98004C7344 /* SceneDelegate.swift in Sources */,
+				7267255D23DA04C90052D3CB /* POITableViewCell.swift in Sources */,
+				7267255B23DA04A60052D3CB /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
