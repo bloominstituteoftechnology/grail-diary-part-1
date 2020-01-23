@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="VUw-Vg-lPB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="VUw-Vg-lPB" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VUw-Vg-lPB" id="g6O-90-PuM">
@@ -32,17 +32,17 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Pi2-CP-Me8">
-                                                    <rect key="frame" x="20" y="7" width="75.5" height="46.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4Ko-wj-7sV">
+                                                    <rect key="frame" x="20" y="9.5" width="70.5" height="41"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lf-Xd-1g1">
-                                                            <rect key="frame" x="0.0" y="0.0" width="75.5" height="24"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZ3-Y8-jYG">
+                                                            <rect key="frame" x="0.0" y="0.0" width="70.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXe-d0-HcD">
-                                                            <rect key="frame" x="0.0" y="26" width="61.5" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upo-kt-p9V">
+                                                            <rect key="frame" x="0.0" y="20.5" width="70.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -51,10 +51,10 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Pi2-CP-Me8" firstAttribute="centerY" secondItem="g6O-90-PuM" secondAttribute="centerY" id="Kl4-7w-PeK"/>
+                                                <constraint firstItem="4Ko-wj-7sV" firstAttribute="centerY" secondItem="g6O-90-PuM" secondAttribute="centerY" id="60U-tI-kAg"/>
+                                                <constraint firstItem="OFo-fp-kyc" firstAttribute="leading" secondItem="4Ko-wj-7sV" secondAttribute="trailing" constant="228.5" id="J0a-DK-Zcg"/>
+                                                <constraint firstItem="4Ko-wj-7sV" firstAttribute="leading" secondItem="g6O-90-PuM" secondAttribute="leadingMargin" id="jPc-w0-Dhg"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="OFo-fp-kyc" secondAttribute="trailing" id="lHK-rc-XbL"/>
-                                                <constraint firstItem="Pi2-CP-Me8" firstAttribute="leading" secondItem="g6O-90-PuM" secondAttribute="leading" constant="20" symbolic="YES" id="o67-yE-ZiM"/>
-                                                <constraint firstItem="OFo-fp-kyc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pi2-CP-Me8" secondAttribute="trailing" constant="8" id="qiT-ug-vTM"/>
                                                 <constraint firstItem="OFo-fp-kyc" firstAttribute="centerY" secondItem="g6O-90-PuM" secondAttribute="centerY" id="tMW-DO-9D3"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -81,15 +81,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="uhc-K6-c6N" id="Gfe-3T-4gn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="102.45535714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="zuX-BE-Qgp">
             <objects>
-                <viewController id="wpR-QP-ky6" sceneMemberID="viewController">
+                <viewController id="wpR-QP-ky6" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="soL-hB-c54">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,15 +157,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VhN-kY-gdL"/>
                     </view>
+                    <connections>
+                        <outlet property="LocationLabel" destination="wtx-Cw-Oj0" id="uno-ha-5yR"/>
+                        <outlet property="clue1Label" destination="Daj-Nb-gU6" id="OXk-si-1rk"/>
+                        <outlet property="clue2Label" destination="57N-7E-DVk" id="ldG-kO-KTk"/>
+                        <outlet property="clue3Label" destination="xyh-kF-Snm" id="UO8-qz-b14"/>
+                        <outlet property="countryLabel" destination="O2N-2T-TiR" id="cK6-0j-Njt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rbm-Y8-tGd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1867" y="102"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="bUb-mc-WHE">
             <objects>
-                <viewController id="M0k-ta-ReJ" sceneMemberID="viewController">
+                <viewController id="M0k-ta-ReJ" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6AA-Ma-CMV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,7 +183,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXg-n3-85p">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXg-n3-85p">
                                 <rect key="frame" x="332.5" y="137" width="61.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -212,7 +222,9 @@
                             <constraint firstItem="5Kw-1U-Tue" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZB7-ma-k8F" secondAttribute="trailing" constant="8" id="h1t-p5-0JI"/>
                             <constraint firstItem="LE6-Dm-dSK" firstAttribute="top" secondItem="oY6-nc-Vnq" secondAttribute="bottom" constant="8" id="kha-Di-emg"/>
                             <constraint firstItem="ZB7-ma-k8F" firstAttribute="top" secondItem="0Tp-cX-85r" secondAttribute="top" constant="20" id="n7k-EF-Yi8"/>
+                            <constraint firstItem="RXg-n3-85p" firstAttribute="top" secondItem="5Kw-1U-Tue" secondAttribute="bottom" constant="8" id="nYm-CU-Ew4"/>
                             <constraint firstItem="RXg-n3-85p" firstAttribute="trailing" secondItem="5Kw-1U-Tue" secondAttribute="trailing" id="qTA-NJ-vZv"/>
+                            <constraint firstItem="0Tp-cX-85r" firstAttribute="trailing" secondItem="oY6-nc-Vnq" secondAttribute="trailing" constant="350.5" id="sgh-Ou-6IY"/>
                             <constraint firstItem="RXg-n3-85p" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5Kw-1U-Tue" secondAttribute="bottom" constant="8" id="yaX-1K-I13"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Tp-cX-85r"/>
