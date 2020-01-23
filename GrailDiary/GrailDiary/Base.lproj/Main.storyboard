@@ -143,9 +143,17 @@
                                 <rect key="frame" x="0.0" y="764" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="ybr-mU-0aM"/>
+                                    <barButtonItem systemItem="cancel" id="ybr-mU-0aM">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="wpR-QP-ky6" id="ijK-DS-wlf"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="crd-lb-Hdo"/>
-                                    <barButtonItem systemItem="save" id="yrN-fU-2UE"/>
+                                    <barButtonItem systemItem="save" id="yrN-fU-2UE">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="wpR-QP-ky6" id="kaJ-5e-q3P"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -159,10 +167,12 @@
                     </view>
                     <connections>
                         <outlet property="LocationLabel" destination="wtx-Cw-Oj0" id="uno-ha-5yR"/>
+                        <outlet property="cancelTapped" destination="yBv-mn-tzN" id="La5-Tp-BZ2"/>
                         <outlet property="clue1Label" destination="Daj-Nb-gU6" id="OXk-si-1rk"/>
                         <outlet property="clue2Label" destination="57N-7E-DVk" id="ldG-kO-KTk"/>
                         <outlet property="clue3Label" destination="xyh-kF-Snm" id="UO8-qz-b14"/>
                         <outlet property="countryLabel" destination="O2N-2T-TiR" id="cK6-0j-Njt"/>
+                        <outlet property="saveTapped" destination="yBv-mn-tzN" id="q2Z-VS-nuJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rbm-Y8-tGd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

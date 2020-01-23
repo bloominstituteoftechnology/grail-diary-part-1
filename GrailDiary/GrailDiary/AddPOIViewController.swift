@@ -28,6 +28,44 @@ class AddPOIViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func cancelTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func saveTapped(_ sender: Any) {
+        guard let country = countryLabel.text,
+            let location = LocationLabel.text else {return}
+            
+            var clues: [String] = []
+            
+            if let clue1 = clue1Label.text,
+                !clue1.isEmpty {
+                clues.append(clue1)
+            }
+            if let clue2 = clue2Label.text,
+                       !clue2.isEmpty {
+                       clues.append(clue2)
+            }
+            if let clue3 = clue3Label.text,
+                       !clue3.isEmpty {
+                       clues.append(clue3)
+            }
+            
+            // make a new friend
+            
+        let poi = POI(location: location, country: country, clues: clues)
+            
+            // add it to the array of friends in the table view controller
+            // TVC is the delegate
+            delegate?.poiWasAdded(_ : poi)
+            
+        }
+    }
+    
+extension AddPOIDelegate: UITextFieldDelegate {
+    
+}
 
     /*
     // MARK: - Navigation
@@ -39,4 +77,4 @@ class AddPOIViewController: UIViewController {
     }
     */
 
-}
+
