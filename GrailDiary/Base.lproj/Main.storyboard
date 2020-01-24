@@ -15,11 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-4q-HIB">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-4q-HIB">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="60" id="Z1b-ts-Tdl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="60" id="Z1b-ts-Tdl" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z1b-ts-Tdl" id="2Sm-cn-rIM">
@@ -59,6 +59,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesCountLabel" destination="8H5-iF-JVf" id="bND-Sv-ckM"/>
+                                            <outlet property="countryLabel" destination="xou-rg-Mse" id="dax-wa-nJC"/>
+                                            <outlet property="locationLabel" destination="gsG-dn-Fif" id="ux9-YP-IIU"/>
                                             <segue destination="CMy-Af-d7Z" kind="show" identifier="ShowPOIDetailSegue" id="pRx-mO-THn"/>
                                         </connections>
                                     </tableViewCell>
@@ -81,15 +84,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="uXG-4q-HIB" id="pI6-3x-dOg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sj-zz-MT3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1021.7391304347827" y="124.55357142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="Q4c-gZ-Gpl">
             <objects>
-                <viewController id="J3b-Au-wgg" sceneMemberID="viewController">
+                <viewController id="J3b-Au-wgg" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xb6-hO-ihN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,11 +113,17 @@
                                         <rect key="frame" x="0.0" y="57" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="J3b-Au-wgg" id="Lfw-by-Gdc"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tLt-3w-KkS">
                                         <rect key="frame" x="0.0" y="107" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="J3b-Au-wgg" id="zil-Qp-LLT"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDt-gs-fwe">
                                         <rect key="frame" x="0.0" y="157" width="374" height="20.5"/>
@@ -123,25 +135,42 @@
                                         <rect key="frame" x="0.0" y="193.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="J3b-Au-wgg" id="bdE-LZ-0f0"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yk9-AO-Aoa">
                                         <rect key="frame" x="0.0" y="243.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="J3b-Au-wgg" id="TOY-Fc-iNj"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ifs-Mp-d66">
                                         <rect key="frame" x="0.0" y="293.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="J3b-Au-wgg" id="lLg-Xy-ENC"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWJ-Kw-OBw">
                                 <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="eJT-Vm-FbU"/>
+                                    <barButtonItem systemItem="cancel" id="eJT-Vm-FbU">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="J3b-Au-wgg" id="Rbe-i7-asC"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="kUs-zu-wPR"/>
-                                    <barButtonItem systemItem="save" id="hJG-o9-Agz"/>
+                                    <barButtonItem systemItem="save" id="hJG-o9-Agz">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="J3b-Au-wgg" id="I2M-OS-1Dg"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -156,10 +185,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ofb-Hu-5HE"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="45I-o9-y0M" id="m4r-10-LMS"/>
+                        <outlet property="clue2TextField" destination="yk9-AO-Aoa" id="iBI-O8-oMC"/>
+                        <outlet property="clue3TextField" destination="Ifs-Mp-d66" id="8Zp-SA-Zuk"/>
+                        <outlet property="countryTextField" destination="tLt-3w-KkS" id="L3E-78-IM2"/>
+                        <outlet property="locationTextField" destination="lYD-2m-L2N" id="tRC-k7-Y16"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vkc-O4-uMD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="-234"/>
+            <point key="canvasLocation" x="1790" y="-258"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XHP-p2-aLN">
@@ -179,10 +215,10 @@
             </objects>
             <point key="canvasLocation" x="111.59420289855073" y="124.55357142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="sc6-Qp-Fae">
             <objects>
-                <viewController id="CMy-Af-d7Z" sceneMemberID="viewController">
+                <viewController id="CMy-Af-d7Z" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ryn-bt-xMu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -242,6 +278,11 @@
                         <viewLayoutGuide key="safeArea" id="Tte-ur-rOB"/>
                     </view>
                     <navigationItem key="navigationItem" id="t1a-Rl-Mz0"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="KUH-SV-Uev" id="p71-2o-8vT"/>
+                        <outlet property="countryLabel" destination="daz-s9-WyY" id="qul-3F-Ffo"/>
+                        <outlet property="locationLabel" destination="qf8-6Q-uE7" id="bV4-Zo-Kbh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPa-Da-xme" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

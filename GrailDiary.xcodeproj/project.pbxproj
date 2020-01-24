@@ -15,6 +15,10 @@
 		D22AFB4823D7C27A00BB6D85 /* storyboard-complete.png in Resources */ = {isa = PBXBuildFile; fileRef = D22AFB4623D7C27A00BB6D85 /* storyboard-complete.png */; };
 		D22AFB4923D7C27A00BB6D85 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D22AFB4723D7C27A00BB6D85 /* README.md */; };
 		D22AFB4B23D7C34100BB6D85 /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22AFB4A23D7C34100BB6D85 /* POIsTableViewController.swift */; };
+		D24CD17023DA45C500544DEC /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24CD16F23DA45C500544DEC /* AddPOIViewController.swift */; };
+		D24CD17223DA45E800544DEC /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24CD17123DA45E800544DEC /* POIDetailViewController.swift */; };
+		D24CD17423DA460400544DEC /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24CD17323DA460400544DEC /* POITableViewCell.swift */; };
+		D24CD17623DA460E00544DEC /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24CD17523DA460E00544DEC /* POI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		D22AFB4623D7C27A00BB6D85 /* storyboard-complete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "storyboard-complete.png"; sourceTree = SOURCE_ROOT; };
 		D22AFB4723D7C27A00BB6D85 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		D22AFB4A23D7C34100BB6D85 /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
+		D24CD16F23DA45C500544DEC /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		D24CD17123DA45E800544DEC /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		D24CD17323DA460400544DEC /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		D24CD17523DA460E00544DEC /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				D22AFB3223D7C12800BB6D85 /* AppDelegate.swift */,
 				D22AFB3423D7C12800BB6D85 /* SceneDelegate.swift */,
 				D22AFB3823D7C12800BB6D85 /* Main.storyboard */,
+				D24CD16F23DA45C500544DEC /* AddPOIViewController.swift */,
+				D24CD17123DA45E800544DEC /* POIDetailViewController.swift */,
+				D24CD17323DA460400544DEC /* POITableViewCell.swift */,
+				D24CD17523DA460E00544DEC /* POI.swift */,
 				D22AFB3B23D7C12A00BB6D85 /* Assets.xcassets */,
 				D22AFB3D23D7C12A00BB6D85 /* LaunchScreen.storyboard */,
 				D22AFB4023D7C12A00BB6D85 /* Info.plist */,
@@ -146,9 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D24CD17623DA460E00544DEC /* POI.swift in Sources */,
 				D22AFB4B23D7C34100BB6D85 /* POIsTableViewController.swift in Sources */,
+				D24CD17023DA45C500544DEC /* AddPOIViewController.swift in Sources */,
 				D22AFB3323D7C12800BB6D85 /* AppDelegate.swift in Sources */,
 				D22AFB3523D7C12800BB6D85 /* SceneDelegate.swift in Sources */,
+				D24CD17423DA460400544DEC /* POITableViewCell.swift in Sources */,
+				D24CD17223DA45E800544DEC /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
