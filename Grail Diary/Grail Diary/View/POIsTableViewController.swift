@@ -19,7 +19,7 @@ class POIsTableViewController: UIViewController {
     //MARK: step 9-10 extensions
     //I am creating an extension now that will cause the table view controller to be the spot I am getting my data from FOR my tableview.
     //MARK: step 10
-    //I am adding the function stubs. At which point numberOfRowsInSection returns POILIST's count. The Table view function for cellForRowAt is dequeing to POICell, downcasting it as the custom table view I have made, or else if this does not work correcting, the tableview deques to a blank UITableViewCell. --------> can we make a default cell for this scnenario or is that redundant?
+    //I am adding the function stubs. At which point numberOfRowsInSection returns POILIST's count. The Table view function for cellForRowAt is dequeing to POICell, downcasting it as the custom table view I have made, or else if this does not work correcting, the tableview deques to a blank UITableViewCell. --------> can we make a default cell for this scnenario or is that redundant? months later. Redundant. 🤣
 
 extension POIsTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
