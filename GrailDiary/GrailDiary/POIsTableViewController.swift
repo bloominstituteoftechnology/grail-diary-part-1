@@ -18,17 +18,43 @@ class POIsTableViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "AddPOIModalSegue" {
+            // We know we are going to the AddFriendViewController
+           
+            //Gives access to AddFriendViewController
+           guard let addPOIVC = segue.destination as?
+            AddPOIViewController else { return }
+            
+            addPOIVC.delegate = self
+        }
+    }
+        
+    }
 
-    var POIModels = POI(location: location, country: country, clues: clues)
-}
+
+var poiArray: [POI] = [POI(location: <#T##String#>, country: <#T##String#>, clues: <#T##[String]#>)]
 
 extension POIsTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        
     }
-    
+
+}
+
+extension POIsTableViewController: AddPOIDelegate {
+    func poiWasAdded(_ poi: POI) {
+        
+        poiArray.append(poi)
+        
+        tableView.reloadData()
+    }
+
 }

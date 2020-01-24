@@ -10,6 +10,27 @@ import UIKit
 
 class POITableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var cluesCountLabel: UILabel!
+    
+    
+    var poi = POI(location: <#T##String#>, country: <#T##String#>, clues: <#T##[String]#>)
+        
+    }
+        
+    didSet {
+        updateViews()
+    }
+    
+
+    func updateViews() {
+        if let unwrappedPoi =  {
+            
+        }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

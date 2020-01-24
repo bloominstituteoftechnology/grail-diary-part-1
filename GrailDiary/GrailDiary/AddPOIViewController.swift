@@ -63,6 +63,7 @@ class AddPOIViewController: UIViewController {
         
         delegate?.poiWasAdded(_: poi)
         
+        dismiss(animated: true, completion: nil)
     }
 }
     

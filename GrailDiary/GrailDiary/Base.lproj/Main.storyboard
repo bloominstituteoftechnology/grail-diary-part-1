@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="umP-O2-8x3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="umP-O2-8x3" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="umP-O2-8x3" id="86g-iB-ysV">
@@ -37,7 +37,7 @@
                                                         </label>
                                                         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="hay-mW-U3n">
                                                             <rect key="frame" x="0.0" y="30" width="98.5" height="0.0"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hay-mW-U3n" id="2nM-cm-aMg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="98.5" height="0.0"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
@@ -110,6 +110,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesCountLabel" destination="2nl-UH-wjt" id="cI1-fF-aR4"/>
+                                            <outlet property="countryLabel" destination="X9l-HM-qRy" id="hS6-p7-SCb"/>
+                                            <outlet property="locationLabel" destination="yFc-c4-YFY" id="z29-fm-HiK"/>
                                             <segue destination="n8o-Wz-qe2" kind="show" identifier="ShowPOIDetailSegue" id="ita-Zo-154"/>
                                         </connections>
                                     </tableViewCell>
