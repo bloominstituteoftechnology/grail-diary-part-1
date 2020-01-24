@@ -41,3 +41,15 @@ extension  POIsTableViewController: UITableViewDataSource {
          }
          
     }
+
+
+ 
+extension POIsTableViewController: AddPOIDelegate {
+     func poiWasAdded(_ poi: POI) {
+       
+        pointsOfInterest.append(poi)
+      
+        dismiss(animated: true, completion: nil)
+        tableView.reloadData()
+    }
+}

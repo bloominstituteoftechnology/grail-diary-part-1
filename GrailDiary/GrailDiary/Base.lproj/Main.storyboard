@@ -159,7 +159,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4B-lv-leS">
                                 <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="UOs-VZ-fZM"/>
+                                    <barButtonItem systemItem="cancel" id="UOs-VZ-fZM">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="0DQ-6u-M3D" id="yZX-hL-h9R"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WOV-KN-hCs"/>
                                     <barButtonItem systemItem="save" id="0Bu-KD-Kem">
                                         <connections>
