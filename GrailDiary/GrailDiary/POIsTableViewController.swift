@@ -16,6 +16,7 @@ class POIsTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
 
@@ -31,6 +32,16 @@ extension POIsTableViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         return cell
+    }
+    
+    
+}
+// STEP 22 - 26
+extension POIsTableViewController: AddPOIDelegate {
+    func poiWasAdded(_ poi: POI) {
+        poiModels.append(poi)
+        dismiss(animated: true, completion: nil)
+        tableView.reloadData()
     }
     
     
