@@ -18,17 +18,23 @@ class POITableViewCell: UITableViewCell {
     
     var poi = POI(location: <#T##String#>, country: <#T##String#>, clues: <#T##[String]#>)
         
-    }
-        
     didSet {
         updateViews()
     }
     
 
     func updateViews() {
-        if let unwrappedPoi =  {
+        if var unwrappedPoi = POI(location: <#T##String#>, country: <#T##String#>, clues: <#T##[String]#>) {
+            
+        let location = locationLabel.text
+        let country = countryLabel.text
+        let clues = cluesCountLabel.text
             
         }
+    
+    }
+        
+    
     
     
     override func awakeFromNib() {
