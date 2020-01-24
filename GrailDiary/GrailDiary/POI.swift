@@ -8,10 +8,8 @@
 
 import Foundation
 
-
 struct POI {
     let location: String
     let country: String
-    let cluse: [String]
-    
+    let clues: [String]
 }

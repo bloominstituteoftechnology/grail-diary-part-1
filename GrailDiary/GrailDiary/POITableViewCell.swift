@@ -10,6 +10,24 @@ import UIKit
 
 class POITableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var NumberOfCluesLabel: UILabel!
+    @IBOutlet weak var LocationLabel: UILabel!
+    @IBOutlet weak var CountryLabel: UILabel!
+    
+    var poi: POI?{
+        didSet{
+            updateViews()
+        }
+    }
+
+    func updateViews(){
+        guard let unwrappedPOI = poi else {return}
+        NumberOfCluesLabel.text = unwrappedPOI.clues.joined(separator: "\n")
+        LocationLabel.text = unwrappedPOI.location
+        CountryLabel.text = unwrappedPOI.country
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +38,5 @@ class POITableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }
+
