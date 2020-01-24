@@ -13,6 +13,10 @@
 		5C6768A123D79A1100295A8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C67689F23D79A1100295A8B /* Main.storyboard */; };
 		5C6768A323D79A1200295A8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6768A223D79A1200295A8B /* Assets.xcassets */; };
 		5C6768A623D79A1200295A8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C6768A423D79A1200295A8B /* LaunchScreen.storyboard */; };
+		5CEF90AC23DA43C8008903EE /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF90AB23DA43C8008903EE /* AddPOIViewController.swift */; };
+		5CEF90AE23DA43F9008903EE /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF90AD23DA43F9008903EE /* POIDetailViewController.swift */; };
+		5CEF90B023DA443C008903EE /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF90AF23DA443C008903EE /* POITableViewCell.swift */; };
+		5CEF90B223DA4446008903EE /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF90B123DA4446008903EE /* POI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		5C6768A223D79A1200295A8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C6768A523D79A1200295A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C6768A723D79A1200295A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CEF90AB23DA43C8008903EE /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		5CEF90AD23DA43F9008903EE /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		5CEF90AF23DA443C008903EE /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		5CEF90B123DA4446008903EE /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +67,11 @@
 				5C67689923D79A1100295A8B /* AppDelegate.swift */,
 				5C67689B23D79A1100295A8B /* SceneDelegate.swift */,
 				5C67689D23D79A1100295A8B /* POIsTableViewController.swift */,
+				5CEF90AD23DA43F9008903EE /* POIDetailViewController.swift */,
+				5CEF90AF23DA443C008903EE /* POITableViewCell.swift */,
+				5CEF90B123DA4446008903EE /* POI.swift */,
 				5C67689F23D79A1100295A8B /* Main.storyboard */,
+				5CEF90AB23DA43C8008903EE /* AddPOIViewController.swift */,
 				5C6768A223D79A1200295A8B /* Assets.xcassets */,
 				5C6768A423D79A1200295A8B /* LaunchScreen.storyboard */,
 				5C6768A723D79A1200295A8B /* Info.plist */,
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CEF90B223DA4446008903EE /* POI.swift in Sources */,
 				5C67689E23D79A1100295A8B /* POIsTableViewController.swift in Sources */,
+				5CEF90AC23DA43C8008903EE /* AddPOIViewController.swift in Sources */,
 				5C67689A23D79A1100295A8B /* AppDelegate.swift in Sources */,
 				5C67689C23D79A1100295A8B /* SceneDelegate.swift in Sources */,
+				5CEF90B023DA443C008903EE /* POITableViewCell.swift in Sources */,
+				5CEF90AE23DA43F9008903EE /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
