@@ -72,12 +72,31 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Grail Diary" largeTitleDisplayMode="always" id="vWj-CA-PiM">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uwL-kN-CsL"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uwL-kN-CsL">
+                            <connections>
+                                <segue destination="K7q-am-mMi" kind="presentation" identifier="AddPOIModalSegue" id="7wp-qA-V3s"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="132.58928571428572"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4qx-OW-XJa">
+            <objects>
+                <viewController id="K7q-am-mMi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nXo-b1-RVi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eT6-FT-gTh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dyr-9w-gJR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1729" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yvu-dU-Ts0">
