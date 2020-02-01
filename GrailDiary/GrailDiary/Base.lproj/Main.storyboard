@@ -178,21 +178,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ff3-UA-RIx">
-                                <rect key="frame" x="44" y="180" width="350" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ff3-UA-RIx">
+                                <rect key="frame" x="8" y="180" width="43.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qq3-5s-Zvf">
-                                <rect key="frame" x="121" y="20" width="150" height="120"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qq3-5s-Zvf">
+                                <rect key="frame" x="8" y="20" width="150" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="SY3-oV-OV0"/>
                                     <constraint firstAttribute="width" secondItem="Qq3-5s-Zvf" secondAttribute="height" multiplier="5:4" id="T70-aR-btQ"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LdW-bI-pOU">
-                                <rect key="frame" x="31" y="209" width="363" height="579"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LdW-bI-pOU">
+                                <rect key="frame" x="8" y="209" width="394" height="579"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -214,6 +214,7 @@
                             <constraint firstItem="l2B-bP-b74" firstAttribute="top" secondItem="b4q-cg-dKl" secondAttribute="top" constant="20" id="afn-2j-xKD"/>
                             <constraint firstItem="Nq4-sP-p0f" firstAttribute="trailing" secondItem="l2B-bP-b74" secondAttribute="trailing" id="d6b-hi-GAd"/>
                             <constraint firstItem="Nq4-sP-p0f" firstAttribute="top" secondItem="l2B-bP-b74" secondAttribute="bottom" constant="8" id="i6B-Fi-Wo4"/>
+                            <constraint firstItem="Qq3-5s-Zvf" firstAttribute="leading" secondItem="b4q-cg-dKl" secondAttribute="leading" constant="8" id="idr-fq-Kax"/>
                             <constraint firstItem="LdW-bI-pOU" firstAttribute="top" secondItem="Ff3-UA-RIx" secondAttribute="bottom" constant="8" id="kDz-KY-Bxn"/>
                             <constraint firstItem="Ff3-UA-RIx" firstAttribute="top" secondItem="Qq3-5s-Zvf" secondAttribute="bottom" constant="40" id="tPu-GB-hRu"/>
                         </constraints>
