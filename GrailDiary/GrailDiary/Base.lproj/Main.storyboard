@@ -194,9 +194,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ghn-g0-RaQ">
-                                <rect key="frame" x="53" y="390" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ghn-g0-RaQ">
+                                <rect key="frame" x="20" y="379" width="374" height="463"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -207,13 +206,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="MqM-NC-dGT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pdk-iB-HIP" secondAttribute="trailing" constant="8" id="6yl-Xr-0Y5"/>
+                            <constraint firstItem="ghn-g0-RaQ" firstAttribute="trailing" secondItem="MqM-NC-dGT" secondAttribute="trailing" id="NQF-eE-e7i"/>
                             <constraint firstItem="MqM-NC-dGT" firstAttribute="trailing" secondItem="DK9-FH-FQ0" secondAttribute="trailing" id="We0-wi-uUl"/>
+                            <constraint firstItem="ghn-g0-RaQ" firstAttribute="top" secondItem="zci-2J-k1g" secondAttribute="bottom" constant="8" id="XaI-RX-6qw"/>
                             <constraint firstItem="zci-2J-k1g" firstAttribute="top" secondItem="Pdk-iB-HIP" secondAttribute="bottom" constant="40" id="XhG-jl-psd"/>
+                            <constraint firstItem="uKj-Jr-Kfp" firstAttribute="bottom" secondItem="ghn-g0-RaQ" secondAttribute="bottom" constant="20" id="Zor-4V-Uuh"/>
                             <constraint firstItem="zci-2J-k1g" firstAttribute="leading" secondItem="uKj-Jr-Kfp" secondAttribute="leading" constant="20" id="cgc-Kw-Xjp"/>
                             <constraint firstItem="MqM-NC-dGT" firstAttribute="top" secondItem="DK9-FH-FQ0" secondAttribute="bottom" constant="8" id="h1r-Id-T8Z"/>
                             <constraint firstItem="Pdk-iB-HIP" firstAttribute="leading" secondItem="uKj-Jr-Kfp" secondAttribute="leading" constant="20" id="hKf-Nm-L9D"/>
                             <constraint firstItem="DK9-FH-FQ0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pdk-iB-HIP" secondAttribute="trailing" constant="8" id="mMN-PX-UQC"/>
                             <constraint firstItem="DK9-FH-FQ0" firstAttribute="top" secondItem="uKj-Jr-Kfp" secondAttribute="top" constant="20" id="mRy-vG-Nfe"/>
+                            <constraint firstItem="ghn-g0-RaQ" firstAttribute="leading" secondItem="zci-2J-k1g" secondAttribute="leading" id="pyW-0Z-Eu4"/>
                             <constraint firstItem="uKj-Jr-Kfp" firstAttribute="trailing" secondItem="DK9-FH-FQ0" secondAttribute="trailing" constant="20" id="z0z-Sy-RJy"/>
                             <constraint firstItem="Pdk-iB-HIP" firstAttribute="top" secondItem="DK9-FH-FQ0" secondAttribute="top" id="zzb-f5-qas"/>
                         </constraints>
