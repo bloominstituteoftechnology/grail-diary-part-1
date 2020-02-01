@@ -100,14 +100,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQO-5N-9q8">
-                                <rect key="frame" x="295" y="268" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r0w-fu-tVx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Teotihuacan-Pyramids" translatesAutoresizingMaskIntoConstraints="NO" id="r0w-fu-tVx">
                                 <rect key="frame" x="20" y="160" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="W4j-82-oix"/>
@@ -115,7 +108,20 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xf8-jV-o6y">
-                                <rect key="frame" x="332" y="189" width="62" height="21"/>
+                                <rect key="frame" x="332.5" y="189" width="61.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WMF-me-0ce">
+                                <rect key="frame" x="20" y="379" width="374" height="463"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQO-5N-9q8">
+                                <rect key="frame" x="20" y="350" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -123,8 +129,16 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="cQO-5N-9q8" firstAttribute="leading" secondItem="r0w-fu-tVx" secondAttribute="leading" id="3HV-Ad-ZWE"/>
+                            <constraint firstItem="WMF-me-0ce" firstAttribute="top" secondItem="cQO-5N-9q8" secondAttribute="bottom" constant="8" id="8mH-wf-84E"/>
+                            <constraint firstItem="rvu-Ij-Y19" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r0w-fu-tVx" secondAttribute="trailing" constant="8" id="AYw-8D-XXT"/>
+                            <constraint firstItem="WMF-me-0ce" firstAttribute="leading" secondItem="cQO-5N-9q8" secondAttribute="leading" id="Nam-wz-opb"/>
+                            <constraint firstItem="cQO-5N-9q8" firstAttribute="top" secondItem="r0w-fu-tVx" secondAttribute="bottom" constant="40" id="W21-c6-RBN"/>
+                            <constraint firstItem="xf8-jV-o6y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r0w-fu-tVx" secondAttribute="trailing" constant="8" id="fkK-ke-k0w"/>
                             <constraint firstItem="r0w-fu-tVx" firstAttribute="top" secondItem="rvu-Ij-Y19" secondAttribute="top" id="kX7-s2-XXh"/>
                             <constraint firstItem="rvu-Ij-Y19" firstAttribute="top" secondItem="5EU-rn-CkA" secondAttribute="top" constant="20" id="lbX-9w-et6"/>
+                            <constraint firstItem="WMF-me-0ce" firstAttribute="trailing" secondItem="xf8-jV-o6y" secondAttribute="trailing" id="n1G-wz-0Up"/>
+                            <constraint firstItem="5EU-rn-CkA" firstAttribute="bottom" secondItem="WMF-me-0ce" secondAttribute="bottom" constant="20" id="oBr-dO-238"/>
                             <constraint firstItem="xf8-jV-o6y" firstAttribute="trailing" secondItem="rvu-Ij-Y19" secondAttribute="trailing" id="rdf-hT-uFM"/>
                             <constraint firstItem="5EU-rn-CkA" firstAttribute="trailing" secondItem="rvu-Ij-Y19" secondAttribute="trailing" constant="20" id="wzs-d6-URW"/>
                             <constraint firstItem="xf8-jV-o6y" firstAttribute="top" secondItem="rvu-Ij-Y19" secondAttribute="bottom" constant="8" id="xDK-H8-rqB"/>
@@ -232,4 +246,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Teotihuacan-Pyramids" width="5616" height="3744"/>
+    </resources>
 </document>
