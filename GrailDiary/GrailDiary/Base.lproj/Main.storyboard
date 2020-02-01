@@ -58,6 +58,9 @@
                                                 <constraint firstItem="fVL-of-BeO" firstAttribute="centerY" secondItem="ae8-Su-vqq" secondAttribute="centerY" id="zjG-QU-aht"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ul9-O2-9j0" kind="show" identifier="ShowPOIDetailSegue" id="QuX-Bt-IMm"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -156,7 +159,71 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyr-9w-gJR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1729" y="133"/>
+            <point key="canvasLocation" x="1799" y="-638"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6A4-lt-ubV">
+            <objects>
+                <viewController id="ul9-O2-9j0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BWi-OI-bMP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DK9-FH-FQ0">
+                                <rect key="frame" x="279" y="160" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqM-NC-dGT">
+                                <rect key="frame" x="332" y="189" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white_house" translatesAutoresizingMaskIntoConstraints="NO" id="Pdk-iB-HIP">
+                                <rect key="frame" x="20" y="160" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="1tp-f1-syz"/>
+                                    <constraint firstAttribute="height" constant="150" id="KDS-L3-t2g"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zci-2J-k1g">
+                                <rect key="frame" x="20" y="350" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ghn-g0-RaQ">
+                                <rect key="frame" x="53" y="390" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MqM-NC-dGT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pdk-iB-HIP" secondAttribute="trailing" constant="8" id="6yl-Xr-0Y5"/>
+                            <constraint firstItem="MqM-NC-dGT" firstAttribute="trailing" secondItem="DK9-FH-FQ0" secondAttribute="trailing" id="We0-wi-uUl"/>
+                            <constraint firstItem="zci-2J-k1g" firstAttribute="top" secondItem="Pdk-iB-HIP" secondAttribute="bottom" constant="40" id="XhG-jl-psd"/>
+                            <constraint firstItem="zci-2J-k1g" firstAttribute="leading" secondItem="uKj-Jr-Kfp" secondAttribute="leading" constant="20" id="cgc-Kw-Xjp"/>
+                            <constraint firstItem="MqM-NC-dGT" firstAttribute="top" secondItem="DK9-FH-FQ0" secondAttribute="bottom" constant="8" id="h1r-Id-T8Z"/>
+                            <constraint firstItem="Pdk-iB-HIP" firstAttribute="leading" secondItem="uKj-Jr-Kfp" secondAttribute="leading" constant="20" id="hKf-Nm-L9D"/>
+                            <constraint firstItem="DK9-FH-FQ0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pdk-iB-HIP" secondAttribute="trailing" constant="8" id="mMN-PX-UQC"/>
+                            <constraint firstItem="DK9-FH-FQ0" firstAttribute="top" secondItem="uKj-Jr-Kfp" secondAttribute="top" constant="20" id="mRy-vG-Nfe"/>
+                            <constraint firstItem="uKj-Jr-Kfp" firstAttribute="trailing" secondItem="DK9-FH-FQ0" secondAttribute="trailing" constant="20" id="z0z-Sy-RJy"/>
+                            <constraint firstItem="Pdk-iB-HIP" firstAttribute="top" secondItem="DK9-FH-FQ0" secondAttribute="top" id="zzb-f5-qas"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uKj-Jr-Kfp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UCw-kL-BUU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4zi-hr-C20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1798.5507246376812" y="70.982142857142847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yvu-dU-Ts0">
@@ -177,4 +244,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="white_house" width="512" height="512"/>
+    </resources>
 </document>
