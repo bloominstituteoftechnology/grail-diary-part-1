@@ -16,8 +16,6 @@ class POIsTableViewController: UIViewController {
     }
 
 
-    let name = "Jorge"
-    let mySonsAge: Int = 2
-    
+
 }
 
