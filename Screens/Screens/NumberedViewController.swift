@@ -1,14 +1,14 @@
 //
-//  POIDetailViewController.swift
-//  GrailDairy
+//  NumberedViewController.swift
+//  Screens
 //
-//  Created by Waseem Idelbi on 11/21/19.
+//  Created by Waseem Idelbi on 12/3/19.
 //  Copyright © 2019 Waseem Idelbi. All rights reserved.
 //
 
 import UIKit
 
-class POIDetailViewController: UIViewController {
+class NumberedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

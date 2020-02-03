@@ -49,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				7B0E63A9237E6E4E007DF022 /* GrailDairy */,
-				7B0E63A8237E6E4E007DF022 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,24 +58,58 @@
 				7B0E63A7237E6E4E007DF022 /* GrailDairy.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		7B0E63A9237E6E4E007DF022 /* GrailDairy */ = {
 			isa = PBXGroup;
 			children = (
-				7B0E63AA237E6E4E007DF022 /* AppDelegate.swift */,
-				7B0E63AC237E6E4E007DF022 /* SceneDelegate.swift */,
-				7B0E63AE237E6E4E007DF022 /* POIsTableViewController.swift */,
-				7B9FE0812387636A0049CB1B /* POITableViewCell.swift */,
-				7B9FE07B238701060049CB1B /* AddPOIViewController.swift */,
-				7B9FE07D238701140049CB1B /* POIDetailViewController.swift */,
+				7B0E63A8237E6E4E007DF022 /* Products */,
+				7B4ACE0523E7BB3C0034B463 /* Resources */,
+				7B4ACE0623E7BB4A0034B463 /* Objects */,
+				7B4ACE0723E7BB5D0034B463 /* Cells */,
+				7B4ACE0423E7BB200034B463 /* View Controllers */,
 				7B0E63B0237E6E4E007DF022 /* Main.storyboard */,
-				7B0E63B3237E6E4F007DF022 /* Assets.xcassets */,
 				7B0E63B5237E6E4F007DF022 /* LaunchScreen.storyboard */,
 				7B0E63B8237E6E4F007DF022 /* Info.plist */,
-				7B9FE07F238706A80049CB1B /* POI.swift */,
 			);
 			path = GrailDairy;
+			sourceTree = "<group>";
+		};
+		7B4ACE0423E7BB200034B463 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B0E63AE237E6E4E007DF022 /* POIsTableViewController.swift */,
+				7B9FE07B238701060049CB1B /* AddPOIViewController.swift */,
+				7B9FE07D238701140049CB1B /* POIDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7B4ACE0523E7BB3C0034B463 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7B0E63AA237E6E4E007DF022 /* AppDelegate.swift */,
+				7B0E63AC237E6E4E007DF022 /* SceneDelegate.swift */,
+				7B0E63B3237E6E4F007DF022 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7B4ACE0623E7BB4A0034B463 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				7B9FE07F238706A80049CB1B /* POI.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		7B4ACE0723E7BB5D0034B463 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7B9FE0812387636A0049CB1B /* POITableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

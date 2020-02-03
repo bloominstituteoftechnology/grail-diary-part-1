@@ -32,8 +32,5 @@ class POITableViewCell: UITableViewCell {
     }
 
 
-    class POITableViewCell: UITableViewCell {
-        
-    }
     
 }

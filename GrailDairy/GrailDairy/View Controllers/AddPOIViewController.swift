@@ -84,12 +84,10 @@ extension AddPOIViewController: UITextFieldDelegate {
                 clue2Label.becomeFirstResponder()
             case clue2Label:
                 clue3Label.becomeFirstResponder()
-            case clue3Label:
-                locationLabel.becomeFirstResponder()
             
             default:
-                break
+                textField.resignFirstResponder()
             }
         }
-    }
+  return false  }
 }
