@@ -29,3 +29,4 @@ class POITableViewCell: UITableViewCell {
     }
 
 }
+
