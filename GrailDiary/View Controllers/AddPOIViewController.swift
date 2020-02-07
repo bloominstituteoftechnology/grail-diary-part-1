@@ -22,7 +22,7 @@ class AddPOIViewController: UIViewController {
     @IBOutlet weak var clue2TextField: UITextField!
     @IBOutlet weak var clue3TextField: UITextField!
     
-    var delegate: AddPOIDelegate? = nil
+    var delegate: AddPOIDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class AddPOIViewController: UIViewController {
         guard let location = locationTextField.text,
         let country = countryTextField.text,
         !location.isEmpty,
-            !country.isEmpty else { return }
+        !country.isEmpty else { return }
         
         var poi = POI(location: location, country: country, clues: [])
         

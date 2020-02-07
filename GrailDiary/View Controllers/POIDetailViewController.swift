@@ -13,9 +13,28 @@ class POIDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateViews()
     }
     
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var cluesTextView: UITextView!
+    
+    var poi: POI?
+    
+    private func updateViews() {
+        var cluesStr = ""
+        guard let location = poi?.location,
+        let country = poi?.country,
+        let clues = poi?.clues else { return }
+            locationLabel.text = location
+            countryLabel.text = country
+        for clue in clues {
+            cluesStr += "• \(clue)\n"
+        }
+            cluesTextView.text = cluesStr
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -27,4 +46,3 @@ class POIDetailViewController: UIViewController {
     }
     */
 
-}
