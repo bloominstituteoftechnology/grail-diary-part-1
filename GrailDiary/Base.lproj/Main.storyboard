@@ -86,15 +86,18 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="grailDiaryTableView" destination="h4Y-oa-oJx" id="GkS-Jl-6Qj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="934.78260869565224" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="OvE-Ze-gya">
             <objects>
-                <viewController id="W3C-td-qry" sceneMemberID="viewController">
+                <viewController id="W3C-td-qry" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yvv-b6-Sg3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="1752" y="136"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="OCg-uO-T5N">
             <objects>
-                <viewController id="Utg-Gm-MMg" sceneMemberID="viewController">
+                <viewController id="Utg-Gm-MMg" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Ll-jQ-x4C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,9 +217,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wve-FJ-P4z">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="Ege-iq-uAu"/>
+                                    <barButtonItem systemItem="cancel" id="Ege-iq-uAu">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="Utg-Gm-MMg" id="F6r-3k-YaG"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Fmn-zs-865"/>
-                                    <barButtonItem systemItem="save" id="MWB-Y7-BmF"/>
+                                    <barButtonItem systemItem="save" id="MWB-Y7-BmF">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="Utg-Gm-MMg" id="Y0z-oc-eHm"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -231,6 +242,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sSG-iV-8hA"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="RkX-tM-0NF" id="3ro-j2-fte"/>
+                        <outlet property="clue2TextField" destination="6jZ-g9-kb0" id="mLf-7V-IYF"/>
+                        <outlet property="clue3TextField" destination="pdS-c0-KlB" id="ryy-xx-Akf"/>
+                        <outlet property="countryTextField" destination="j4n-id-wkc" id="HXO-O8-7J6"/>
+                        <outlet property="locationTextField" destination="Wus-KK-kgR" id="Ens-TY-z8T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r43-ii-lk6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

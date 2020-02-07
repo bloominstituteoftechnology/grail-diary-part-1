@@ -12,6 +12,10 @@
 		C93CDA0023E3E38A00880555 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93CD9FE23E3E38A00880555 /* Main.storyboard */; };
 		C93CDA0223E3E38B00880555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C93CDA0123E3E38B00880555 /* Assets.xcassets */; };
 		C93CDA0523E3E38B00880555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93CDA0323E3E38B00880555 /* LaunchScreen.storyboard */; };
+		C93CDA1823EBCE7600880555 /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93CDA1723EBCE7600880555 /* AddPOIViewController.swift */; };
+		C93CDA1A23EBCE8F00880555 /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93CDA1923EBCE8F00880555 /* POIDetailViewController.swift */; };
+		C93CDA1C23EBCEAE00880555 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93CDA1B23EBCEAE00880555 /* POITableViewCell.swift */; };
+		C93CDA1E23EBCEBC00880555 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93CDA1D23EBCEBC00880555 /* POI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		C93CDA0123E3E38B00880555 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C93CDA0423E3E38B00880555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C93CDA0623E3E38B00880555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C93CDA1723EBCE7600880555 /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		C93CDA1923EBCE8F00880555 /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		C93CDA1B23EBCEAE00880555 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		C93CDA1D23EBCEBC00880555 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +63,41 @@
 			isa = PBXGroup;
 			children = (
 				C93CD9FA23E3E38A00880555 /* AppDelegate.swift */,
-				C93CD9FC23E3E38A00880555 /* POIsTableViewController.swift */,
+				C93CDA1F23EBCECC00880555 /* View Controllers */,
 				C93CD9FE23E3E38A00880555 /* Main.storyboard */,
 				C93CDA0123E3E38B00880555 /* Assets.xcassets */,
 				C93CDA0323E3E38B00880555 /* LaunchScreen.storyboard */,
 				C93CDA0623E3E38B00880555 /* Info.plist */,
+				C93CDA2223EBCEF800880555 /* Views */,
+				C93CDA2123EBCEDE00880555 /* Model */,
 			);
 			path = GrailDiary;
+			sourceTree = "<group>";
+		};
+		C93CDA1F23EBCECC00880555 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C93CD9FC23E3E38A00880555 /* POIsTableViewController.swift */,
+				C93CDA1723EBCE7600880555 /* AddPOIViewController.swift */,
+				C93CDA1923EBCE8F00880555 /* POIDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C93CDA2123EBCEDE00880555 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C93CDA1D23EBCEBC00880555 /* POI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C93CDA2223EBCEF800880555 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C93CDA1B23EBCEAE00880555 /* POITableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +172,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C93CD9FD23E3E38A00880555 /* POIsTableViewController.swift in Sources */,
+				C93CDA1823EBCE7600880555 /* AddPOIViewController.swift in Sources */,
+				C93CDA1A23EBCE8F00880555 /* POIDetailViewController.swift in Sources */,
 				C93CD9FB23E3E38A00880555 /* AppDelegate.swift in Sources */,
+				C93CDA1E23EBCEBC00880555 /* POI.swift in Sources */,
+				C93CDA1C23EBCEAE00880555 /* POITableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
