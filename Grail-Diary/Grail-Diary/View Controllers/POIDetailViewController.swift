@@ -31,14 +31,11 @@ class POIDetailViewController: UIViewController {
 
             }
         }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateViews()
     }
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        self.updateViews()
-//
-//        // Do any additional setup after loading the view.
-//    }
-    
+}
 
     /*
     // MARK: - Navigation
