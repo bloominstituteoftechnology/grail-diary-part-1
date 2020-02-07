@@ -35,7 +35,7 @@ extension POIsTableViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
         
         let poi = pois[indexPath.row]
-        //cell.poi = poi
+        cell.poi = poi
         return cell
     }
     

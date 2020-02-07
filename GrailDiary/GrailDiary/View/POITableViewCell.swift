@@ -10,15 +10,25 @@ import UIKit
 
 class POITableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    //IBOutlet
+    @IBOutlet var locationLabel: UILabel!
+    @IBOutlet var countryLabel: UILabel!
+    @IBOutlet var cluesCountLabel: UILabel!
+    
+    //Reference the POI object
+    var poi: POI? {
+        didSet{
+            self.updateViews()
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    private func updateViews() {
+        guard let poi = poi else {return}
+        
+        //use our friend object to fill in the data
+        locationLabel.text = poi.location
+        countryLabel.text = poi.country
+        cluesCountLabel.text = "\(poi.clues.count) clues"
     }
 
 }
