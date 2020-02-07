@@ -35,7 +35,23 @@ extension POIsTableViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
         
         let poi = pois[indexPath.row]
-        
+        //cell.poi = poi
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.description == "AddPOIModalSegue" {
+            let addPOIVC = segue.destination as! AddPOIViewController
+            addPOIVC.delegate = self
+        }
+    }
+}
+
+extension POIsTableViewController: AddPOIDelegate {
+    func poiWasAdded(_ poi: POI) {
+        self.pois.append(poi)
+        tableView.reloadData()
+    }
+    
+    
 }
