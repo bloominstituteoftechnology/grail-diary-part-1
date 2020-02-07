@@ -10,15 +10,15 @@ import UIKit
 
 class POITableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var poi: POI? {
+        didSet {
+            self.updateViews()
+        }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    private func updateViews() {
+        guard let poi = poi else { return }
 
-        // Configure the view for the selected state
+        // TODO: update UI
     }
-
 }
