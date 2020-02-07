@@ -18,7 +18,7 @@ class POITableViewCell: UITableViewCell {
     // MARK: Properties
     var poi: POI? {
         didSet {
-            self.updateViews()
+            updateViews()
         }
     }
     
@@ -29,15 +29,15 @@ class POITableViewCell: UITableViewCell {
         cluesCountLabel.text = "\(poi.clues.count) clues"
     }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        // Initialization code
+//    }
+//
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
+//    }
 
 }

@@ -31,7 +31,7 @@ class POIDetailViewController: UIViewController {
         locationLabel.text = poi.location
         countryLabel.text = poi.country
         for i in 0..<poi.clues.count {
-            text = text + "\(i+1): \(poi.clues[i])"
+            text = text + "Clue \(i+1): \(poi.clues[i])\n"
         }
         cluesTextView.text = text
     }
