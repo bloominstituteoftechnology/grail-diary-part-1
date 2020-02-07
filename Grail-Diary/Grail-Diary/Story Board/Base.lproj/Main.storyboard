@@ -10,6 +10,7 @@
         <!--Grail Diary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="POIsTableViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -19,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jKd-xj-gs3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POIContentCell" id="jKd-xj-gs3" customClass="POITableViewCell" customModule="Grail_Diary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jKd-xj-gs3" id="01J-yg-2Sa">
@@ -32,8 +33,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="m9j-Xp-tWK">
-                                                    <rect key="frame" x="44" y="7" width="75.5" height="46.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="m9j-Xp-tWK">
+                                                    <rect key="frame" x="44" y="7" width="75.5" height="46"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrX-Kf-yGK">
                                                             <rect key="frame" x="0.0" y="0.0" width="75.5" height="24"/>
@@ -42,7 +43,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Flx-aD-Kj8">
-                                                            <rect key="frame" x="0.0" y="26" width="61.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="26" width="61.5" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -59,9 +60,14 @@
                                                 <constraint firstItem="m9j-Xp-tWK" firstAttribute="centerY" secondItem="01J-yg-2Sa" secondAttribute="centerY" id="AOy-nw-wOp"/>
                                                 <constraint firstItem="Jqd-PV-FCP" firstAttribute="centerY" secondItem="01J-yg-2Sa" secondAttribute="centerY" id="MMd-s8-Hoc"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Jqd-PV-FCP" secondAttribute="trailing" id="Svk-bI-emU"/>
+                                                <constraint firstItem="m9j-Xp-tWK" firstAttribute="top" secondItem="01J-yg-2Sa" secondAttribute="topMargin" constant="-4" id="mGL-Zo-bdo"/>
+                                                <constraint firstItem="m9j-Xp-tWK" firstAttribute="leading" secondItem="01J-yg-2Sa" secondAttribute="leadingMargin" constant="24" id="trL-O1-Aw1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesCountLabel" destination="Jqd-PV-FCP" id="4lr-9V-UKD"/>
+                                            <outlet property="countryLabel" destination="Flx-aD-Kj8" id="Iw8-EB-5yl"/>
+                                            <outlet property="locationLabel" destination="qrX-Kf-yGK" id="zuh-qL-dcA"/>
                                             <segue destination="f4I-Le-GsL" kind="show" identifier="ShowPOIDetailSegue" id="quW-0P-AHP"/>
                                         </connections>
                                     </tableViewCell>
@@ -84,15 +90,17 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="CustomTableView" destination="9u1-UY-d9T" id="uNW-bY-6qk"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1023.1884057971015" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="kiI-PP-lNq">
             <objects>
-                <viewController id="f4I-Le-GsL" sceneMemberID="viewController">
+                <viewController id="f4I-Le-GsL" customClass="POIDetailViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gih-y2-2TB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,15 +159,20 @@
                         <viewLayoutGuide key="safeArea" id="aOA-Cc-tPt"/>
                     </view>
                     <navigationItem key="navigationItem" id="SRk-2C-WtH"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="Qy1-NK-zyx" id="kDG-Bf-Oxn"/>
+                        <outlet property="countryLabel" destination="bhP-CX-JlS" id="wR4-FV-o4i"/>
+                        <outlet property="locationLabel" destination="REp-13-iLJ" id="lSG-Sh-g9r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4k-Yf-NL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1740.5797101449277" y="450.66964285714283"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="ots-yv-Dao">
             <objects>
-                <viewController id="BOa-ro-nsT" sceneMemberID="viewController">
+                <viewController id="BOa-ro-nsT" customClass="AddPOIViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cpS-Q3-90W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,12 +186,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SAh-fj-0I1">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SAh-fj-0I1" customClass="UITextFieldDelegate">
                                         <rect key="frame" x="0.0" y="57" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hmd-qH-Hba">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hmd-qH-Hba" customClass="UITextFieldDelegate">
                                         <rect key="frame" x="0.0" y="107" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -189,17 +202,17 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BgH-cH-ouN">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BgH-cH-ouN" customClass="UITextFieldDelegate">
                                         <rect key="frame" x="0.0" y="193.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eM8-sz-y0g">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eM8-sz-y0g" customClass="UITextFieldDelegate">
                                         <rect key="frame" x="0.0" y="243.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1cV-qf-jvi">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1cV-qf-jvi" customClass="UITextFieldDelegate">
                                         <rect key="frame" x="0.0" y="293.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -209,9 +222,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7m-4g-mwt">
                                 <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Cancel" id="rPt-ih-yja"/>
+                                    <barButtonItem title="Cancel" id="rPt-ih-yja">
+                                        <connections>
+                                            <action selector="cancelButtonTapped:" destination="BOa-ro-nsT" id="zBN-p6-e2z"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Gb3-kO-126"/>
-                                    <barButtonItem title="Save" id="okt-3t-3Fj"/>
+                                    <barButtonItem title="Save" id="okt-3t-3Fj">
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="BOa-ro-nsT" id="b7Y-hj-tIh"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -226,6 +247,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Qs-rX-icY"/>
                     </view>
+                    <connections>
+                        <outlet property="Clue1Label" destination="BgH-cH-ouN" id="0Us-qL-SyP"/>
+                        <outlet property="Clue2Label" destination="eM8-sz-y0g" id="cpQ-wK-lnK"/>
+                        <outlet property="Clue3Label" destination="1cV-qf-jvi" id="08i-o1-ez3"/>
+                        <outlet property="CountryLabel" destination="hmd-qH-Hba" id="Vqn-g8-xul"/>
+                        <outlet property="LocationLabel" destination="SAh-fj-0I1" id="z6n-VP-6SG"/>
+                        <outlet property="cancelButtonTapped" destination="F7m-4g-mwt" id="AoU-Da-C5k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCw-Yp-k51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
