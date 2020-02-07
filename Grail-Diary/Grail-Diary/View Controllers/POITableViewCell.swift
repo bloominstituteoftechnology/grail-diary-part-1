@@ -17,12 +17,15 @@ class POITableViewCell: UITableViewCell {
     
     var poi: POI? {
         didSet {
-            self.updateViews()
+        updateViews()
         }
     }
     
     private func updateViews() {
         guard let poi = poi else { return }
+        locationLabel.text = poi.location
+        countryLabel.text = poi.country
+        cluesCountLabel.text = "\(poi.clues.count) clues"
             
    
 //    override func setSelected(_ selected: Bool, animated: Bool) {

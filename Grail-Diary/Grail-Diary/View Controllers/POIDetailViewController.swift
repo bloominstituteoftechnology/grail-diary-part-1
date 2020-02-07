@@ -23,19 +23,21 @@ class POIDetailViewController: UIViewController {
         guard let poi = poi else { return }
         locationLabel.text = poi.location
         countryLabel.text = poi.country
-        for i in 0..<poi.clues.count {
-            cluesTextView.text = 
+        var cluesString = ""
+        for clue in poi.clues {
+            cluesString += "\(clue) \n"
+        cluesTextView.text = cluesString
                     
 
             }
         }
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.updateViews() 
-
-        // Do any additional setup after loading the view.
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        self.updateViews()
+//
+//        // Do any additional setup after loading the view.
+//    }
     
 
     /*

@@ -91,7 +91,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="CustomTableView" destination="9u1-UY-d9T" id="uNW-bY-6qk"/>
+                        <outlet property="tableView" destination="9u1-UY-d9T" id="uNW-bY-6qk"/>
                     </connections>
                 </viewController>
             </objects>
@@ -224,13 +224,13 @@
                                 <items>
                                     <barButtonItem title="Cancel" id="rPt-ih-yja">
                                         <connections>
-                                            <action selector="cancelButtonTapped:" destination="BOa-ro-nsT" id="zBN-p6-e2z"/>
+                                            <action selector="cancelTapped:" destination="BOa-ro-nsT" id="JLi-Lu-KI4"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Gb3-kO-126"/>
                                     <barButtonItem title="Save" id="okt-3t-3Fj">
                                         <connections>
-                                            <action selector="saveButtonTapped:" destination="BOa-ro-nsT" id="b7Y-hj-tIh"/>
+                                            <action selector="saveTapped:" destination="BOa-ro-nsT" id="4D1-wK-cph"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -248,12 +248,11 @@
                         <viewLayoutGuide key="safeArea" id="9Qs-rX-icY"/>
                     </view>
                     <connections>
-                        <outlet property="Clue1Label" destination="BgH-cH-ouN" id="0Us-qL-SyP"/>
-                        <outlet property="Clue2Label" destination="eM8-sz-y0g" id="cpQ-wK-lnK"/>
-                        <outlet property="Clue3Label" destination="1cV-qf-jvi" id="08i-o1-ez3"/>
-                        <outlet property="CountryLabel" destination="hmd-qH-Hba" id="Vqn-g8-xul"/>
-                        <outlet property="LocationLabel" destination="SAh-fj-0I1" id="z6n-VP-6SG"/>
-                        <outlet property="cancelButtonTapped" destination="F7m-4g-mwt" id="AoU-Da-C5k"/>
+                        <outlet property="clue1Label" destination="BgH-cH-ouN" id="o0f-dS-D6v"/>
+                        <outlet property="clue2Label" destination="eM8-sz-y0g" id="CYa-b5-brx"/>
+                        <outlet property="clue3Label" destination="1cV-qf-jvi" id="yUR-3R-i4E"/>
+                        <outlet property="countryLabel" destination="hmd-qH-Hba" id="6Ri-2F-s2r"/>
+                        <outlet property="locationLabel" destination="SAh-fj-0I1" id="ngi-Ku-KXC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCw-Yp-k51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

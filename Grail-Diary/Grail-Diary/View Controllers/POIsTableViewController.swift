@@ -12,12 +12,14 @@ class POIsTableViewController: UIViewController, UITableViewDelegate {
     
     // MARK: IBOutlets
     
-    @IBOutlet weak var CustomTableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
-    var POIArray: [POI] = []
+    var pois: [POI] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -25,14 +27,14 @@ class POIsTableViewController: UIViewController, UITableViewDelegate {
 
 extension POIsTableViewController: UITableViewDataSource    {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return POIArray.count
+        return pois.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "POIContentCell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
         
-        let poi = POIArray[indexPath.row]
+        let poi = pois[indexPath.row]
         cell.poi = poi
         return cell
     }
@@ -48,9 +50,9 @@ extension POIsTableViewController: UITableViewDataSource    {
             }
             
         } else if segue.identifier == "ShowPOIDetailSegue" {
-            if let indexPath = CustomTableView.indexPathForSelectedRow,
+            if let indexPath = tableView.indexPathForSelectedRow,
                 let detailVC = segue.destination as? POIDetailViewController {
-                detailVC.poi = POIArray[indexPath.row]
+                detailVC.poi = pois[indexPath.row]
             }
         }
     }
@@ -59,9 +61,9 @@ extension POIsTableViewController: UITableViewDataSource    {
 
 extension POIsTableViewController: AddPOIDelegate {
     func poiWasCreated(_ poi: POI) {
-        POIArray.append(poi)
+        pois.append(poi)
         dismiss(animated: true, completion: nil)
-        CustomTableView.reloadData()
+        tableView.reloadData()
         }
     }
 

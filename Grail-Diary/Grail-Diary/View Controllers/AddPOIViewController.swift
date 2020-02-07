@@ -31,11 +31,11 @@ class AddPOIViewController: UIViewController {
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
     self.dismiss(animated: true, completion: nil)
     }
- 
+    
     @IBAction func saveTapped(_ sender: UIBarButtonItem) {
       guard let location = locationLabel.text,
               let country = countryLabel.text,
-              !location.isEmpty,
+                !location.isEmpty,
               !country.isEmpty else { return }
 
       
@@ -54,11 +54,12 @@ class AddPOIViewController: UIViewController {
               poi.clues.append(clue3)
           }
           delegate?.poiWasCreated(poi)
-        
+           
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        [locationLabel, countryLabel, clue1Label, clue2Label, clue3Label] .forEach{$0.delegate = self}
 
     }
 
@@ -66,15 +67,20 @@ class AddPOIViewController: UIViewController {
 
 extension AddPOIViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let text = textField.text {
+        
+        if let text = textField.text, !text.isEmpty {
             switch textField {
-            case <#pattern#>:
-                <#code#>
-            default:
-                <#code#>
-            }
+            case locationLabel: countryLabel
+                .becomeFirstResponder()
+            case countryLabel: clue1Label.becomeFirstResponder()
+            case clue1Label: clue2Label.becomeFirstResponder()
+            case clue2Label: clue3Label.becomeFirstResponder()
+                
+            default: locationLabel.becomeFirstResponder() 
+                
             }
             
         }
+        return false
     }
 }
