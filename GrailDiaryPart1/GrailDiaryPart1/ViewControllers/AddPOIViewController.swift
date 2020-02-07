@@ -40,8 +40,21 @@ class AddPOIViewController: UIViewController {
         
         if let clue1 = clue1TextField.text,
             !clue1.isEmpty {
-            
+            poi.clues.append(clue1)
+        }
+        if let clue2 = clue1TextField.text,
+            !clue2.isEmpty {
+            poi.clues.append(clue2)
+        }
+        if let clue3 = clue1TextField.text,
+            !clue3.isEmpty {
+            poi.clues.append(clue3)
         }
         
+        delegate?.poiWasAdded(poi)
+        self.dismiss(animated: true, completion: nil)
     }
+}
+
+extension AddPOIViewController: UITextFieldDelegate {
 }

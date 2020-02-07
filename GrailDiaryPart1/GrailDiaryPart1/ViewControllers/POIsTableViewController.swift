@@ -27,5 +27,7 @@ extension POIsTableViewController: UITableViewDataSource {
         
         let poi = pois[indexPath.row]
         cell.poi = poi
+        
+        return cell
     }
 }
