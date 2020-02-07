@@ -2,14 +2,14 @@
 //  POI.swift
 //  GrailDairy
 //
-//  Created by Kennedy Samarakody on 11/21/19.
-//  Copyright © 2019 Kennedy Samarakody. All rights reserved.
+//  Created by Lambda_School_Loaner_241 on 2/6/20.
+//  Copyright © 2020 Kennedy Samarakody. All rights reserved.
 //
 
 import Foundation
 
 struct POI {
-    let location: String
-    let country: String
-    let clues: [String]
+    var location: String
+    var country: String
+    var clues: [String]
 }

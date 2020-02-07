@@ -1,5 +1,5 @@
 //
-//  POIDetailViewController.swift
+//  AddPOIViewController.swift
 //  GrailDairy
 //
 //  Created by Lambda_School_Loaner_241 on 2/6/20.
@@ -8,7 +8,13 @@
 
 import UIKit
 
-class POIDetailViewController: UIViewController {
+protocol AddPOIDelegate {
+    func POIWasCreated(_ POI: Friend)
+}
+
+class AddPOIViewController: UIViewController {
+    
+    // Mark - IBOutlets
 
     override func viewDidLoad() {
         super.viewDidLoad()

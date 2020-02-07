@@ -19,10 +19,10 @@
                                 <rect key="frame" x="0.0" y="2" width="414" height="862"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="ayf-XD-xiy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="ayf-XD-xiy" customClass="POITableViewCell" customModule="GrailDairy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ayf-XD-xiy" id="QVz-Ty-jKp">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ayf-XD-xiy" id="QVz-Ty-jKp" customClass="POITableViewCell" customModule="GrailDairy" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -160,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uqj-jT-f0f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="580" y="131"/>
+            <point key="canvasLocation" x="-155" y="-354"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="KVi-zv-7xJ">
@@ -189,14 +189,14 @@
                                     <constraint firstAttribute="width" constant="150" id="zJv-xI-Z4x"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPL-oY-vJo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPL-oY-vJo">
                                 <rect key="frame" x="38" y="466" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Put Clues here." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fAD-kS-mW7">
-                                <rect key="frame" x="68" y="506" width="326" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Put Clues here." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fAD-kS-mW7">
+                                <rect key="frame" x="68" y="506" width="326" height="336"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -205,6 +205,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kPL-oY-vJo" secondAttribute="bottom" constant="409" id="0ye-om-SGp"/>
                             <constraint firstItem="jGF-XK-BmH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zp6-8V-LZK" secondAttribute="bottom" constant="8" id="22A-E7-yoy"/>
                             <constraint firstItem="FRk-gi-cdD" firstAttribute="trailing" secondItem="zp6-8V-LZK" secondAttribute="trailing" constant="20" id="5AH-OM-izu"/>
                             <constraint firstItem="zp6-8V-LZK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1JZ-xn-5Gd" secondAttribute="trailing" constant="8" id="EyE-XX-flg"/>
@@ -212,6 +213,7 @@
                             <constraint firstItem="fAD-kS-mW7" firstAttribute="leading" secondItem="kPL-oY-vJo" secondAttribute="leading" constant="8" id="OgI-ZH-fxY"/>
                             <constraint firstItem="1JZ-xn-5Gd" firstAttribute="top" secondItem="zp6-8V-LZK" secondAttribute="top" id="SUk-JJ-Zw4"/>
                             <constraint firstItem="kPL-oY-vJo" firstAttribute="leading" secondItem="1JZ-xn-5Gd" secondAttribute="leading" constant="40" id="TRk-pi-mAb"/>
+                            <constraint firstItem="fAD-kS-mW7" firstAttribute="top" secondItem="kPL-oY-vJo" secondAttribute="bottom" constant="19" id="UF5-J8-KaU"/>
                             <constraint firstItem="1JZ-xn-5Gd" firstAttribute="leading" secondItem="FRk-gi-cdD" secondAttribute="leading" constant="20" id="VZC-se-gyD"/>
                             <constraint firstItem="jGF-XK-BmH" firstAttribute="trailing" secondItem="zp6-8V-LZK" secondAttribute="trailing" id="ebT-Jq-yIR"/>
                             <constraint firstItem="fAD-kS-mW7" firstAttribute="trailing" secondItem="jGF-XK-BmH" secondAttribute="trailing" id="iGc-hE-aJg"/>
@@ -224,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LWY-RG-qm1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-216" y="163"/>
+            <point key="canvasLocation" x="-1000" y="315"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nf4-p9-UO7">
@@ -242,7 +244,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8l3-lt-tZi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2329" y="181"/>
+            <point key="canvasLocation" x="658" y="315"/>
         </scene>
     </scenes>
 </document>
