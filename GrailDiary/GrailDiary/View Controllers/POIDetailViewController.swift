@@ -9,9 +9,26 @@
 import UIKit
 
 class POIDetailViewController: UIViewController {
+    
+    // MARK: - IBOutlets
+    @IBOutlet var locationLabel: UILabel!
+    @IBOutlet var countryLabel: UILabel!
+    @IBOutlet var cluesTextView: UITextView!
+    
+    var poi: POI?
+    
+    private func updateViews() {
+        guard let poi = poi else { return }
+        locationLabel.text = poi.location
+        countryLabel.text = poi.country
+        for i in 0..<poi.clues.count {
+            cluesTextView.text = cluesTextView.text + "\(i+1). \(poi.clues[i])"
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.updateViews()
 
         // Do any additional setup after loading the view.
     }
