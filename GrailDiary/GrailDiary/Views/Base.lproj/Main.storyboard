@@ -59,6 +59,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesCountLabel" destination="8IT-vC-V1f" id="ciO-X3-haT"/>
+                                            <outlet property="countryLabel" destination="bdi-z1-Yco" id="gDo-4N-Uu8"/>
+                                            <outlet property="locationLabel" destination="PMj-32-dCf" id="tYK-v1-miP"/>
                                             <segue destination="gTY-jy-z2c" kind="show" identifier="ShowPOIDetailSegue" id="O7K-no-xaO"/>
                                         </connections>
                                     </tableViewCell>
@@ -150,6 +153,11 @@
                         <viewLayoutGuide key="safeArea" id="Zot-dj-sP8"/>
                     </view>
                     <navigationItem key="navigationItem" id="Xz0-iV-Udo"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="h0u-jJ-oIQ" id="xw9-ez-f9O"/>
+                        <outlet property="countryLabel" destination="RHW-9i-umg" id="Lhr-Rl-orV"/>
+                        <outlet property="locationLabel" destination="LX9-8A-gTt" id="HSo-LG-fDS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hP-Ea-fLO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,12 +180,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Location" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Jo-LH-fEA">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Jo-LH-fEA">
                                         <rect key="frame" x="0.0" y="56.666666666666671" width="335" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Country" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FFG-kd-ttY">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FFG-kd-ttY">
                                         <rect key="frame" x="0.0" y="106.66666666666667" width="335" height="34.000000000000014"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -188,17 +196,17 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Clue 1" borderStyle="roundedRect" placeholder="Clue 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="raD-bb-pbq">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="raD-bb-pbq">
                                         <rect key="frame" x="0.0" y="193" width="335" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Clue 2" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hxm-Db-fhw">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hxm-Db-fhw">
                                         <rect key="frame" x="0.0" y="243" width="335" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Clue 3" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nj5-Rj-hlS">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nj5-Rj-hlS">
                                         <rect key="frame" x="0.0" y="293" width="335" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -208,9 +216,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxv-mh-YVU">
                                 <rect key="frame" x="0.0" y="675" width="375" height="49"/>
                                 <items>
-                                    <barButtonItem title="Cancel" id="qbP-qk-Xup"/>
+                                    <barButtonItem title="Cancel" id="qbP-qk-Xup">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="Fbh-us-qy4" id="cLT-7D-iEy"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="jSe-cL-btz"/>
-                                    <barButtonItem title="Save" id="SEC-Z3-dpB"/>
+                                    <barButtonItem title="Save" id="SEC-Z3-dpB">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="Fbh-us-qy4" id="7Cg-Ie-DU2"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -225,6 +241,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6wy-xu-bq0"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="raD-bb-pbq" id="auU-68-L20"/>
+                        <outlet property="clue2TextField" destination="Hxm-Db-fhw" id="C6e-D7-AnW"/>
+                        <outlet property="clue3TextField" destination="Nj5-Rj-hlS" id="lQT-83-7g8"/>
+                        <outlet property="countryTextField" destination="FFG-kd-ttY" id="FMX-r3-PQ7"/>
+                        <outlet property="locationTextField" destination="8Jo-LH-fEA" id="LGA-I1-7nz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mBA-cE-28x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
