@@ -110,11 +110,17 @@
                                         <rect key="frame" x="0.0" y="57" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="kJg-ex-Pze" id="NlA-Qr-ef7"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="re9-YH-fC2">
                                         <rect key="frame" x="0.0" y="107" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="kJg-ex-Pze" id="Atv-7y-iP1"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2c-AY-Dg7">
                                         <rect key="frame" x="0.0" y="157" width="374" height="20.5"/>
@@ -126,25 +132,42 @@
                                         <rect key="frame" x="0.0" y="193.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="kJg-ex-Pze" id="ppc-Ra-Db0"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue #2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXv-VX-JGC">
                                         <rect key="frame" x="0.0" y="243.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="kJg-ex-Pze" id="yd4-ZT-ONO"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue #3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fhx-aa-wnM">
                                         <rect key="frame" x="0.0" y="293.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="kJg-ex-Pze" id="Rmt-Vh-XnB"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0XK-F4-A96">
                                 <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Cancel" id="ZU7-mH-k4L"/>
+                                    <barButtonItem title="Cancel" id="ZU7-mH-k4L">
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="Nzb-hO-BsB" id="0hb-Gs-tl9"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="A4A-98-XTd"/>
-                                    <barButtonItem title="Save" id="4D3-dd-64B"/>
+                                    <barButtonItem title="Save" id="4D3-dd-64B">
+                                        <connections>
+                                            <action selector="saveButtonPressed:" destination="Nzb-hO-BsB" id="VEo-ze-kqr"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -159,6 +182,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rzk-ac-gh1"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="5SV-pb-Yym" id="PfG-OZ-JEd"/>
+                        <outlet property="clue2TextField" destination="OXv-VX-JGC" id="hAJ-aA-jyy"/>
+                        <outlet property="clue3TextField" destination="fhx-aa-wnM" id="HU8-1E-2At"/>
+                        <outlet property="cuntryTextField" destination="re9-YH-fC2" id="z2y-yd-Kmu"/>
+                        <outlet property="locationTextField" destination="jG2-or-evI" id="QHL-mS-TJr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEE-5Q-5E0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,6 +255,11 @@
                         <viewLayoutGuide key="safeArea" id="hZX-vt-Flr"/>
                     </view>
                     <navigationItem key="navigationItem" id="spJ-aO-cTr"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="fgf-XE-bgS" id="w1O-C2-597"/>
+                        <outlet property="countryLabel" destination="ZEq-LL-ORe" id="4R3-lW-Uan"/>
+                        <outlet property="locationLabel" destination="mCX-Fm-xix" id="1gx-mV-RoW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKr-ji-8wb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

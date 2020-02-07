@@ -9,7 +9,12 @@
 import UIKit
 
 class POIDetailViewController: UIViewController {
-
+    
+    //IBOutlets
+    @IBOutlet var locationLabel: UILabel!
+    @IBOutlet var countryLabel: UILabel!
+    @IBOutlet var cluesTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
