@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 struct POI {
     var location: String
     var country: String
     var clues: [String]
+    var image: UIImage
 }

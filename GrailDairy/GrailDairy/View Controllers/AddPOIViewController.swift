@@ -12,8 +12,8 @@ protocol AddPOIDelegate {
     func poiWasAdded(poi: POI)
     
 }
-class AddPOIViewController: UIViewController {
-
+class AddPOIViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     @IBOutlet var locationLabel: UITextField!
     @IBOutlet var countryLabel: UITextField!
     @IBOutlet var clue1Label: UITextField!
@@ -24,35 +24,39 @@ class AddPOIViewController: UIViewController {
     @IBAction func cancelTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func saveTapped(_ sender: Any) {
         
         guard let location = locationLabel.text,
             let country = countryLabel.text,
-            
             !location.isEmpty,
             !country.isEmpty else {return}
         
-        var poi = POI(location: location, country: country, clues: [])
+        var poi = POI(location: location, country: country, clues: [], image: UIImage.init(named: "app-store-ios-150x150.jpg", in: nil, compatibleWith: nil)!)
         
-        if let clue1 = clue1Label.text {
-            !clue1.isEmpty
+        if let clue1 = clue1Label.text,
+            !clue1.isEmpty {
             poi.clues.append(clue1)
         }
-        if let clue2 = clue2Label.text {
-            !clue2.isEmpty
+        if let clue2 = clue2Label.text,
+            !clue2.isEmpty {
             poi.clues.append(clue2)
         }
-        if let clue3 = clue3Label.text {
-            !clue3.isEmpty
+        if let clue3 = clue3Label.text,
+            !clue3.isEmpty {
             poi.clues.append(clue3)
         }
         delegate?.poiWasAdded(poi: poi)
-        
-        
+        dismiss(animated: true)
     }
-    
     var delegate: AddPOIDelegate?
     
+    
+    @IBAction func addImageButtonTapped(_ sender: Any) {
+        let image = UIImagePickerController()
+        image.delegate = self
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,4 +94,24 @@ extension AddPOIViewController: UITextFieldDelegate {
             }
         }
   return false  }
+}
+
+extension AddPOIViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(field: UITextField) {
+        guard let textField = field
+        switch textField {
+        case locationLabel:
+            countryLabel.becomeFirstResponder()
+        case countryLabel:
+            clue1Label.becomeFirstResponder()
+        case clue1Label:
+            clue2Label.becomeFirstResponder()
+        case clue2Label:
+            clue3Label.becomeFirstResponder()
+        case clue3Label:
+            locationLabel.becomeFirstResponder()
+        default:
+            locationLabel.becomeFirstResponder()
+        }
+    }
 }

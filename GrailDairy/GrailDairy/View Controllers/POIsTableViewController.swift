@@ -9,15 +9,15 @@
 import UIKit
 
 class POIsTableViewController: UIViewController {
-
+    
     var POIArray: [POI] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tableView.dataSource = self
     }
-
+    
     @IBOutlet var tableView: UITableView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -26,18 +26,19 @@ class POIsTableViewController: UIViewController {
                 addPOIVC.delegate = self
             }
         } else if segue.identifier == "ShowPOIDetailSegue" {
-            if let poiDetailVC = segue.destination as? POIDetailViewController {
-                
+            if let poiDetailVC = segue.destination as? POIDetailViewController,
+                let indexPath = tableView.indexPathForSelectedRow?.row {
+                poiDetailVC.poi = POIArray[indexPath]
             }
         }
     }
-
-    
 }
+
+
 
 extension POIsTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        POIArray.count
+        return POIArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,7 +54,6 @@ extension POIsTableViewController: UITableViewDataSource {
 extension POIsTableViewController: AddPOIDelegate {
     func poiWasAdded(poi: POI) {
         POIArray.append(poi)
-        dismiss(animated: true, completion: nil)
         tableView.reloadData()
     }
     

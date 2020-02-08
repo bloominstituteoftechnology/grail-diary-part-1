@@ -131,7 +131,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e7g-0O-Wp5">
                                 <rect key="frame" x="20" y="327" width="374" height="515"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -190,7 +189,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <outlet property="delegate" destination="iRy-Br-FOH" id="Yds-7B-nTv"/>
+                                            <outlet property="delegate" destination="iRy-Br-FOH" id="o1F-9H-iFe"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6sK-4d-CH3">
@@ -198,7 +197,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <outlet property="delegate" destination="iRy-Br-FOH" id="FWI-cJ-V0A"/>
+                                            <outlet property="delegate" destination="iRy-Br-FOH" id="Tev-fQ-yXS"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsE-f5-MbH">
@@ -212,7 +211,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <outlet property="delegate" destination="iRy-Br-FOH" id="ZSf-12-txw"/>
+                                            <outlet property="delegate" destination="iRy-Br-FOH" id="iJl-iA-v0L"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n3G-3Z-Ca7">
@@ -220,7 +219,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <outlet property="delegate" destination="iRy-Br-FOH" id="8p8-8L-alK"/>
+                                            <outlet property="delegate" destination="iRy-Br-FOH" id="ATe-OV-5jv"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aA8-Bc-CBl">
@@ -228,7 +227,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <outlet property="delegate" destination="iRy-Br-FOH" id="p23-CK-tg2"/>
+                                            <outlet property="delegate" destination="iRy-Br-FOH" id="Zi3-XG-Tmg"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -249,26 +248,49 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJY-Y0-m8p">
+                                <rect key="frame" x="20" y="363.5" width="374" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Add Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addImageButtonTapped:" destination="iRy-Br-FOH" eventType="touchUpInside" id="Cgy-rX-jiE"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QD5-jp-vyM">
+                                <rect key="frame" x="132" y="418.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Pg6-th-1PW"/>
+                                    <constraint firstAttribute="width" constant="150" id="bf0-Yg-50B"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ebf-w8-J23" secondAttribute="bottom" id="1b5-k2-uNi"/>
+                            <constraint firstItem="beG-ha-Lmf" firstAttribute="trailing" secondItem="lJY-Y0-m8p" secondAttribute="trailing" constant="20" id="2WQ-gZ-K2g"/>
                             <constraint firstItem="GJb-h2-3vf" firstAttribute="top" secondItem="beG-ha-Lmf" secondAttribute="top" constant="20" id="7xe-R4-tAz"/>
+                            <constraint firstItem="lJY-Y0-m8p" firstAttribute="leading" secondItem="beG-ha-Lmf" secondAttribute="leading" constant="20" id="8ME-lh-acA"/>
+                            <constraint firstItem="lJY-Y0-m8p" firstAttribute="centerX" secondItem="4A0-LD-nT6" secondAttribute="centerX" id="8lt-lf-HXe"/>
+                            <constraint firstItem="lJY-Y0-m8p" firstAttribute="top" secondItem="GJb-h2-3vf" secondAttribute="bottom" constant="16" id="9mh-Wk-Aa4"/>
                             <constraint firstItem="ebf-w8-J23" firstAttribute="trailing" secondItem="beG-ha-Lmf" secondAttribute="trailing" id="G3g-nt-D2X"/>
+                            <constraint firstItem="QD5-jp-vyM" firstAttribute="top" secondItem="lJY-Y0-m8p" secondAttribute="bottom" constant="25" id="Nit-Lb-V6T"/>
                             <constraint firstItem="beG-ha-Lmf" firstAttribute="trailing" secondItem="GJb-h2-3vf" secondAttribute="trailing" constant="20" id="TgR-Bw-YB5"/>
+                            <constraint firstItem="QD5-jp-vyM" firstAttribute="centerX" secondItem="4A0-LD-nT6" secondAttribute="centerX" id="UzH-C4-et5"/>
                             <constraint firstItem="ebf-w8-J23" firstAttribute="leading" secondItem="beG-ha-Lmf" secondAttribute="leading" id="kjt-l3-OI4"/>
                             <constraint firstItem="GJb-h2-3vf" firstAttribute="leading" secondItem="beG-ha-Lmf" secondAttribute="leading" constant="20" id="qHp-1t-ldN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="beG-ha-Lmf"/>
                     </view>
                     <connections>
-                        <outlet property="cancelButtonTapped" destination="ebf-w8-J23" id="P2u-UO-60L"/>
                         <outlet property="clue1Label" destination="SAf-5Z-roD" id="VRO-OX-wKn"/>
                         <outlet property="clue2Label" destination="n3G-3Z-Ca7" id="Kfu-NL-2qh"/>
                         <outlet property="clue3Label" destination="aA8-Bc-CBl" id="NkZ-Md-ATh"/>
                         <outlet property="countryLabel" destination="6sK-4d-CH3" id="FTa-TH-tnS"/>
                         <outlet property="locationLabel" destination="PvJ-lU-f51" id="Uaw-5w-gQE"/>
-                        <outlet property="saveTapped" destination="Sgt-DZ-Ox1" id="cpa-4n-KuZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xj5-n1-Yxt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
