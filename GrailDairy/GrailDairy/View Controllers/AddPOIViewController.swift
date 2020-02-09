@@ -96,22 +96,3 @@ extension AddPOIViewController: UITextFieldDelegate {
   return false  }
 }
 
-extension AddPOIViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(field: UITextField) {
-        guard let textField = field
-        switch textField {
-        case locationLabel:
-            countryLabel.becomeFirstResponder()
-        case countryLabel:
-            clue1Label.becomeFirstResponder()
-        case clue1Label:
-            clue2Label.becomeFirstResponder()
-        case clue2Label:
-            clue3Label.becomeFirstResponder()
-        case clue3Label:
-            locationLabel.becomeFirstResponder()
-        default:
-            locationLabel.becomeFirstResponder()
-        }
-    }
-}
