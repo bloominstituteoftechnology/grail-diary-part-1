@@ -21,10 +21,6 @@ class AddPOIViewController: UIViewController {
     @IBOutlet weak var clue3TextField: UITextField!
 
     var delegate: AddPOIDelegate?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     @IBAction func cancelTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -58,7 +54,6 @@ class AddPOIViewController: UIViewController {
 
 extension AddPOIViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("return tapped on \(textField.text!)")
         switch textField {
         case locationTextField:
             countryTextField.becomeFirstResponder()

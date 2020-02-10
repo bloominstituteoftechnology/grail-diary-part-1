@@ -22,7 +22,6 @@ class POITableViewCell: UITableViewCell {
 
     private func updateViews() {
         guard let poi = poi else { return }
-
         locationLabel.text = poi.location
         countryLabel.text = poi.country
         cluesCountLabel.text = "\(poi.clues.count)"
