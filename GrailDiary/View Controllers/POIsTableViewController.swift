@@ -51,7 +51,6 @@ extension POIsTableViewController: UITableViewDataSource {
             detailPOIvc.poi = poi
         }
     }
-    
 }
 
 extension POIsTableViewController: AddPOIDelegate {
