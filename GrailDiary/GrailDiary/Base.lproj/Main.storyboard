@@ -182,7 +182,59 @@
                     <view key="view" contentMode="scaleToFill" id="WRZ-bg-3KM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7H-bQ-cqo">
+                                <rect key="frame" x="279" y="160" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oca-AQ-oRs">
+                                <rect key="frame" x="332.5" y="189" width="61.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmJ-1C-Hjx">
+                                <rect key="frame" x="20" y="350" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="condado_beach" translatesAutoresizingMaskIntoConstraints="NO" id="PV3-UD-t9B">
+                                <rect key="frame" x="20" y="160" width="150" height="150"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PV3-UD-t9B" secondAttribute="height" multiplier="1:1" id="1YT-wc-Ta4"/>
+                                    <constraint firstAttribute="width" constant="150" id="G39-h5-owu"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UfW-9F-DTI">
+                                <rect key="frame" x="20" y="379" width="374" height="463"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pmJ-1C-Hjx" firstAttribute="leading" secondItem="PV3-UD-t9B" secondAttribute="leading" id="A4H-2V-YbX"/>
+                            <constraint firstItem="pmJ-1C-Hjx" firstAttribute="top" secondItem="PV3-UD-t9B" secondAttribute="bottom" constant="40" id="BJE-Cr-b13"/>
+                            <constraint firstItem="oca-AQ-oRs" firstAttribute="trailing" secondItem="E7H-bQ-cqo" secondAttribute="trailing" id="M0m-Rs-QHd"/>
+                            <constraint firstItem="E7H-bQ-cqo" firstAttribute="top" secondItem="TB8-ix-DQ9" secondAttribute="top" constant="20" id="QEE-4T-PLq"/>
+                            <constraint firstItem="UfW-9F-DTI" firstAttribute="top" secondItem="pmJ-1C-Hjx" secondAttribute="bottom" constant="8" id="aov-TV-bOU"/>
+                            <constraint firstItem="UfW-9F-DTI" firstAttribute="leading" secondItem="pmJ-1C-Hjx" secondAttribute="leading" id="eLE-FQ-u2H"/>
+                            <constraint firstItem="E7H-bQ-cqo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PV3-UD-t9B" secondAttribute="trailing" constant="8" id="g7c-lC-cYl"/>
+                            <constraint firstItem="oca-AQ-oRs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PV3-UD-t9B" secondAttribute="trailing" constant="8" id="gtV-hS-2IS"/>
+                            <constraint firstItem="PV3-UD-t9B" firstAttribute="top" secondItem="E7H-bQ-cqo" secondAttribute="top" id="juj-FY-5OK"/>
+                            <constraint firstItem="TB8-ix-DQ9" firstAttribute="trailing" secondItem="E7H-bQ-cqo" secondAttribute="trailing" constant="20" id="m53-o5-B1v"/>
+                            <constraint firstItem="UfW-9F-DTI" firstAttribute="trailing" secondItem="oca-AQ-oRs" secondAttribute="trailing" id="pWG-gN-CFk"/>
+                            <constraint firstItem="TB8-ix-DQ9" firstAttribute="bottom" secondItem="UfW-9F-DTI" secondAttribute="bottom" constant="20" id="rCK-9e-dKt"/>
+                            <constraint firstItem="PV3-UD-t9B" firstAttribute="leading" secondItem="TB8-ix-DQ9" secondAttribute="leading" constant="20" id="s5q-Z2-NUt"/>
+                            <constraint firstItem="oca-AQ-oRs" firstAttribute="top" secondItem="E7H-bQ-cqo" secondAttribute="bottom" constant="8" id="sUG-wb-RQO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TB8-ix-DQ9"/>
                     </view>
                     <navigationItem key="navigationItem" id="cO4-V1-X5U"/>
@@ -192,4 +244,7 @@
             <point key="canvasLocation" x="787" y="371"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="condado_beach" width="1024" height="768"/>
+    </resources>
 </document>
