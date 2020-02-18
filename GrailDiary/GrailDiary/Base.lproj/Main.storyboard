@@ -147,10 +147,21 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jyl-hb-54y">
+                                <rect key="frame" x="0.0" y="759" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="0oq-I1-EqJ"/>
+                                    <barButtonItem systemItem="flexibleSpace" id="W4J-fe-VRw"/>
+                                    <barButtonItem systemItem="save" id="Qbo-GT-4Gc"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Jyl-hb-54y" firstAttribute="bottom" secondItem="7C2-QN-DiH" secondAttribute="bottom" id="7wl-iw-Nyp"/>
+                            <constraint firstItem="Jyl-hb-54y" firstAttribute="trailing" secondItem="7C2-QN-DiH" secondAttribute="trailing" id="AMg-2L-4j0"/>
                             <constraint firstItem="FgF-M8-h2U" firstAttribute="leading" secondItem="7C2-QN-DiH" secondAttribute="leading" constant="20" id="H2J-3V-v5F"/>
+                            <constraint firstItem="Jyl-hb-54y" firstAttribute="leading" secondItem="7C2-QN-DiH" secondAttribute="leading" id="PdJ-fR-SRO"/>
                             <constraint firstItem="7C2-QN-DiH" firstAttribute="trailing" secondItem="FgF-M8-h2U" secondAttribute="trailing" constant="20" id="bdu-me-9fE"/>
                             <constraint firstItem="FgF-M8-h2U" firstAttribute="top" secondItem="7C2-QN-DiH" secondAttribute="top" constant="20" id="oHj-j7-Hfb"/>
                         </constraints>
