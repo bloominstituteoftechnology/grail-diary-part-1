@@ -26,8 +26,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vsC-eI-AZ3">
-                                                    <rect key="frame" x="20" y="11" width="68.5" height="41"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="vsC-eI-AZ3">
+                                                    <rect key="frame" x="20" y="8.5" width="68.5" height="43"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7D-e8-XSK">
                                                             <rect key="frame" x="0.0" y="0.0" width="68.5" height="20.5"/>
@@ -36,21 +36,26 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgm-Kh-wBK">
-                                                            <rect key="frame" x="0.0" y="20.5" width="68.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="22.5" width="61.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# of Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLd-wp-CUY">
-                                                    <rect key="frame" x="336" y="23" width="58" height="15"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLd-wp-CUY">
+                                                    <rect key="frame" x="336" y="23" width="58" height="14.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vsC-eI-AZ3" firstAttribute="centerY" secondItem="TS1-RT-coR" secondAttribute="centerY" id="FVt-0a-oP3"/>
+                                                <constraint firstItem="vsC-eI-AZ3" firstAttribute="leading" secondItem="TS1-RT-coR" secondAttribute="leading" constant="20" symbolic="YES" id="Wsh-cY-u8e"/>
+                                                <constraint firstItem="yLd-wp-CUY" firstAttribute="trailing" secondItem="TS1-RT-coR" secondAttribute="trailingMargin" id="o9V-h4-Xnx"/>
+                                                <constraint firstItem="yLd-wp-CUY" firstAttribute="centerY" secondItem="TS1-RT-coR" secondAttribute="centerY" id="qAU-dR-mRS"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
