@@ -100,24 +100,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahd-3Z-aYK">
-                                <rect key="frame" x="60" y="223" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGA-zB-HXy">
                                 <rect key="frame" x="332" y="137" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahd-3Z-aYK">
+                                <rect key="frame" x="80" y="371" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JOc-sC-N0F">
+                                <rect key="frame" x="20" y="108" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JOc-sC-N0F" secondAttribute="height" multiplier="1:1" id="rzt-fm-aCg"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="SGA-zB-HXy" firstAttribute="trailing" secondItem="gmX-JD-CyV" secondAttribute="trailing" id="4Ph-9c-VF8"/>
                             <constraint firstItem="gmX-JD-CyV" firstAttribute="top" secondItem="UfU-vM-zLx" secondAttribute="top" constant="20" id="TSX-dN-H4J"/>
+                            <constraint firstItem="JOc-sC-N0F" firstAttribute="leading" secondItem="UfU-vM-zLx" secondAttribute="leading" constant="20" id="YII-Y1-R1D"/>
+                            <constraint firstItem="JOc-sC-N0F" firstAttribute="top" secondItem="gmX-JD-CyV" secondAttribute="top" id="uA2-PY-92C"/>
                             <constraint firstItem="SGA-zB-HXy" firstAttribute="top" secondItem="gmX-JD-CyV" secondAttribute="bottom" constant="8" id="x2B-Dh-DOx"/>
                             <constraint firstItem="UfU-vM-zLx" firstAttribute="trailing" secondItem="gmX-JD-CyV" secondAttribute="trailing" constant="20" id="yzs-gL-LvM"/>
                         </constraints>
