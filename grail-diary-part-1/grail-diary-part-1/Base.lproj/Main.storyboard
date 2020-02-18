@@ -100,14 +100,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INO-gv-RuU">
-                                <rect key="frame" x="20" y="438" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INO-gv-RuU">
+                                <rect key="frame" x="20" y="350" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Guatamala" translatesAutoresizingMaskIntoConstraints="NO" id="odE-fl-pUl">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YungShua" translatesAutoresizingMaskIntoConstraints="NO" id="odE-fl-pUl">
                                 <rect key="frame" x="20" y="160" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="68u-wl-CRD"/>
@@ -120,13 +119,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gVq-Rk-jfD">
+                                <rect key="frame" x="20" y="379" width="374" height="463"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="odE-fl-pUl" firstAttribute="leading" secondItem="vcJ-iQ-SYU" secondAttribute="leading" constant="20" id="DDc-gb-wU1"/>
                             <constraint firstItem="muE-Wm-Ipy" firstAttribute="top" secondItem="2it-k0-wde" secondAttribute="topMargin" constant="20" id="FdX-Sm-HJC"/>
+                            <constraint firstItem="gVq-Rk-jfD" firstAttribute="trailing" secondItem="Erx-Sp-kK7" secondAttribute="trailing" id="G3p-Vz-tr2"/>
+                            <constraint firstItem="INO-gv-RuU" firstAttribute="leading" secondItem="odE-fl-pUl" secondAttribute="leading" id="Jln-b3-z8M"/>
                             <constraint firstItem="odE-fl-pUl" firstAttribute="top" secondItem="muE-Wm-Ipy" secondAttribute="top" id="KzN-Gv-hhk"/>
+                            <constraint firstItem="INO-gv-RuU" firstAttribute="top" secondItem="odE-fl-pUl" secondAttribute="bottom" constant="40" id="M1k-fY-LJS"/>
+                            <constraint firstItem="gVq-Rk-jfD" firstAttribute="top" secondItem="INO-gv-RuU" secondAttribute="bottom" constant="8" id="N8b-ao-5jY"/>
+                            <constraint firstItem="vcJ-iQ-SYU" firstAttribute="bottom" secondItem="gVq-Rk-jfD" secondAttribute="bottom" constant="20" id="PW0-On-hOX"/>
+                            <constraint firstItem="Erx-Sp-kK7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="odE-fl-pUl" secondAttribute="trailing" constant="8" id="Stj-vM-GeQ"/>
+                            <constraint firstItem="gVq-Rk-jfD" firstAttribute="leading" secondItem="INO-gv-RuU" secondAttribute="leading" id="UMq-YL-zOD"/>
                             <constraint firstItem="vcJ-iQ-SYU" firstAttribute="trailing" secondItem="muE-Wm-Ipy" secondAttribute="trailing" constant="20" id="aKF-Rl-eO2"/>
+                            <constraint firstItem="muE-Wm-Ipy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="odE-fl-pUl" secondAttribute="trailing" constant="8" id="hhL-nI-lih"/>
                             <constraint firstItem="Erx-Sp-kK7" firstAttribute="top" secondItem="muE-Wm-Ipy" secondAttribute="bottom" constant="8" id="nsJ-Bu-Vk3"/>
                             <constraint firstItem="Erx-Sp-kK7" firstAttribute="trailing" secondItem="muE-Wm-Ipy" secondAttribute="trailing" id="you-MX-F1e"/>
                         </constraints>
@@ -233,6 +247,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Guatamala" width="768" height="1024"/>
+        <image name="YungShua" width="1080" height="1092"/>
     </resources>
 </document>
