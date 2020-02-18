@@ -53,6 +53,7 @@
                                             <constraints>
                                                 <constraint firstItem="vsC-eI-AZ3" firstAttribute="centerY" secondItem="TS1-RT-coR" secondAttribute="centerY" id="FVt-0a-oP3"/>
                                                 <constraint firstItem="vsC-eI-AZ3" firstAttribute="leading" secondItem="TS1-RT-coR" secondAttribute="leading" constant="20" symbolic="YES" id="Wsh-cY-u8e"/>
+                                                <constraint firstItem="yLd-wp-CUY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vsC-eI-AZ3" secondAttribute="trailing" constant="8" id="eNb-ly-trX"/>
                                                 <constraint firstItem="yLd-wp-CUY" firstAttribute="trailing" secondItem="TS1-RT-coR" secondAttribute="trailingMargin" id="o9V-h4-Xnx"/>
                                                 <constraint firstItem="yLd-wp-CUY" firstAttribute="centerY" secondItem="TS1-RT-coR" secondAttribute="centerY" id="qAU-dR-mRS"/>
                                             </constraints>
@@ -70,7 +71,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Grail Diary" largeTitleDisplayMode="always" id="ksK-gS-XRR"/>
+                    <navigationItem key="navigationItem" title="Grail Diary" largeTitleDisplayMode="always" id="ksK-gS-XRR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nW9-vC-7bB"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
