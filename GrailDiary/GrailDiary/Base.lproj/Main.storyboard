@@ -72,6 +72,9 @@
                                                 <constraint firstItem="KZA-NJ-Syz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rXX-gg-Kwo" secondAttribute="trailing" constant="8" id="quc-OM-Dt0"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="pcB-fb-qov" kind="show" identifier="ShowPOIDetailSegue" id="aZD-s1-sWb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -170,7 +173,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDp-5T-gPV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="-31"/>
+            <point key="canvasLocation" x="787" y="-393"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YDT-To-I7G">
+            <objects>
+                <viewController id="pcB-fb-qov" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WRZ-bg-3KM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="TB8-ix-DQ9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cO4-V1-X5U"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gaa-uS-mac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787" y="371"/>
         </scene>
     </scenes>
 </document>
