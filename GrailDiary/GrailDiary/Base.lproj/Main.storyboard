@@ -181,6 +181,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fw-37-y0Z">
+                                <rect key="frame" x="20" y="298" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MtKili" translatesAutoresizingMaskIntoConstraints="NO" id="NeS-rH-AAJ">
                                 <rect key="frame" x="20" y="108" width="150" height="150"/>
                                 <constraints>
@@ -188,31 +194,28 @@
                                     <constraint firstAttribute="width" secondItem="NeS-rH-AAJ" secondAttribute="height" multiplier="1:1" id="Le0-Po-0Dd"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JrW-ig-QlW">
-                                <rect key="frame" x="53" y="372" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JrW-ig-QlW">
+                                <rect key="frame" x="20" y="327" width="374" height="515"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fw-37-y0Z">
-                                <rect key="frame" x="20" y="298" width="44" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="NeS-rH-AAJ" firstAttribute="leading" secondItem="jaJ-hd-AqN" secondAttribute="leading" constant="20" id="591-Sh-zZF"/>
+                            <constraint firstItem="JrW-ig-QlW" firstAttribute="trailing" secondItem="69l-cG-FNi" secondAttribute="trailing" id="60y-v1-cFf"/>
                             <constraint firstItem="jaJ-hd-AqN" firstAttribute="trailing" secondItem="fta-OG-KwW" secondAttribute="trailing" constant="20" id="6R4-n3-Pyk"/>
                             <constraint firstItem="69l-cG-FNi" firstAttribute="trailing" secondItem="fta-OG-KwW" secondAttribute="trailing" id="DZE-Tz-fZb"/>
                             <constraint firstItem="NeS-rH-AAJ" firstAttribute="top" secondItem="fta-OG-KwW" secondAttribute="top" id="E5v-oA-GJi"/>
                             <constraint firstItem="fta-OG-KwW" firstAttribute="top" secondItem="jaJ-hd-AqN" secondAttribute="top" constant="20" id="F5s-Cb-bkz"/>
                             <constraint firstItem="7fw-37-y0Z" firstAttribute="top" secondItem="NeS-rH-AAJ" secondAttribute="bottom" constant="40" id="F8b-CN-9lB"/>
                             <constraint firstItem="69l-cG-FNi" firstAttribute="top" secondItem="fta-OG-KwW" secondAttribute="bottom" constant="8" id="LCF-Ju-mzs"/>
+                            <constraint firstItem="jaJ-hd-AqN" firstAttribute="bottom" secondItem="JrW-ig-QlW" secondAttribute="bottom" constant="20" id="PHz-jQ-y4C"/>
+                            <constraint firstItem="JrW-ig-QlW" firstAttribute="top" secondItem="7fw-37-y0Z" secondAttribute="bottom" constant="8" id="Qcr-hB-813"/>
+                            <constraint firstItem="JrW-ig-QlW" firstAttribute="leading" secondItem="7fw-37-y0Z" secondAttribute="leading" id="bbT-I7-b9m"/>
                             <constraint firstItem="fta-OG-KwW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NeS-rH-AAJ" secondAttribute="trailing" constant="8" id="gaB-JB-4iD"/>
                             <constraint firstItem="69l-cG-FNi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NeS-rH-AAJ" secondAttribute="trailing" constant="8" id="icd-0v-Jg1"/>
                             <constraint firstItem="7fw-37-y0Z" firstAttribute="leading" secondItem="NeS-rH-AAJ" secondAttribute="leading" id="v9B-ib-gnR"/>
