@@ -8,7 +8,7 @@
 
 import UIKit
 
-class POIsViewController: UIViewController {
+class POIsTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
