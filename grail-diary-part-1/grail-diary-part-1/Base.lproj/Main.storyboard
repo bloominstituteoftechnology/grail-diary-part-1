@@ -10,7 +10,7 @@
         <!--Grail Diary-->
         <scene sceneID="eHN-wR-ht3">
             <objects>
-                <viewController id="N0a-iZ-2wi" sceneMemberID="viewController">
+                <viewController id="N0a-iZ-2wi" customClass="POITableViewController" customModule="grail_diary_part_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jAA-Vr-Ci6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,15 +81,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="dxh-0c-GmN" id="c7F-QF-sUF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htU-rl-DTO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="943" y="119"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="sC1-9S-RPu">
             <objects>
-                <viewController id="HTy-By-3qd" sceneMemberID="viewController">
+                <viewController id="HTy-By-3qd" customClass="POIDetailViewController" customModule="grail_diary_part_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2it-k0-wde">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="1918.840579710145" y="118.52678571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="UGZ-ZF-KB6">
             <objects>
-                <viewController id="fzv-A3-3h8" sceneMemberID="viewController">
+                <viewController id="fzv-A3-3h8" customClass="AddPOIViewController" customModule="grail_diary_part_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FGI-Si-g3v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
