@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Is View Controller-->
+        <!--GrailDiary-->
         <scene sceneID="iD5-TJ-k7c">
             <objects>
-                <viewController id="yB3-xM-Yfc" customClass="POIsViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="GrailDiary" id="yB3-xM-Yfc" customClass="POIsViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ayA-WS-0n6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vmh-De-D9j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1829" y="170"/>
+            <point key="canvasLocation" x="1836" y="160"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PDh-ea-MO5">
@@ -188,9 +188,8 @@
                                     <constraint firstAttribute="width" constant="150" id="gZM-5I-k16"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LXG-Ik-yix">
-                                <rect key="frame" x="47" y="390" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LXG-Ik-yix">
+                                <rect key="frame" x="20" y="247" width="369" height="541"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -206,6 +205,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="5CX-Qt-nyj" firstAttribute="trailing" secondItem="LXG-Ik-yix" secondAttribute="trailing" constant="25" id="BZa-Tq-WyZ"/>
+                            <constraint firstItem="LXG-Ik-yix" firstAttribute="leading" secondItem="5CX-Qt-nyj" secondAttribute="leading" constant="20" id="DNO-KN-mbo"/>
+                            <constraint firstItem="5CX-Qt-nyj" firstAttribute="bottom" secondItem="LXG-Ik-yix" secondAttribute="bottom" constant="20" id="F8Z-aQ-6Qy"/>
                             <constraint firstItem="1do-im-yo0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VQd-dg-kdZ" secondAttribute="trailing" constant="8" id="FDc-5C-vGm"/>
                             <constraint firstItem="x8C-ij-hqB" firstAttribute="leading" secondItem="5CX-Qt-nyj" secondAttribute="leading" constant="20" id="Hbq-go-2Pn"/>
                             <constraint firstItem="x8C-ij-hqB" firstAttribute="top" secondItem="VQd-dg-kdZ" secondAttribute="bottom" constant="40" id="OxB-Zp-X6E"/>
@@ -214,6 +216,7 @@
                             <constraint firstItem="vKc-qb-rVm" firstAttribute="top" secondItem="5CX-Qt-nyj" secondAttribute="top" constant="20" id="ewz-hO-vOn"/>
                             <constraint firstItem="VQd-dg-kdZ" firstAttribute="leading" secondItem="5CX-Qt-nyj" secondAttribute="leading" constant="20" id="fat-pu-bEv"/>
                             <constraint firstItem="VQd-dg-kdZ" firstAttribute="top" secondItem="5CX-Qt-nyj" secondAttribute="top" constant="20" id="h3t-1p-547"/>
+                            <constraint firstItem="LXG-Ik-yix" firstAttribute="top" secondItem="x8C-ij-hqB" secondAttribute="bottom" constant="8" id="iLi-mF-ErR"/>
                             <constraint firstItem="1do-im-yo0" firstAttribute="trailing" secondItem="vKc-qb-rVm" secondAttribute="trailing" id="q4B-j0-dSf"/>
                             <constraint firstItem="vKc-qb-rVm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VQd-dg-kdZ" secondAttribute="trailing" constant="8" id="xuA-Np-riQ"/>
                         </constraints>
@@ -223,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biA-sh-Cm2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2596" y="181"/>
+            <point key="canvasLocation" x="2601" y="161"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TZs-CG-JJa">
