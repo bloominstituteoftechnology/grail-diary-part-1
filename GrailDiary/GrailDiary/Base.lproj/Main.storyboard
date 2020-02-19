@@ -106,9 +106,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahd-3Z-aYK">
-                                <rect key="frame" x="80" y="371" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahd-3Z-aYK">
+                                <rect key="frame" x="20" y="298" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -120,17 +119,32 @@
                                     <constraint firstAttribute="width" secondItem="JOc-sC-N0F" secondAttribute="height" multiplier="1:1" id="rzt-fm-aCg"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DhR-zB-FmS">
+                                <rect key="frame" x="20" y="327" width="374" height="515"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="SGA-zB-HXy" firstAttribute="trailing" secondItem="gmX-JD-CyV" secondAttribute="trailing" id="4Ph-9c-VF8"/>
+                            <constraint firstItem="ahd-3Z-aYK" firstAttribute="leading" secondItem="JOc-sC-N0F" secondAttribute="leading" id="AK8-bW-gkA"/>
+                            <constraint firstItem="ahd-3Z-aYK" firstAttribute="top" secondItem="JOc-sC-N0F" secondAttribute="bottom" constant="40" id="Dex-aq-EZq"/>
+                            <constraint firstItem="ahd-3Z-aYK" firstAttribute="trailing" secondItem="SGA-zB-HXy" secondAttribute="trailing" id="QhF-dJ-gtV"/>
                             <constraint firstItem="gmX-JD-CyV" firstAttribute="top" secondItem="UfU-vM-zLx" secondAttribute="top" constant="20" id="TSX-dN-H4J"/>
+                            <constraint firstItem="UfU-vM-zLx" firstAttribute="bottom" secondItem="DhR-zB-FmS" secondAttribute="bottom" constant="20" id="VnN-8F-QbT"/>
+                            <constraint firstItem="DhR-zB-FmS" firstAttribute="top" secondItem="ahd-3Z-aYK" secondAttribute="bottom" constant="8" id="WJ1-Ns-Zup"/>
                             <constraint firstItem="SGA-zB-HXy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JOc-sC-N0F" secondAttribute="trailing" constant="8" id="Wzf-G5-Pgl"/>
                             <constraint firstItem="JOc-sC-N0F" firstAttribute="leading" secondItem="UfU-vM-zLx" secondAttribute="leading" constant="20" id="YII-Y1-R1D"/>
                             <constraint firstItem="gmX-JD-CyV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JOc-sC-N0F" secondAttribute="trailing" constant="8" id="bPU-75-cXz"/>
+                            <constraint firstItem="DhR-zB-FmS" firstAttribute="leading" secondItem="ahd-3Z-aYK" secondAttribute="leading" id="dJ0-vA-c22"/>
                             <constraint firstItem="JOc-sC-N0F" firstAttribute="top" secondItem="gmX-JD-CyV" secondAttribute="top" id="uA2-PY-92C"/>
                             <constraint firstItem="SGA-zB-HXy" firstAttribute="top" secondItem="gmX-JD-CyV" secondAttribute="bottom" constant="8" id="x2B-Dh-DOx"/>
                             <constraint firstItem="UfU-vM-zLx" firstAttribute="trailing" secondItem="gmX-JD-CyV" secondAttribute="trailing" constant="20" id="yzs-gL-LvM"/>
+                            <constraint firstItem="DhR-zB-FmS" firstAttribute="trailing" secondItem="SGA-zB-HXy" secondAttribute="trailing" id="zem-LL-3JV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UfU-vM-zLx"/>
                     </view>
