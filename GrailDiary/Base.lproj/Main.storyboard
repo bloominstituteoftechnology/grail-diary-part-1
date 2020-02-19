@@ -20,14 +20,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="5t8-83-Bjw">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5t8-83-Bjw" id="njO-4Q-AgR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="# of clues" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arb-Pd-fLm">
-                                                    <rect key="frame" x="319" y="12" width="75" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of clues" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arb-Pd-fLm">
+                                                    <rect key="frame" x="319" y="0.0" width="75" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -51,6 +51,9 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Arb-Pd-fLm" firstAttribute="top" secondItem="njO-4Q-AgR" secondAttribute="top" id="Qvo-TO-7ZW"/>
+                                                <constraint firstAttribute="trailing" secondItem="Arb-Pd-fLm" secondAttribute="trailing" constant="20" symbolic="YES" id="hl3-yF-ilT"/>
+                                                <constraint firstAttribute="bottom" secondItem="Arb-Pd-fLm" secondAttribute="bottom" constant="20" symbolic="YES" id="l45-7s-c2i"/>
                                                 <constraint firstItem="Arb-Pd-fLm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gEW-Ho-3qd" secondAttribute="trailing" constant="8" id="uHS-WR-YZf"/>
                                             </constraints>
                                         </tableViewCellContentView>
