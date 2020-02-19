@@ -15,9 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNt-Ut-gJn">
-                                <rect key="frame" x="20" y="304" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNt-Ut-gJn">
+                                <rect key="frame" x="20" y="210" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,23 +33,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7wa-ld-MpX">
-                                <rect key="frame" x="20" y="20" width="187" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sobre-san-diego.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7wa-ld-MpX">
+                                <rect key="frame" x="20" y="20" width="150" height="150"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="7wa-ld-MpX" secondAttribute="height" multiplier="1:1" id="NgG-gY-ase"/>
                                     <constraint firstAttribute="width" constant="150" id="h5z-Lj-GS2"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7jb-SW-hRa">
+                                <rect key="frame" x="20" y="239" width="374" height="549"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="7jb-SW-hRa" firstAttribute="trailing" secondItem="Vbl-fn-z1D" secondAttribute="trailing" id="6i3-Kv-b9O"/>
                             <constraint firstItem="EmY-kG-065" firstAttribute="trailing" secondItem="IwQ-eC-U2S" secondAttribute="trailing" constant="20" id="Avl-WZ-1Hb"/>
-                            <constraint firstItem="7wa-ld-MpX" firstAttribute="top" secondItem="EmY-kG-065" secondAttribute="top" constant="20" id="ItW-jf-oPQ"/>
+                            <constraint firstItem="zNt-Ut-gJn" firstAttribute="leading" secondItem="7wa-ld-MpX" secondAttribute="leading" id="BA0-ni-CP4"/>
+                            <constraint firstItem="7jb-SW-hRa" firstAttribute="leading" secondItem="zNt-Ut-gJn" secondAttribute="leading" id="RDj-14-w5j"/>
                             <constraint firstItem="Vbl-fn-z1D" firstAttribute="trailing" secondItem="IwQ-eC-U2S" secondAttribute="trailing" id="UCc-30-UWn"/>
                             <constraint firstItem="Vbl-fn-z1D" firstAttribute="top" secondItem="IwQ-eC-U2S" secondAttribute="bottom" constant="8" id="Z0P-7s-srN"/>
-                            <constraint firstItem="7wa-ld-MpX" firstAttribute="width" secondItem="Mam-zF-wtR" secondAttribute="height" multiplier="1:1" id="g6i-eB-Ang"/>
-                            <constraint firstItem="IwQ-eC-U2S" firstAttribute="leading" secondItem="7wa-ld-MpX" secondAttribute="trailing" constant="72" id="oUK-oj-RqT"/>
+                            <constraint firstItem="7jb-SW-hRa" firstAttribute="top" secondItem="zNt-Ut-gJn" secondAttribute="bottom" constant="8" id="b62-Ff-apL"/>
+                            <constraint firstItem="EmY-kG-065" firstAttribute="bottom" secondItem="7jb-SW-hRa" secondAttribute="bottom" constant="20" id="bK3-uc-46q"/>
+                            <constraint firstItem="7wa-ld-MpX" firstAttribute="top" secondItem="IwQ-eC-U2S" secondAttribute="top" id="bkF-qR-wRm"/>
+                            <constraint firstItem="IwQ-eC-U2S" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7wa-ld-MpX" secondAttribute="trailing" constant="8" id="jf9-Cf-yUH"/>
                             <constraint firstItem="IwQ-eC-U2S" firstAttribute="top" secondItem="EmY-kG-065" secondAttribute="top" constant="20" id="qBc-ZI-5Bk"/>
                             <constraint firstItem="7wa-ld-MpX" firstAttribute="leading" secondItem="EmY-kG-065" secondAttribute="leading" constant="20" id="vGf-Re-zJU"/>
+                            <constraint firstItem="zNt-Ut-gJn" firstAttribute="top" secondItem="7wa-ld-MpX" secondAttribute="bottom" constant="40" id="yAX-ea-Bdk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EmY-kG-065"/>
                     </view>
@@ -225,4 +238,7 @@
             <point key="canvasLocation" x="3031.884057971015" y="-37.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sobre-san-diego.jpg" width="1200" height="800"/>
+    </resources>
 </document>
