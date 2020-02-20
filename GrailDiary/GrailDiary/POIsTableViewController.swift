@@ -34,14 +34,12 @@ extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return models.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath)
-        
-        cell.textLabel?.text = "We testing"
         
         return cell
         
@@ -54,7 +52,10 @@ extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
         } else if segue.identifier == "ShowPOIDetailSegue" {
             guard let DetailPOIVC = segue.destination as? POIDetailViewController,
                 let indexPath = POITable.indexPathForSelectedRow else { fatalError()}
-            DetailPOIVC.poi = models[indexPath.row]
+            
+            let sentPoi = models[indexPath.row]
+            
+            DetailPOIVC.poi = sentPoi
             
         }
     }
