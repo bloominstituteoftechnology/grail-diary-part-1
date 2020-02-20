@@ -8,26 +8,27 @@
 
 import UIKit
 
-protocol AddPOIDelegate {
+protocol AddPOIDelegate: AnyObject {
     func poiWasAdded(_ poi: POI)
 }
 
 class AddPOIViewController: UIViewController {
 
+    weak var delegate: AddPOIDelegate?
+    
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var clue1TextField: UITextField!
     @IBOutlet weak var clue2TextField: UITextField!
     @IBOutlet weak var clue3TextField: UITextField!
     
-    var delegate: AddPOIDelegate?
-    
-   
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
+    
     @IBAction func saveTapped(_ sender: UIBarButtonItem) {
         guard let location = locationTextField.text, let country = countryTextField.text else { return }
+        
         var poi = POI(location: location, country: country, clues: [])
         
         if let clue1 = clue1TextField.text, !clue1.isEmpty {
@@ -43,13 +44,10 @@ class AddPOIViewController: UIViewController {
         delegate?.poiWasAdded(poi)
         dismiss(animated: true)
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
 }
+
+
+//MARK: - UITextFieldDelegate
 
 extension AddPOIViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

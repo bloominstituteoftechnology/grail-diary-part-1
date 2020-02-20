@@ -59,6 +59,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesCountLabel" destination="Q2M-tR-F9Z" id="tgz-Od-Kax"/>
+                                            <outlet property="countryLabel" destination="Efa-gn-Ofm" id="2sq-oX-cwQ"/>
+                                            <outlet property="locationLabel" destination="bcs-YE-0s4" id="u0z-hn-i6M"/>
                                             <segue destination="SD8-M4-fJa" kind="show" identifier="ShowPOIDetailSegue" id="udy-Av-GLU"/>
                                         </connections>
                                     </tableViewCell>
@@ -151,6 +154,11 @@
                         <viewLayoutGuide key="safeArea" id="fG7-aW-Whl"/>
                     </view>
                     <navigationItem key="navigationItem" id="Mhj-8n-7Fh"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="AXy-rl-yod" id="89Z-fb-FRn"/>
+                        <outlet property="countryLabel" destination="bDj-jR-CV3" id="Jmz-uI-k2u"/>
+                        <outlet property="locationLabel" destination="vmG-jd-Ya4" id="5LJ-E8-ZR4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="476-yx-83g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
