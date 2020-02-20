@@ -22,11 +22,11 @@ class AddPOIViewController: UIViewController {
     @IBOutlet weak var clue2Field: UITextField!
     @IBOutlet weak var clue3Field: UITextField!
     
-    @IBAction func cancel(_ sender: Any) {
+    @IBAction func cancelTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func save(_ sender: Any) {
+    @IBAction func saveTapped(_ sender: Any) {
         guard let loc = locationField.text,
             let country = countryField.text else { return }
         
