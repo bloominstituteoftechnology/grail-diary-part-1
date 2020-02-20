@@ -24,9 +24,16 @@ class POIsTableViewController: UIViewController, UITableViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
         
-        if identifier == "AddPOIModalSegue",
-                let apvc = segue.destination as? AddPOIViewController {
-            apvc.delegate = self
+        if identifier == "AddPOIModalSegue" {
+            if let apvc = segue.destination as? AddPOIViewController {
+                apvc.delegate = self
+            }
+        } else if identifier == "ShowPOIDetailSegue" {
+            if let pdvc = segue.destination as? POIDetailViewController,
+               let indexPath = tableView.indexPathForSelectedRow {
+                
+                pdvc.poi = pois[indexPath.row]
+            }
         }
     }
 }
