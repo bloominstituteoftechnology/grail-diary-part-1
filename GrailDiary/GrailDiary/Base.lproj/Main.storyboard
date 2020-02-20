@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="7Az-du-KRC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="7Az-du-KRC" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Az-du-KRC" id="bAN-dt-ROz">
@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="1026.0869565217392" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="9GL-nQ-3QG">
             <objects>
-                <viewController id="oMq-Z0-pCi" sceneMemberID="viewController">
+                <viewController id="oMq-Z0-pCi" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xTj-ld-hJl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,6 +143,7 @@
                             <constraint firstItem="S07-pC-9XX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oXK-tc-jpc" secondAttribute="trailing" constant="8" id="b7O-G1-ChX"/>
                             <constraint firstItem="ICz-0f-dnV" firstAttribute="leading" secondItem="ux8-0D-Vow" secondAttribute="leading" id="hNn-XG-igA"/>
                             <constraint firstItem="oXK-tc-jpc" firstAttribute="leading" secondItem="dCW-Fr-aBq" secondAttribute="leading" constant="20" id="nIl-yg-jtd"/>
+                            <constraint firstItem="dCW-Fr-aBq" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ux8-0D-Vow" secondAttribute="trailing" symbolic="YES" id="sdX-HC-5rz"/>
                             <constraint firstItem="oXK-tc-jpc" firstAttribute="top" secondItem="Cts-0D-lfP" secondAttribute="top" id="xkY-Ft-ewG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dCW-Fr-aBq"/>
@@ -153,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="2052" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="NN1-Ss-saG">
             <objects>
-                <viewController id="uZv-8r-HPU" sceneMemberID="viewController">
+                <viewController id="uZv-8r-HPU" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zw6-IE-x3w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
