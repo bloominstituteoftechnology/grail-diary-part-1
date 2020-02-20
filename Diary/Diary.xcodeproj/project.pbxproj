@@ -13,6 +13,10 @@
 		AE73FDB323FC843C004379FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE73FDB123FC843C004379FB /* Main.storyboard */; };
 		AE73FDB523FC843D004379FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE73FDB423FC843D004379FB /* Assets.xcassets */; };
 		AE73FDB823FC843D004379FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE73FDB623FC843D004379FB /* LaunchScreen.storyboard */; };
+		AEB5F19323FEF21800614A2B /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB5F19223FEF21800614A2B /* AddPOIViewController.swift */; };
+		AEB5F19523FEF22B00614A2B /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB5F19423FEF22B00614A2B /* POIDetailViewController.swift */; };
+		AEB5F19923FEF25C00614A2B /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB5F19823FEF25C00614A2B /* POI.swift */; };
+		AEB5F1C523FF29ED00614A2B /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB5F1C423FF29ED00614A2B /* POITableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		AE73FDB423FC843D004379FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE73FDB723FC843D004379FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE73FDB923FC843D004379FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEB5F19223FEF21800614A2B /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		AEB5F19423FEF22B00614A2B /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		AEB5F19823FEF25C00614A2B /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
+		AEB5F1C423FF29ED00614A2B /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +67,11 @@
 				AE73FDAB23FC843C004379FB /* AppDelegate.swift */,
 				AE73FDAD23FC843C004379FB /* SceneDelegate.swift */,
 				AE73FDAF23FC843C004379FB /* POIsTableViewController.swift */,
+				AEB5F1C423FF29ED00614A2B /* POITableViewCell.swift */,
 				AE73FDB123FC843C004379FB /* Main.storyboard */,
+				AEB5F19223FEF21800614A2B /* AddPOIViewController.swift */,
+				AEB5F19423FEF22B00614A2B /* POIDetailViewController.swift */,
+				AEB5F19823FEF25C00614A2B /* POI.swift */,
 				AE73FDB423FC843D004379FB /* Assets.xcassets */,
 				AE73FDB623FC843D004379FB /* LaunchScreen.storyboard */,
 				AE73FDB923FC843D004379FB /* Info.plist */,
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEB5F1C523FF29ED00614A2B /* POITableViewCell.swift in Sources */,
+				AEB5F19923FEF25C00614A2B /* POI.swift in Sources */,
 				AE73FDB023FC843C004379FB /* POIsTableViewController.swift in Sources */,
+				AEB5F19323FEF21800614A2B /* AddPOIViewController.swift in Sources */,
 				AE73FDAC23FC843C004379FB /* AppDelegate.swift in Sources */,
 				AE73FDAE23FC843C004379FB /* SceneDelegate.swift in Sources */,
+				AEB5F19523FEF22B00614A2B /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
