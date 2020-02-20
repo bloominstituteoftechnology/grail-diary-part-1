@@ -10,7 +10,7 @@
         <!--Grail Diary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="POIsTableViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="2io-u6-ngL">
             <objects>
-                <viewController id="LuY-6t-LtQ" sceneMemberID="viewController">
+                <viewController id="LuY-6t-LtQ" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lqj-ae-Iqw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,10 +173,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="GhD-RZ-MhQ">
             <objects>
-                <viewController id="VYY-xe-yaG" sceneMemberID="viewController">
+                <viewController id="VYY-xe-yaG" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bqf-ih-Doa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,7 +224,7 @@
                                 </subviews>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Uy-pf-jTF">
-                                <rect key="frame" x="0.0" y="793" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
                                     <barButtonItem systemItem="cancel" id="oeE-8w-18N"/>
                                     <barButtonItem systemItem="flexibleSpace" id="q57-GH-ZHm"/>
@@ -234,12 +234,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="3Uy-pf-jTF" secondAttribute="bottom" id="8hg-C5-NcG"/>
+                            <constraint firstItem="3Uy-pf-jTF" firstAttribute="trailing" secondItem="os6-J4-1j4" secondAttribute="trailing" id="0Lg-Vy-A0S"/>
+                            <constraint firstItem="3Uy-pf-jTF" firstAttribute="leading" secondItem="os6-J4-1j4" secondAttribute="leading" id="5Wn-pP-ald"/>
                             <constraint firstItem="n31-m0-sBn" firstAttribute="leading" secondItem="os6-J4-1j4" secondAttribute="leading" constant="20" id="Bj5-MD-irB"/>
                             <constraint firstItem="os6-J4-1j4" firstAttribute="trailing" secondItem="n31-m0-sBn" secondAttribute="trailing" constant="20" id="Dys-kw-NFo"/>
                             <constraint firstItem="n31-m0-sBn" firstAttribute="top" secondItem="os6-J4-1j4" secondAttribute="top" constant="20" id="M95-Ns-V4H"/>
-                            <constraint firstItem="3Uy-pf-jTF" firstAttribute="leading" secondItem="os6-J4-1j4" secondAttribute="leading" id="fHC-Yg-oyh"/>
-                            <constraint firstItem="3Uy-pf-jTF" firstAttribute="trailing" secondItem="os6-J4-1j4" secondAttribute="trailing" id="xCs-4Y-fkI"/>
+                            <constraint firstItem="3Uy-pf-jTF" firstAttribute="bottom" secondItem="os6-J4-1j4" secondAttribute="bottom" id="d1w-H1-Wy3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="os6-J4-1j4"/>
                     </view>
