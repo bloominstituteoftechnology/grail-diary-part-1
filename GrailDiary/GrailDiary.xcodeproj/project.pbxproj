@@ -64,19 +64,59 @@
 		43513DF823FC7530007DBC68 /* GrailDiary */ = {
 			isa = PBXGroup;
 			children = (
-				43513DF923FC7530007DBC68 /* AppDelegate.swift */,
-				43513DFB23FC7530007DBC68 /* SceneDelegate.swift */,
-				43513DFF23FC7530007DBC68 /* Main.storyboard */,
+				43A615CF23FF26C0003EF166 /* Resources */,
+				43A615CE23FF26B7003EF166 /* Storyboards */,
+				43A615CD23FF26B1003EF166 /* Models */,
+				43A615CC23FF26A5003EF166 /* View Controllers */,
+				43A615CB23FF2690003EF166 /* Views */,
 				43513E0223FC7535007DBC68 /* Assets.xcassets */,
-				43513E0423FC7535007DBC68 /* LaunchScreen.storyboard */,
-				43513E0723FC7535007DBC68 /* Info.plist */,
-				43513E0F23FC76E8007DBC68 /* POIsTableViewController.swift */,
-				43A615C323FF20BB003EF166 /* AddPOIViewController.swift */,
-				43A615C523FF20D5003EF166 /* POIDetailViewController.swift */,
-				43A615C723FF22AC003EF166 /* POITableViewCell.swift */,
-				43A615C923FF22E7003EF166 /* POI.swift */,
 			);
 			path = GrailDiary;
+			sourceTree = "<group>";
+		};
+		43A615CB23FF2690003EF166 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43A615C723FF22AC003EF166 /* POITableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		43A615CC23FF26A5003EF166 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				43A615C523FF20D5003EF166 /* POIDetailViewController.swift */,
+				43A615C323FF20BB003EF166 /* AddPOIViewController.swift */,
+				43513E0F23FC76E8007DBC68 /* POIsTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		43A615CD23FF26B1003EF166 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				43A615C923FF22E7003EF166 /* POI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		43A615CE23FF26B7003EF166 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				43513DFF23FC7530007DBC68 /* Main.storyboard */,
+				43513E0423FC7535007DBC68 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		43A615CF23FF26C0003EF166 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				43513DFB23FC7530007DBC68 /* SceneDelegate.swift */,
+				43513E0723FC7535007DBC68 /* Info.plist */,
+				43513DF923FC7530007DBC68 /* AppDelegate.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,7 +341,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GrailDiary/Info.plist;
+				INFOPLIST_FILE = GrailDiary/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,7 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GrailDiary/Info.plist;
+				INFOPLIST_FILE = GrailDiary/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
