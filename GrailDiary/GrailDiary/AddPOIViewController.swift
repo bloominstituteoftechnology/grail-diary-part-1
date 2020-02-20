@@ -14,13 +14,34 @@ protocol AddPOIDelegate {
 
 class AddPOIViewController: UIViewController {
 
+    var delegate: AddPOIDelegate?
+    
     @IBOutlet weak var locationField: UITextField!
     @IBOutlet weak var countryField: UITextField!
     @IBOutlet weak var clue1Field: UITextField!
     @IBOutlet weak var clue2Field: UITextField!
     @IBOutlet weak var clue3Field: UITextField!
     
-    var delegate: AddPOIDelegate?
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func save(_ sender: Any) {
+        guard let loc = locationField.text,
+            let country = countryField.text,
+            let clue1 = clue1Field.text,
+            let clue2 = clue2Field.text,
+            let clue3 = clue3Field.text else { return }
+        
+        var clues = [String]()
+        if clue1.count > 1 { clues.append(clue1) }
+        if clue2.count > 1 { clues.append(clue2) }
+        if clue3.count > 1 { clues.append(clue3) }
+
+        let poi = POI(location: loc, country: country, clues: clues)
+        
+        delegate?.poiWasAdded(poi)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
