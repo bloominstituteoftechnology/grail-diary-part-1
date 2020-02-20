@@ -40,7 +40,7 @@ class AddPOIViewController: UIViewController {
             
             var clues = Array<String>()
             func maybeAppendClue(_ textField: UITextField) {
-                if let clue = textField.text {
+                if let clue = textField.text, !clue.isEmpty {
                     clues.append(clue)
                 }
             }
@@ -60,7 +60,7 @@ class AddPOIViewController: UIViewController {
 extension AddPOIViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField.text != nil {
+        if textField.text?.isEmpty == false {
             switch textField {
             case locationTextField:
                 countryTextField.becomeFirstResponder()
