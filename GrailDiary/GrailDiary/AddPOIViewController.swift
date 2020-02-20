@@ -28,17 +28,24 @@ class AddPOIViewController: UIViewController {
     
     @IBAction func save(_ sender: Any) {
         guard let loc = locationField.text,
-            let country = countryField.text,
-            let clue1 = clue1Field.text,
-            let clue2 = clue2Field.text,
-            let clue3 = clue3Field.text else { return }
+            let country = countryField.text else { return }
         
         var clues = [String]()
+        var poi = POI(location: loc, country: country, clues: clues)
+
+        guard let clue1 = clue1Field.text,
+            let clue2 = clue2Field.text,
+            let clue3 = clue3Field.text else {
+                // Something is wrong with 1 or more clues. Save what we got.
+                delegate?.poiWasAdded(poi)
+                return
+        }
+
         if clue1.count > 1 { clues.append(clue1) }
         if clue2.count > 1 { clues.append(clue2) }
         if clue3.count > 1 { clues.append(clue3) }
 
-        let poi = POI(location: loc, country: country, clues: clues)
+        poi.clues = clues
         
         delegate?.poiWasAdded(poi)
     }
