@@ -73,7 +73,22 @@ class AddPOIViewController: UIViewController {
 
 extension AddPOIViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        <#code#>
-        return true
+        var result: Bool
+        
+        switch textField.description {
+        case "Location":
+            result = true
+        case "Country":
+            result = true
+        case "Clue1":
+            result = true
+        case "Clue2":
+            result = true
+        case "Clue3":
+            result = true
+        default:
+            result = true
+        }
+        return result
     }
 }
