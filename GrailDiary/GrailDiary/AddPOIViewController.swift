@@ -33,22 +33,26 @@ class AddPOIViewController: UIViewController {
         var clues = [String]()
         var poi = POI(location: loc, country: country, clues: clues)
 
-        guard let clue1 = clue1Field.text,
-            let clue2 = clue2Field.text,
-            let clue3 = clue3Field.text else {
-                // Something is wrong with 1 or more clues. Save what we got.
-                delegate?.poiWasAdded(poi)
-                return
+        if let clue = clue1Field.text,
+            !clue.isEmpty {
+            clues.append(clue)
         }
 
-        if clue1.count > 1 { clues.append(clue1) }
-        if clue2.count > 1 { clues.append(clue2) }
-        if clue3.count > 1 { clues.append(clue3) }
+        if let clue = clue2Field.text,
+            !clue.isEmpty {
+            clues.append(clue)
+        }
+
+        if let clue = clue3Field.text,
+            !clue.isEmpty {
+            clues.append(clue)
+        }
 
         poi.clues = clues
         
         delegate?.poiWasAdded(poi)
 
+        //FIXME: Does this go here or in the delegate?
         dismiss(animated: true, completion: nil)
     }
     

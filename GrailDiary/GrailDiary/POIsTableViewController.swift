@@ -19,6 +19,13 @@ class POIsTableViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddPOIModalSegue" {
+            guard let addPOIVC = segue.destination as? AddPOIViewController else {return}
+            addPOIVC.delegate = self
+        }
+    }
 }
 
 
@@ -37,7 +44,9 @@ extension POIsTableViewController: UITableViewDataSource {
 
 extension POIsTableViewController: AddPOIDelegate {
     func poiWasAdded(_ poi: POI) {
-//        poi.app
+        self.poi.append(poi)
+
+        tableView.reloadData()
     }
     
     
