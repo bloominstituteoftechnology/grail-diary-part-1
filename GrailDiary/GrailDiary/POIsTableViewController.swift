@@ -65,5 +65,4 @@ extension POIsTableViewController: AddPOIDelegate {
         POIarray.append(poi)
         myTableView.reloadData()
     }
-    
 }
