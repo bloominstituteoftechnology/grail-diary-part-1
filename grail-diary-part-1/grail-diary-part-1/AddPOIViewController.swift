@@ -27,7 +27,7 @@ class AddPOIViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func cancelTapped(_ sender: Any) {
-        self.dismiss(animated: false, completion: nil)
+        dismiss(animated: false, completion: nil)
     }
     
     @IBAction func saveTapped(_ sender: Any) {

@@ -14,8 +14,8 @@ class POITableViewCell: UITableViewCell {
     @IBOutlet weak var cluesCountLabel: UILabel!
     
     var poi: POI? {
-    didSet {
-       updateViews()
+        didSet {
+            updateViews()
     }
         
     override func awakeFromNib() {
