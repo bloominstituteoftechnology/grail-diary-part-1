@@ -46,4 +46,22 @@ extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddPOIModalSegue" {
+            guard let AddPOIVC = segue.destination as? AddPOIViewController else { fatalError()}
+            AddPOIVC.delegate = self
+        }
+    }
+}
+
+
+extension POIsTableViewController: AddPOIDelegate {
+    func poiWasAdded(_ poi: POI) {
+        models.append(poi)
+        dismiss(animated: true, completion: nil)
+        POITable.reloadData()
+    }
+    
+    
 }
