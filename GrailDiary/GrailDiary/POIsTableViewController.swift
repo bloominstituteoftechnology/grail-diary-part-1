@@ -8,14 +8,30 @@
 
 import UIKit
 
-class POIsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class POIsTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        POITable.dataSource = self
-        POITable.delegate = self
+        POITable.delegate = self as? UITableViewDelegate
+        POITable.dataSource = self as? UITableViewDataSource
     }
+
+    var models: [POI] = []
+    
+    @IBOutlet weak var POITable: UITableView!
+
+    
+    
+
+
+}
+
+// Delegate and DataSource functionality
+
+extension POITableViewCell: UITableViewDataSource, UITableViewDelegate {
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -30,15 +46,4 @@ class POIsTableViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
         
     }
-    
-    
-    var models: [POI] = []
-    
-    @IBOutlet weak var POITable: UITableView!
-
-    
-    
-
-
 }
-
