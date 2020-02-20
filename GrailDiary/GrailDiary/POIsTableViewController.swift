@@ -24,6 +24,14 @@ class POIsTableViewController: UIViewController {
         if segue.identifier == "AddPOIModalSegue" {
             guard let addPOIVC = segue.destination as? AddPOIViewController else {return}
             addPOIVC.delegate = self
+        } else if segue.identifier == "ShowPOIDetailSegue" {
+            guard let showDetailVC = segue.destination as? POIDetailViewController else {return}
+            
+            guard let indexPath = self.tableView.indexPathForSelectedRow else { return }
+
+            let poi = self.poi[indexPath.row]
+            
+            showDetailVC.poi = poi
         }
     }
 }
