@@ -6,7 +6,7 @@
 //  Copyright © 2020 Samuel Esserman. All rights reserved.
 //
 
-// Step 11 is where I stopped
+
 import UIKit
 
 class POITableViewController: UIViewController {
@@ -17,6 +17,8 @@ class POITableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
         
         
     }
@@ -33,7 +35,7 @@ class POITableViewController: UIViewController {
     
         // Do any additional setup after loading the view.
        
-    }
+}
 extension POITableViewController: UITableViewDataSource {
     
 }
