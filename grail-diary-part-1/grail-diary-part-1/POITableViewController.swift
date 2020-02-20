@@ -9,7 +9,7 @@
 // Step 11 is where I stopped
 import UIKit
 
-class POITableViewController: UIViewController, UITableViewDataSource {
+class POITableViewController: UIViewController {
    
     @IBOutlet weak var tableView: UITableView!
     
@@ -34,7 +34,9 @@ class POITableViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
        
     }
-
+extension POITableViewController: UITableViewDataSource {
+    
+}
 
 
 
