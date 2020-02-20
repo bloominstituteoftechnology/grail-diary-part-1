@@ -14,7 +14,6 @@ protocol AddPOIDelegate {
 
 class AddPOIViewController: UIViewController {
 
-    
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var clue1TextField: UITextField!
@@ -51,11 +50,11 @@ class AddPOIViewController: UIViewController {
         var clues: [String] = []
         
         
-        if let clue1 = clue3TextField.text {
+        if let clue1 = clue1TextField.text {
             clues.append(clue1)
         }
         
-        if let clue2 = clue3TextField.text {
+        if let clue2 = clue2TextField.text {
             clues.append(clue2)
         }
         
@@ -78,17 +77,15 @@ extension AddPOIViewController: UITextFieldDelegate {
         if textField.text != nil {
             switch textField {
                 case locationTextField:
-                    resignFirstResponder()
-                    //.resignFirstResponder()
-                    //.becomeFirst
+                    countryTextField.becomeFirstResponder()
                 case countryTextField:
-                    resignFirstResponder()
+                    clue1TextField.becomeFirstResponder()
                 case clue1TextField:
-                    resignFirstResponder()
+                    clue2TextField.becomeFirstResponder()
                 case clue2TextField:
-                    resignFirstResponder()
+                    clue3TextField.becomeFirstResponder()
                 case clue3TextField:
-                    resignFirstResponder()
+                    clue3TextField.resignFirstResponder()
                 default:
                     print("Error")
             }

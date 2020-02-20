@@ -8,35 +8,31 @@
 
 import UIKit
 
-class POIsTableViewController: UIViewController, UITableViewDataSource {
+class POIsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var pois: [POI] = []
+    var pois: [POI] = [POI(location: "test", country: "test", clues: ["test", "test", "test"])]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "AddPOIModalSegue" {
             guard let AddPOIVC = segue.destination as? AddPOIViewController else { return }
             
             AddPOIVC.delegate = self
+            
         } else if segue.identifier == "ShowPOIDetailSegue" {
             if let POIDetailVC = segue.destination as? POIDetailViewController, let selectedRow = tableView.indexPathForSelectedRow {
                 POIDetailVC.poi = pois[selectedRow.row]
             }
-            
-            
-            
         }
-        
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,9 +42,8 @@ class POIsTableViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
         
-        
-        // MARK: - NEED TO DO
-        // NEED TO DO NUMBER 10 AND 11
+        let aPOI = pois[indexPath.row]
+        cell.poi = aPOI
         
         return cell
     }
