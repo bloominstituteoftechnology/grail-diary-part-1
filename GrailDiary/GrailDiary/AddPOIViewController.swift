@@ -48,6 +48,8 @@ class AddPOIViewController: UIViewController {
         poi.clues = clues
         
         delegate?.poiWasAdded(poi)
+
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -67,4 +69,11 @@ class AddPOIViewController: UIViewController {
     }
     */
 
+}
+
+extension AddPOIViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        <#code#>
+        return true
+    }
 }

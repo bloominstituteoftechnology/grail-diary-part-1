@@ -34,3 +34,11 @@ extension POIsTableViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension POIsTableViewController: AddPOIDelegate {
+    func poiWasAdded(_ poi: POI) {
+//        poi.app
+    }
+    
+    
+}
