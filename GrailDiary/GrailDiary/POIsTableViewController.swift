@@ -10,6 +10,10 @@ import UIKit
 
 class POIsTableViewController: UIViewController {
 
+    @IBOutlet weak var poiTableView: UITableView!
+    
+    var poi: [POI]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,3 +22,16 @@ class POIsTableViewController: UIViewController {
 
 }
 
+extension POIsTableViewController: UITableViewDataSource {
+   
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
+    
+}

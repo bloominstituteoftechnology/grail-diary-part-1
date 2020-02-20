@@ -81,6 +81,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="poiTableView" destination="S9F-1Z-rxT" id="mrv-9I-Ib8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BH6-qf-T9q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,9 +142,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BbD-bZ-gJV">
                                 <rect key="frame" x="0.0" y="793" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="Oe2-C2-D4S"/>
+                                    <barButtonItem systemItem="cancel" id="Oe2-C2-D4S">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="697-ot-ZxW" id="h9f-w3-e8N"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="jJu-gv-du9"/>
-                                    <barButtonItem systemItem="save" id="xct-si-c3W"/>
+                                    <barButtonItem systemItem="save" id="xct-si-c3W">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="697-ot-ZxW" id="xgv-6k-7Pt"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -156,6 +167,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kj1-rj-SpX"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="Itn-MW-O3I" id="yZY-ae-gUK"/>
+                        <outlet property="clue2TextField" destination="DAj-lJ-Zul" id="dzZ-UC-a6b"/>
+                        <outlet property="clue3TextField" destination="sDU-zj-zaO" id="Mnb-gE-AV3"/>
+                        <outlet property="countryTextField" destination="Uid-pT-pPr" id="uqV-ll-qT2"/>
+                        <outlet property="locationTextField" destination="vvC-BF-PeK" id="HkJ-dX-FTE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNg-oU-i6G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
