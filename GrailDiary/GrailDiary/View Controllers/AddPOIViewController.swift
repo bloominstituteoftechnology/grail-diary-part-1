@@ -1,14 +1,14 @@
 //
-//  POIsViewController.swift
+//  AddPOIViewController.swift
 //  GrailDiary
 //
-//  Created by Harmony Radley on 2/18/20.
+//  Created by Harmony Radley on 2/20/20.
 //  Copyright © 2020 Harmony Radley. All rights reserved.
 //
 
 import UIKit
 
-class POIsViewController: UIViewController {
+class AddPOIViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
