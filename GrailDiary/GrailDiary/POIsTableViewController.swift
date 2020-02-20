@@ -13,8 +13,8 @@ class POIsTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        POITable.delegate = self as? UITableViewDelegate
-        POITable.dataSource = self as? UITableViewDataSource
+        POITable.delegate = self
+        POITable.dataSource = self
     }
 
     var models: [POI] = []
@@ -29,7 +29,7 @@ class POIsTableViewController: UIViewController {
 
 // Delegate and DataSource functionality
 
-extension POITableViewCell: UITableViewDataSource, UITableViewDelegate {
+extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     
