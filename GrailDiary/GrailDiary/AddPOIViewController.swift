@@ -72,7 +72,7 @@ extension AddPOIViewController: UITextFieldDelegate {
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard let text = textField.text else { return true }
+        guard textField.text != nil else { return true }
         
         switch textField {
         case locationTextField:
