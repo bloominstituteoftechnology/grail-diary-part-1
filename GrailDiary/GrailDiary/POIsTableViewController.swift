@@ -12,7 +12,7 @@ class POIsTableViewController: UIViewController, UITableViewDataSource, UITableV
 
     @IBOutlet weak var tableView: UITableView!
     
-    var pois: [POI] = [POI(location: "test", country: "test", clues: ["test", "test", "test"])]
+    var pois: [POI] = [POI(location: "Tallahassee", country: "USA", clues: ["her is the first clue", "here is the second clue", "here is the third clue"])]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +49,6 @@ class POIsTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
 
 }
-
-
 
 extension POIsTableViewController: AddPOIDelegate {
     func poiWasAdded(_ poi: POI) {

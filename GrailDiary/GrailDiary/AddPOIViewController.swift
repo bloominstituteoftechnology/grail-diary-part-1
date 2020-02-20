@@ -50,15 +50,15 @@ class AddPOIViewController: UIViewController {
         var clues: [String] = []
         
         
-        if let clue1 = clue1TextField.text {
+        if let clue1 = clue1TextField.text, !clue1.isEmpty {
             clues.append(clue1)
         }
         
-        if let clue2 = clue2TextField.text {
+        if let clue2 = clue2TextField.text, !clue2.isEmpty {
             clues.append(clue2)
         }
         
-        if let clue3 = clue3TextField.text {
+        if let clue3 = clue3TextField.text, !clue3.isEmpty {
             clues.append(clue3)
         }
         
