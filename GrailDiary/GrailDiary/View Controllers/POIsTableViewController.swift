@@ -10,7 +10,7 @@ import UIKit
 
 class POIsTableViewController: UIViewController, UITableViewDelegate {
     
-    let pois: [POI] = []
+    var pois: [POI] = []
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -19,6 +19,15 @@ class POIsTableViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        if identifier == "AddPOIModalSegue",
+                let apvc = segue.destination as? AddPOIViewController {
+            apvc.delegate = self
+        }
     }
 }
 
@@ -37,5 +46,14 @@ extension POIsTableViewController: UITableViewDataSource {
         }
         
         return cell
+    }
+}
+
+extension POIsTableViewController: AddPOIDelegate {
+    
+    func poiWasAdded(_ poi: POI) {
+        pois.append(poi)
+        dismiss(animated: true)
+        tableView.reloadData()
     }
 }
