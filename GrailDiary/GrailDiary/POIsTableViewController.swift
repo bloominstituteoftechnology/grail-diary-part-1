@@ -39,16 +39,25 @@ extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { fatalError() }
+        
+        let poi = models[indexPath.row]
+        
+        cell.poi = poi
+        
         
         return cell
+        
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddPOIModalSegue" {
+            
             guard let AddPOIVC = segue.destination as? AddPOIViewController else { fatalError()}
+            
             AddPOIVC.delegate = self
+            
         } else if segue.identifier == "ShowPOIDetailSegue" {
             guard let DetailPOIVC = segue.destination as? POIDetailViewController,
                 let indexPath = POITable.indexPathForSelectedRow else { fatalError()}
@@ -63,10 +72,12 @@ extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
 
 
 extension POIsTableViewController: AddPOIDelegate {
+    
     func poiWasAdded(_ poi: POI) {
         models.append(poi)
         dismiss(animated: true, completion: nil)
         POITable.reloadData()
+        print("We ger to the bottom of here")
     }
     
     
