@@ -66,6 +66,8 @@ class AddPOIViewController: UIViewController {
         let newPOI = POI(location: location, country: country, clues: clues)
         
         delegate?.poiWasAdded(newPOI)
+        
+        dismiss(animated: true, completion: nil)
     }
     
     

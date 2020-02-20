@@ -20,6 +20,18 @@ class POIsTableViewController: UIViewController, UITableViewDataSource {
     }
 
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "AddPOIModalSegue" {
+            guard let AddPOIVC = segue.destination as? AddPOIViewController else { return }
+            
+            AddPOIVC.delegate = self
+        }
+        
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pois.count
     }
@@ -28,11 +40,19 @@ class POIsTableViewController: UIViewController, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
         
         
-        
-        
+        // MARK: - NEED TO DO
+        // NEED TO DO NUMBER 10 AND 11
         
         return cell
     }
 
 }
 
+
+
+extension POIsTableViewController: AddPOIDelegate {
+    func poiWasAdded(_ poi: POI) {
+        pois.append(poi)
+        tableView.reloadData()
+    }
+}
