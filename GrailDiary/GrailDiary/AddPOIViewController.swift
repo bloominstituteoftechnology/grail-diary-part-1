@@ -8,6 +8,12 @@
 
 import UIKit
 
+
+protocol AddPOIDelegate {
+    func poiWasAdded(_ poi: POI)
+}
+
+
 class AddPOIViewController: UIViewController {
 
     @IBOutlet weak var locationTextField: UITextField!
@@ -16,6 +22,32 @@ class AddPOIViewController: UIViewController {
     @IBOutlet weak var clue2TextField: UITextField!
     @IBOutlet weak var clue3TextField: UITextField!
     
+    
+    @IBAction func cancelTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func saveTapped(_ sender: Any) {
+        guard let location = locationTextField.text,
+            let country = countryTextField.text
+            else { return }
+        
+        var newPOI: POI = POI(location: location, country: country, clues: [])
+        
+        if let clue1 = clue1TextField.text {
+            newPOI.clues.append(clue1)
+        }
+        if let clue2 = clue2TextField.text {
+            newPOI.clues.append(clue2)
+        }
+        if let clue3 = clue3TextField.text {
+            newPOI.clues.append(clue3)
+        }
+        
+        delegate?.poiWasAdded(newPOI)
+        
+    }
+    
+    var delegate: AddPOIDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
