@@ -51,6 +51,11 @@ extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
         if segue.identifier == "AddPOIModalSegue" {
             guard let AddPOIVC = segue.destination as? AddPOIViewController else { fatalError()}
             AddPOIVC.delegate = self
+        } else if segue.identifier == "ShowPOIDetailSegue" {
+            guard let DetailPOIVC = segue.destination as? POIDetailViewController,
+                let indexPath = POITable.indexPathForSelectedRow else { fatalError()}
+            DetailPOIVC.poi = models[indexPath.row]
+            
         }
     }
 }
