@@ -8,14 +8,27 @@
 
 import UIKit
 
-class POIsTableViewController: UIViewController, UITableViewDataSource {
+class POIsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        POITable.dataSource = self
+        POITable.delegate = self
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        models.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath)
+        
+        cell.textLabel?.text = "We testing"
+        
+        return cell
+        
     }
     
     
@@ -24,10 +37,7 @@ class POIsTableViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var POITable: UITableView!
 
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+    
 
 
 }
