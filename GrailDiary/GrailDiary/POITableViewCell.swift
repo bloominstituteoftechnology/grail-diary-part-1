@@ -13,6 +13,13 @@ class POITableViewCell: UITableViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var cluesCountLabel: UILabel!
+    
+    var poi: POI? {
+        didSet {
+            self.updateViews()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,5 +30,12 @@ class POITableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    private func updateViews() {
+        guard let poi = poi else { return }
+        
+        locationLabel.text = poi.location
+        countryLabel.text = poi.country
+        cluesCountLabel.text = "\(poi.clues.count) clue/s"
+    }
 }
