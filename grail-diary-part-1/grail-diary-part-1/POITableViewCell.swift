@@ -16,6 +16,7 @@ class POITableViewCell: UITableViewCell {
     var poi: POI? {
         didSet {
             updateViews()
+        }
     }
         
     override func awakeFromNib() {
@@ -39,4 +40,4 @@ class POITableViewCell: UITableViewCell {
             }
 
         }
-}
+

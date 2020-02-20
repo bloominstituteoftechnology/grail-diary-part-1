@@ -18,8 +18,6 @@ class POITableViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -53,13 +51,12 @@ class POITableViewController: UIViewController {
         // Do any additional setup after loading the view.
        
 }
-extension POITableViewController: UITableViewDataSource {
+extension POITableViewController: UITableViewDataSource, UITableViewDelegate {
     
 }
 extension POITableViewController: AddPOIDelegate {
     func poiWasAdded(_ poi: POI) {
         pois.append(poi)
-        dismiss(animated: true, completion: nil)
         tableView.reloadData()
     }
 }

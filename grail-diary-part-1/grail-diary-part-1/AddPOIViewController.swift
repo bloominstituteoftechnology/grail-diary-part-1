@@ -26,6 +26,7 @@ class AddPOIViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
     @IBAction func cancelTapped(_ sender: Any) {
         dismiss(animated: false, completion: nil)
     }
@@ -34,16 +35,18 @@ class AddPOIViewController: UIViewController {
         guard let location = locationTextField.text,
             let country = countryTextField.text else { return }
         
-        var poi = POI(location: location, country: country, clues: [])
+        var poi = POI(location: location, country: country)
         
         if let text = clue1TextField.text {
             poi.clues.append(text)
         }
+        
         if let text = clue2TextField.text {
-            poi.clues.append(contentsOf: text)
+            poi.clues.append(text)
         }
+        
         if let text = clue3TextField.text {
-            poi.clues.append(contentsOf: text)
+            poi.clues.append(text)
         }
         
         delegate?.poiWasAdded(poi)
