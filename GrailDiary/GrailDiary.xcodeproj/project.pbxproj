@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F6CA29923FF528E0011EBDE /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6CA29823FF528E0011EBDE /* AddPOIViewController.swift */; };
+		3F6CA29B23FF53220011EBDE /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6CA29A23FF53220011EBDE /* POIDetailViewController.swift */; };
+		3F6CA29D23FF53420011EBDE /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6CA29C23FF53420011EBDE /* POITableViewCell.swift */; };
+		3F6CA29F23FF537B0011EBDE /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6CA29E23FF537B0011EBDE /* POI.swift */; };
+		3F6CA2A123FF54E80011EBDE /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6CA2A023FF54E80011EBDE /* POIsTableViewController.swift */; };
+		3F738A9C23FC975600836B08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F738A9B23FC975600836B08 /* AppDelegate.swift */; };
+		3F738A9E23FC975600836B08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F738A9D23FC975600836B08 /* SceneDelegate.swift */; };
+		3F738AA323FC975600836B08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F738AA123FC975600836B08 /* Main.storyboard */; };
+		3F738AA523FC975900836B08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F738AA423FC975900836B08 /* Assets.xcassets */; };
+		3F738AA823FC975900836B08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F738AA623FC975900836B08 /* LaunchScreen.storyboard */; };
+		3F738AB023FCAE7800836B08 /* sobre-san-diego.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F738AAF23FCAE7800836B08 /* sobre-san-diego.jpg */; };
+		3F738AB223FCAF1200836B08 /* place massena.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F738AB123FCAF1200836B08 /* place massena.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3F6CA29823FF528E0011EBDE /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		3F6CA29A23FF53220011EBDE /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		3F6CA29C23FF53420011EBDE /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		3F6CA29E23FF537B0011EBDE /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
+		3F6CA2A023FF54E80011EBDE /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
+		3F738A9823FC975600836B08 /* GrailDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrailDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F738A9B23FC975600836B08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F738A9D23FC975600836B08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3F738AA223FC975600836B08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F738AA423FC975900836B08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F738AA723FC975900836B08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F738AA923FC975900836B08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F738AAF23FCAE7800836B08 /* sobre-san-diego.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "sobre-san-diego.jpg"; path = "../../../../Desktop/sobre-san-diego.jpg"; sourceTree = "<group>"; };
+		3F738AB123FCAF1200836B08 /* place massena.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "place massena.jpg"; path = "../../../../Desktop/place massena.jpg"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F738A9523FC975500836B08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F738A8F23FC975500836B08 = {
+			isa = PBXGroup;
+			children = (
+				3F738A9A23FC975600836B08 /* GrailDiary */,
+				3F738A9923FC975600836B08 /* Products */,
+				3F738AB123FCAF1200836B08 /* place massena.jpg */,
+				3F738AAF23FCAE7800836B08 /* sobre-san-diego.jpg */,
+			);
+			sourceTree = "<group>";
+		};
+		3F738A9923FC975600836B08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F738A9823FC975600836B08 /* GrailDiary.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F738A9A23FC975600836B08 /* GrailDiary */ = {
+			isa = PBXGroup;
+			children = (
+				3F738A9B23FC975600836B08 /* AppDelegate.swift */,
+				3F738A9D23FC975600836B08 /* SceneDelegate.swift */,
+				3F738AA123FC975600836B08 /* Main.storyboard */,
+				3F6CA29823FF528E0011EBDE /* AddPOIViewController.swift */,
+				3F6CA2A023FF54E80011EBDE /* POIsTableViewController.swift */,
+				3F6CA29A23FF53220011EBDE /* POIDetailViewController.swift */,
+				3F6CA29C23FF53420011EBDE /* POITableViewCell.swift */,
+				3F6CA29E23FF537B0011EBDE /* POI.swift */,
+				3F738AA423FC975900836B08 /* Assets.xcassets */,
+				3F738AA623FC975900836B08 /* LaunchScreen.storyboard */,
+				3F738AA923FC975900836B08 /* Info.plist */,
+			);
+			path = GrailDiary;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F738A9723FC975500836B08 /* GrailDiary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F738AAC23FC975900836B08 /* Build configuration list for PBXNativeTarget "GrailDiary" */;
+			buildPhases = (
+				3F738A9423FC975500836B08 /* Sources */,
+				3F738A9523FC975500836B08 /* Frameworks */,
+				3F738A9623FC975500836B08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GrailDiary;
+			productName = GrailDiary;
+			productReference = 3F738A9823FC975600836B08 /* GrailDiary.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F738A9023FC975500836B08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Bhawnish Kumar";
+				TargetAttributes = {
+					3F738A9723FC975500836B08 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 3F738A9323FC975500836B08 /* Build configuration list for PBXProject "GrailDiary" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F738A8F23FC975500836B08;
+			productRefGroup = 3F738A9923FC975600836B08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F738A9723FC975500836B08 /* GrailDiary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F738A9623FC975500836B08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F738AA823FC975900836B08 /* LaunchScreen.storyboard in Resources */,
+				3F738AB023FCAE7800836B08 /* sobre-san-diego.jpg in Resources */,
+				3F738AB223FCAF1200836B08 /* place massena.jpg in Resources */,
+				3F738AA523FC975900836B08 /* Assets.xcassets in Resources */,
+				3F738AA323FC975600836B08 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F738A9423FC975500836B08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F6CA29F23FF537B0011EBDE /* POI.swift in Sources */,
+				3F6CA29923FF528E0011EBDE /* AddPOIViewController.swift in Sources */,
+				3F738A9C23FC975600836B08 /* AppDelegate.swift in Sources */,
+				3F738A9E23FC975600836B08 /* SceneDelegate.swift in Sources */,
+				3F6CA2A123FF54E80011EBDE /* POIsTableViewController.swift in Sources */,
+				3F6CA29D23FF53420011EBDE /* POITableViewCell.swift in Sources */,
+				3F6CA29B23FF53220011EBDE /* POIDetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3F738AA123FC975600836B08 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F738AA223FC975600836B08 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3F738AA623FC975900836B08 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F738AA723FC975900836B08 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F738AAA23FC975900836B08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3F738AAB23FC975900836B08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F738AAD23FC975900836B08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFBD923VWU;
+				INFOPLIST_FILE = GrailDiary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bharat.GrailDiary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F738AAE23FC975900836B08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFBD923VWU;
+				INFOPLIST_FILE = GrailDiary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bharat.GrailDiary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F738A9323FC975500836B08 /* Build configuration list for PBXProject "GrailDiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F738AAA23FC975900836B08 /* Debug */,
+				3F738AAB23FC975900836B08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F738AAC23FC975900836B08 /* Build configuration list for PBXNativeTarget "GrailDiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F738AAD23FC975900836B08 /* Debug */,
+				3F738AAE23FC975900836B08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F738A9023FC975500836B08 /* Project object */;
+}
