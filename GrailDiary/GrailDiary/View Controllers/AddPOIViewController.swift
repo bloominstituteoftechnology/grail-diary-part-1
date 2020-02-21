@@ -61,25 +61,24 @@ class AddPOIViewController: UIViewController {
 
 }
 
-
 extension AddPOIViewController: UITextFieldDelegate {
-     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-         if let text = textField.text,
-             !text.isEmpty {
-             switch textField {
-             case locationTextField:
-                 countryTextField.becomeFirstResponder()
-             case countryTextField:
-                 clue1TextField.becomeFirstResponder()
-             case clue1TextField:
-                 clue2TextField.becomeFirstResponder()
-             case clue2TextField:
-                 clue3TextField.becomeFirstResponder()
-             default:
-                 textField.resignFirstResponder()
-             }
-         }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 
-         return false
-     }
- }
+        switch textField {
+        case locationTextField:
+            countryTextField.becomeFirstResponder()
+        case countryTextField:
+            clue1TextField.becomeFirstResponder()
+        case clue1TextField:
+            clue2TextField.becomeFirstResponder()
+        case clue2TextField:
+            clue3TextField.becomeFirstResponder()
+        case clue3TextField:
+            return true
+        default:
+            return true
+        }
+
+        return true
+    }
+}
