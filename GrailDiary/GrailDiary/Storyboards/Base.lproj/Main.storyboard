@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="exL-s9-CdL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="exL-s9-CdL" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="exL-s9-CdL" id="G5m-Y9-78x">
@@ -58,6 +58,11 @@
                                                 <constraint firstItem="qQR-Hf-T0u" firstAttribute="centerY" secondItem="G5m-Y9-78x" secondAttribute="centerY" id="dA5-DY-tZC"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cluesLabel" destination="qQR-Hf-T0u" id="r4p-Kc-tCZ"/>
+                                            <outlet property="countryLabel" destination="mRN-HQ-9on" id="WNE-1i-3ak"/>
+                                            <outlet property="locationLabel" destination="DB5-rN-Bde" id="okN-Q3-fZT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -142,9 +147,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEl-sA-4XW">
                                 <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="ua9-Ih-GLz"/>
+                                    <barButtonItem systemItem="cancel" id="ua9-Ih-GLz">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="CCN-D4-uhL" id="3Lo-if-HuF"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="gcK-Yg-Llz"/>
-                                    <barButtonItem systemItem="save" id="yO1-ES-s0K"/>
+                                    <barButtonItem systemItem="save" id="yO1-ES-s0K">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="CCN-D4-uhL" id="NaL-0T-ST4"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -159,6 +172,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R4h-oA-daU"/>
                     </view>
+                    <connections>
+                        <outlet property="Clue1Label" destination="EES-yw-AHc" id="rYI-5Q-ItX"/>
+                        <outlet property="Clue2Label" destination="tAq-18-uwl" id="TWq-z8-iw1"/>
+                        <outlet property="Clue3Label" destination="mhV-Vd-BrJ" id="xVn-6j-S7X"/>
+                        <outlet property="CountryLabel" destination="TfH-vr-irg" id="10p-1N-Y4L"/>
+                        <outlet property="LocationLabel" destination="57k-kg-r1b" id="eZb-Nr-nct"/>
+                        <outlet property="cancelTapped" destination="sEl-sA-4XW" id="XKn-ek-fHg"/>
+                        <outlet property="clue1TextField" destination="EES-yw-AHc" id="mcy-EY-14L"/>
+                        <outlet property="clue2TextField" destination="tAq-18-uwl" id="yXX-xI-OjU"/>
+                        <outlet property="countryTextField" destination="TfH-vr-irg" id="geV-iB-oFN"/>
+                        <outlet property="locationTextField" destination="57k-kg-r1b" id="BVt-L2-Z10"/>
+                        <outlet property="saveTapped" destination="sEl-sA-4XW" id="IfY-RF-31B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vmh-De-D9j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -226,6 +252,12 @@
                         <viewLayoutGuide key="safeArea" id="5CX-Qt-nyj"/>
                     </view>
                     <navigationItem key="navigationItem" id="hYd-En-8Bj"/>
+                    <connections>
+                        <outlet property="cluesLabel" destination="1do-im-yo0" id="tvC-AH-nrT"/>
+                        <outlet property="cluesTextView" destination="LXG-Ik-yix" id="zyN-Vk-kbQ"/>
+                        <outlet property="countryLabel" destination="1do-im-yo0" id="JaR-4Q-Bvm"/>
+                        <outlet property="locationLabel" destination="vKc-qb-rVm" id="kLd-BJ-tEG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biA-sh-Cm2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

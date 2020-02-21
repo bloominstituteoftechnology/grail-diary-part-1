@@ -8,28 +8,43 @@
 
 import UIKit
 
-class POIsTableViewController: UIViewController {
-
-    var poi: [POI] = [POI(location: "Montana",                         country: "USA",
-                          clues: ["Mountains",           "Horses"])]
+class POIsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddPOIDelegate {
+    func poiWasAdded(_ poi: POI) {
+        
+    }
     
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    var poi: [POI] = [POI(location: "Montana",
+                          country: "USA",
+                          clues: ["Mountains", "Horses"])]
+    
+    func poiWasCreated(poi: POI) {
+        poi.append(poi)
+        tableView.reloadData()
     }
-    */
-
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return poi.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    
 }
+    
+
+    
+
+    
