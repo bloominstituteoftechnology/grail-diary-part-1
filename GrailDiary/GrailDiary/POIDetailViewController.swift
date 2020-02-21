@@ -27,7 +27,9 @@ class POIDetailViewController: UIViewController {
         
         locationLabel.text = poi.location
         countryLabel.text = poi.country
-        
+        for clue in poi.clues {
+            clue = "\(clue)"\n
+        }
             
         }
     }
@@ -40,8 +42,8 @@ class POIDetailViewController: UIViewController {
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
-    
-
-
-}
+//    }
+//
+//
+//
+//}
