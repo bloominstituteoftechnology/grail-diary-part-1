@@ -46,6 +46,8 @@ extension POIsTableViewController: UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell") as? POITableViewCell else { return UITableViewCell() }
         
+        cell.poi = poi[indexPath.row]
+        
         return cell
     }
 }
@@ -56,6 +58,4 @@ extension POIsTableViewController: AddPOIDelegate {
 
         tableView.reloadData()
     }
-    
-    
 }
