@@ -24,8 +24,7 @@ class AddPOIViewController: UIViewController {
     @IBOutlet weak var clue2TextField: UITextField!
     @IBOutlet weak var clue3TextField: UITextField!
     
-    
-    
+     var delegate: AddPOIDelegate?
     
     
     override func viewDidLoad() {
@@ -33,13 +32,9 @@ class AddPOIViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-    var delegate: AddPOIDelegate?
    
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
-        
         dismiss(animated: true, completion: nil)
-        
     }
    
     @IBAction func saveTapped(_ sender: UIBarButtonItem) {
@@ -63,24 +58,28 @@ class AddPOIViewController: UIViewController {
         }
         delegate?.poiWasAdded(poi)
     }
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
-    extension AddPOIViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        }
-}
+
+extension AddPOIViewController: UITextFieldDelegate {
+     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+         if let text = textField.text,
+             !text.isEmpty {
+             switch textField {
+             case locationTextField:
+                 countryTextField.becomeFirstResponder()
+             case countryTextField:
+                 clue1TextField.becomeFirstResponder()
+             case clue1TextField:
+                 clue2TextField.becomeFirstResponder()
+             case clue2TextField:
+                 clue3TextField.becomeFirstResponder()
+             default:
+                 textField.resignFirstResponder()
+             }
+         }
+
+         return false
+     }
+ }

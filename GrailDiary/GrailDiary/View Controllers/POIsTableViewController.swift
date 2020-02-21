@@ -8,60 +8,56 @@
 
 import UIKit
 
-class POIsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddPOIDelegate {
-    func poiWasAdded(_ poi: POI) {
-        
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tableView.dataSource = self
-        tableView.delegate = self
-    }
-    
-    var poi: [POI] = [POI(location: "Montana",
-                          country: "USA",
-                          clues: ["Mountains", "Horses"])]
-    
-    func poiWasCreated(poi: POI) {
-        poi.append(poi)
-        tableView.reloadData()
-        dismiss(animated: true, completion: nil)
-    }
-    
-    
+class POIsTableViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return poi.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-    
-    
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddPOIModalSegue" {
-            
-            guard let addPOIVC = segue.destination as? AddPOIViewController else { return }
-            
-            addPOIVC.delegate = self
+     var pois = [POI]()
+
+        override func viewDidLoad() {
+            super.viewDidLoad()
+        }
+
+        // MARK: - Navigation
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "AddPOIModalSegue" {
+                if let addPOIVC = segue.destination as? AddPOIViewController {
+                    addPOIVC.delegate = self
+                }
+            } else if segue.identifier == "ShowPOIDetailSegue" {
+                if let indexPath = tableView.indexPathForSelectedRow,
+                    let poiDetailVC = segue.destination as? POIDetailViewController {
+                    poiDetailVC.poi = pois[indexPath.row]
+                }
+            }
         }
     }
-    
-    if segue.identifier == "ShowPOIDetailSegue" {
-    
-    guard let showPOIS = segue.destination as? POIDetailViewController else { return }
-    
-    showPOIS.delegate = POI
-    }
-}
 
+    extension POIsTableViewController: UITableViewDataSource {
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return pois.count
+        }
+
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
+
+            let poi = pois[indexPath.row]
+            cell.poi = poi
+
+            return cell
+        }
+    }
+
+    extension POIsTableViewController: AddPOIDelegate {
+        func poiWasAdded(_ poi: POI) {
+
+            pois.append(poi)
+
+            dismiss(animated: true, completion: nil)
+
+            tableView.reloadData()
+        }
+    }
+ 
     
     
 
