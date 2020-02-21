@@ -28,6 +28,5 @@ class POITableViewCell: UITableViewCell {
         countryLabel.text = poi.country
         cluesCountLabel.text = "\(poi.clues.count) clues"
     }
-    
 }
     

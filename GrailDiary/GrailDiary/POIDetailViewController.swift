@@ -27,23 +27,14 @@ class POIDetailViewController: UIViewController {
         
         locationLabel.text = poi.location
         countryLabel.text = poi.country
+        
+        var clueListed = ""
         for clue in poi.clues {
-            clue = "\(clue)"\n
+            clueListed += "\(clue)\n"
         }
+        
+        cluesTextView.text = clueListed
             
         }
     }
     
-
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-//    }
-//
-//
-//
-//}
