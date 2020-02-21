@@ -8,16 +8,18 @@
 
 import UIKit
 protocol AddPOIDelegate {
-    func poiWasAdded(_ poi: POI)
+    func poiWasAdded(poi: POI)
 }
-class AddPOIViewController: UIViewController {
+
+class AddPOIViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet weak var locationTextField: UITextField!
-    @IBOutlet weak var countryTextLabel: UITextField!
+    @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var clueTextField1: UITextField!
     @IBOutlet weak var clueTextField2: UITextField!
     @IBOutlet weak var clueTextField3: UITextField!
     
-    var delegate = AddPOIDelegate?
+    var delegate: AddPOIDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +27,31 @@ class AddPOIViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
     @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     @IBAction func save(_ sender: Any) {
+        guard let location = locationTextField.text,
+            let country = countryTextField.text else { return }
+        var pois: [String] = []
+        if let poi1 = clueTextField1.text,
+            !poi1.isEmpty {
+            pois.append(poi1)
+        }
+        if let poi2 = clueTextField2.text,
+            !poi2.isEmpty {
+            pois.append(poi2)
+        }
+        if let poi3 = clueTextField3.text,
+            !poi3.isEmpty {
+            pois.append(poi3)
+        }
+        
+        let addPoi = POI(location: location, country: country, clues: pois)
+        
     }
-    
+  
     /*
     // MARK: - Navigation
 

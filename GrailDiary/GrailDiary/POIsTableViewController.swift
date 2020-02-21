@@ -8,21 +8,16 @@
 
 import UIKit
 
-class POIsTableViewController: UITableViewController {
+class POIsTableViewController: UITableViewController, AddPOIDelegate {
     
-    let pois: [POI] = [POI(location: "San Diego", country: "United States", clues: ["Coronado Islands"])]
+    var pois: [POI] = [POI(location: "San Diego", country: "United States", clues: ["Coronado Islands"])]
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    func poiWasAdded(poi: POI) {
+        pois.append(poi)
+        tableView.reloadData()
     }
-
-    // MARK: - Table view data source
+    
+  
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -85,7 +80,7 @@ class POIsTableViewController: UITableViewController {
         
         if segue.identifier == "AddPOIModalSegue" {
             guard let newPoiVC = segue.destination as? AddPOIViewController else {return }
-            newPoiVC.delegate = self 
+            newPoiVC.delegate = self as? AddPOIDelegate
         }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.

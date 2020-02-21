@@ -95,11 +95,17 @@
                                         <rect key="frame" x="0.0" y="57" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="A1V-v3-kNU" id="8Lj-M6-Brc"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5m7-UJ-AEk">
                                         <rect key="frame" x="0.0" y="107" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="A1V-v3-kNU" id="yqK-Hi-SLO"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abA-Ft-Yce">
                                         <rect key="frame" x="0.0" y="157" width="374" height="20.5"/>
@@ -111,16 +117,25 @@
                                         <rect key="frame" x="0.0" y="193.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="A1V-v3-kNU" id="Zb4-cZ-5FY"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KAM-dK-3HG">
                                         <rect key="frame" x="0.0" y="243.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="A1V-v3-kNU" id="llJ-aP-HNg"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j8o-aH-QvP">
                                         <rect key="frame" x="0.0" y="293.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="A1V-v3-kNU" id="0NL-zT-UOR"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -156,6 +171,7 @@
                         <outlet property="clueTextField1" destination="rG3-Zq-uoV" id="jhp-X8-MNs"/>
                         <outlet property="clueTextField2" destination="KAM-dK-3HG" id="uGX-af-DJO"/>
                         <outlet property="clueTextField3" destination="j8o-aH-QvP" id="WgN-H6-c2e"/>
+                        <outlet property="countryTextField" destination="5m7-UJ-AEk" id="eyZ-8r-kc9"/>
                         <outlet property="countryTextLabel" destination="5m7-UJ-AEk" id="QhC-l7-ZjQ"/>
                         <outlet property="locationTextField" destination="eov-SO-La5" id="dxp-jU-E11"/>
                     </connections>
