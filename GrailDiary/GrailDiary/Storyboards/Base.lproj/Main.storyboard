@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="60" id="e1d-tJ-ZZh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="60" id="e1d-tJ-ZZh" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e1d-tJ-ZZh" id="9gJ-BA-Oqq">
@@ -59,6 +59,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesCountLabel" destination="Tmo-31-vAz" id="C8e-et-Irr"/>
+                                            <outlet property="countryLabel" destination="yZF-Iz-7IF" id="4uR-K5-4Rk"/>
+                                            <outlet property="locationLabel" destination="ugo-LI-9qL" id="kr3-M7-PcZ"/>
                                             <segue destination="LuY-6t-LtQ" kind="show" identifier="ShowPOIDetailSegue" id="Pi4-DM-K9T"/>
                                         </connections>
                                     </tableViewCell>
@@ -81,6 +84,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="ARK-t0-nIH" id="kbV-6b-DyW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,6 +156,11 @@
                         <viewLayoutGuide key="safeArea" id="yo6-31-Cyt"/>
                     </view>
                     <navigationItem key="navigationItem" id="9Xa-zc-7Is"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="cna-cT-JkL" id="BAs-OH-yyM"/>
+                        <outlet property="countryLabel" destination="hLu-ws-PKU" id="wOl-Q5-LMX"/>
+                        <outlet property="locationLabel" destination="JDI-ka-YIX" id="ezm-Dj-5qF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eef-bY-QNw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -226,9 +237,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Uy-pf-jTF">
                                 <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="oeE-8w-18N"/>
+                                    <barButtonItem systemItem="cancel" id="oeE-8w-18N">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="VYY-xe-yaG" id="eBm-0F-Rad"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="q57-GH-ZHm"/>
-                                    <barButtonItem systemItem="save" id="671-QV-rUq"/>
+                                    <barButtonItem systemItem="save" id="671-QV-rUq">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="VYY-xe-yaG" id="qLE-QX-Sdx"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -243,6 +262,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="os6-J4-1j4"/>
                     </view>
+                    <connections>
+                        <outlet property="countryField" destination="mHi-cx-7El" id="yeO-9m-r31"/>
+                        <outlet property="firstClueField" destination="IcO-Zz-AdB" id="49u-bR-rWU"/>
+                        <outlet property="locationField" destination="UuE-E4-Jbv" id="yvW-dQ-Jsh"/>
+                        <outlet property="secondClueField" destination="HA5-vc-6Xz" id="Ewi-r9-X3I"/>
+                        <outlet property="thirdClueField" destination="jYR-Nk-LqC" id="xxI-se-CAJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBB-bC-tx9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

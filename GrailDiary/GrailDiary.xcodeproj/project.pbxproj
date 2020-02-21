@@ -45,6 +45,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D78E9C823FEF9D400BFBB6D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1DCCB32E23FC896000DC63DE /* AppDelegate.swift */,
+				1DCCB33023FC896000DC63DE /* SceneDelegate.swift */,
+				1DCCB33723FC896300DC63DE /* Assets.xcassets */,
+				1DCCB33C23FC896300DC63DE /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1D78E9C923FEFB4300BFBB6D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1DCCB33223FC896000DC63DE /* POIsTableViewController.swift */,
+				1D78E9C023FEE4BF00BFBB6D /* AddPOIViewController.swift */,
+				1D78E9C223FEED9800BFBB6D /* POIDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1D78E9CA23FEFB5E00BFBB6D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1DCCB33423FC896000DC63DE /* Main.storyboard */,
+				1DCCB33923FC896300DC63DE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1D78E9CB23FEFB6A00BFBB6D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D78E9C423FEEDE200BFBB6D /* POITableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D78E9CC23FEFB7F00BFBB6D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D78E9C623FEEDF300BFBB6D /* POI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1DCCB32223FC896000DC63DE = {
 			isa = PBXGroup;
 			children = (
@@ -64,17 +110,11 @@
 		1DCCB32D23FC896000DC63DE /* GrailDiary */ = {
 			isa = PBXGroup;
 			children = (
-				1DCCB32E23FC896000DC63DE /* AppDelegate.swift */,
-				1DCCB33023FC896000DC63DE /* SceneDelegate.swift */,
-				1DCCB33223FC896000DC63DE /* POIsTableViewController.swift */,
-				1DCCB33423FC896000DC63DE /* Main.storyboard */,
-				1D78E9C023FEE4BF00BFBB6D /* AddPOIViewController.swift */,
-				1D78E9C223FEED9800BFBB6D /* POIDetailViewController.swift */,
-				1D78E9C423FEEDE200BFBB6D /* POITableViewCell.swift */,
-				1D78E9C623FEEDF300BFBB6D /* POI.swift */,
-				1DCCB33723FC896300DC63DE /* Assets.xcassets */,
-				1DCCB33923FC896300DC63DE /* LaunchScreen.storyboard */,
-				1DCCB33C23FC896300DC63DE /* Info.plist */,
+				1D78E9CC23FEFB7F00BFBB6D /* Models */,
+				1D78E9C923FEFB4300BFBB6D /* View Controllers */,
+				1D78E9CB23FEFB6A00BFBB6D /* Views */,
+				1D78E9CA23FEFB5E00BFBB6D /* Storyboards */,
+				1D78E9C823FEF9D400BFBB6D /* Resources */,
 			);
 			path = GrailDiary;
 			sourceTree = "<group>";
@@ -302,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SKL49NTL5D;
-				INFOPLIST_FILE = GrailDiary/Info.plist;
+				INFOPLIST_FILE = GrailDiary/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,7 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SKL49NTL5D;
-				INFOPLIST_FILE = GrailDiary/Info.plist;
+				INFOPLIST_FILE = GrailDiary/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
