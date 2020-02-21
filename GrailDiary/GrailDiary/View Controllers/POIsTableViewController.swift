@@ -28,6 +28,7 @@ class POIsTableViewController: UIViewController, UITableViewDelegate, UITableVie
     func poiWasCreated(poi: POI) {
         poi.append(poi)
         tableView.reloadData()
+        dismiss(animated: true, completion: nil)
     }
     
     
@@ -42,9 +43,26 @@ class POIsTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     
-}
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddPOIModalSegue" {
+            
+            guard let addPOIVC = segue.destination as? AddPOIViewController else { return }
+            
+            addPOIVC.delegate = self
+        }
+    }
+    
+    if segue.identifier == "ShowPOIDetailSegue" {
+    
+    guard let showPOIS = segue.destination as? POIDetailViewController else { return }
+    
+    showPOIS.delegate = POI
+    }
+}
 
+    
     
 
     
