@@ -13,7 +13,7 @@
         <!--POI Tabe View Controller-->
         <scene sceneID="Skm-U5-NRH">
             <objects>
-                <viewController title="Grail Diary" id="D0z-om-IMj" userLabel="POI Tabe View Controller" sceneMemberID="viewController">
+                <viewController title="Grail Diary" id="D0z-om-IMj" userLabel="POI Tabe View Controller" customClass="POIsTableViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pxJ-ev-3Yu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,14 +22,14 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="77" id="uF3-2A-6jk">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="77" id="uF3-2A-6jk" customClass="POITableViewCell" customModule="Grail_Diary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uF3-2A-6jk" id="UgX-Jp-VL5">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="76.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fae-2f-Tjc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fae-2f-Tjc">
                                                     <rect key="frame" x="340" y="0.0" width="75" height="76.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -63,10 +63,14 @@
                                                 <constraint firstItem="fae-2f-Tjc" firstAttribute="centerY" secondItem="UgX-Jp-VL5" secondAttribute="centerY" id="NiI-Oz-4JN"/>
                                                 <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="jjf-MF-XYq" secondAttribute="bottom" constant="8" id="brf-Sc-c33"/>
                                                 <constraint firstAttribute="bottom" secondItem="fae-2f-Tjc" secondAttribute="bottom" id="iY1-5W-MLX"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fae-2f-Tjc" secondAttribute="trailing" constant="-21" id="kYE-YF-UlD"/>
                                                 <constraint firstItem="fae-2f-Tjc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jjf-MF-XYq" secondAttribute="trailing" constant="254.5" id="xsZ-1z-aCg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesCountLabel" destination="fae-2f-Tjc" id="NvT-kI-6dp"/>
+                                            <outlet property="countryLabel" destination="qq9-hs-8Ef" id="45v-f4-97s"/>
+                                            <outlet property="locationLabel" destination="qHe-ow-tL5" id="vds-jE-0cf"/>
                                             <segue destination="MJo-I7-zzr" kind="show" identifier="ShowPOIDetailSegue" id="rLU-us-bCC"/>
                                         </connections>
                                     </tableViewCell>
@@ -89,46 +93,52 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="nnS-V6-tEr" id="6lC-cN-z9i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUh-PX-ypl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1786.9565217391305" y="151.33928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="NNZ-f1-T4v">
             <objects>
-                <viewController id="MJo-I7-zzr" sceneMemberID="viewController">
+                <viewController id="MJo-I7-zzr" customClass="POIDetailViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WvB-oX-5cr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myx-Ng-mlv">
-                                <rect key="frame" x="297" y="160" width="97" height="31.5"/>
+                                <rect key="frame" x="297" y="160" width="97" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYJ-XB-tg7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYJ-XB-tg7">
                                 <rect key="frame" x="332" y="190" width="62" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="Kae-n8-P9D"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7T-Vc-IBx">
-                                <rect key="frame" x="20" y="350" width="43.5" height="20.5"/>
+                                <rect key="frame" x="20" y="350" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TpK-pp-Zai">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="City of Nigeria" translatesAutoresizingMaskIntoConstraints="NO" id="TpK-pp-Zai">
                                 <rect key="frame" x="20" y="160" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TpK-pp-Zai" secondAttribute="height" multiplier="1:1" id="Jfi-lb-DEL"/>
                                     <constraint firstAttribute="width" constant="150" id="qWS-E6-aUp"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dc9-Rq-vlT">
-                                <rect key="frame" x="28" y="415" width="366" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dc9-Rq-vlT">
+                                <rect key="frame" x="28" y="415" width="366" height="427"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -150,18 +160,25 @@
                             <constraint firstItem="RYJ-XB-tg7" firstAttribute="trailing" secondItem="myx-Ng-mlv" secondAttribute="trailing" id="f5a-MV-7H7"/>
                             <constraint firstItem="QsT-w8-PlG" firstAttribute="trailing" secondItem="myx-Ng-mlv" secondAttribute="trailing" constant="20" id="j0l-BH-JJB"/>
                             <constraint firstItem="myx-Ng-mlv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TpK-pp-Zai" secondAttribute="trailing" constant="127" id="js5-Bc-JgJ"/>
+                            <constraint firstItem="RYJ-XB-tg7" firstAttribute="top" secondItem="QsT-w8-PlG" secondAttribute="top" constant="50" id="lyj-TE-TKh"/>
+                            <constraint firstItem="dc9-Rq-vlT" firstAttribute="top" secondItem="G7T-Vc-IBx" secondAttribute="bottom" constant="44" id="uBG-cr-de5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QsT-w8-PlG"/>
                     </view>
+                    <connections>
+                        <outlet property="cluesTextView" destination="dc9-Rq-vlT" id="Mlk-xh-ur7"/>
+                        <outlet property="countryLabel" destination="RYJ-XB-tg7" id="OMo-m9-Bx8"/>
+                        <outlet property="locationLabel" destination="myx-Ng-mlv" id="CsP-ka-nTY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPY-xt-EX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2849.275362318841" y="135.9375"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="mcd-2c-YLg">
             <objects>
-                <viewController id="qzU-3K-4NB" sceneMemberID="viewController">
+                <viewController id="qzU-3K-4NB" customClass="AddPOIViewController" customModule="Grail_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BWE-JN-771">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,9 +233,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kr2-hJ-W4V">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="pTz-PA-l5r"/>
+                                    <barButtonItem systemItem="cancel" id="pTz-PA-l5r">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="qzU-3K-4NB" id="HFP-kq-24L"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="7nA-rc-0i0"/>
-                                    <barButtonItem systemItem="save" id="Jf6-Z3-anz"/>
+                                    <barButtonItem systemItem="save" id="Jf6-Z3-anz">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="qzU-3K-4NB" id="fCx-VX-d0g"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -233,6 +258,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lys-Bb-UFI"/>
                     </view>
+                    <connections>
+                        <outlet property="CountryTextField" destination="22N-xs-8Oh" id="X9s-fd-XNG"/>
+                        <outlet property="clue1TextField" destination="eXh-uO-vm4" id="wqb-ak-bqo"/>
+                        <outlet property="clue2TextField" destination="Zj3-PV-6JZ" id="Vah-VT-06i"/>
+                        <outlet property="clue3TextField" destination="87E-YX-KcS" id="qgc-Kn-Byg"/>
+                        <outlet property="locationTextField" destination="IEq-HZ-ngP" id="Evq-sz-Mc6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YTk-oz-1RO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -257,4 +289,7 @@
             <point key="canvasLocation" x="876.81159420289862" y="151.33928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="City of Nigeria" width="275" height="183"/>
+    </resources>
 </document>
