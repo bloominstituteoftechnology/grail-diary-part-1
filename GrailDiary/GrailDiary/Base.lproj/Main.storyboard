@@ -59,6 +59,9 @@
                                                 <constraint firstItem="UWy-2a-nXI" firstAttribute="leading" secondItem="dM0-dd-fH4" secondAttribute="leadingMargin" id="yAa-4O-DSV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="oLP-Of-LC6" kind="show" identifier="ShowPOIDetailSegue" id="qTE-Hb-gnf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -83,6 +86,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="e1A-GA-ZuP">
+            <objects>
+                <viewController id="oLP-Of-LC6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qc3-v6-Avr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pf-t7-ytp">
+                                <rect key="frame" x="279" y="160" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hms-Wh-ZAK">
+                                <rect key="frame" x="332" y="185" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Thailand" translatesAutoresizingMaskIntoConstraints="NO" id="WxT-FZ-JL4">
+                                <rect key="frame" x="20" y="160" width="251" height="182"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Moe-nN-zdA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sY3-FA-1WZ">
+                                <rect key="frame" x="20" y="382" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MUz-Yt-qV5">
+                                <rect key="frame" x="20" y="411" width="374" height="451"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="aPv-4W-LkJ"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5Pf-t7-ytp" firstAttribute="top" secondItem="50F-gm-QcQ" secondAttribute="top" constant="20" id="0pT-nh-jW8"/>
+                            <constraint firstItem="WxT-FZ-JL4" firstAttribute="leading" secondItem="50F-gm-QcQ" secondAttribute="leading" constant="20" id="1B4-F1-mCS"/>
+                            <constraint firstItem="5Pf-t7-ytp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="50F-gm-QcQ" secondAttribute="leading" symbolic="YES" id="3bp-Ni-3TN"/>
+                            <constraint firstItem="MUz-Yt-qV5" firstAttribute="leading" secondItem="sY3-FA-1WZ" secondAttribute="leading" id="FdI-1u-y8m"/>
+                            <constraint firstItem="sY3-FA-1WZ" firstAttribute="leading" secondItem="WxT-FZ-JL4" secondAttribute="leading" id="GrH-su-6m4"/>
+                            <constraint firstItem="Hms-Wh-ZAK" firstAttribute="top" secondItem="5Pf-t7-ytp" secondAttribute="bottom" constant="8" id="PBt-53-e4g"/>
+                            <constraint firstItem="sY3-FA-1WZ" firstAttribute="top" secondItem="WxT-FZ-JL4" secondAttribute="bottom" constant="40" id="X6I-ot-UVb"/>
+                            <constraint firstItem="WxT-FZ-JL4" firstAttribute="width" secondItem="Qc3-v6-Avr" secondAttribute="height" multiplier="1:1" id="X6M-Iv-X96"/>
+                            <constraint firstItem="50F-gm-QcQ" firstAttribute="trailing" secondItem="5Pf-t7-ytp" secondAttribute="trailing" constant="20" id="XNB-4X-s7p"/>
+                            <constraint firstAttribute="bottom" secondItem="MUz-Yt-qV5" secondAttribute="bottom" constant="20" id="fSG-YK-KJB"/>
+                            <constraint firstItem="Hms-Wh-ZAK" firstAttribute="top" secondItem="5Pf-t7-ytp" secondAttribute="bottom" constant="8" id="gsO-bz-4rz"/>
+                            <constraint firstItem="MUz-Yt-qV5" firstAttribute="top" secondItem="sY3-FA-1WZ" secondAttribute="bottom" constant="8" id="iMe-nE-cym"/>
+                            <constraint firstItem="Hms-Wh-ZAK" firstAttribute="trailing" secondItem="5Pf-t7-ytp" secondAttribute="trailing" constant="20" id="j51-gx-922"/>
+                            <constraint firstItem="MUz-Yt-qV5" firstAttribute="trailing" secondItem="Hms-Wh-ZAK" secondAttribute="trailing" constant="20" id="pl3-TP-SOv"/>
+                            <constraint firstItem="WxT-FZ-JL4" firstAttribute="top" secondItem="5Pf-t7-ytp" secondAttribute="top" id="uPS-ap-A3M"/>
+                            <constraint firstItem="5Pf-t7-ytp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WxT-FZ-JL4" secondAttribute="trailing" constant="8" id="z4C-mh-hiN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="50F-gm-QcQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sD6-0X-zwe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hbN-Nr-Tj8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1815.9420289855075" y="447.99107142857139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3Sv-Dt-rBy">
@@ -178,4 +252,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Thailand" width="276" height="182"/>
+    </resources>
 </document>
