@@ -139,6 +139,9 @@
                                                 <constraint firstItem="Pnt-nj-bIj" firstAttribute="centerY" secondItem="Pwi-jZ-ITm" secondAttribute="centerY" id="qKP-pu-OMg"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="JXX-IK-4Tk" kind="show" identifier="ShowPOIDetailSegue" id="Jol-ei-t9L"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -171,13 +174,66 @@
                     <view key="view" contentMode="scaleToFill" id="Idr-hc-KiN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkg-Ne-iD4">
+                                <rect key="frame" x="279" y="108" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFL-ZM-gLd">
+                                <rect key="frame" x="332" y="137" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Path" translatesAutoresizingMaskIntoConstraints="NO" id="E7b-ag-jR3">
+                                <rect key="frame" x="20" y="116" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Mpt-0e-V40"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bac-ot-4TZ">
+                                <rect key="frame" x="20" y="282" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bbc-RJ-9Tl">
+                                <rect key="frame" x="20" y="311" width="374" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="KDf-bx-0Te"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rkg-Ne-iD4" firstAttribute="top" secondItem="nzS-en-8by" secondAttribute="top" constant="20" id="68m-Je-CAN"/>
+                            <constraint firstItem="bbc-RJ-9Tl" firstAttribute="leading" secondItem="bac-ot-4TZ" secondAttribute="leading" id="QeD-qf-mh4"/>
+                            <constraint firstItem="nzS-en-8by" firstAttribute="trailing" secondItem="rkg-Ne-iD4" secondAttribute="trailing" constant="20" id="RsW-gb-aYK"/>
+                            <constraint firstItem="YFL-ZM-gLd" firstAttribute="trailing" secondItem="rkg-Ne-iD4" secondAttribute="trailing" id="SHD-NM-MPp"/>
+                            <constraint firstItem="bbc-RJ-9Tl" firstAttribute="leading" secondItem="nzS-en-8by" secondAttribute="leading" constant="20" id="WU7-na-7jW"/>
+                            <constraint firstItem="YFL-ZM-gLd" firstAttribute="top" secondItem="rkg-Ne-iD4" secondAttribute="bottom" constant="8" id="bIo-tU-xXp"/>
+                            <constraint firstItem="bbc-RJ-9Tl" firstAttribute="top" secondItem="bac-ot-4TZ" secondAttribute="bottom" constant="8" id="eDv-rv-Vq4"/>
+                            <constraint firstItem="bbc-RJ-9Tl" firstAttribute="trailing" secondItem="rkg-Ne-iD4" secondAttribute="trailing" id="f3G-5S-0gF"/>
+                            <constraint firstItem="nzS-en-8by" firstAttribute="trailing" secondItem="bbc-RJ-9Tl" secondAttribute="trailing" constant="20" id="fXp-sC-P5f"/>
+                            <constraint firstItem="nzS-en-8by" firstAttribute="bottom" secondItem="bbc-RJ-9Tl" secondAttribute="bottom" constant="423" id="jLf-TS-p8E"/>
+                            <constraint firstItem="E7b-ag-jR3" firstAttribute="top" secondItem="nzS-en-8by" secondAttribute="top" constant="28" id="lSK-PZ-mvt"/>
+                            <constraint firstItem="rkg-Ne-iD4" firstAttribute="leading" secondItem="E7b-ag-jR3" secondAttribute="trailing" constant="109" id="otz-Sl-4Fb"/>
+                            <constraint firstItem="E7b-ag-jR3" firstAttribute="leading" secondItem="nzS-en-8by" secondAttribute="leading" constant="20" id="uk9-zy-N7Z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nzS-en-8by"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jHW-VQ-fec"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdQ-1N-qf0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1699" y="228"/>
+            <point key="canvasLocation" x="1698.5507246376812" y="227.67857142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dQu-BR-822">
@@ -198,4 +254,7 @@
             <point key="canvasLocation" x="11.594202898550726" y="10.714285714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Path" width="1024" height="1024"/>
+    </resources>
 </document>
