@@ -40,9 +40,7 @@ Please fork and clone this repository. Create a new Xcode project inside of the 
 14. Add the following constraints to the Stack View:
     * vertical centering in the container (cell)
     * margin-based leading = `0`
-15. Add the following constraints to the clues label:
-    * vertical centering in the container (cell)
-    * margin-based trailing = `0`
+15. 8
 16. Add a constraint between the Stack View and the clues label with these attributes:
     * horizontal spacing
     * change the relationship to `>=`
