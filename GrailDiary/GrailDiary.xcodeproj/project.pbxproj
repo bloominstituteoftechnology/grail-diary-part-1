@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D83998E242164CA00B66247 /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D83998D242164CA00B66247 /* POIsTableViewController.swift */; };
 		1DCCB32F23FC896000DC63DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCCB32E23FC896000DC63DE /* AppDelegate.swift */; };
 		1DCCB33123FC896000DC63DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCCB33023FC896000DC63DE /* SceneDelegate.swift */; };
 		1DCCB33623FC896000DC63DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DCCB33423FC896000DC63DE /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D83998D242164CA00B66247 /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
 		1DCCB32B23FC896000DC63DE /* GrailDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrailDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DCCB32E23FC896000DC63DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DCCB33023FC896000DC63DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,13 +48,22 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		1D78E9CA23FEFB5E00BFBB6D /* Storyboards */ = {
+		1D78E9CA23FEFB5E00BFBB6D /* View */ = {
 			isa = PBXGroup;
 			children = (
 				1DCCB33423FC896000DC63DE /* Main.storyboard */,
 				1DCCB33923FC896300DC63DE /* LaunchScreen.storyboard */,
 			);
-			path = Storyboards;
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D83998F242164D000B66247 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D83998D242164CA00B66247 /* POIsTableViewController.swift */,
+			);
+			name = Controller;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		1DCCB32223FC896000DC63DE = {
@@ -74,7 +85,8 @@
 		1DCCB32D23FC896000DC63DE /* GrailDiary */ = {
 			isa = PBXGroup;
 			children = (
-				1D78E9CA23FEFB5E00BFBB6D /* Storyboards */,
+				1D78E9CA23FEFB5E00BFBB6D /* View */,
+				1D83998F242164D000B66247 /* Controller */,
 				1D78E9C823FEF9D400BFBB6D /* Resources */,
 			);
 			path = GrailDiary;
@@ -151,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D83998E242164CA00B66247 /* POIsTableViewController.swift in Sources */,
 				1DCCB32F23FC896000DC63DE /* AppDelegate.swift in Sources */,
 				1DCCB33123FC896000DC63DE /* SceneDelegate.swift in Sources */,
 			);
