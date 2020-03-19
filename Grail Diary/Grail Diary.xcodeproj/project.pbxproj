@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE4AA1B8242405D8000336C8 /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4AA1B7242405D8000336C8 /* AddPOIViewController.swift */; };
+		FE4AA1BA242405E7000336C8 /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4AA1B9242405E7000336C8 /* POIDetailViewController.swift */; };
+		FE4AA1BC24240603000336C8 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4AA1BB24240603000336C8 /* POITableViewCell.swift */; };
+		FE4AA1BE24240612000336C8 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4AA1BD24240612000336C8 /* POI.swift */; };
 		FEF9710A2421618B005C6B35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF971092421618B005C6B35 /* AppDelegate.swift */; };
 		FEF9710C2421618B005C6B35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF9710B2421618B005C6B35 /* SceneDelegate.swift */; };
 		FEF9710E2421618B005C6B35 /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF9710D2421618B005C6B35 /* POIsTableViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE4AA1B7242405D8000336C8 /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		FE4AA1B9242405E7000336C8 /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		FE4AA1BB24240603000336C8 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		FE4AA1BD24240612000336C8 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 		FEF971062421618B005C6B35 /* Grail Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grail Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF971092421618B005C6B35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEF9710B2421618B005C6B35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +45,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE4AA1BF24240639000336C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE4AA1BD24240612000336C8 /* POI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE4AA1C024240657000336C8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FEF9710F2421618B005C6B35 /* Main.storyboard */,
+				FEF971142421618C005C6B35 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FE4AA1C1242406CE000336C8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FEF9710D2421618B005C6B35 /* POIsTableViewController.swift */,
+				FE4AA1B7242405D8000336C8 /* AddPOIViewController.swift */,
+				FE4AA1B9242405E7000336C8 /* POIDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FE4AA1C2242406FC000336C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE4AA1BB24240603000336C8 /* POITableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FEF970FD2421618B005C6B35 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +99,13 @@
 		FEF971082421618B005C6B35 /* Grail Diary */ = {
 			isa = PBXGroup;
 			children = (
-				FEF971092421618B005C6B35 /* AppDelegate.swift */,
-				FEF9710B2421618B005C6B35 /* SceneDelegate.swift */,
-				FEF9710D2421618B005C6B35 /* POIsTableViewController.swift */,
-				FEF9710F2421618B005C6B35 /* Main.storyboard */,
+				FE4AA1BF24240639000336C8 /* Model */,
+				FE4AA1C1242406CE000336C8 /* View Controllers */,
+				FE4AA1C024240657000336C8 /* Storyboards */,
+				FE4AA1C2242406FC000336C8 /* View */,
 				FEF971122421618C005C6B35 /* Assets.xcassets */,
-				FEF971142421618C005C6B35 /* LaunchScreen.storyboard */,
+				FEF9710B2421618B005C6B35 /* SceneDelegate.swift */,
+				FEF971092421618B005C6B35 /* AppDelegate.swift */,
 				FEF971172421618C005C6B35 /* Info.plist */,
 			);
 			path = "Grail Diary";
@@ -138,9 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE4AA1BE24240612000336C8 /* POI.swift in Sources */,
 				FEF9710E2421618B005C6B35 /* POIsTableViewController.swift in Sources */,
+				FE4AA1B8242405D8000336C8 /* AddPOIViewController.swift in Sources */,
 				FEF9710A2421618B005C6B35 /* AppDelegate.swift in Sources */,
 				FEF9710C2421618B005C6B35 /* SceneDelegate.swift in Sources */,
+				FE4AA1BC24240603000336C8 /* POITableViewCell.swift in Sources */,
+				FE4AA1BA242405E7000336C8 /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
