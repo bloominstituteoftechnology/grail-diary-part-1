@@ -49,3 +49,12 @@ extension POIsTableViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension POIsTableViewController: AddPOIDelegate {
+    func poiWasAdded(_ poi: POI) {
+        pois.append(poi)
+        tableView.reloadData()
+    }
+    
+    
+}
