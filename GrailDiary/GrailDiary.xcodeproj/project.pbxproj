@@ -13,6 +13,10 @@
 		95993F1D2421686200912043 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95993F1B2421686200912043 /* Main.storyboard */; };
 		95993F1F2421686300912043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95993F1E2421686300912043 /* Assets.xcassets */; };
 		95993F222421686300912043 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95993F202421686300912043 /* LaunchScreen.storyboard */; };
+		95993F6A2424073400912043 /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95993F692424073400912043 /* AddPOIViewController.swift */; };
+		95993F6C2424074E00912043 /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95993F6B2424074E00912043 /* POIDetailViewController.swift */; };
+		95993F6E2424076D00912043 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95993F6D2424076D00912043 /* POITableViewCell.swift */; };
+		95993F702424078100912043 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95993F6F2424078100912043 /* POI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		95993F1E2421686300912043 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95993F212421686300912043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95993F232421686300912043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95993F692424073400912043 /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		95993F6B2424074E00912043 /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		95993F6D2424076D00912043 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		95993F6F2424078100912043 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +66,12 @@
 			children = (
 				95993F152421686200912043 /* AppDelegate.swift */,
 				95993F172421686200912043 /* SceneDelegate.swift */,
-				95993F192421686200912043 /* POIsTableViewController.swift */,
 				95993F1B2421686200912043 /* Main.storyboard */,
+				95993F6F2424078100912043 /* POI.swift */,
+				95993F192421686200912043 /* POIsTableViewController.swift */,
+				95993F6D2424076D00912043 /* POITableViewCell.swift */,
+				95993F692424073400912043 /* AddPOIViewController.swift */,
+				95993F6B2424074E00912043 /* POIDetailViewController.swift */,
 				95993F1E2421686300912043 /* Assets.xcassets */,
 				95993F202421686300912043 /* LaunchScreen.storyboard */,
 				95993F232421686300912043 /* Info.plist */,
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95993F702424078100912043 /* POI.swift in Sources */,
 				95993F1A2421686200912043 /* POIsTableViewController.swift in Sources */,
+				95993F6A2424073400912043 /* AddPOIViewController.swift in Sources */,
 				95993F162421686200912043 /* AppDelegate.swift in Sources */,
 				95993F182421686200912043 /* SceneDelegate.swift in Sources */,
+				95993F6E2424076D00912043 /* POITableViewCell.swift in Sources */,
+				95993F6C2424074E00912043 /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
