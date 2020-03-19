@@ -8,7 +8,22 @@
 
 import UIKit
 
+protocol AddPOIDelegate {
+    func poiWasAdded(_ poi: POI)
+}
+
+
 class AddPOIViewController: UIViewController {
+    
+    @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var countryTextField: UITextField!
+    @IBOutlet weak var clue1TextField: UITextField!
+    @IBOutlet weak var clue2TextField: UITextField!
+    @IBOutlet weak var clue3TextField: UITextField!
+    
+    var delegate: AddPOIDelegate?
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +32,15 @@ class AddPOIViewController: UIViewController {
     }
     
 
+    @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func saveTapped(_ sender: UIBarButtonItem) {
+    }
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
