@@ -28,5 +28,4 @@ class POIDetailViewController: UIViewController {
         countryLabel.text = poi.country
         cluesTextView.text = "\(poi.clues)"
     }
-
 }

@@ -18,7 +18,8 @@ class POIsTableViewController: UIViewController, UITableViewDelegate {
         tableView.delegate = self
         tableView.dataSource = self
     }
-
+    
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -26,6 +27,7 @@ class POIsTableViewController: UIViewController, UITableViewDelegate {
                 if segue.identifier == "AddPOIModalSegue" {
                     if let addPOIVC = segue.destination as? AddPOIViewController {
                         addPOIVC.delegate = self
+                        
                     }
                 } else if segue.identifier == "ShowPOIDetailSegue" {
                     if let indexPath = tableView.indexPathForSelectedRow,
@@ -64,7 +66,6 @@ extension POIsTableViewController: UITableViewDataSource {
 extension POIsTableViewController: AddPOIDelegate {
     func poiWasAdded(_ poi: POI) {
         pois.append(poi)
-        dismiss(animated: true, completion: nil)
         tableView.reloadData()
     }
 }
