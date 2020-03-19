@@ -23,12 +23,8 @@ class AddPOIViewController: UIViewController {
     
     var delegate: AddPOIDelegate?
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
@@ -57,6 +53,8 @@ class AddPOIViewController: UIViewController {
             poi.clues.append(clue3)
         }
         delegate?.poiWasAdded(poi)
+        
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -75,7 +73,7 @@ extension AddPOIViewController: UITextFieldDelegate {
         case clue3TextField:
             return true
         default:
-            return true
+            print("Error")
         }
         
         return true 
