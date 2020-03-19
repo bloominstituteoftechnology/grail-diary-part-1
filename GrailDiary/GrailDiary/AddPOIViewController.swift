@@ -71,7 +71,8 @@ class AddPOIViewController: UIViewController {
 
 extension AddPOIViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard let _ = textField.text else {
+        guard let text = textField.text,
+            !text.isEmpty else {
             fatalError("Textfield returned nil.")
         }
         switch textField {
