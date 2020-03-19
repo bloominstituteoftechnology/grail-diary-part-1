@@ -27,6 +27,15 @@ class POITableViewCell: UITableViewCell {
         locationLabel.text = poi.location
         countryLabel.text = poi.country
         cluesLabel.text = "\(poi.clues.count) clues"
-    }    
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
 
 }

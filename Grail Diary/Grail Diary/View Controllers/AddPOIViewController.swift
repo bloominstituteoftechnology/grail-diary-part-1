@@ -34,9 +34,7 @@ class AddPOIViewController: UIViewController {
     
     @IBAction func saveTapped(_ sender: UIBarButtonItem) {
         guard let location = locationTextField.text,
-            let country = countryTextField.text else {
-                return
-        }
+            let country = countryTextField.text else { return }
         
         var poi = POI(location: location, country: country, clues: [])
         
@@ -73,7 +71,7 @@ extension AddPOIViewController: UITextFieldDelegate {
         case clue3TextField:
             return true
         default:
-            print("Error")
+            return true
         }
         
         return true 
