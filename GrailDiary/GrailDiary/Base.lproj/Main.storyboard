@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="POICell" rowHeight="60" id="mJY-1m-Efx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="POICell" rowHeight="60" id="mJY-1m-Efx" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mJY-1m-Efx" id="NGj-FG-6x6">
@@ -65,6 +65,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesCountLabel" destination="p7a-We-kXv" id="cgU-rB-joo"/>
+                                            <outlet property="countryLabel" destination="gJL-iS-l4O" id="QLP-Ji-FoI"/>
+                                            <outlet property="locationLabel" destination="LJr-6h-4a8" id="CmU-oY-ilq"/>
                                             <segue destination="dcG-9e-oTf" kind="show" identifier="ShowPOIDetailSegue" id="GAM-pp-0qj"/>
                                         </connections>
                                     </tableViewCell>
@@ -87,15 +90,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="4ja-5a-9Fo" id="Fph-AO-qus"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="6BR-S6-WB0">
             <objects>
-                <viewController id="dcG-9e-oTf" sceneMemberID="viewController">
+                <viewController id="dcG-9e-oTf" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3sv-2c-hLk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,15 +165,20 @@
                         <viewLayoutGuide key="safeArea" id="2cV-yq-NBp"/>
                     </view>
                     <navigationItem key="navigationItem" id="8cL-II-gdg"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="bE6-zc-YLv" id="WmK-nK-Ip8"/>
+                        <outlet property="countryLabel" destination="kgL-i1-muv" id="oUB-E3-e32"/>
+                        <outlet property="locationLabel" destination="bnU-Ja-Jfb" id="wnp-vi-RCz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsL-MV-fy4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2015.9420289855075" y="355.58035714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="Uim-tu-Jxr">
             <objects>
-                <viewController id="jXO-Ql-iSz" sceneMemberID="viewController">
+                <viewController id="jXO-Ql-iSz" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UPd-w2-CYs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,11 +196,17 @@
                                         <rect key="frame" x="0.0" y="61" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="jXO-Ql-iSz" id="gZZ-ku-5tO"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="srw-kk-4L4">
                                         <rect key="frame" x="0.0" y="115" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="jXO-Ql-iSz" id="qK1-NE-SE6"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7s4-wv-fo4">
                                         <rect key="frame" x="0.0" y="169" width="374" height="20.5"/>
@@ -201,16 +218,25 @@
                                         <rect key="frame" x="0.0" y="209.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="jXO-Ql-iSz" id="NSW-Es-fC6"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XHu-ac-OW4">
                                         <rect key="frame" x="0.0" y="263.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="jXO-Ql-iSz" id="mqE-Q6-Bc6"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pIT-uU-eRd">
                                         <rect key="frame" x="0.0" y="317.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="jXO-Ql-iSz" id="to0-HP-4ZE"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -222,9 +248,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDk-d7-UXg">
                                 <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Cancel" id="wA6-6j-OCw"/>
+                                    <barButtonItem title="Cancel" id="wA6-6j-OCw">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="jXO-Ql-iSz" id="En8-Nt-orR"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3GS-hP-fa1"/>
-                                    <barButtonItem title="Save" id="5c4-mE-5B3"/>
+                                    <barButtonItem title="Save" id="5c4-mE-5B3">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="jXO-Ql-iSz" id="kJh-jA-2iu"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -239,6 +273,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fHo-mx-8wS"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="maN-jH-KNV" id="nJh-m6-Zug"/>
+                        <outlet property="clue2TextField" destination="XHu-ac-OW4" id="714-76-Oql"/>
+                        <outlet property="clue3TextField" destination="pIT-uU-eRd" id="eE4-i4-pAF"/>
+                        <outlet property="countryTextField" destination="srw-kk-4L4" id="K0S-D1-wJ6"/>
+                        <outlet property="locationTextField" destination="rdD-ew-hA7" id="Kpo-jb-A7E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCV-Ha-n5K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
