@@ -14,10 +14,13 @@ class POIsTableViewController: UIViewController {
     
     var pois: [POI] = [POI(location: "Charlotte", country: "USA", clues: ["Queen City"])]
     
+    private func updateViews() {
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -28,6 +31,7 @@ class POIsTableViewController: UIViewController {
             }
         }
     }
+
     
 extension POIsTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
