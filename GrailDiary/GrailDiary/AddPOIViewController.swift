@@ -76,15 +76,15 @@ extension AddPOIViewController: UITextFieldDelegate {
         }
         switch textField {
         case locationTextField:
-            return locationTextField.isFirstResponder
+            return locationTextField.becomeFirstResponder()
         case countryTextField:
-            return countryTextField.isFirstResponder
+            return countryTextField.becomeFirstResponder()
         case clue1TextField:
-            return clue1TextField.isFirstResponder
+            return clue1TextField.becomeFirstResponder()
         case clue2TextField:
-            return clue2TextField.isFirstResponder
+            return clue2TextField.becomeFirstResponder()
         default:
-            return clue3TextField.isFirstResponder
+            return clue3TextField.becomeFirstResponder()
         }
     }
 }
