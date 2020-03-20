@@ -21,26 +21,25 @@ class POIsTableViewController: UIViewController {
         POITableView.dataSource = self
         
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddPOIModalSegue" {
-            
-            guard let segue.destination is AddPOIViewController,
-            
-            if segue.identifier == "ShowPOIDetailSegue" {
-                
-                guard let segue.destination is POIDetailViewController else {
-                    return
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "AddPOIModalSegue" {
+                if let addPOIVC = segue.destination as? AddPOIViewController {
+                    addPOIVC.delegate = self
+                }
+            else if segue.identifier == "ShowPOIDetailSegue" {
+                    if let indexPath = POITableView.indexPathForSelectedRow,
+                        let poiDetailVC = segue.destination as? POIDetailViewController {
+                        poiDetailVC.poi = poi[indexPath.row]
+                    }
                 }
             }
-                
-                
-                
-                
-           
-           
         }
     }
 }
+    
+
   
     extension POIsTableViewController: UITableViewDataSource {
     
