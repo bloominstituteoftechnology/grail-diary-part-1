@@ -8,10 +8,7 @@
 
 import UIKit
 
-class POIsTableViewController: UIViewController, AddPOIDelegate {
-    func poiWasAdded(_ poi: POI) {
-    }
-    
+class POIsTableViewController: UIViewController {
   
     
     var newPOI: [POI] = [POI(location: "CLEVELAND", country: "GUAM", clues: nil)]
@@ -59,6 +56,14 @@ class POIsTableViewController: UIViewController, AddPOIDelegate {
         return cell
     }
 }
-
+extension POIsTableViewController: AddPOIDelegate {
+    func poiWasAdded(_ poi: POI) {
+        newPOI.append(poi)
+        
+        POITableView.reloadData()
+    }
+    
+    
+}
     
 
