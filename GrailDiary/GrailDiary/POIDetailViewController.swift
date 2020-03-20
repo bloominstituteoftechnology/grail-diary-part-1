@@ -9,10 +9,11 @@
 import UIKit
 
 
-var poi: POI?
+
 
 class POIDetailViewController: UIViewController {
     
+   var poi: POI?
    
     // Objects
     @IBOutlet weak var locationLabel: UILabel!
