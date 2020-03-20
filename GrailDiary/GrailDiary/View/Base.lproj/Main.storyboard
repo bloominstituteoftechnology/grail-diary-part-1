@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="60" id="RHI-o2-KGV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="60" id="RHI-o2-KGV" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RHI-o2-KGV" id="YOP-Sk-AsZ">
@@ -60,6 +60,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesCountLabel" destination="wb2-eW-aos" id="LjM-ZN-uoy"/>
+                                            <outlet property="countryLabel" destination="qfS-f8-T0D" id="pWo-29-5kY"/>
+                                            <outlet property="locationLabel" destination="hcP-xG-l5z" id="Rdw-WR-Gqj"/>
                                             <segue destination="c3i-Ex-1W5" kind="show" identifier="ShowPOIDetailSegue" id="gQM-RM-ZTL"/>
                                         </connections>
                                     </tableViewCell>
@@ -82,6 +85,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="kgm-8l-JiK" id="aTu-V6-0hZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DjW-iR-EzI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,6 +160,11 @@
                         <viewLayoutGuide key="safeArea" id="qp6-rh-21f"/>
                     </view>
                     <navigationItem key="navigationItem" id="PqF-sh-eDl"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="tlt-z6-QyW" id="Fc1-iB-g0z"/>
+                        <outlet property="countryLabel" destination="PDH-CR-sh3" id="9ZH-oi-UK4"/>
+                        <outlet property="locationLabel" destination="CNd-0t-bk6" id="pZ5-9t-pWM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kod-xv-sKW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,6 +173,7 @@
         <!--AddPOI View Controller-->
         <scene sceneID="ewT-Rc-8Yv">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o8v-ec-eSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="O9l-NK-IV1" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qqy-Cp-4cq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -208,23 +221,54 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6WI-RN-zZm">
+                                <rect key="frame" x="20" y="387" width="374" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQw-FQ-lVZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveTapped:" destination="O9l-NK-IV1" eventType="touchUpInside" id="JPw-Qb-w88"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0u-qM-m7g">
+                                        <rect key="frame" x="0.0" y="38" width="374" height="30"/>
+                                        <color key="backgroundColor" red="0.62078022960000001" green="0.1171534434" blue="0.1126009598" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="O9l-NK-IV1" eventType="touchUpInside" id="bVj-Y0-KPl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="qiS-3A-JfF" firstAttribute="trailing" secondItem="6WI-RN-zZm" secondAttribute="trailing" constant="20" id="0uQ-PI-2au"/>
                             <constraint firstItem="qiS-3A-JfF" firstAttribute="trailing" secondItem="SoU-Li-Zfj" secondAttribute="trailing" constant="20" id="4JZ-BF-teE"/>
+                            <constraint firstItem="6WI-RN-zZm" firstAttribute="centerX" secondItem="SoU-Li-Zfj" secondAttribute="centerX" id="4pW-fL-Gne"/>
+                            <constraint firstItem="6WI-RN-zZm" firstAttribute="leading" secondItem="qiS-3A-JfF" secondAttribute="leading" constant="20" id="Adg-aO-VIY"/>
                             <constraint firstItem="SoU-Li-Zfj" firstAttribute="leading" secondItem="qiS-3A-JfF" secondAttribute="leading" constant="20" id="L1J-hx-KKY"/>
                             <constraint firstItem="SoU-Li-Zfj" firstAttribute="centerY" secondItem="qqy-Cp-4cq" secondAttribute="centerY" constant="-200" id="N1Z-b4-haF"/>
+                            <constraint firstItem="6WI-RN-zZm" firstAttribute="top" secondItem="SoU-Li-Zfj" secondAttribute="bottom" constant="28.5" id="fFU-tj-sJv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qiS-3A-JfF"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem style="plain" systemItem="cancel" id="chL-6q-wcP"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="mRL-4L-fxm"/>
-                        <barButtonItem style="plain" systemItem="save" id="pbN-23-3UA"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="clue1TextField" destination="hV8-W3-Fz5" id="Vx9-tr-hml"/>
+                        <outlet property="clue2TextField" destination="tId-93-5rd" id="Ql3-bo-FHd"/>
+                        <outlet property="clue3TextField" destination="fRz-Qu-iVx" id="yjI-fd-fhi"/>
+                        <outlet property="countryTextField" destination="HZ8-nc-27N" id="6PP-PF-JKS"/>
+                        <outlet property="locationTextField" destination="Zrp-q0-NYq" id="yXb-Z7-pha"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o8v-ec-eSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3126" y="-704"/>
         </scene>

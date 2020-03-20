@@ -10,12 +10,33 @@ import UIKit
 
 class POIDetailViewController: UIViewController {
 
+    // MARK: - Outlets
+    
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var cluesTextView: UITextView!
+    
+    // MARK: - Properties
+    var poi: POI?
+    
+    
+    // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        updateViews()
     }
     
+    private func updateViews() {
+        guard let unwrappedPoi = poi else { return }
+        locationLabel.text = unwrappedPoi.location
+        countryLabel.text = unwrappedPoi.country
+        cluesTextView.text = """
+        Clue 1: \(unwrappedPoi.clues[0])
+        Clue 2: \(unwrappedPoi.clues[1])
+        Clue 3: \(unwrappedPoi.clues[2])
+        """
+    }
 
     /*
     // MARK: - Navigation
