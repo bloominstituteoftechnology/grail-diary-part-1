@@ -22,25 +22,27 @@ class POIsTableViewController: UIViewController {
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddPOIModalSegue" {
             
-       
-        
-        
-        
-        
-        
-        
+            guard let segue.destination is AddPOIViewController,
+            
+            if segue.identifier == "ShowPOIDetailSegue" {
+                
+                guard let segue.destination is POIDetailViewController else {
+                    return
+                }
+            }
+                
+                
+                
+                
+           
+           
+        }
     }
-  
 }
-
-
-    
-
-
-
-
-extension POIsTableViewController: UITableViewDataSource {
+  
+    extension POIsTableViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return newPOI.count
@@ -51,14 +53,8 @@ extension POIsTableViewController: UITableViewDataSource {
         guard let cell = POITableView.dequeueReusableCell(withIdentifier: "AddPOIModalSegue", for: indexPath) as? POITableViewCell else {
             fatalError("Cell is not a POITableViewCell")
         }
-        
-        
-        
         return cell
     }
-    
-    
-      
 }
 
     
