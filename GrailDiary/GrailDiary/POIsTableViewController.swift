@@ -8,7 +8,11 @@
 
 import UIKit
 
-class POIsTableViewController: UIViewController {
+class POIsTableViewController: UIViewController, AddPOIDelegate {
+    func poiWasAdded(_ poi: POI) {
+    }
+    
+  
     
     var newPOI: [POI] = [POI(location: "CLEVELAND", country: "GUAM", clues: nil)]
     
@@ -26,7 +30,7 @@ class POIsTableViewController: UIViewController {
         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "AddPOIModalSegue" {
                 if let addPOIVC = segue.destination as? AddPOIViewController {
-                    addPOIVC.delegate = self as? AddPOIDelegate
+                    addPOIVC.delegate = self
                 }
             else if segue.identifier == "ShowPOIDetailSegue" {
                     if let indexPath = POITableView.indexPathForSelectedRow,
