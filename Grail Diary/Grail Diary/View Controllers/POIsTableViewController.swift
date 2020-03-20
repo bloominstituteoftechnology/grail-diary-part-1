@@ -23,7 +23,6 @@ class POIsTableViewController: UIViewController, UITableViewDelegate {
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
                 if segue.identifier == "AddPOIModalSegue" {
                     if let addPOIVC = segue.destination as? AddPOIViewController {
                         addPOIVC.delegate = self
@@ -35,7 +34,6 @@ class POIsTableViewController: UIViewController, UITableViewDelegate {
                         poiDetailVC.poi = pois[indexPath.row]
                 }
             }
-        }
     }
 }
 
