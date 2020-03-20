@@ -18,28 +18,28 @@ class POITableViewCell: UITableViewCell {
     
     var poi: POI? {
         didSet {
-            func updateViews() {
-                if let unwrappedPOI = poi {
-                    locationLabel.text = unwrappedPOI.location
-                    countryLabel.text = unwrappedPOI.country
-                    cluesCountLabel.text = "\(unwrappedPOI.clues.count) clues"
-                } else {
-                    return
-                }
-            }
+            updateViews()
         }
     }
     
+    private func updateViews() {
+        if let unwrappedPOI = poi {
+            locationLabel.text = unwrappedPOI.location
+            countryLabel.text = unwrappedPOI.country
+            cluesCountLabel.text = "\(unwrappedPOI.clues.count) clues"
+        }
+        
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+     
     }
 
 }

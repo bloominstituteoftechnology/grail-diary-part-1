@@ -19,25 +19,34 @@ class POIsTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        tableView.dataSource = self
+        tableView.delegate = self as? UITableViewDelegate
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "AddPOIModalSegue" {
-        
-        guard let newPOI = segue.destination as? AddPOIViewController else { return }
-        
-        // Sets up this view controller to receive the information passed from the newfriendVC
-        
-        newPOI.delegate = self
-    
+            if segue.identifier == "AddPOIModalSegue" {
+                if let addPOIVC = segue.destination as? AddPOIViewController {
+                    addPOIVC.delegate = self
+                }
+                
+            } else if segue.identifier == "ShowPOIDetailSegue" {
+                if let indexPath =
+                    tableView.indexPathForSelectedRow,
+                    let poiDetailVC = segue.destination as? POIDetailViewController {
+                    poiDetailVC.poi = POIs[indexPath.row]
+                }
+            }
+            
         }
-    }
+//    }
     
 }
 
-    
-    
-    
+
+
+
 
 extension POIsTableViewController: AddPOIDelegate {
     
@@ -48,25 +57,21 @@ extension POIsTableViewController: AddPOIDelegate {
     }
 }
 
-    extension POIsTableViewController: UITableViewDataSource {
+extension POIsTableViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return POIs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return POIs.count
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else {
+            fatalError("Cell is not a POITableViewCell")
         }
+        cell.poi = POIs[indexPath.row]
         
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else {
-                fatalError("Cell is not a POITableViewCell")
-            }
-            
-            let pOI = POIs[indexPath.row]
-
-//            cell.textLabel?.text = poi.location
-//            cell.textLabel?.text = poi.country
-//            cell.textLabel?.text = (String(poi.clues.count))
-            return cell
-            
+        return cell
+        
         
     }
 }

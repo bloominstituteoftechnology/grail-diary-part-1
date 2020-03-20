@@ -63,7 +63,7 @@
                                             <outlet property="cluesCountLabel" destination="bcO-ZD-ToG" id="RcS-qj-Pee"/>
                                             <outlet property="countryLabel" destination="jP6-mx-ChW" id="yUF-QJ-wcu"/>
                                             <outlet property="locationLabel" destination="985-19-oAS" id="bXQ-qz-5gA"/>
-                                            <segue destination="azM-QJ-ewA" kind="show" id="xsK-8j-UqS"/>
+                                            <segue destination="azM-QJ-ewA" kind="show" identifier="ShowPOIDetailSegue" id="xsK-8j-UqS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -249,6 +249,7 @@
                             <constraint firstItem="KW3-eL-7bW" firstAttribute="leading" secondItem="ygx-Do-mil" secondAttribute="trailing" constant="162" id="TdA-de-vFV"/>
                             <constraint firstItem="OO2-ur-dkm" firstAttribute="top" secondItem="ygx-Do-mil" secondAttribute="bottom" constant="40" id="V6h-Gd-tpw"/>
                             <constraint firstItem="ygx-Do-mil" firstAttribute="leading" secondItem="3KN-aa-eMo" secondAttribute="leading" constant="20" id="YEm-Cu-sl7"/>
+                            <constraint firstItem="OO2-ur-dkm" firstAttribute="leading" secondItem="3KN-aa-eMo" secondAttribute="leading" constant="20" id="eLi-pq-UG4"/>
                             <constraint firstItem="KW3-eL-7bW" firstAttribute="trailing" secondItem="8XK-LC-e99" secondAttribute="trailing" id="iuO-dy-vPv"/>
                             <constraint firstItem="3KN-aa-eMo" firstAttribute="bottom" secondItem="07i-Zw-FWK" secondAttribute="bottom" constant="20" id="lwj-eo-ahh"/>
                             <constraint firstItem="8XK-LC-e99" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ygx-Do-mil" secondAttribute="trailing" constant="8" id="mGy-py-Em4"/>
@@ -256,10 +257,16 @@
                             <constraint firstItem="07i-Zw-FWK" firstAttribute="trailing" secondItem="8XK-LC-e99" secondAttribute="trailing" id="q9F-CS-ei2"/>
                             <constraint firstItem="8XK-LC-e99" firstAttribute="top" secondItem="3KN-aa-eMo" secondAttribute="top" constant="20" id="rJI-mE-d2m"/>
                             <constraint firstItem="3KN-aa-eMo" firstAttribute="trailing" secondItem="8XK-LC-e99" secondAttribute="trailing" constant="20" id="vNd-2M-nhs"/>
+                            <constraint firstItem="3KN-aa-eMo" firstAttribute="trailing" secondItem="OO2-ur-dkm" secondAttribute="trailing" constant="350" id="z9j-VC-oVB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3KN-aa-eMo"/>
                     </view>
                     <navigationItem key="navigationItem" id="mNs-Gz-TU5"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="07i-Zw-FWK" id="H2q-PI-EiA"/>
+                        <outlet property="countryLabel" destination="KW3-eL-7bW" id="hIl-N3-VNd"/>
+                        <outlet property="locationLabel" destination="8XK-LC-e99" id="6bg-ZK-iDI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="buV-iM-ZU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

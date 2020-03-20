@@ -8,25 +8,33 @@
 
 import UIKit
 
+
 class POIDetailViewController: UIViewController {
     
-  
-
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var cluesTextView: UITextView!
+    
+    var poi: POI?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateViews()
     }
     
+    private func updateViews() {
+        if let unwrappedPOI = poi {
+            print("should print poi")
+            print(unwrappedPOI)
+            locationLabel.text = unwrappedPOI.location
+            countryLabel.text = unwrappedPOI.country
+            var clueString: String = ""
+            for clue in unwrappedPOI.clues {
+                clueString.append(clue + "\n")
+            }
+            cluesTextView.text = clueString
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        }
     }
-    */
 
 }
