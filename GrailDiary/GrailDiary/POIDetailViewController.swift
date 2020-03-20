@@ -9,7 +9,7 @@
 import UIKit
 
 
-    
+var poi: POI?
 
 class POIDetailViewController: UIViewController {
     

@@ -31,7 +31,7 @@ class POIsTableViewController: UIViewController {
             else if segue.identifier == "ShowPOIDetailSegue" {
                     if let indexPath = POITableView.indexPathForSelectedRow,
                         let poiDetailVC = segue.destination as? POIDetailViewController {
-                        poiDetailVC.poi = poi[indexPath.row]
+                        poiDetailVC.poi = POI[indexPath.row]
                     }
                 }
             }
