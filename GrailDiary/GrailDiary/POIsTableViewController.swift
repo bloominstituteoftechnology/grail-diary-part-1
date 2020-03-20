@@ -26,12 +26,12 @@ class POIsTableViewController: UIViewController {
         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "AddPOIModalSegue" {
                 if let addPOIVC = segue.destination as? AddPOIViewController {
-                    addPOIVC.delegate = self
+                    addPOIVC.delegate = self as? AddPOIDelegate
                 }
             else if segue.identifier == "ShowPOIDetailSegue" {
                     if let indexPath = POITableView.indexPathForSelectedRow,
                         let poiDetailVC = segue.destination as? POIDetailViewController {
-                        poiDetailVC.poi = poi[indexPath.row]
+                        poiDetailVC.poi = newPOI[indexPath.row]
                     }
                 }
             }
