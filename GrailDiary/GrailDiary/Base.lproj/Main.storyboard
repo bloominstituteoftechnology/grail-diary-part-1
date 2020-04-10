@@ -63,6 +63,9 @@
                                                 <constraint firstItem="Ilv-DR-hNy" firstAttribute="leading" secondItem="0rq-FC-4Bh" secondAttribute="leadingMargin" id="sPI-ss-R4H"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ctz-pQ-pe8" kind="show" identifier="ShowPOIDetailSegue" id="59i-1i-WF7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -87,6 +90,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ak8-iU-iLW">
+            <objects>
+                <viewController id="ctz-pQ-pe8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VkJ-Sk-lIY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8Y-1Y-vSM">
+                                <rect key="frame" x="279" y="160" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJd-hV-H9g">
+                                <rect key="frame" x="332" y="189" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1O-Yn-e50">
+                                <rect key="frame" x="20" y="350" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yonge_dundas_square" translatesAutoresizingMaskIntoConstraints="NO" id="cOd-3B-pBV">
+                                <rect key="frame" x="20" y="160" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="9fH-Sn-CcX"/>
+                                    <constraint firstAttribute="width" secondItem="cOd-3B-pBV" secondAttribute="height" multiplier="1:1" id="tf4-H5-4tR"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Apb-hB-rE5">
+                                <rect key="frame" x="20" y="379" width="374" height="463"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QJd-hV-H9g" firstAttribute="trailing" secondItem="j8Y-1Y-vSM" secondAttribute="trailing" id="1Wq-Ye-0CV"/>
+                            <constraint firstItem="QJd-hV-H9g" firstAttribute="top" secondItem="j8Y-1Y-vSM" secondAttribute="bottom" constant="8" id="3ew-R3-4Hw"/>
+                            <constraint firstItem="j8Y-1Y-vSM" firstAttribute="top" secondItem="Y5x-0q-gaz" secondAttribute="top" constant="20" id="PIQ-1b-rfQ"/>
+                            <constraint firstItem="Apb-hB-rE5" firstAttribute="leading" secondItem="Y1O-Yn-e50" secondAttribute="leading" id="Ul9-SB-w3h"/>
+                            <constraint firstItem="j8Y-1Y-vSM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cOd-3B-pBV" secondAttribute="trailing" constant="8" id="VVw-Kq-T3q"/>
+                            <constraint firstItem="cOd-3B-pBV" firstAttribute="top" secondItem="j8Y-1Y-vSM" secondAttribute="top" id="Wtm-Ky-lBZ"/>
+                            <constraint firstItem="Y1O-Yn-e50" firstAttribute="top" secondItem="cOd-3B-pBV" secondAttribute="bottom" constant="40" id="YYR-PX-rX4"/>
+                            <constraint firstItem="cOd-3B-pBV" firstAttribute="leading" secondItem="Y5x-0q-gaz" secondAttribute="leading" constant="20" id="cV0-Nz-bYg"/>
+                            <constraint firstItem="Y5x-0q-gaz" firstAttribute="bottom" secondItem="Apb-hB-rE5" secondAttribute="bottom" constant="20" id="iqV-8Q-sTx"/>
+                            <constraint firstItem="QJd-hV-H9g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cOd-3B-pBV" secondAttribute="trailing" constant="8" id="kaS-ss-ASY"/>
+                            <constraint firstItem="Apb-hB-rE5" firstAttribute="top" secondItem="Y1O-Yn-e50" secondAttribute="bottom" constant="8" id="mYg-0O-gcP"/>
+                            <constraint firstItem="Apb-hB-rE5" firstAttribute="trailing" secondItem="QJd-hV-H9g" secondAttribute="trailing" id="nny-Nz-vEw"/>
+                            <constraint firstItem="Y1O-Yn-e50" firstAttribute="leading" secondItem="cOd-3B-pBV" secondAttribute="leading" id="vWE-Kx-wgX"/>
+                            <constraint firstItem="Y5x-0q-gaz" firstAttribute="trailing" secondItem="j8Y-1Y-vSM" secondAttribute="trailing" constant="20" id="zrb-Rk-NX0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y5x-0q-gaz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tcd-9k-k0r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rtH-Zt-TQK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906" y="467"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="FxK-Vu-9LW">
@@ -161,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXS-jP-2zC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1958" y="138"/>
+            <point key="canvasLocation" x="1907" y="-287"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4pb-CO-CS4">
@@ -182,4 +252,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="yonge_dundas_square" width="270" height="270"/>
+    </resources>
 </document>
