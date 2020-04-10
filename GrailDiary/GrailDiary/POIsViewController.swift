@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  POIsViewController.swift
 //  GrailDiary
 //
 //  Created by Aaron Peterson on 4/10/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class POIsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
