@@ -29,13 +29,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rEb-6X-0L0">
                                                     <rect key="frame" x="8" y="10" width="68.5" height="40.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTs-7T-Lbz">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTs-7T-Lbz">
                                                             <rect key="frame" x="0.0" y="0.0" width="68.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnu-e9-lZ3">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnu-e9-lZ3">
                                                             <rect key="frame" x="0.0" y="22.5" width="55" height="18"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <nil key="textColor"/>
@@ -121,7 +121,7 @@
                                     <constraint firstAttribute="width" secondItem="sNN-9B-vk9" secondAttribute="height" multiplier="15:8" id="ce0-2S-aWZ"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nnh-Oh-4Yu">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nnh-Oh-4Yu">
                                 <rect key="frame" x="20" y="309" width="374" height="161"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -138,6 +138,7 @@
                             <constraint firstItem="nnh-Oh-4Yu" firstAttribute="trailing" secondItem="xgi-Ak-Vtm" secondAttribute="trailing" id="A0N-5k-lDn"/>
                             <constraint firstItem="4tP-fu-i9V" firstAttribute="top" secondItem="sNN-9B-vk9" secondAttribute="bottom" constant="40" id="DxX-Zm-wib"/>
                             <constraint firstItem="xgi-Ak-Vtm" firstAttribute="top" secondItem="152-37-THn" secondAttribute="bottom" constant="8" id="HmR-ez-fD9"/>
+                            <constraint firstItem="nnh-Oh-4Yu" firstAttribute="leading" secondItem="4tP-fu-i9V" secondAttribute="leading" id="V2T-nc-Zfc"/>
                             <constraint firstItem="xgi-Ak-Vtm" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="152-37-THn" secondAttribute="trailing" id="XCK-Qx-eax"/>
                             <constraint firstItem="nnh-Oh-4Yu" firstAttribute="top" secondItem="4tP-fu-i9V" secondAttribute="bottom" constant="8" id="cDT-cL-dGw"/>
                             <constraint firstItem="xjg-pw-yg1" firstAttribute="trailing" secondItem="4tP-fu-i9V" secondAttribute="trailing" constant="350" id="cpM-44-fPD"/>
