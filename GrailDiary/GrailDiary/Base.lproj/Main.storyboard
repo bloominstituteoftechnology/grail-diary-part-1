@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Grail Diary-->
+        <scene sceneID="Vjl-Es-qm8">
+            <objects>
+                <viewController id="mmu-Q4-VUQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xHM-oA-nQo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vhs-b8-NOh">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Tc5-pV-aHg">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tc5-pV-aHg" id="ZwR-r3-8Wd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OxM-NF-OHM" firstAttribute="bottom" secondItem="vhs-b8-NOh" secondAttribute="bottom" id="2oV-kJ-XcT"/>
+                            <constraint firstItem="OxM-NF-OHM" firstAttribute="trailing" secondItem="vhs-b8-NOh" secondAttribute="trailing" id="Cb0-cg-3Yf"/>
+                            <constraint firstItem="vhs-b8-NOh" firstAttribute="leading" secondItem="OxM-NF-OHM" secondAttribute="leading" id="HFw-H7-Izj"/>
+                            <constraint firstItem="vhs-b8-NOh" firstAttribute="top" secondItem="OxM-NF-OHM" secondAttribute="top" id="fIu-lz-oPd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OxM-NF-OHM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Grail Diary" id="oMh-83-UvZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EGX-1f-tTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="744.64285714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eB2-3i-dMa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TvO-GD-EfC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="5n3-Bw-zVj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mmu-Q4-VUQ" kind="relationship" relationship="rootViewController" id="edk-rl-WLn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRF-dK-67c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="744.64285714285711"/>
+        </scene>
+    </scenes>
+</document>
