@@ -29,7 +29,7 @@ Please fork and clone this repository. Create a new Xcode project inside of the 
     * Bottom = `0`
 7. Set the Table View to show 1 prototype cell (select the Table View and look in the attributes inspector); set the prototype cell identifier to "POICell"
 8. Set the Table View to show 60 pt rows (row height in the Table View's size inspector)
-9. Drag 3 labels into the cell prototype
+9. Drag 3 ter labels into the cell prototype
 10. Give one a text value of `"Location"`, one `"Country"`, and the last one `"# of clues"`
 11. Change the text styles for the three labels to emphasize the location primarily
 12. Select the location and country labels and embed them in a vertical Stack View
