@@ -110,9 +110,8 @@
                                     <constraint firstAttribute="width" secondItem="S8N-NH-ZW9" secondAttribute="height" multiplier="1:1" id="wKK-m9-bbh"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DyP-Fo-s3G">
-                                <rect key="frame" x="20" y="283" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DyP-Fo-s3G">
+                                <rect key="frame" x="20" y="283" width="374" height="559"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -120,7 +119,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2M1-YC-ulC">
-                                <rect key="frame" x="20" y="254" width="44" height="21"/>
+                                <rect key="frame" x="20" y="254" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -130,12 +129,18 @@
                         <constraints>
                             <constraint firstItem="2M1-YC-ulC" firstAttribute="top" secondItem="S8N-NH-ZW9" secondAttribute="bottom" constant="40" id="29k-vI-cua"/>
                             <constraint firstItem="S8N-NH-ZW9" firstAttribute="leading" secondItem="xQM-d6-uym" secondAttribute="leading" constant="20" id="3tS-Xl-Yvd"/>
+                            <constraint firstItem="xQM-d6-uym" firstAttribute="bottom" secondItem="DyP-Fo-s3G" secondAttribute="bottom" constant="20" id="4Rd-pF-XWI"/>
                             <constraint firstItem="2M1-YC-ulC" firstAttribute="leading" secondItem="S8N-NH-ZW9" secondAttribute="leading" id="4Sl-YF-B5C"/>
+                            <constraint firstItem="DyP-Fo-s3G" firstAttribute="top" secondItem="2M1-YC-ulC" secondAttribute="bottom" constant="8" id="CTX-JT-OuI"/>
                             <constraint firstItem="3ND-cv-78e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="S8N-NH-ZW9" secondAttribute="trailing" constant="8" id="HBs-pU-N9d"/>
                             <constraint firstItem="3ND-cv-78e" firstAttribute="top" secondItem="S8N-NH-ZW9" secondAttribute="top" id="RtM-nC-af2"/>
+                            <constraint firstItem="DyP-Fo-s3G" firstAttribute="trailing" secondItem="RAB-ax-TSq" secondAttribute="trailing" id="U3G-hg-w6L"/>
                             <constraint firstItem="xQM-d6-uym" firstAttribute="trailing" secondItem="3ND-cv-78e" secondAttribute="trailing" constant="20" id="WcO-0A-Wow"/>
+                            <constraint firstItem="RAB-ax-TSq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="S8N-NH-ZW9" secondAttribute="trailing" constant="8" id="YOp-ap-Udl"/>
+                            <constraint firstItem="xQM-d6-uym" firstAttribute="trailing" secondItem="2M1-YC-ulC" secondAttribute="trailing" constant="20" id="axL-B2-sjJ"/>
                             <constraint firstItem="3ND-cv-78e" firstAttribute="top" secondItem="xQM-d6-uym" secondAttribute="top" constant="20" id="e8U-XM-OJd"/>
                             <constraint firstItem="RAB-ax-TSq" firstAttribute="trailing" secondItem="3ND-cv-78e" secondAttribute="trailing" id="gX9-VG-Ep3"/>
+                            <constraint firstItem="DyP-Fo-s3G" firstAttribute="leading" secondItem="2M1-YC-ulC" secondAttribute="leading" id="mj8-il-Nkw"/>
                             <constraint firstItem="RAB-ax-TSq" firstAttribute="top" secondItem="3ND-cv-78e" secondAttribute="bottom" constant="8" id="pSr-ke-10k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xQM-d6-uym"/>
