@@ -26,8 +26,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Zi6-yD-fzM">
-                                                    <rect key="frame" x="53" y="0.0" width="126" height="59"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Zi6-yD-fzM">
+                                                    <rect key="frame" x="20" y="-0.5" width="126" height="61"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rte-2e-vgT">
                                                             <rect key="frame" x="0.0" y="0.0" width="126" height="41"/>
@@ -36,21 +36,27 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frW-td-Dyo">
-                                                            <rect key="frame" x="0.0" y="41" width="55" height="18"/>
+                                                            <rect key="frame" x="0.0" y="43" width="55" height="18"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfR-jK-bCc">
-                                                    <rect key="frame" x="308" y="20" width="72" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfR-jK-bCc">
+                                                    <rect key="frame" x="322.5" y="20.5" width="71.5" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NfR-jK-bCc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Zi6-yD-fzM" secondAttribute="trailing" constant="8" id="06z-wE-H8z"/>
+                                                <constraint firstItem="Zi6-yD-fzM" firstAttribute="centerY" secondItem="b6I-wq-2XR" secondAttribute="centerY" id="1iC-oN-d27"/>
+                                                <constraint firstItem="Zi6-yD-fzM" firstAttribute="leading" secondItem="b6I-wq-2XR" secondAttribute="leadingMargin" id="EnD-sm-5WT"/>
+                                                <constraint firstItem="NfR-jK-bCc" firstAttribute="centerY" secondItem="b6I-wq-2XR" secondAttribute="centerY" id="XcN-mn-KAC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NfR-jK-bCc" secondAttribute="trailing" id="vfB-db-ecT"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -65,7 +71,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ULK-lC-gId"/>
+                    <navigationItem key="navigationItem" id="ULK-lC-gId">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oly-0t-C90"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
