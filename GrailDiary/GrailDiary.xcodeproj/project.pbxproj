@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE5308A524463AFE00C25283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5308A424463AFE00C25283 /* AppDelegate.swift */; };
+		BE5308A724463AFE00C25283 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5308A624463AFE00C25283 /* SceneDelegate.swift */; };
+		BE5308A924463AFE00C25283 /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5308A824463AFE00C25283 /* POIsTableViewController.swift */; };
+		BE5308AC24463AFE00C25283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5308AA24463AFE00C25283 /* Main.storyboard */; };
+		BE5308AE24463B0000C25283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5308AD24463B0000C25283 /* Assets.xcassets */; };
+		BE5308B124463B0000C25283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5308AF24463B0000C25283 /* LaunchScreen.storyboard */; };
+		BE5308BC24463B0000C25283 /* GrailDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5308BB24463B0000C25283 /* GrailDiaryTests.swift */; };
+		BE5308C724463B0000C25283 /* GrailDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5308C624463B0000C25283 /* GrailDiaryUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE5308B824463B0000C25283 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE53089924463AFE00C25283 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE5308A024463AFE00C25283;
+			remoteInfo = GrailDiary;
+		};
+		BE5308C324463B0000C25283 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE53089924463AFE00C25283 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE5308A024463AFE00C25283;
+			remoteInfo = GrailDiary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE5308A124463AFE00C25283 /* GrailDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrailDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5308A424463AFE00C25283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BE5308A624463AFE00C25283 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BE5308A824463AFE00C25283 /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
+		BE5308AB24463AFE00C25283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE5308AD24463B0000C25283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE5308B024463B0000C25283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BE5308B224463B0000C25283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE5308B724463B0000C25283 /* GrailDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrailDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5308BB24463B0000C25283 /* GrailDiaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrailDiaryTests.swift; sourceTree = "<group>"; };
+		BE5308BD24463B0000C25283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE5308C224463B0000C25283 /* GrailDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrailDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5308C624463B0000C25283 /* GrailDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrailDiaryUITests.swift; sourceTree = "<group>"; };
+		BE5308C824463B0000C25283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE53089E24463AFE00C25283 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5308B424463B0000C25283 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5308BF24463B0000C25283 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE53089824463AFE00C25283 = {
+			isa = PBXGroup;
+			children = (
+				BE5308A324463AFE00C25283 /* GrailDiary */,
+				BE5308BA24463B0000C25283 /* GrailDiaryTests */,
+				BE5308C524463B0000C25283 /* GrailDiaryUITests */,
+				BE5308A224463AFE00C25283 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE5308A224463AFE00C25283 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE5308A124463AFE00C25283 /* GrailDiary.app */,
+				BE5308B724463B0000C25283 /* GrailDiaryTests.xctest */,
+				BE5308C224463B0000C25283 /* GrailDiaryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE5308A324463AFE00C25283 /* GrailDiary */ = {
+			isa = PBXGroup;
+			children = (
+				BE5308A424463AFE00C25283 /* AppDelegate.swift */,
+				BE5308A624463AFE00C25283 /* SceneDelegate.swift */,
+				BE5308A824463AFE00C25283 /* POIsTableViewController.swift */,
+				BE5308AA24463AFE00C25283 /* Main.storyboard */,
+				BE5308AD24463B0000C25283 /* Assets.xcassets */,
+				BE5308AF24463B0000C25283 /* LaunchScreen.storyboard */,
+				BE5308B224463B0000C25283 /* Info.plist */,
+			);
+			path = GrailDiary;
+			sourceTree = "<group>";
+		};
+		BE5308BA24463B0000C25283 /* GrailDiaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE5308BB24463B0000C25283 /* GrailDiaryTests.swift */,
+				BE5308BD24463B0000C25283 /* Info.plist */,
+			);
+			path = GrailDiaryTests;
+			sourceTree = "<group>";
+		};
+		BE5308C524463B0000C25283 /* GrailDiaryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BE5308C624463B0000C25283 /* GrailDiaryUITests.swift */,
+				BE5308C824463B0000C25283 /* Info.plist */,
+			);
+			path = GrailDiaryUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE5308A024463AFE00C25283 /* GrailDiary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE5308CB24463B0000C25283 /* Build configuration list for PBXNativeTarget "GrailDiary" */;
+			buildPhases = (
+				BE53089D24463AFE00C25283 /* Sources */,
+				BE53089E24463AFE00C25283 /* Frameworks */,
+				BE53089F24463AFE00C25283 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GrailDiary;
+			productName = GrailDiary;
+			productReference = BE5308A124463AFE00C25283 /* GrailDiary.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE5308B624463B0000C25283 /* GrailDiaryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE5308CE24463B0000C25283 /* Build configuration list for PBXNativeTarget "GrailDiaryTests" */;
+			buildPhases = (
+				BE5308B324463B0000C25283 /* Sources */,
+				BE5308B424463B0000C25283 /* Frameworks */,
+				BE5308B524463B0000C25283 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE5308B924463B0000C25283 /* PBXTargetDependency */,
+			);
+			name = GrailDiaryTests;
+			productName = GrailDiaryTests;
+			productReference = BE5308B724463B0000C25283 /* GrailDiaryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE5308C124463B0000C25283 /* GrailDiaryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE5308D124463B0000C25283 /* Build configuration list for PBXNativeTarget "GrailDiaryUITests" */;
+			buildPhases = (
+				BE5308BE24463B0000C25283 /* Sources */,
+				BE5308BF24463B0000C25283 /* Frameworks */,
+				BE5308C024463B0000C25283 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE5308C424463B0000C25283 /* PBXTargetDependency */,
+			);
+			name = GrailDiaryUITests;
+			productName = GrailDiaryUITests;
+			productReference = BE5308C224463B0000C25283 /* GrailDiaryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE53089924463AFE00C25283 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Vincent Hoang";
+				TargetAttributes = {
+					BE5308A024463AFE00C25283 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					BE5308B624463B0000C25283 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = BE5308A024463AFE00C25283;
+					};
+					BE5308C124463B0000C25283 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = BE5308A024463AFE00C25283;
+					};
+				};
+			};
+			buildConfigurationList = BE53089C24463AFE00C25283 /* Build configuration list for PBXProject "GrailDiary" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE53089824463AFE00C25283;
+			productRefGroup = BE5308A224463AFE00C25283 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE5308A024463AFE00C25283 /* GrailDiary */,
+				BE5308B624463B0000C25283 /* GrailDiaryTests */,
+				BE5308C124463B0000C25283 /* GrailDiaryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE53089F24463AFE00C25283 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5308B124463B0000C25283 /* LaunchScreen.storyboard in Resources */,
+				BE5308AE24463B0000C25283 /* Assets.xcassets in Resources */,
+				BE5308AC24463AFE00C25283 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5308B524463B0000C25283 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5308C024463B0000C25283 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE53089D24463AFE00C25283 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5308A924463AFE00C25283 /* POIsTableViewController.swift in Sources */,
+				BE5308A524463AFE00C25283 /* AppDelegate.swift in Sources */,
+				BE5308A724463AFE00C25283 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5308B324463B0000C25283 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5308BC24463B0000C25283 /* GrailDiaryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5308BE24463B0000C25283 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5308C724463B0000C25283 /* GrailDiaryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE5308B924463B0000C25283 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE5308A024463AFE00C25283 /* GrailDiary */;
+			targetProxy = BE5308B824463B0000C25283 /* PBXContainerItemProxy */;
+		};
+		BE5308C424463B0000C25283 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE5308A024463AFE00C25283 /* GrailDiary */;
+			targetProxy = BE5308C324463B0000C25283 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE5308AA24463AFE00C25283 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE5308AB24463AFE00C25283 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BE5308AF24463B0000C25283 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE5308B024463B0000C25283 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE5308C924463B0000C25283 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BE5308CA24463B0000C25283 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE5308CC24463B0000C25283 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GrailDiary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = system787.GrailDiary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE5308CD24463B0000C25283 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GrailDiary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = system787.GrailDiary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BE5308CF24463B0000C25283 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GrailDiaryTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = system787.GrailDiaryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GrailDiary.app/GrailDiary";
+			};
+			name = Debug;
+		};
+		BE5308D024463B0000C25283 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GrailDiaryTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = system787.GrailDiaryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GrailDiary.app/GrailDiary";
+			};
+			name = Release;
+		};
+		BE5308D224463B0000C25283 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GrailDiaryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = system787.GrailDiaryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GrailDiary;
+			};
+			name = Debug;
+		};
+		BE5308D324463B0000C25283 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GrailDiaryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = system787.GrailDiaryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GrailDiary;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE53089C24463AFE00C25283 /* Build configuration list for PBXProject "GrailDiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE5308C924463B0000C25283 /* Debug */,
+				BE5308CA24463B0000C25283 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE5308CB24463B0000C25283 /* Build configuration list for PBXNativeTarget "GrailDiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE5308CC24463B0000C25283 /* Debug */,
+				BE5308CD24463B0000C25283 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE5308CE24463B0000C25283 /* Build configuration list for PBXNativeTarget "GrailDiaryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE5308CF24463B0000C25283 /* Debug */,
+				BE5308D024463B0000C25283 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE5308D124463B0000C25283 /* Build configuration list for PBXNativeTarget "GrailDiaryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE5308D224463B0000C25283 /* Debug */,
+				BE5308D324463B0000C25283 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE53089924463AFE00C25283 /* Project object */;
+}
