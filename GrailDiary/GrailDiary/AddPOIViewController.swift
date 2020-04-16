@@ -13,25 +13,18 @@ protocol AddPOIDelegate {
 }
 
 class AddPOIViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var clue1TextField: UITextField!
     @IBOutlet weak var clue2TextField: UITextField!
     @IBOutlet weak var clue3TextField: UITextField!
-    
-    @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
+
+    @IBAction func cancelTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        
     }
     
-    @IBAction func saveTapped(_ sender: UIBarButtonItem) {
+    @IBAction func saveTapped(_ sender: Any) {
         guard let location = locationTextField.text,
             let country = countryTextField.text,
             !location.isEmpty,

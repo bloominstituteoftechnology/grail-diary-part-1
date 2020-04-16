@@ -59,7 +59,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="cluesTextView" destination="611-RW-pH7" id="4An-w8-Rm2"/>
+                                            <outlet property="cluesCountLabel" destination="611-RW-pH7" id="FFH-u8-BC0"/>
                                             <outlet property="countryLabel" destination="UCI-TS-wO6" id="wNW-8X-3bY"/>
                                             <outlet property="locationLabel" destination="jmV-fK-Cc3" id="z1S-f4-ISl"/>
                                             <segue destination="fE3-5p-eem" kind="show" identifier="ShowPOIDetailSegue" id="JGb-hH-bWG"/>
@@ -158,9 +158,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Et1-gx-hbP"/>
                     <connections>
-                        <outlet property="cluesTextView" destination="Aue-RB-KZv" id="UhZ-JL-zYM"/>
-                        <outlet property="countryLabel" destination="V43-lF-yr1" id="n22-m1-iZp"/>
-                        <outlet property="locationLabel" destination="5h3-By-BnU" id="Yvr-jS-XTd"/>
+                        <outlet property="cluesTextView" destination="Aue-RB-KZv" id="c6A-Q0-1lw"/>
+                        <outlet property="countryLabel" destination="V43-lF-yr1" id="CzC-d4-AUC"/>
+                        <outlet property="locationLabel" destination="5h3-By-BnU" id="yDi-kq-a83"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQT-VR-ubC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -189,7 +189,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="newPOI:" destination="wiY-QR-CS4" eventType="editingDidEnd" id="dOi-Dg-cet"/>
                                             <outlet property="delegate" destination="wiY-QR-CS4" id="gDg-HG-04Q"/>
                                         </connections>
                                     </textField>
@@ -198,7 +197,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="countryTextField:" destination="wiY-QR-CS4" eventType="editingDidEnd" id="UlC-dl-z51"/>
                                             <outlet property="delegate" destination="wiY-QR-CS4" id="r6j-Gz-Cko"/>
                                         </connections>
                                     </textField>
@@ -239,13 +237,13 @@
                                 <items>
                                     <barButtonItem title="Cancel" id="HKN-6G-DJN">
                                         <connections>
-                                            <action selector="cancelTapped:" destination="wiY-QR-CS4" id="8ZF-9P-9pb"/>
+                                            <action selector="cancelTapped:" destination="wiY-QR-CS4" id="XgR-Zm-5ph"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="cbD-iV-Mgd"/>
                                     <barButtonItem title="Save" id="G5N-5f-IVJ">
                                         <connections>
-                                            <action selector="saveTapped:" destination="wiY-QR-CS4" id="aiZ-Ie-bqI"/>
+                                            <action selector="saveTapped:" destination="wiY-QR-CS4" id="cJT-ey-ckh"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -263,11 +261,11 @@
                         <viewLayoutGuide key="safeArea" id="Dcn-nM-0RY"/>
                     </view>
                     <connections>
-                        <outlet property="clue1TextField" destination="rPk-6m-Gxn" id="xVg-06-2qc"/>
-                        <outlet property="clue2TextField" destination="fmG-DK-yQm" id="Ke9-tz-F0z"/>
-                        <outlet property="clue3TextField" destination="ZKH-oX-nwa" id="d4R-6X-RHJ"/>
-                        <outlet property="countryTextField" destination="dmZ-WQ-ZVj" id="DHS-1a-g9s"/>
-                        <outlet property="locationTextField" destination="5yf-p1-9gH" id="gtZ-oC-gyj"/>
+                        <outlet property="clue1TextField" destination="rPk-6m-Gxn" id="SDD-UD-FJZ"/>
+                        <outlet property="clue2TextField" destination="fmG-DK-yQm" id="oVy-WY-sfT"/>
+                        <outlet property="clue3TextField" destination="ZKH-oX-nwa" id="bQd-2h-nU3"/>
+                        <outlet property="countryTextField" destination="dmZ-WQ-ZVj" id="2Dv-JA-Tpy"/>
+                        <outlet property="locationTextField" destination="5yf-p1-9gH" id="1ur-JM-LMg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2x8-V2-AL6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
