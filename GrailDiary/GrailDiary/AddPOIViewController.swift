@@ -60,8 +60,7 @@ class AddPOIViewController: UIViewController {
     var delegate: AddPOIDelegate?
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let unwrappedText = textField.text {
-            
+        if textField.text != nil {
             switch textField {
             case locationTextField:
                 locationTextField.becomeFirstResponder()

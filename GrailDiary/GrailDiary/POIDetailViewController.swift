@@ -16,6 +16,8 @@ class POIDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    var poi: POI
+    
 
     /*
     // MARK: - Navigation
