@@ -36,6 +36,7 @@ class AddPOIViewController: UIViewController {
             let country = countryTextField.text,
             !location.isEmpty,
             !country.isEmpty else { return }
+        
         var newPOI = POI(location: location, country: country, clues: [])
         
         if let clue1 = clue1TextField.text,
@@ -59,6 +60,7 @@ class AddPOIViewController: UIViewController {
     
     var delegate: AddPOIDelegate?
     
+    /*
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField.text != nil {
             switch textField {
@@ -78,17 +80,11 @@ class AddPOIViewController: UIViewController {
         }
         return false
     }
-}
-    
-    /*
-    // MARK: - Navigation
-     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
     */
+}
 
+/*
 extension AddPOIViewController: UITextFieldDelegate {
     // It conforms?
 }
+ */
