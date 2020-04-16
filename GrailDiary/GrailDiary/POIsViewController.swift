@@ -9,6 +9,10 @@
 import UIKit
 
 class POIsViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var POIs: [POI] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,5 +20,17 @@ class POIsViewController: UIViewController {
     }
 
 
+}
+
+extension POIsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return POIs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
 }
 

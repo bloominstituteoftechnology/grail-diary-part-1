@@ -86,6 +86,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="0cq-wD-EBR" id="fIo-jD-iYF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,6 +231,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v85-i9-ScW"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1Textfield" destination="JFA-td-oMu" id="XcC-VE-bmi"/>
+                        <outlet property="clue2Textfield" destination="k0r-gX-sF5" id="hu0-1y-tIu"/>
+                        <outlet property="clue3Textfield" destination="yIg-jl-cKW" id="K7O-KZ-SD0"/>
+                        <outlet property="countryTextfield" destination="jnM-cW-TlD" id="LR5-aM-5zN"/>
+                        <outlet property="locationTextfield" destination="Hxj-NQ-R0f" id="fUx-1A-fyA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXS-jP-2zC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

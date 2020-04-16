@@ -8,8 +8,20 @@
 
 import UIKit
 
+protocol AddPOIDelegate {
+    func poiWasAdded(_poi: POI)
+}
+
 class AddPOIViewController: UIViewController {
 
+    @IBOutlet weak var locationTextfield: UITextField!
+    @IBOutlet weak var countryTextfield: UITextField!
+    @IBOutlet weak var clue1Textfield: UITextField!
+    @IBOutlet weak var clue2Textfield: UITextField!
+    @IBOutlet weak var clue3Textfield: UITextField!
+    
+    var delegate: AddPOIDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
