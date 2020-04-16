@@ -13,6 +13,10 @@
 		AD3C73A82440D56B00F89D8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD3C73A62440D56B00F89D8B /* Main.storyboard */; };
 		AD3C73AA2440D56C00F89D8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3C73A92440D56C00F89D8B /* Assets.xcassets */; };
 		AD3C73AD2440D56C00F89D8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD3C73AB2440D56C00F89D8B /* LaunchScreen.storyboard */; };
+		ADE83ABD2448B31C00F98B31 /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE83ABC2448B31C00F98B31 /* AddPOIViewController.swift */; };
+		ADE83ABF2448B37E00F98B31 /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE83ABE2448B37E00F98B31 /* POIDetailViewController.swift */; };
+		ADE83AC12448B3CA00F98B31 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE83AC02448B3CA00F98B31 /* POITableViewCell.swift */; };
+		ADE83AC32448B3DE00F98B31 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE83AC22448B3DE00F98B31 /* POI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		AD3C73A92440D56C00F89D8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD3C73AC2440D56C00F89D8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD3C73AE2440D56C00F89D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADE83ABC2448B31C00F98B31 /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		ADE83ABE2448B37E00F98B31 /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		ADE83AC02448B3CA00F98B31 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		ADE83AC22448B3DE00F98B31 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				AD3C73A92440D56C00F89D8B /* Assets.xcassets */,
 				AD3C73AB2440D56C00F89D8B /* LaunchScreen.storyboard */,
 				AD3C73AE2440D56C00F89D8B /* Info.plist */,
+				ADE83ABC2448B31C00F98B31 /* AddPOIViewController.swift */,
+				ADE83ABE2448B37E00F98B31 /* POIDetailViewController.swift */,
+				ADE83AC02448B3CA00F98B31 /* POITableViewCell.swift */,
+				ADE83AC22448B3DE00F98B31 /* POI.swift */,
 			);
 			path = GrailDiary;
 			sourceTree = "<group>";
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADE83AC32448B3DE00F98B31 /* POI.swift in Sources */,
 				AD3C73A52440D56B00F89D8B /* POIsViewController.swift in Sources */,
+				ADE83ABD2448B31C00F98B31 /* AddPOIViewController.swift in Sources */,
 				AD3C73A12440D56B00F89D8B /* AppDelegate.swift in Sources */,
 				AD3C73A32440D56B00F89D8B /* SceneDelegate.swift in Sources */,
+				ADE83AC12448B3CA00F98B31 /* POITableViewCell.swift in Sources */,
+				ADE83ABF2448B37E00F98B31 /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
