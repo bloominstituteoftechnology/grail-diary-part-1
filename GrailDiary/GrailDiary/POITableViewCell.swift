@@ -24,7 +24,7 @@ class POITableViewCell: UITableViewCell {
         
         locationLabel.text = poi.location
         countryLabel.text = poi.country
-        cluesTextView.text = "\(poi.clues.count) clues"
+        cluesCountLabel.text = "\(poi.clues.count) clues"
     }
     
     var poi: POI? {
@@ -35,7 +35,7 @@ class POITableViewCell: UITableViewCell {
     
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
-    @IBOutlet weak var cluesTextView: UILabel!
+    @IBOutlet weak var cluesCountLabel: UILabel!
     
 
 }
