@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="60" id="rsc-ne-cIe">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="60" id="rsc-ne-cIe" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rsc-ne-cIe" id="pU6-W9-CSp">
@@ -60,10 +60,16 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesLabel" destination="Ghp-PQ-naJ" id="A7o-hW-PhR"/>
+                                            <outlet property="countryLabel" destination="2eG-2Y-w9s" id="tRV-1r-Dx1"/>
+                                            <outlet property="locationLabel" destination="4ud-Ib-0sX" id="yrS-eL-zg5"/>
                                             <segue destination="2yv-6Y-jth" kind="show" identifier="ShowPOIDetailSegue" id="4wg-69-TrD"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="P6F-eQ-JZ0"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -82,15 +88,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="POITableView" destination="ols-ai-dIK" id="BO5-aO-Sfc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="838" y="140"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="pcs-2y-NxW">
             <objects>
-                <viewController id="2yv-6Y-jth" sceneMemberID="viewController">
+                <viewController id="2yv-6Y-jth" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qW1-DD-xTh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,6 +158,11 @@
                         <viewLayoutGuide key="safeArea" id="O6k-Ot-ZR4"/>
                     </view>
                     <navigationItem key="navigationItem" id="L2O-rF-VLE"/>
+                    <connections>
+                        <outlet property="cluesTextField" destination="Fab-Y8-YM6" id="mLJ-3O-Q5I"/>
+                        <outlet property="countryLabel" destination="Ujv-yp-0FN" id="NgU-a7-VdW"/>
+                        <outlet property="locationLabel" destination="JsS-ji-XFa" id="GpY-zz-4KT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F43-pL-29A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

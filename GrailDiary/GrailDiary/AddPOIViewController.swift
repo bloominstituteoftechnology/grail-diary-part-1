@@ -16,12 +16,6 @@ class AddPOIViewController: UIViewController {
 
     var delegate: AddPOIDelegate?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var clue1TextField: UITextField!
