@@ -2,15 +2,15 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Ee-eF-11J">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--AddPOI View Controller-->
         <scene sceneID="2bx-32-7RD">
             <objects>
-                <viewController id="bxt-4g-vuv" sceneMemberID="viewController">
+                <viewController id="bxt-4g-vuv" customClass="AddPOIViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fFs-T9-pXr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,11 +28,17 @@
                                         <rect key="frame" x="0.0" y="57" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bxt-4g-vuv" id="2TB-LB-7rI"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aah-P7-TAk">
                                         <rect key="frame" x="0.0" y="107" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bxt-4g-vuv" id="nMJ-Fq-miV"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD7-Mo-rO1">
                                         <rect key="frame" x="0.0" y="157" width="374" height="20.5"/>
@@ -44,25 +50,42 @@
                                         <rect key="frame" x="0.0" y="193.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bxt-4g-vuv" id="mIH-TQ-eL6"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9f0-dG-N4y">
                                         <rect key="frame" x="0.0" y="243.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bxt-4g-vuv" id="5pM-rj-ZkO"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m1z-jN-vZW">
                                         <rect key="frame" x="0.0" y="293.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bxt-4g-vuv" id="ZxK-BC-QLX"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTq-MD-s1E">
                                 <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="daI-A8-8lC"/>
+                                    <barButtonItem systemItem="cancel" id="daI-A8-8lC">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="bxt-4g-vuv" id="GPh-hx-V3h"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="puv-mU-LPd"/>
-                                    <barButtonItem systemItem="save" id="Se1-sL-kNv"/>
+                                    <barButtonItem systemItem="save" id="Se1-sL-kNv">
+                                        <connections>
+                                            <action selector="saveTapped:" destination="bxt-4g-vuv" id="SGf-PE-IQK"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -78,6 +101,13 @@
                         <viewLayoutGuide key="safeArea" id="Wzd-9T-2eH"/>
                     </view>
                     <navigationItem key="navigationItem" id="nMJ-aY-F4d"/>
+                    <connections>
+                        <outlet property="countryTextField" destination="aah-P7-TAk" id="Ghh-Zj-UCn"/>
+                        <outlet property="firstClue" destination="wee-6S-g7B" id="SOt-tb-VkB"/>
+                        <outlet property="locationTextField" destination="L3T-c2-efa" id="wdv-Wb-iBq"/>
+                        <outlet property="secondClue" destination="9f0-dG-N4y" id="G4t-uz-UYg"/>
+                        <outlet property="thirdClue" destination="m1z-jN-vZW" id="eRM-Tg-8Md"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="InL-WD-xap" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,7 +116,7 @@
         <!--Grail Diary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Grail Diary" customClass="ViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Grail Diary" customClass="POIsTableViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,7 +126,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="RWE-4K-ydA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" rowHeight="60" id="RWE-4K-ydA" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RWE-4K-ydA" id="pA1-88-MbJ">
@@ -121,8 +151,8 @@
                                                     </subviews>
                                                     <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZc-9d-Owa">
-                                                    <rect key="frame" x="309" y="20" width="75" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZc-9d-Owa">
+                                                    <rect key="frame" x="309" y="20" width="75" height="20"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="# of clues">
                                                             <attributes>
@@ -134,17 +164,27 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="UZc-9d-Owa" firstAttribute="top" secondItem="pA1-88-MbJ" secondAttribute="topMargin" constant="9" id="2dR-0r-gNV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="UZc-9d-Owa" secondAttribute="trailing" constant="22" id="5eo-a9-lhs"/>
                                                 <constraint firstItem="fQr-Uh-anI" firstAttribute="top" secondItem="pA1-88-MbJ" secondAttribute="topMargin" constant="-7" id="On9-kS-YEX"/>
                                                 <constraint firstItem="UZc-9d-Owa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fQr-Uh-anI" secondAttribute="trailing" constant="8" id="caT-V8-EJX"/>
                                                 <constraint firstItem="fQr-Uh-anI" firstAttribute="leading" secondItem="pA1-88-MbJ" secondAttribute="leadingMargin" constant="17" id="ylA-nr-vzl"/>
+                                                <constraint firstItem="UZc-9d-Owa" firstAttribute="centerY" secondItem="pA1-88-MbJ" secondAttribute="centerY" id="za2-2I-MRk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="y0k-rw-Rew" kind="show" identifier="ShoePOIDetailSegue" id="gju-cE-Ono"/>
+                                            <outlet property="cluesCountLabel" destination="UZc-9d-Owa" id="WEz-R7-9mY"/>
+                                            <outlet property="countryLabel" destination="Xc7-XY-AAX" id="aLy-F7-DNf"/>
+                                            <outlet property="locationLabel" destination="9g0-uV-6f2" id="b1D-0J-VmQ"/>
+                                            <segue destination="y0k-rw-Rew" kind="show" identifier="ShowPOIDetailSegue" id="gju-cE-Ono"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Trv-6L-iHs"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="NtX-ba-2LY"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -159,10 +199,13 @@
                     <navigationItem key="navigationItem" title="Grail Diary" id="wyF-Lv-3cc">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="YzZ-k3-cLP">
                             <connections>
-                                <segue destination="bxt-4g-vuv" kind="presentation" identifier="ShowPOIDetailSegue" id="D5T-8y-aKb"/>
+                                <segue destination="bxt-4g-vuv" kind="presentation" identifier="AddPOIModalSegue" id="D5T-8y-aKb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="poiTableView" destination="Qw8-pk-0wP" id="Tyc-Bl-S57"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,10 +229,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="1iv-LW-Qkn">
             <objects>
-                <viewController id="y0k-rw-Rew" sceneMemberID="viewController">
+                <viewController id="y0k-rw-Rew" customClass="POIDetailViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oNu-8D-6rR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,6 +291,11 @@
                         <viewLayoutGuide key="safeArea" id="8VR-Rm-rSs"/>
                     </view>
                     <navigationItem key="navigationItem" id="zXH-7o-a8i"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="kbs-fR-jdG" id="aoF-sw-M3d"/>
+                        <outlet property="countryLabel" destination="e6B-w8-Pp8" id="hME-xY-cow"/>
+                        <outlet property="locationLabel" destination="6oV-km-hRB" id="Kf9-Cq-w43"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inb-tv-Mhi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
