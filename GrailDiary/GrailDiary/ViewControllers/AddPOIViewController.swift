@@ -16,6 +16,8 @@ protocol AddPOIDelegate {
 
 class AddPOIViewController: UIViewController {
     
+    @IBOutlet weak var buttonTest: UIButton!
+    
     var delegate: AddPOIDelegate?
     
     // Name & Location TextFields
@@ -67,5 +69,33 @@ class AddPOIViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+}
 
+
+extension AddPOIViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if let location = locationTextField.text {
+            locationTextField.text = location
+        }
+        
+        if let country = countryTextField.text {
+            countryTextField.text = country
+        }
+        
+        if let textField = textField.text {
+            switch textField {
+            case clue1TextField.text:
+                return clue1TextField.becomeFirstResponder()
+            case clue2TextField.text:
+                return clue2TextField.becomeFirstResponder()
+            case clue3TextField.text:
+                return clue3TextField.becomeFirstResponder()
+            default:
+                break
+            }
+        }
+        return false
+    }
 }

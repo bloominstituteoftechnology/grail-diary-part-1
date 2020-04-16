@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@IBDesignable
 class POIDetailViewController: UIViewController {
     
     @IBOutlet weak var locationLabel: UILabel!
@@ -16,33 +16,27 @@ class POIDetailViewController: UIViewController {
     
     @IBOutlet weak var cluesTextView: UITextView!
     
-    private func updateViews() {
-        
-        guard let location = locationLabel.text,
-                 let country = countryLabel.text else { return }
-             
-             locationLabel.text = location
-             countryLabel.text = country
-    }
-
-
-
-
+    var poi: POI?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateViews()
+    }
+    
+    private func updateViews() {
         
-       
+        guard let poi = poi else { return }
+        
+        locationLabel.text = poi.location
+        countryLabel.text = poi.country
+        
+        var cluesText: String = ""
+        
+        for clues in poi.clues {
+            
+            cluesText += "\(clues)"
+        }
+        
+        cluesTextView.text = cluesText
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

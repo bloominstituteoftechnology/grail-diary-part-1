@@ -7,19 +7,15 @@
 //
 
 import UIKit
-
+@IBDesignable
 class POIsTableViewController: UIViewController {
- 
     
-    
+    // Table View Outlet
     @IBOutlet weak var tableView: UITableView!
     
     
+    var pois: [POI] = [POI(location: "Fiji", country: "Fiji????", clues: ["He Was There", "It Was There"])]
     
-    
-    
-    var pois: [POI] = [POI(location: "Fiji", country: "Fiji?", clues: ["He Was There", "It Was There"])]
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,27 +26,27 @@ class POIsTableViewController: UIViewController {
 
     
     // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "AddPOIModalSegue" {
-                   
-                   let addPOIVC = segue.destination as? AddPOIViewController
-                   
-                   // Tell the delegator (NewFriendVC) that the table view controller will be it's delegate
-                   
-                   addPOIVC?.delegate = self
+            
+            let addPOIVC = segue.destination as? AddPOIViewController
+            
+            // Tell the delegator (NewFriendVC) that the table view controller will be it's delegate
+            
+            addPOIVC?.delegate = self
             
         } else if segue.identifier == "ShowPOIDetailSegue" {
             
-            guard let 
-            
             let detailPOIVC = segue.destination as? POIDetailViewController
             
-            detailPOIVC.delegate = self
-            
-        
-        
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let poi = pois[indexPath.row]
+                
+                detailPOIVC?.poi = poi
+                	
+            }
         }
     }
 }
@@ -69,7 +65,7 @@ extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
         cell.locationLabel.text = poi.location
         cell.countryLabel.text = poi.country
         cell.numberOfCluesLabel.text = "\(poi.clues.count) clues"
-    
+        
         return cell
     }
 }
@@ -78,6 +74,6 @@ extension POIsTableViewController: AddPOIDelegate {
         
         pois.append(poi)
         tableView.reloadData()
-
+        
     }
 }
