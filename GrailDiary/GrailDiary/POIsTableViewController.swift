@@ -10,11 +10,53 @@ import UIKit
 
 class POIsTableViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var POIsTableView: UITableView!
+    
+    var points: [POI] = [
+        POI(location: "Banff", country: "Canada", clues: ["Mountains", "Fairmont Hotel", "Cascade Mountain"])
+       ]
+    
+    
+}  // class end bracket
+
+
+extension POIsTableViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
     }
-
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
+    
 }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  //  override func viewDidLoad() {
+    //    super.viewDidLoad()
+        // Do any additional setup after loading the view.
+ //   }
+
+
+
 
