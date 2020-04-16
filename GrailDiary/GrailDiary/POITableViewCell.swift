@@ -17,12 +17,14 @@ class POITableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     private func updateViews() {
         guard let poi = self.poi else { return }
+        
+        locationLabel.text = poi.location
+        countryLabel.text = poi.country
+        cluesTextView.text = "\(poi.clues.count) clues"
     }
     
     var poi: POI? {
@@ -30,5 +32,10 @@ class POITableViewCell: UITableViewCell {
             self.updateViews()
         }
     }
+    
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var cluesTextView: UILabel!
+    
 
 }
