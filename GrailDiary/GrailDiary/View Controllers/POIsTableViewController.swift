@@ -19,9 +19,7 @@ class POIsTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        // 11 Done?
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -30,7 +28,7 @@ class POIsTableViewController: UIViewController {
         
         if segue.identifier == "AddPOIModalSegue" {
             guard let addPOIVC = segue.destination as? AddPOIViewController else {return}
-            // sets up the TVC as the delegate or employee of the add friend view controller
+
             addPOIVC.delegate = self
         }
         
@@ -39,20 +37,14 @@ class POIsTableViewController: UIViewController {
             
             if let indexPath = tableView.indexPathForSelectedRow {
                 let poi = poiArray[indexPath.row]
-                // will call updateViews because of didSet
                 detailVC.poi = poi
             }
 
         }
-        
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
 
 
 }
-
-        //10. NOT DONE NEEDS tableviewcell file first
 extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,8 +60,6 @@ extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
 }
-
-// 22-24
 extension POIsTableViewController: AddPOIDelegate {
     func poiWasAdded(poi: POI) {
         poiArray.append(poi)
