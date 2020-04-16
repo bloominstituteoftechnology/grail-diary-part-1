@@ -20,5 +20,15 @@ class POITableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    private func updateViews() {
+        guard let poi = self.poi else { return }
+    }
+    
+    var poi: POI? {
+        didSet {
+            self.updateViews()
+        }
+    }
 
 }

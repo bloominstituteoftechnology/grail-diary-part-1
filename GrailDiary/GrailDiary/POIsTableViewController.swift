@@ -9,12 +9,27 @@
 import UIKit
 
 class POIsTableViewController: UIViewController {
+    
+    var poi: [POI] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBOutlet weak var tableView: UITableView!
 }
 
+extension POIsTableViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return poi.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
+        let newPOI = poi[indexPath.row]
+        cell.poi = newPOI
+        return cell
+    }
+    
+    
+}
