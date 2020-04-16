@@ -22,21 +22,40 @@ class AddPOIViewController: UIViewController {
     
     var delegate: AddPOIDelegate?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveTapped(_ sender: UIBarButtonItem) {
+        guard let location = locationTextfield.text, let country = countryTextfield.text else {
+            return
+        }
+        
+        var poi = POI(location: location, country: country, clues: [])
+        
+        if let clue1 = clue1Textfield.text {
+            poi.clues.append(clue1)
+        }
+        
+        if let clue2 = clue1Textfield.text {
+            poi.clues.append(clue2)
+        }
+        
+        if let clue3 = clue1Textfield.text {
+            poi.clues.append(clue3)
+        }
+        
+        delegate?.poiWasAdded(_poi: poi)
     }
-    */
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+}
 
+extension AddPOIViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
 }
