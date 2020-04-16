@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B42FFD342448DA00001999BE /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42FFD332448DA00001999BE /* AddPOIViewController.swift */; };
+		B42FFD362448DA22001999BE /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42FFD352448DA22001999BE /* POIDetailViewController.swift */; };
+		B42FFD382448DA46001999BE /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42FFD372448DA46001999BE /* POITableViewCell.swift */; };
+		B42FFD3B2448DA75001999BE /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42FFD3A2448DA75001999BE /* POI.swift */; };
+		B46A211224490211004F925B /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46A211124490211004F925B /* POIsTableViewController.swift */; };
 		B4939E3324464175000C25F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4939E3224464175000C25F8 /* AppDelegate.swift */; };
 		B4939E3524464175000C25F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4939E3424464175000C25F8 /* SceneDelegate.swift */; };
-		B4939E3724464175000C25F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4939E3624464175000C25F8 /* ViewController.swift */; };
 		B4939E3A24464175000C25F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4939E3824464175000C25F8 /* Main.storyboard */; };
 		B4939E3C24464178000C25F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4939E3B24464178000C25F8 /* Assets.xcassets */; };
 		B4939E3F24464178000C25F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4939E3D24464178000C25F8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B42FFD332448DA00001999BE /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		B42FFD352448DA22001999BE /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		B42FFD372448DA46001999BE /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		B42FFD3A2448DA75001999BE /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
+		B46A211124490211004F925B /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
 		B4939E2F24464175000C25F8 /* GrailDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrailDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4939E3224464175000C25F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4939E3424464175000C25F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B4939E3624464175000C25F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4939E3924464175000C25F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4939E3B24464178000C25F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4939E3E24464178000C25F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +45,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B42FFD312448D999001999BE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B4939E3224464175000C25F8 /* AppDelegate.swift */,
+				B4939E3424464175000C25F8 /* SceneDelegate.swift */,
+				B4939E3B24464178000C25F8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B42FFD322448D9BA001999BE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B4939E3824464175000C25F8 /* Main.storyboard */,
+				B4939E3D24464178000C25F8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B42FFD392448DA57001999BE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B46A211124490211004F925B /* POIsTableViewController.swift */,
+				B42FFD332448DA00001999BE /* AddPOIViewController.swift */,
+				B42FFD352448DA22001999BE /* POIDetailViewController.swift */,
+				B42FFD3C2448DA86001999BE /* Model */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B42FFD3C2448DA86001999BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B42FFD3A2448DA75001999BE /* POI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B42FFD3F2448EC12001999BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B42FFD322448D9BA001999BE /* Storyboards */,
+				B42FFD372448DA46001999BE /* POITableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B42FFD402448EC68001999BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B42FFD412448EC7A001999BE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B42FFD432448ED31001999BE /* Model Controllers */,
+				B42FFD392448DA57001999BE /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B42FFD432448ED31001999BE /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
 		B4939E2624464175000C25F8 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +134,11 @@
 		B4939E3124464175000C25F8 /* GrailDiary */ = {
 			isa = PBXGroup;
 			children = (
-				B4939E3224464175000C25F8 /* AppDelegate.swift */,
-				B4939E3424464175000C25F8 /* SceneDelegate.swift */,
-				B4939E3624464175000C25F8 /* ViewController.swift */,
-				B4939E3824464175000C25F8 /* Main.storyboard */,
-				B4939E3B24464178000C25F8 /* Assets.xcassets */,
-				B4939E3D24464178000C25F8 /* LaunchScreen.storyboard */,
 				B4939E4024464178000C25F8 /* Info.plist */,
+				B42FFD402448EC68001999BE /* Models */,
+				B42FFD3F2448EC12001999BE /* Views */,
+				B42FFD412448EC7A001999BE /* Controllers */,
+				B42FFD312448D999001999BE /* Resources */,
 			);
 			path = GrailDiary;
 			sourceTree = "<group>";
@@ -138,9 +214,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4939E3724464175000C25F8 /* ViewController.swift in Sources */,
 				B4939E3324464175000C25F8 /* AppDelegate.swift in Sources */,
+				B42FFD342448DA00001999BE /* AddPOIViewController.swift in Sources */,
+				B42FFD362448DA22001999BE /* POIDetailViewController.swift in Sources */,
 				B4939E3524464175000C25F8 /* SceneDelegate.swift in Sources */,
+				B46A211224490211004F925B /* POIsTableViewController.swift in Sources */,
+				B42FFD3B2448DA75001999BE /* POI.swift in Sources */,
+				B42FFD382448DA46001999BE /* POITableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,12 +365,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JKA99996Q5;
 				INFOPLIST_FILE = GrailDiary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nonye.GrailDiary;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Nonye-E..";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,12 +384,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JKA99996Q5;
 				INFOPLIST_FILE = GrailDiary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nonye.GrailDiary;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Nonye-E..";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
