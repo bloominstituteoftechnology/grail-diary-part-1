@@ -29,9 +29,9 @@ class POIDetailViewController: UIViewController {
     
     func updateViews() {
 
-        guard isViewLoaded else {return}
+        guard isViewLoaded else { return }
         
-        guard let poi = poi else {return}
+        guard let poi = poi else { return }
         
         locationLabel.text = poi.location
         countryLabel.text = poi.country
