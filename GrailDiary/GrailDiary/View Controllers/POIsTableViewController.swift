@@ -16,7 +16,6 @@ class POIsTableViewController: UIViewController {
     
     var poiArray: [POI] = [POI(location: "Yosemite", country: "USA", clues: ["Half-Dome", "El Capitan", "Cathedral Rocks"])]
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,8 +41,6 @@ class POIsTableViewController: UIViewController {
 
         }
     }
-
-
 }
 extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
 
@@ -58,7 +55,6 @@ extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
         cell.poi = poi
         return cell
     }
-
 }
 extension POIsTableViewController: AddPOIDelegate {
     func poiWasAdded(poi: POI) {

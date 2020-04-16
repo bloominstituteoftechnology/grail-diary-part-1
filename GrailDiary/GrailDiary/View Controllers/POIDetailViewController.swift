@@ -36,18 +36,13 @@ class POIDetailViewController: UIViewController {
         locationLabel.text = poi.location
         countryLabel.text = poi.country
         
-
         var cluesText = ""
         
         for clue in poi.clues {
             cluesText += "- \(clue)\n"
         }
-        
         cluesTextView.text = cluesText
-        
     }
-
-
 }
 
 
