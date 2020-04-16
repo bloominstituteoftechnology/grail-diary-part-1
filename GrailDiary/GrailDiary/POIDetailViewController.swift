@@ -1,5 +1,5 @@
 //
-//  POIsTableViewController.swift
+//  POIDetailViewController.swift
 //  GrailDiary
 //
 //  Created by Clayton Watkins on 4/15/20.
@@ -8,15 +8,16 @@
 
 import UIKit
 
-class POIsTableViewController: UIViewController {
+class POIDetailViewController: UIViewController {
 
-    let poi: [POI] = []
-    
-    @IBOutlet weak var POITableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
+    
+
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -24,16 +25,6 @@ class POIsTableViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-}
+    */
 
-extension POIsTableViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return poi.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
 }
-
-extension POIsTableViewController: 
