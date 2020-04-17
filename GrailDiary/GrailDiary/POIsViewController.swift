@@ -12,7 +12,7 @@ class POIsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var POIs: [POI] = []
+    var POIs = [POI]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,7 @@ extension POIsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POITableViewCell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
         
         let poi = POIs[indexPath.row]
         cell.poi = poi
@@ -53,7 +53,7 @@ extension POIsViewController: UITableViewDataSource {
 }
 
 extension POIsViewController: AddPOIDelegate {
-    func poiWasAdded(poi: POI) {
+    func poiWasAdded(_ poi: POI) {
         POIs.append(poi)
         dismiss(animated: true, completion: nil)
         tableView.reloadData()

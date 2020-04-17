@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AddPOIDelegate {
-    func poiWasAdded(poi: POI)
+    func poiWasAdded(_ poi: POI)
 }
 
 class AddPOIViewController: UIViewController {
@@ -45,7 +45,8 @@ class AddPOIViewController: UIViewController {
             poi.clues.append(clue3)
         }
         
-        delegate?.poiWasAdded(poi: poi)
+        delegate?.poiWasAdded(poi)
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

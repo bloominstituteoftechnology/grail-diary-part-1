@@ -20,6 +20,8 @@ class POIDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        updateViews()
     }
     
     private func updateViews() {
