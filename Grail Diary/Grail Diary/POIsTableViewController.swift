@@ -8,7 +8,7 @@
 
 import UIKit
 
-class POIsTableViewController: UIViewController {
+class POIsTableViewController: UIViewController, UITableViewDelegate {
     
     
     
@@ -24,8 +24,23 @@ class POIsTableViewController: UIViewController {
         
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let addPOIVC = segue.destination as? AddPOIViewController {
+            
+            addPOIVC.delegate = self
+            
+        }
+       else if let poiDetailVC = segue.destination as? POIDetailViewController {
+            if let indexPath = tableViewPOIList.indexPathForSelectedRow {
+                poiDetailVC.poi = pointsOfInterest[indexPath.row]
+
+            }
+        }
+        
+    }
 }
+
+
 
 extension POIsTableViewController : UITableViewDataSource {
     
@@ -35,22 +50,23 @@ extension POIsTableViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ShowPoIDetailSegue") as? POITableViewCell else { fatalError("Cell Identifier is wrong.")}
         
+        let pointOfInterest = pointsOfInterest[indexPath.row]
+        cell.poi = pointOfInterest
+        
+        return cell
     }
 }
-
-extension POIsTableViewController: UITableViewDelegate {
-    
-    
-}
-
 
 extension POIsTableViewController: AddPOIDelegate {
     func poiWasAdded(_ poi: POI) {
         
-        
+        pointsOfInterest.append(poi)
         
         dismiss(animated: true, completion: nil)
+        
+        tableViewPOIList.reloadData()
         
     }
     

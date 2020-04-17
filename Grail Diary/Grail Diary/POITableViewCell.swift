@@ -21,4 +21,21 @@ class POITableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    
+    @IBOutlet weak var numOfCluesLabel: UILabel!
+    @IBOutlet weak var actualLocationLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    
+    var poi: POI? {
+        didSet{
+            updateViews()
+        }
+    }
+    func updateViews() {
+        guard let poi  = poi else { return }
+        
+        actualLocationLabel.text = poi.location
+        countryLabel.text = poi.country
+        numOfCluesLabel.text = "\(poi.clues.count)"
+    }
 }

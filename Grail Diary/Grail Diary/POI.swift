@@ -6,7 +6,7 @@
 //  Copyright © 2020 Kelson Hartle. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 
 struct POI {

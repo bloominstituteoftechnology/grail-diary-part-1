@@ -16,13 +16,12 @@ protocol AddPOIDelegate {
 
 class AddPOIViewController: UIViewController {
 
-    
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var clue1TextField: UITextField!
     @IBOutlet weak var clue2TextField: UITextField!
     @IBOutlet weak var clue3TextField: UITextField!
-    
+        
     var delegate: AddPOIDelegate?
     
     override func viewDidLoad() {
@@ -61,9 +60,6 @@ class AddPOIViewController: UIViewController {
         
         delegate?.poiWasAdded(poi)
         
-        
-        
-        dismiss(animated: true, completion: nil)
     }
 
 }
@@ -72,7 +68,7 @@ extension AddPOIViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if let text = textField.text,
-            text.isEmpty {
+            !text.isEmpty {
             
             switch textField {
             case locationTextField:

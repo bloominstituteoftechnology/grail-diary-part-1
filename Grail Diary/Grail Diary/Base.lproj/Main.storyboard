@@ -59,6 +59,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="actualLocationLabel" destination="ra9-Cr-U1s" id="xlM-SI-N13"/>
+                                            <outlet property="countryLabel" destination="D0g-Gl-xK7" id="WpT-QP-hw8"/>
+                                            <outlet property="numOfCluesLabel" destination="z3V-3e-S63" id="WcJ-u3-mNS"/>
                                             <segue destination="Me5-Tx-2dc" kind="show" id="sQW-rO-Ojb"/>
                                         </connections>
                                     </tableViewCell>
@@ -151,6 +154,11 @@
                         <viewLayoutGuide key="safeArea" id="9Yx-4Y-BxQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="tRM-Im-Nc4"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="T7T-pn-vMd" id="E0e-n2-P49"/>
+                        <outlet property="countryLabel" destination="N5T-Kg-HUg" id="fVW-5C-KqH"/>
+                        <outlet property="locationLabel" destination="HL6-yg-peG" id="h7K-hR-coF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QIT-Rz-e4s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,9 +190,6 @@
                                         <rect key="frame" x="0.0" y="107" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="country:" destination="tpa-BR-IkY" eventType="editingDidEnd" id="HUF-1N-sfz"/>
-                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vph-iP-mdc">
                                         <rect key="frame" x="0.0" y="157" width="374" height="20.5"/>
@@ -236,11 +241,11 @@
                         <viewLayoutGuide key="safeArea" id="7qq-D5-qtP"/>
                     </view>
                     <connections>
-                        <outlet property="clue1TextField" destination="OOn-iS-VhV" id="YeE-MB-v0s"/>
-                        <outlet property="clue2TextField" destination="bC9-c1-p6q" id="b6i-z6-Urf"/>
-                        <outlet property="clue3TextField" destination="vRO-pa-vu5" id="wKf-Ce-7Th"/>
-                        <outlet property="countryTextField" destination="DOe-gT-kn1" id="7Dw-pB-s3W"/>
-                        <outlet property="locationTextField" destination="Ymf-1h-cS1" id="27d-Qe-FJF"/>
+                        <outlet property="clue1TextField" destination="OOn-iS-VhV" id="Q59-gL-0HA"/>
+                        <outlet property="clue2TextField" destination="bC9-c1-p6q" id="0aj-uc-3pl"/>
+                        <outlet property="clue3TextField" destination="vRO-pa-vu5" id="8vM-0b-gQI"/>
+                        <outlet property="countryTextField" destination="DOe-gT-kn1" id="KDn-qs-yaN"/>
+                        <outlet property="locationTextField" destination="Ymf-1h-cS1" id="oe1-pF-zPC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vr4-Pz-QrO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
