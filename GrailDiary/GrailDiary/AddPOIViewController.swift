@@ -48,6 +48,15 @@ class AddPOIViewController: UIViewController {
         delegate?.pointWasAdded(point: poi)
     }
     var delegate: AddPOIDelegate?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        locationTextField.delegate = self
+        countryTextField.delegate = self
+        clue1TextField.delegate = self
+        clue2TextField.delegate = self
+        clue3TextField.delegate = self
+    }
 }
 
 extension AddPOIViewController: UITextFieldDelegate {

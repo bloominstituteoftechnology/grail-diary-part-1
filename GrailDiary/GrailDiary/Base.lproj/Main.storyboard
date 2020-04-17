@@ -58,6 +58,11 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="NfR-jK-bCc" secondAttribute="trailing" id="vfB-db-ecT"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cluesLabel" destination="NfR-jK-bCc" id="iLn-vU-hLV"/>
+                                            <outlet property="countryLabel" destination="frW-td-Dyo" id="sF0-wf-hTS"/>
+                                            <outlet property="locationLabel" destination="rte-2e-vgT" id="cHa-Er-aCP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -82,6 +87,7 @@
                         <outlet property="cluesLabel" destination="NfR-jK-bCc" id="c1g-GY-tGr"/>
                         <outlet property="countryLabel" destination="frW-td-Dyo" id="Ljz-Ac-5TZ"/>
                         <outlet property="locationLabel" destination="rte-2e-vgT" id="2ac-Mr-7jA"/>
+                        <outlet property="tableView" destination="m7m-MC-QOO" id="Wd8-T5-Nlp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -257,6 +263,11 @@
                         <viewLayoutGuide key="safeArea" id="v9o-B9-wvy"/>
                     </view>
                     <navigationItem key="navigationItem" id="zdJ-gk-1Wr"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="BkA-xv-OdS" id="4fs-VI-UPk"/>
+                        <outlet property="countryLabel" destination="9CA-2J-VaE" id="mTq-lh-uLT"/>
+                        <outlet property="locationLabel" destination="XHp-uo-xvP" id="qSc-7J-9fB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Etv-TZ-IYH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
