@@ -12,7 +12,7 @@ class POIsTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var points: [POI] = [POI(location: "St John's", country: "Malta", clues: ["skull", "racket", "dagger"])]
+    var points: [POI]? = [POI(location: "St John's", country: "Malta", clues: ["skull", "racket", "dagger"])]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,7 @@ class POIsTableViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "AddPOIModalSegue" {
+            
             guard let destination = segue.destination as? AddPOIViewController else { return }
             destination.delegate = self
             
@@ -33,7 +34,7 @@ class POIsTableViewController: UIViewController {
             
             guard let destination = segue.destination as? POIDetailViewController,
                 let selectedCell = tableView.indexPathForSelectedRow?.row else { return }
-            
+            destination.poi = self.points?[selectedCell]
         }
     }
 }
@@ -41,7 +42,7 @@ class POIsTableViewController: UIViewController {
 extension POIsTableViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return points.count
+        return points?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,10 +51,10 @@ extension POIsTableViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell
             else { fatalError() }
         
-        let point = points[indexPath.row]
-        cell.locationLabel?.text = point.location
-        cell.countryLabel?.text = point.country
-        cell.cluesLabel?.text = "\(point.clues.count) clues"
+        guard let point = self.points?[indexPath.row] else { return cell }
+        
+        cell.poi = point
+        
         return cell
     }
 }
