@@ -13,6 +13,10 @@
 		5150DCFB2441477F00FB064C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5150DCF92441477F00FB064C /* Main.storyboard */; };
 		5150DCFD2441478100FB064C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5150DCFC2441478100FB064C /* Assets.xcassets */; };
 		5150DD002441478100FB064C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5150DCFE2441478100FB064C /* LaunchScreen.storyboard */; };
+		51FB5A842449398D00656E17 /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FB5A832449398D00656E17 /* AddPOIViewController.swift */; };
+		51FB5A86244939B500656E17 /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FB5A85244939B500656E17 /* POIDetailViewController.swift */; };
+		51FB5A88244939F300656E17 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FB5A87244939F300656E17 /* POITableViewCell.swift */; };
+		51FB5A8B24493AAA00656E17 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FB5A8A24493AAA00656E17 /* POI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		5150DCFC2441478100FB064C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5150DCFF2441478100FB064C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5150DD012441478100FB064C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51FB5A832449398D00656E17 /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		51FB5A85244939B500656E17 /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		51FB5A87244939F300656E17 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		51FB5A8A24493AAA00656E17 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +67,24 @@
 				5150DCF32441477F00FB064C /* AppDelegate.swift */,
 				5150DCF52441477F00FB064C /* SceneDelegate.swift */,
 				5150DCF72441477F00FB064C /* POIsTableViewController.swift */,
+				51FB5A832449398D00656E17 /* AddPOIViewController.swift */,
+				51FB5A85244939B500656E17 /* POIDetailViewController.swift */,
+				51FB5A87244939F300656E17 /* POITableViewCell.swift */,
+				51FB5A8924493A8700656E17 /* Model */,
 				5150DCF92441477F00FB064C /* Main.storyboard */,
 				5150DCFC2441478100FB064C /* Assets.xcassets */,
 				5150DCFE2441478100FB064C /* LaunchScreen.storyboard */,
 				5150DD012441478100FB064C /* Info.plist */,
 			);
 			path = GrailDiary;
+			sourceTree = "<group>";
+		};
+		51FB5A8924493A8700656E17 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				51FB5A8A24493AAA00656E17 /* POI.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51FB5A8B24493AAA00656E17 /* POI.swift in Sources */,
 				5150DCF82441477F00FB064C /* POIsTableViewController.swift in Sources */,
+				51FB5A842449398D00656E17 /* AddPOIViewController.swift in Sources */,
 				5150DCF42441477F00FB064C /* AppDelegate.swift in Sources */,
 				5150DCF62441477F00FB064C /* SceneDelegate.swift in Sources */,
+				51FB5A88244939F300656E17 /* POITableViewCell.swift in Sources */,
+				51FB5A86244939B500656E17 /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
