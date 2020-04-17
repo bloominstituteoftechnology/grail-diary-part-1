@@ -13,15 +13,20 @@ class POIsTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "AddPOIModalSegue" {
-//            if let addVC = segue.description as? AddPOIViewController {
-//                addVC.
-//            }
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddPOIModalSegue" {
+            if let addVC = segue.destination as? AddPOIViewController {
+                addVC.delegate = self // not sure why this is not working?
+                
+            }
+        } else if segue.identifier == "ShowPOIDetailSegue"{
+            if let detailVC = segue.destination as? POIDetailViewController,
+                let indexPath = tableView.indexPathForSelectedRow {
+                let poi = propertys[indexPath.row]
+                detailVC.poi = poi
+            }
+        }
+    }
 }
 
 extension POIsTableViewController: UITableViewDataSource {
@@ -30,7 +35,11 @@ extension POIsTableViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return ()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else { return UITableViewCell()}
+        
+        let poi = propertys[indexPath.row]
+        cell.poi = poi
+        return cell
     }
     
     
