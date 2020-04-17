@@ -8,35 +8,53 @@
 
 import UIKit
 
-    @IBDesignable
+@IBDesignable
 class POIsTableViewController: UIViewController {
-    var poiModels: [POI] = [POI(location: "Serene Escape", country: "Mauritius", clues: ["Sand", "Oceans", "Family Friendly"])]
+
+
         
-        @IBOutlet weak var tableView: UITableView!{
-
+@IBOutlet weak var tableView: UITableView!
+    
+var poiModels: [POI] = [POI(location: "Serene Escape", country: "Mauritius", clues: ["Sand", "Oceans", "Family Friendly"])]
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
 
+    }
+
+  
 
     // MARK: - Table view data source
-
-    extension POIsTableViewController: UITableViewDataSource {
-        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-            return poiModels.count
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if segue.identifier == "AddPOIModalSegue" {
+               let addVC = segue.destination as? AddPOIViewController
+               addVC?.delegate = self
+           }
+       }
     }
-
+extension POIsTableViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   
+        return poiModels.count
+    }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "GrailCell", for: indexPath)
-
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "GrailCell", for: indexPath) as? POITableViewCell else { return UITableViewCell() }
         let poi = poiModels[indexPath.row]
         cell.poi = poi
+        
         return cell
+
+            }
     }
-    
+
+        extension POIsTableViewController: AddPOIDelegate {
+            func poiWasAdded(_ poi: POI) {
+                poiModels.append(poi)
+                dismiss(animated: true, completion: nil)
+                tableView.reloadData()
+            }
         }
-  
         
         
     /*
@@ -55,7 +73,7 @@ class POIsTableViewController: UIViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
@@ -78,11 +96,7 @@ class POIsTableViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddPOIModalSegue" {
-            let addVC = segue.destination as? AddPOIViewController
-            addVC.delegate = self
-        }
-    }
-}
+ 
 
+
+    

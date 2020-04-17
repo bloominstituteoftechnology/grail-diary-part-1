@@ -68,6 +68,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="clues" destination="R0P-f8-ViI" id="Lt2-25-QpH"/>
+                                            <outlet property="countryLabel" destination="wgS-jD-geB" id="WU0-il-X0x"/>
+                                            <outlet property="locationLabel" destination="x8l-2R-eur" id="6i7-Cl-no3"/>
                                             <segue destination="uaY-l8-ZcM" kind="show" identifier="ShowPOIDetailSegue" id="ZoP-XG-NWb"/>
                                         </connections>
                                     </tableViewCell>
@@ -163,6 +166,11 @@
                         <viewLayoutGuide key="safeArea" id="Jud-Fc-auH"/>
                     </view>
                     <navigationItem key="navigationItem" id="OFJ-fr-q5v"/>
+                    <connections>
+                        <outlet property="clueTextView" destination="iEX-5D-fkE" id="vNo-qH-rYv"/>
+                        <outlet property="countryLabel" destination="7vP-dD-tko" id="Mhc-sk-w5E"/>
+                        <outlet property="locationLabel" destination="t47-Xt-MFY" id="STQ-P4-Ajs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3lP-vT-mhe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,13 +231,13 @@
                                 <items>
                                     <barButtonItem systemItem="cancel" id="Mb3-Ud-A75">
                                         <connections>
-                                            <action selector="cancelTapped:" destination="HyP-KI-64N" id="YVF-pH-fcp"/>
+                                            <action selector="cancelTapped:" destination="HyP-KI-64N" id="Va3-Rd-haU"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="naL-FR-oZ7"/>
                                     <barButtonItem systemItem="save" id="AF2-V3-WcD">
                                         <connections>
-                                            <action selector="saveTapped:" destination="HyP-KI-64N" id="cEr-ML-PHQ"/>
+                                            <action selector="saveTapped:" destination="HyP-KI-64N" id="JJa-JI-cyb"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -247,13 +255,11 @@
                         <viewLayoutGuide key="safeArea" id="oE0-nd-pfC"/>
                     </view>
                     <connections>
-                        <outlet property="cancelTapped" destination="Mb3-Ud-A75" id="HIq-hT-Z71"/>
                         <outlet property="clue1TextField" destination="fWZ-ce-ANl" id="7Su-PS-EC5"/>
                         <outlet property="clue2TextField" destination="CYG-nc-fbv" id="zbN-C4-CMk"/>
                         <outlet property="clue3TextField" destination="WNd-Se-Ovn" id="LEC-Ae-G0a"/>
                         <outlet property="countryTextField" destination="stY-jh-EwV" id="K3o-fD-hwo"/>
                         <outlet property="locationTextField" destination="nDw-4R-EBZ" id="RtO-96-BY3"/>
-                        <outlet property="saveTapped" destination="AF2-V3-WcD" id="uC9-Cb-taG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8o-ue-Bqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
