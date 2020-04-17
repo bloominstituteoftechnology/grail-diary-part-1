@@ -12,8 +12,6 @@ protocol AddPOIDelegate {
     func poiWasAdded(_ poi: POI)
 }
 
- 
-
 class AddPOIViewController: UIViewController {
 
     @IBOutlet var locationLabel: UITextField!
@@ -22,7 +20,7 @@ class AddPOIViewController: UIViewController {
     @IBOutlet var clue2Label: UITextField!
     @IBOutlet var clue3Label: UITextField!
     
-//    var delegate = AddPOIDelegate? // Not sure why this is requiring .self
+    var delegate: AddPOIDelegate? 
    
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
@@ -51,8 +49,8 @@ class AddPOIViewController: UIViewController {
             poi.clues.append(clue3)
         }
         
-//        delegate.init(AppDelegate.self as! AddPOIDelegate)
-//        dismiss(animated: true, completion: nil)
+        delegate?.poiWasAdded(<#T##poi: POI##POI#>)
+        dismiss(animated: true, completion: nil)
     }
 }
 

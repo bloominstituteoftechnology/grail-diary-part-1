@@ -30,7 +30,7 @@ class POIDetailViewController: UIViewController {
         locationLabel.text = poi.location
         countryLabel.text = poi.country
         
-//        clueListTextView.text = poi.clues.joined(separator: ", ")
+       // clueListTextView.text = poi.clues.joined(separator: ",  ")  // No able to make this one work?
     }
 
 }
