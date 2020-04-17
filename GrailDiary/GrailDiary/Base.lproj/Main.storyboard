@@ -59,13 +59,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesCountLabel" destination="si2-78-xCm" id="pO5-ax-GjN"/>
+                                            <outlet property="countryLabel" destination="Kit-gn-eXt" id="zTy-bI-Aaf"/>
+                                            <outlet property="locationLabel" destination="Wru-YV-248" id="ySG-BY-x0K"/>
                                             <segue destination="GMG-uY-Lm0" kind="show" identifier="ShowPOIDetailSegue" destinationCreationSelector="Location" id="4s8-YB-GdC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="6VC-fw-6ag"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Azm-Ij-Lh7"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -86,12 +88,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="POIsTableViewController" destination="WQE-h1-ge2" id="fkn-90-Jgc"/>
+                        <outlet property="tableView" destination="WQE-h1-ge2" id="U7F-pG-6HO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="948" y="119"/>
+            <point key="canvasLocation" x="947.82608695652186" y="118.52678571428571"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="ar5-7H-qF1">
@@ -155,6 +157,11 @@
                         <viewLayoutGuide key="safeArea" id="tDO-nh-2Va"/>
                     </view>
                     <navigationItem key="navigationItem" id="Xsu-Nl-Egr"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="Hcw-gm-JhX" id="AMc-1g-Z7y"/>
+                        <outlet property="countryLabel" destination="jg7-Lf-hj7" id="AJF-GB-bTj"/>
+                        <outlet property="locationLabel" destination="eFR-Og-Map" id="nZV-C2-4JS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsf-dc-nGz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -181,11 +188,17 @@
                                         <rect key="frame" x="0.0" y="57" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="qEQ-Gf-cPw" id="uhs-gQ-BPV"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Country" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9yw-zW-rDg">
                                         <rect key="frame" x="0.0" y="107" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="qEQ-Gf-cPw" id="ZiX-FJ-cXt"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LK-LL-jvC">
                                         <rect key="frame" x="0.0" y="157" width="374" height="20.5"/>
@@ -197,16 +210,25 @@
                                         <rect key="frame" x="0.0" y="193.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="qEQ-Gf-cPw" id="qE6-TW-Up2"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Clue 2" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uvC-W4-aVk">
                                         <rect key="frame" x="0.0" y="243.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="qEQ-Gf-cPw" id="Jkd-Tf-7D7"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Clue 3" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="haZ-ev-3aq">
                                         <rect key="frame" x="0.0" y="293.5" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="qEQ-Gf-cPw" id="nVx-5A-m3M"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -239,11 +261,11 @@
                         <viewLayoutGuide key="safeArea" id="umM-9j-pKE"/>
                     </view>
                     <connections>
-                        <outlet property="Location" destination="Rs8-Aa-aQQ" id="dxU-Y3-NOK"/>
                         <outlet property="clue1TextField" destination="3vv-Yn-yUT" id="lKx-W3-cOZ"/>
                         <outlet property="clue2TextField" destination="uvC-W4-aVk" id="QDC-b8-uHv"/>
                         <outlet property="clue3TextField" destination="haZ-ev-3aq" id="ifQ-yj-Ueh"/>
                         <outlet property="countryTextField" destination="9yw-zW-rDg" id="mCZ-S7-8uH"/>
+                        <outlet property="locationTextField" destination="Rs8-Aa-aQQ" id="w2q-uK-J2Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFU-rZ-PNO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
