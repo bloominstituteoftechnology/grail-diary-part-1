@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,23 +12,32 @@
             <objects>
                 <viewController title="Grail Diary " id="dJ9-9a-VbH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GkB-mD-rdL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ckV-WS-fLV">
-                                <rect key="frame" x="55" y="293" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z8y-xa-jXR">
+                                <rect key="frame" x="0.0" y="140" width="375" height="638"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Z8y-xa-jXR" firstAttribute="leading" secondItem="65r-m4-GH1" secondAttribute="leading" id="4yl-QE-TLq"/>
+                            <constraint firstItem="Z8y-xa-jXR" firstAttribute="top" secondItem="65r-m4-GH1" secondAttribute="top" id="TUK-PQ-C2F"/>
+                            <constraint firstItem="Z8y-xa-jXR" firstAttribute="bottom" secondItem="65r-m4-GH1" secondAttribute="bottom" id="U2c-3o-9Vj"/>
+                            <constraint firstItem="Z8y-xa-jXR" firstAttribute="bottom" secondItem="65r-m4-GH1" secondAttribute="bottom" id="han-C5-KHP"/>
+                            <constraint firstItem="Z8y-xa-jXR" firstAttribute="leading" secondItem="65r-m4-GH1" secondAttribute="leading" id="ibd-9C-NMS"/>
+                            <constraint firstItem="Z8y-xa-jXR" firstAttribute="top" secondItem="65r-m4-GH1" secondAttribute="top" id="sS4-o5-aNq"/>
+                            <constraint firstItem="65r-m4-GH1" firstAttribute="trailing" secondItem="Z8y-xa-jXR" secondAttribute="trailing" id="uNm-EY-t2m"/>
+                            <constraint firstItem="Z8y-xa-jXR" firstAttribute="trailing" secondItem="65r-m4-GH1" secondAttribute="trailing" id="wru-mv-Gnw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="65r-m4-GH1"/>
                     </view>
                     <navigationItem key="navigationItem" id="8e1-g6-FNn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWN-C5-pnJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1033.3333333333335" y="106.47321428571428"/>
+            <point key="canvasLocation" x="1032.8" y="106.40394088669952"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sXU-xJ-jFF">
@@ -36,7 +45,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0i7-s2-2oU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="tUv-SE-FTw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
