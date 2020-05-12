@@ -175,34 +175,50 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLV-vx-cqI">
-                                <rect key="frame" x="96" y="281" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w8I-6E-ews">
-                                <rect key="frame" x="20" y="49" width="150" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="EYI-OA-TYm"/>
-                                    <constraint firstAttribute="width" secondItem="w8I-6E-ews" secondAttribute="height" multiplier="1:1" id="XIY-pa-i8A"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNh-3t-WD9">
                                 <rect key="frame" x="305" y="49" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLV-vx-cqI">
+                                <rect key="frame" x="20" y="178" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="The Gorge Ampitheater" translatesAutoresizingMaskIntoConstraints="NO" id="w8I-6E-ews">
+                                <rect key="frame" x="20" y="20" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="EYI-OA-TYm"/>
+                                    <constraint firstAttribute="width" secondItem="w8I-6E-ews" secondAttribute="height" multiplier="1:1" id="XIY-pa-i8A"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="acZ-B7-Ggc">
+                                <rect key="frame" x="20" y="218" width="374" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="QNh-3t-WD9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="w8I-6E-ews" secondAttribute="trailing" constant="8" id="1Wt-Rm-YAH"/>
                             <constraint firstItem="QNh-3t-WD9" firstAttribute="trailing" secondItem="uhJ-2p-FRX" secondAttribute="trailing" id="6tN-p5-YAp"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="acZ-B7-Ggc" secondAttribute="bottom" constant="20" id="8n7-Gl-oXb"/>
+                            <constraint firstItem="YLV-vx-cqI" firstAttribute="leading" secondItem="w8I-6E-ews" secondAttribute="leading" id="Hz5-q9-cyh"/>
                             <constraint firstItem="w8I-6E-ews" firstAttribute="leading" secondItem="ayK-jC-M98" secondAttribute="leading" constant="20" id="L6f-aO-ef5"/>
+                            <constraint firstItem="acZ-B7-Ggc" firstAttribute="leading" secondItem="YLV-vx-cqI" secondAttribute="leading" id="Lml-dm-rhj"/>
                             <constraint firstItem="QNh-3t-WD9" firstAttribute="top" secondItem="uhJ-2p-FRX" secondAttribute="bottom" constant="8" id="PPG-y7-DRx"/>
                             <constraint firstItem="ayK-jC-M98" firstAttribute="trailing" secondItem="uhJ-2p-FRX" secondAttribute="trailing" constant="20" id="Pa5-31-Z0D"/>
                             <constraint firstItem="uhJ-2p-FRX" firstAttribute="top" secondItem="ayK-jC-M98" secondAttribute="top" constant="20" id="Q8U-Jy-ydz"/>
+                            <constraint firstItem="acZ-B7-Ggc" firstAttribute="top" secondItem="YLV-vx-cqI" secondAttribute="bottom" constant="8" id="Stg-AM-fc0"/>
+                            <constraint firstItem="uhJ-2p-FRX" firstAttribute="leading" secondItem="w8I-6E-ews" secondAttribute="trailing" constant="109" id="XZL-zD-iHB"/>
+                            <constraint firstItem="YLV-vx-cqI" firstAttribute="top" secondItem="w8I-6E-ews" secondAttribute="bottom" constant="40" id="lGd-xg-Jan"/>
+                            <constraint firstItem="acZ-B7-Ggc" firstAttribute="trailing" secondItem="QNh-3t-WD9" secondAttribute="trailing" id="oW1-Ly-vrG"/>
+                            <constraint firstItem="w8I-6E-ews" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uhJ-2p-FRX" secondAttribute="top" constant="8" id="vdo-aB-YTK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ayK-jC-M98"/>
                     </view>
@@ -231,4 +247,7 @@
             <point key="canvasLocation" x="75.362318840579718" y="41.517857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="The Gorge Ampitheater" width="750" height="422"/>
+    </resources>
 </document>
