@@ -107,6 +107,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFp-IV-Gp2">
+                                <rect key="frame" x="20" y="350" width="52.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Square Enchanting Lavender Fields" translatesAutoresizingMaskIntoConstraints="NO" id="i4Y-jO-qMh">
                                 <rect key="frame" x="20" y="160" width="150" height="150"/>
                                 <constraints>
@@ -114,12 +120,14 @@
                                     <constraint firstAttribute="width" secondItem="i4Y-jO-qMh" secondAttribute="height" multiplier="1:1" id="nV8-wp-2xV"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFp-IV-Gp2">
-                                <rect key="frame" x="20" y="350" width="52.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yhb-Ka-zJd">
+                                <rect key="frame" x="20" y="382" width="374" height="460"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -128,9 +136,13 @@
                             <constraint firstItem="x95-hX-Ify" firstAttribute="top" secondItem="PlY-Db-Abz" secondAttribute="bottom" constant="8" id="1ib-PM-4lQ"/>
                             <constraint firstItem="x95-hX-Ify" firstAttribute="trailing" secondItem="PlY-Db-Abz" secondAttribute="trailing" id="2hJ-x4-3ms"/>
                             <constraint firstItem="i4Y-jO-qMh" firstAttribute="leading" secondItem="LSc-NX-6Xo" secondAttribute="leading" constant="20" id="9x5-tZ-pcC"/>
+                            <constraint firstItem="Yhb-Ka-zJd" firstAttribute="trailing" secondItem="x95-hX-Ify" secondAttribute="trailing" id="CMX-Vm-DOC"/>
                             <constraint firstItem="PlY-Db-Abz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i4Y-jO-qMh" secondAttribute="trailing" constant="8" id="Fic-KW-myR"/>
                             <constraint firstItem="hFp-IV-Gp2" firstAttribute="top" secondItem="i4Y-jO-qMh" secondAttribute="bottom" constant="40" id="HSl-ho-XVC"/>
+                            <constraint firstItem="Yhb-Ka-zJd" firstAttribute="top" secondItem="hFp-IV-Gp2" secondAttribute="bottom" constant="8" id="PXU-eq-3PA"/>
                             <constraint firstItem="PlY-Db-Abz" firstAttribute="top" secondItem="i4Y-jO-qMh" secondAttribute="top" id="bA6-jX-14l"/>
+                            <constraint firstItem="LSc-NX-6Xo" firstAttribute="bottom" secondItem="Yhb-Ka-zJd" secondAttribute="bottom" constant="20" id="fY1-Yu-ASg"/>
+                            <constraint firstItem="Yhb-Ka-zJd" firstAttribute="leading" secondItem="hFp-IV-Gp2" secondAttribute="leading" id="ill-zc-QC5"/>
                             <constraint firstItem="hFp-IV-Gp2" firstAttribute="leading" secondItem="i4Y-jO-qMh" secondAttribute="leading" id="k3o-oz-C7S"/>
                             <constraint firstItem="PlY-Db-Abz" firstAttribute="top" secondItem="LSc-NX-6Xo" secondAttribute="top" constant="20" id="wUL-mr-JFZ"/>
                         </constraints>
