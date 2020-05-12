@@ -137,20 +137,24 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y2I-cK-0vR">
-                                <rect key="frame" x="0.0" y="680" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2I-cK-0vR">
+                                <rect key="frame" x="0.0" y="675" width="375" height="49"/>
                                 <items>
-                                    <barButtonItem title="Item" id="Qsk-7N-20F"/>
+                                    <barButtonItem systemItem="cancel" id="Qsk-7N-20F"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qT8-6i-ck0"/>
+                                    <barButtonItem systemItem="save" id="wgX-4t-2XB"/>
                                 </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="y2I-cK-0vR" firstAttribute="trailing" secondItem="LAX-bK-TLV" secondAttribute="trailing" id="084-EO-nhu"/>
                             <constraint firstItem="bKA-hW-aU8" firstAttribute="top" secondItem="LAX-bK-TLV" secondAttribute="top" constant="20" id="BmY-xH-qGm"/>
                             <constraint firstItem="bKA-hW-aU8" firstAttribute="leading" secondItem="LAX-bK-TLV" secondAttribute="leading" constant="20" id="Jws-FB-2Nj"/>
                             <constraint firstItem="LAX-bK-TLV" firstAttribute="trailing" secondItem="bKA-hW-aU8" secondAttribute="trailing" constant="20" id="K9h-4m-ak0"/>
+                            <constraint firstItem="y2I-cK-0vR" firstAttribute="leading" secondItem="LAX-bK-TLV" secondAttribute="leading" id="Nos-hH-ofJ"/>
                             <constraint firstItem="bKA-hW-aU8" firstAttribute="top" secondItem="LAX-bK-TLV" secondAttribute="top" constant="20" id="X18-So-ZGV"/>
+                            <constraint firstItem="y2I-cK-0vR" firstAttribute="bottom" secondItem="LAX-bK-TLV" secondAttribute="bottom" id="hBi-x8-lO4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LAX-bK-TLV"/>
                     </view>
