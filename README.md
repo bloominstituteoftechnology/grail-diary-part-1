@@ -23,19 +23,6 @@ Please fork and clone this repository. Create a new Xcode project inside of the 
 
 #### POI Detail View
 
-30. Drag 3 labels into the new scene
-31. Set one to "Location Name" and use the following constraints:
-    * top = `20`
-    * trailing = `20`
-32. Place another label below that and set it to "Country"; control-drag from this label to the location name label above and add these constraints:
-    * trailing alignment (trailing edges of both labels are aligned)
-    * vertical spacing = `8`
-33. Drag an Image View into the scene
-34. Constrain it with the following:
-    * `1:1` aspect ratio (check the box and then edit the value to make it 1:1)
-    * width = `150`
-    * leading = `20`
-    * using a constraint, align the top of the image with the top of the location name label
 35. Find a square image of an interesting location on Google and drag it into your asset catalog; set a sensible name and set the name as the image in the Image View attributes
 36. Add a horizontal distance constraint between the location label and the Image View
     * set the constant value to `8`
