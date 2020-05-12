@@ -107,28 +107,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFp-IV-Gp2">
-                                <rect key="frame" x="294" y="386" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i4Y-jO-qMh">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Square Enchanting Lavender Fields" translatesAutoresizingMaskIntoConstraints="NO" id="i4Y-jO-qMh">
                                 <rect key="frame" x="20" y="160" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="BeR-nu-tgp"/>
                                     <constraint firstAttribute="width" secondItem="i4Y-jO-qMh" secondAttribute="height" multiplier="1:1" id="nV8-wp-2xV"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFp-IV-Gp2">
+                                <rect key="frame" x="20" y="350" width="52.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="x95-hX-Ify" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i4Y-jO-qMh" secondAttribute="trailing" constant="8" id="0Eb-X2-DXW"/>
                             <constraint firstItem="LSc-NX-6Xo" firstAttribute="trailing" secondItem="PlY-Db-Abz" secondAttribute="trailing" constant="20" id="0Yk-j4-Zdr"/>
                             <constraint firstItem="x95-hX-Ify" firstAttribute="top" secondItem="PlY-Db-Abz" secondAttribute="bottom" constant="8" id="1ib-PM-4lQ"/>
                             <constraint firstItem="x95-hX-Ify" firstAttribute="trailing" secondItem="PlY-Db-Abz" secondAttribute="trailing" id="2hJ-x4-3ms"/>
                             <constraint firstItem="i4Y-jO-qMh" firstAttribute="leading" secondItem="LSc-NX-6Xo" secondAttribute="leading" constant="20" id="9x5-tZ-pcC"/>
+                            <constraint firstItem="PlY-Db-Abz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i4Y-jO-qMh" secondAttribute="trailing" constant="8" id="Fic-KW-myR"/>
+                            <constraint firstItem="hFp-IV-Gp2" firstAttribute="top" secondItem="i4Y-jO-qMh" secondAttribute="bottom" constant="40" id="HSl-ho-XVC"/>
                             <constraint firstItem="PlY-Db-Abz" firstAttribute="top" secondItem="i4Y-jO-qMh" secondAttribute="top" id="bA6-jX-14l"/>
+                            <constraint firstItem="hFp-IV-Gp2" firstAttribute="leading" secondItem="i4Y-jO-qMh" secondAttribute="leading" id="k3o-oz-C7S"/>
                             <constraint firstItem="PlY-Db-Abz" firstAttribute="top" secondItem="LSc-NX-6Xo" secondAttribute="top" constant="20" id="wUL-mr-JFZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LSc-NX-6Xo"/>
@@ -137,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iih-Tn-z9p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1819" y="451"/>
+            <point key="canvasLocation" x="1819" y="439"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LuQ-3q-FEM">
@@ -212,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQG-eZ-u7j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1819" y="-156"/>
+            <point key="canvasLocation" x="1819" y="-149"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Txk-IN-EGX">
@@ -233,4 +236,7 @@
             <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Square Enchanting Lavender Fields" width="985" height="985"/>
+    </resources>
 </document>
