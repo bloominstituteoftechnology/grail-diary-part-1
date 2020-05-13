@@ -23,13 +23,6 @@ Please fork and clone this repository. Create a new Xcode project inside of the 
 
 #### POI Detail View
 
-35. Find a square image of an interesting location on Google and drag it into your asset catalog; set a sensible name and set the name as the image in the Image View attributes
-36. Add a horizontal distance constraint between the location label and the Image View
-    * set the constant value to `8`
-    * make it a `>=` constraint
-37. Add a horizontal distance constraint between the country label and the Image View
-    * set the constant value to `8`
-    * make it a `>=` constraint
 38. Place the third label below; set the value to "Clues"; use the following constraints:
     * align the leading with the Image View
     * set a top distance to the Image View = `40`
