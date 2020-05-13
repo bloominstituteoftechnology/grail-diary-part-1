@@ -94,14 +94,41 @@
                     <view key="view" contentMode="scaleToFill" id="jXY-ud-Jpz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYX-It-Bpy">
+                                <rect key="frame" x="279" y="108" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXO-uL-1Fl">
+                                <rect key="frame" x="186" y="550" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJU-rr-BIN">
+                                <rect key="frame" x="332.5" y="137" width="61.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eBL-hi-ETR" firstAttribute="trailing" secondItem="MYX-It-Bpy" secondAttribute="trailing" constant="20" id="0of-4U-Qoi"/>
+                            <constraint firstItem="GJU-rr-BIN" firstAttribute="top" secondItem="MYX-It-Bpy" secondAttribute="bottom" constant="8" id="3L8-f7-8GP"/>
+                            <constraint firstItem="GJU-rr-BIN" firstAttribute="trailing" secondItem="MYX-It-Bpy" secondAttribute="trailing" id="xbh-dS-GXo"/>
+                            <constraint firstItem="MYX-It-Bpy" firstAttribute="top" secondItem="eBL-hi-ETR" secondAttribute="top" constant="20" id="yat-hz-bnO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eBL-hi-ETR"/>
                     </view>
                     <navigationItem key="navigationItem" id="2uK-oZ-SO9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Tk-l0-RVq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1938" y="96"/>
+            <point key="canvasLocation" x="1937.68115942029" y="95.758928571428569"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="CRj-5i-thE">
