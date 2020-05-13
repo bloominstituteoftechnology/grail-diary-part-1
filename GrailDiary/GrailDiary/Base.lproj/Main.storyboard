@@ -99,6 +99,9 @@
                                         <rect key="frame" x="0.0" y="57" width="127.5" height="474.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <segue destination="AA0-Ab-o5B" kind="show" identifier="ShowPOIDetailSegue" id="o4n-kk-bwW"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uWH-uQ-R3Q">
                                         <rect key="frame" x="0.0" y="547.5" width="127.5" height="34"/>
@@ -153,6 +156,61 @@
             </objects>
             <point key="canvasLocation" x="1804" y="137"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="VJL-Va-LDK">
+            <objects>
+                <viewController id="AA0-Ab-o5B" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DdU-r0-fQf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BF8-ZH-xeY">
+                                <rect key="frame" x="279" y="20" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5S-74-uW6">
+                                <rect key="frame" x="332" y="49" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Sri Lanka Sigiriya-Rock" translatesAutoresizingMaskIntoConstraints="NO" id="VZi-ZC-vGA">
+                                <rect key="frame" x="20" y="20" width="150" height="128"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1zw-NO-nWR">
+                                <rect key="frame" x="20" y="202" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtz-3Y-Lm4">
+                                <rect key="frame" x="20" y="156" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1zw-NO-nWR" firstAttribute="top" secondItem="dtz-3Y-Lm4" secondAttribute="bottom" constant="8" id="HY5-ka-HnG"/>
+                            <constraint firstItem="1zw-NO-nWR" firstAttribute="leading" secondItem="dtz-3Y-Lm4" secondAttribute="leading" id="Q1p-vg-hm7"/>
+                            <constraint firstItem="dtz-3Y-Lm4" firstAttribute="top" secondItem="VZi-ZC-vGA" secondAttribute="bottom" constant="40" id="Rkb-yg-CM7"/>
+                            <constraint firstItem="1zw-NO-nWR" firstAttribute="bottom" secondItem="a5S-74-uW6" secondAttribute="bottom" constant="20" id="nLZ-BJ-Rts"/>
+                            <constraint firstItem="dtz-3Y-Lm4" firstAttribute="leading" secondItem="VZi-ZC-vGA" secondAttribute="leading" id="seH-Qn-uvQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x25-Ln-ddD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a6g-Fv-sDV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GxN-vo-gUI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2581" y="137"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="LIe-ne-4eI">
             <objects>
@@ -172,4 +230,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Sri Lanka Sigiriya-Rock" width="1900" height="1266"/>
+    </resources>
 </document>
