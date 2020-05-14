@@ -36,7 +36,7 @@ extension POIsTableViewController: UITableViewDataSource {
         
         cell.locationLabel.text = POI.location
         cell.countryLabel.text = POI.country
-        cell.cluesLabel.text = "\(manyPOIs.count)of clues"
+        cell.cluesLabel.text = "\(POI.clues.count) clue(s)"
         
         return cell
     }

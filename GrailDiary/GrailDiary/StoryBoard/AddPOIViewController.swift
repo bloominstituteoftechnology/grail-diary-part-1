@@ -21,13 +21,22 @@ class AddPOIViewController: UIViewController {
     @IBOutlet var clue2TextField: UITextField!
     @IBOutlet var clue3TextField: UITextField!
     
-    
+    var delegate: AddPOIDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func save(_ sender: Any) {
+    }
+    
+    
+    
+    
     
 
     /*
