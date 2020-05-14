@@ -9,24 +9,45 @@
 import UIKit
 
 class POIsTableViewController: UIViewController {
-    let manyPOIs: [POI] = []
+    @IBOutlet var POIsTableView: UITableView!
+    
+    var manyPOIs: [POI] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    @IBOutlet var POIsTableView: UITableView!
-    
 
 }
 
 
 extension POIsTableViewController: UITableViewDataSource {
+   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        
+        return manyPOIs.count
+        
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else {
+            fatalError("Cell is not of expected identifier POICell. If you are a user, I am very sorry. Please restart your app!")
+        }
+        let POI = manyPOIs[indexPath.row]
+        
+        cell.locationLabel.text = POI.location
+        cell.countryLabel.text = POI.country
+        cell.cluesLabel.text = "\(manyPOIs.count)of clues"
+        
+        return cell
+    }
+  
+    
+}
+
+extension POIsTableViewController: AddPOIDelegate {
+    func POIWasAdded(poi: POI) {
+        manyPOIs.append(poi)
+        POIsTableView.reloadData()
     }
     
     
