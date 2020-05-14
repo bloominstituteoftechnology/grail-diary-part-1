@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8213056246DE18500DE9F7B /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8213055246DE18500DE9F7B /* AddPOIViewController.swift */; };
+		E8213058246DE19900DE9F7B /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8213057246DE19900DE9F7B /* POIDetailViewController.swift */; };
+		E821305A246DE1B100DE9F7B /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8213059246DE1B100DE9F7B /* POITableViewCell.swift */; };
+		E821305D246DE22700DE9F7B /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E821305C246DE22700DE9F7B /* POI.swift */; };
 		E855A329246B1CC30054635C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E855A328246B1CC30054635C /* AppDelegate.swift */; };
 		E855A32B246B1CC30054635C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E855A32A246B1CC30054635C /* SceneDelegate.swift */; };
 		E855A32D246B1CC30054635C /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E855A32C246B1CC30054635C /* POIsTableViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E8213055246DE18500DE9F7B /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddPOIViewController.swift; path = GrailDiary/StoryBoard/AddPOIViewController.swift; sourceTree = SOURCE_ROOT; };
+		E8213057246DE19900DE9F7B /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		E8213059246DE1B100DE9F7B /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		E821305C246DE22700DE9F7B /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 		E855A325246B1CC30054635C /* GrailDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrailDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E855A328246B1CC30054635C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E855A32A246B1CC30054635C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +45,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E821305B246DE1F700DE9F7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8213059246DE1B100DE9F7B /* POITableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E821305E246DE22D00DE9F7B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E821305C246DE22700DE9F7B /* POI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E855A31C246B1CC30054635C = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +80,8 @@
 		E855A327246B1CC30054635C /* GrailDiary */ = {
 			isa = PBXGroup;
 			children = (
+				E821305E246DE22D00DE9F7B /* Models */,
+				E821305B246DE1F700DE9F7B /* Views */,
 				E855A33E246B1CF40054635C /* Resources */,
 				E855A33D246B1CE50054635C /* ViewControllers */,
 				E855A33C246B1CD80054635C /* StoryBoard */,
@@ -76,6 +102,8 @@
 		E855A33D246B1CE50054635C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E8213055246DE18500DE9F7B /* AddPOIViewController.swift */,
+				E8213057246DE19900DE9F7B /* POIDetailViewController.swift */,
 				E855A32C246B1CC30054635C /* POIsTableViewController.swift */,
 			);
 			path = ViewControllers;
@@ -162,9 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E821305D246DE22700DE9F7B /* POI.swift in Sources */,
 				E855A32D246B1CC30054635C /* POIsTableViewController.swift in Sources */,
+				E8213056246DE18500DE9F7B /* AddPOIViewController.swift in Sources */,
 				E855A329246B1CC30054635C /* AppDelegate.swift in Sources */,
 				E855A32B246B1CC30054635C /* SceneDelegate.swift in Sources */,
+				E821305A246DE1B100DE9F7B /* POITableViewCell.swift in Sources */,
+				E8213058246DE19900DE9F7B /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
