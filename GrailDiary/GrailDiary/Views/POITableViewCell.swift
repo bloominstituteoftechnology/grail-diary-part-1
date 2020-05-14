@@ -9,6 +9,10 @@
 import UIKit
 
 class POITableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var cluesNumberLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

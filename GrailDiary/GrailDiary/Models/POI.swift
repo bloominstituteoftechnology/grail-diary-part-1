@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+struct POI {
+    
+    location: String
+    country: String
+    clues: [String]
+    
+}
+
+var poiList: [POI] = []
