@@ -1,14 +1,14 @@
 //
-//  POISTableViewController.swift
+//  AddPOIViewController.swift
 //  GrailDiary
 //
-//  Created by Ian Becker on 5/12/20.
+//  Created by Ian Becker on 5/14/20.
 //  Copyright © 2020 Ian Becker. All rights reserved.
 //
 
 import UIKit
 
-class POISTableViewController: UIViewController {
+class AddPOIViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
