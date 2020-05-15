@@ -25,7 +25,7 @@ class AddPOIViewController: UIViewController {
     
     // #14
     
-    var delegate: AddPOIDelegate
+    var delegate: AddPOIDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +71,7 @@ class AddPOIViewController: UIViewController {
         
     // #18
         
-        delegate.poiWasAdded(poi)
+        delegate?.poiWasAdded(poi)
     }
 
     /*
@@ -89,11 +89,12 @@ class AddPOIViewController: UIViewController {
 // #19
 
 extension AddPOIViewController: UITextFieldDelegate {
- /*   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let textField = textField,
-            let textField != "" {
-            return
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let textField = textField.text,
+            textField != "" else {
+            return false
         }
-    }
-    */
+        return true
+        }
 }
+

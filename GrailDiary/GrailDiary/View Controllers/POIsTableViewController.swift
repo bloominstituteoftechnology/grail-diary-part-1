@@ -10,9 +10,6 @@ import UIKit
 
 class POIsTableViewController: UIViewController {
   
-    // #7
-    
-    //  var poiArray = poiList (declared global poiList in POI.swift)
     
     // #8
     
@@ -24,7 +21,11 @@ class POIsTableViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    // #27 28
+    
+    override func prepare(for segue: AddPOIModalSegue, sender: Any?) {
+    }
 
 }
 
@@ -48,10 +49,31 @@ extension POIsTableViewController: UITableViewDataSource {
     }
 }
 
+// #22
+
 extension POIsTableViewController: AddPOIDelegate {
+    
+    // #23
+    
     func poiWasAdded(_ poi: POI) {
+        
+        // #24
         poiList.append(poi)
         
+        // #25
+        
+        dismiss(animated: true, completion: nil)
+        
+        // #26
+        
+        tableView.reloadData()
+        
     }
+
 }
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+
+// Get the new view controller using segue.destination.
+// Pass the selected object to the new view controller.
 
