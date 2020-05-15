@@ -15,6 +15,7 @@
 		B1376154246B44DE00F7E217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1376152246B44DE00F7E217 /* LaunchScreen.storyboard */; };
 		B1CC4269246E1BEF0088DE6B /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC4268246E1BEF0088DE6B /* AddPOIViewController.swift */; };
 		B1CC426C246E1CCA0088DE6B /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC426B246E1CCA0088DE6B /* POIDetailViewController.swift */; };
+		B1CC426E246E1DB50088DE6B /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC426D246E1DB50088DE6B /* POITableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B1376155246B44DE00F7E217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1CC4268246E1BEF0088DE6B /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
 		B1CC426B246E1CCA0088DE6B /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		B1CC426D246E1DB50088DE6B /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		B1376146246B44DD00F7E217 /* GrailDiary */ = {
 			isa = PBXGroup;
 			children = (
+				B1CC426F246E1DCA0088DE6B /* Views  */,
 				B1CC426A246E1BFA0088DE6B /* View Controllers */,
 				B1CC4267246E19FE0088DE6B /* Table View Controllers */,
 				B1CC4266246E19DA0088DE6B /* Storyboards */,
@@ -103,6 +106,14 @@
 				B1CC4268246E1BEF0088DE6B /* AddPOIViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B1CC426F246E1DCA0088DE6B /* Views  */ = {
+			isa = PBXGroup;
+			children = (
+				B1CC426D246E1DB50088DE6B /* POITableViewCell.swift */,
+			);
+			path = "Views ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 				B1CC4269246E1BEF0088DE6B /* AddPOIViewController.swift in Sources */,
 				B1376148246B44DD00F7E217 /* AppDelegate.swift in Sources */,
 				B137614A246B44DD00F7E217 /* SceneDelegate.swift in Sources */,
+				B1CC426E246E1DB50088DE6B /* POITableViewCell.swift in Sources */,
 				B1CC426C246E1CCA0088DE6B /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
