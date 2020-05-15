@@ -19,12 +19,14 @@ class POIsTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
     
     // #27 28
     
     override func prepare(for segue: AddPOIModalSegue, sender: Any?) {
+        
+        if
     }
 
 }
@@ -72,8 +74,4 @@ extension POIsTableViewController: AddPOIDelegate {
 
 }
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-
-// Get the new view controller using segue.destination.
-// Pass the selected object to the new view controller.
 
