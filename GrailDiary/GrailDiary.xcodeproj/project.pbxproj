@@ -13,6 +13,7 @@
 		B137614F246B44DD00F7E217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B137614D246B44DD00F7E217 /* Main.storyboard */; };
 		B1376151246B44DE00F7E217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1376150246B44DE00F7E217 /* Assets.xcassets */; };
 		B1376154246B44DE00F7E217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1376152246B44DE00F7E217 /* LaunchScreen.storyboard */; };
+		B1CC4269246E1BEF0088DE6B /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC4268246E1BEF0088DE6B /* AddPOIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B1376150246B44DE00F7E217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1376153246B44DE00F7E217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1376155246B44DE00F7E217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1CC4268246E1BEF0088DE6B /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		B1376146246B44DD00F7E217 /* GrailDiary */ = {
 			isa = PBXGroup;
 			children = (
+				B1CC426A246E1BFA0088DE6B /* View Controllers */,
 				B1CC4267246E19FE0088DE6B /* Table View Controllers */,
 				B1CC4266246E19DA0088DE6B /* Storyboards */,
 				B1CC4265246E19740088DE6B /* Resources */,
@@ -89,6 +92,14 @@
 				B137614B246B44DD00F7E217 /* POIsTableViewController.swift */,
 			);
 			path = "Table View Controllers";
+			sourceTree = "<group>";
+		};
+		B1CC426A246E1BFA0088DE6B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1CC4268246E1BEF0088DE6B /* AddPOIViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B137614C246B44DD00F7E217 /* POIsTableViewController.swift in Sources */,
+				B1CC4269246E1BEF0088DE6B /* AddPOIViewController.swift in Sources */,
 				B1376148246B44DD00F7E217 /* AppDelegate.swift in Sources */,
 				B137614A246B44DD00F7E217 /* SceneDelegate.swift in Sources */,
 			);
