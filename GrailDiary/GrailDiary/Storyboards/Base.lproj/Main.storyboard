@@ -59,6 +59,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesLabel" destination="tGh-lL-rBq" id="cWC-kG-n6T"/>
+                                            <outlet property="countryLabel" destination="Fjd-v2-HKO" id="GoV-Tq-GpZ"/>
+                                            <outlet property="locationLabel" destination="abe-Zf-xYb" id="hEh-S7-Vk8"/>
                                             <segue destination="xir-pw-FJa" kind="show" identifier="ShowPOIDetailSegue" id="XRK-XV-JXZ"/>
                                         </connections>
                                     </tableViewCell>
@@ -254,6 +257,11 @@
                         <viewLayoutGuide key="safeArea" id="ayK-jC-M98"/>
                     </view>
                     <navigationItem key="navigationItem" id="oTS-90-YgJ"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="vWF-PS-Xx8" id="YiW-nm-tpU"/>
+                        <outlet property="countryLabel" destination="CVB-Al-fEf" id="Hi8-W1-akO"/>
+                        <outlet property="locationLabel" destination="DLC-Cf-gl7" id="X8L-zr-Dk3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHd-oy-jY4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -262,7 +270,6 @@
         <!--Navigation Controller-->
         <scene sceneID="lAj-B9-Iaf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TCX-IU-fEv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gxV-0U-FJb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="J69-w5-MzJ">
@@ -274,6 +281,7 @@
                         <segue destination="8vb-0e-ufe" kind="relationship" relationship="rootViewController" id="Q3x-Lr-jbT"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TCX-IU-fEv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75.362318840579718" y="41.517857142857139"/>
         </scene>

@@ -22,11 +22,8 @@ class AddPOIViewController: UIViewController {
     
     var delegate: AddPOIDelegate?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func save(_ sender: Any) {
@@ -56,17 +53,6 @@ class AddPOIViewController: UIViewController {
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 // Step 1 Get text that was entered into the text field
@@ -85,11 +71,9 @@ extension AddPOIViewController: UITextFieldDelegate {
             clue2VC.becomeFirstResponder()
         case clue2VC:
             clue3VC.becomeFirstResponder()
-        case clue3VC:
-            clue3VC.resignFirstResponder()
         default:
-            break
+            textField.resignFirstResponder()
         }
-        return true 
+        return false
     }
 }
