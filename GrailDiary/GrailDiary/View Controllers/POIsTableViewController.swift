@@ -12,8 +12,6 @@ class POIsTableViewController: UITableViewController {
     
     var pois: [POI] = [POI(location: "The Gorge Ampitheater", country: "USA", clues: ["Festivals", "Concerts", "Camping"])]
 
-    @IBOutlet weak var tableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -83,8 +81,4 @@ class POIsTableViewController: UITableViewController {
     }
     */
 
-}
-
-extension POIsTableViewController: UITableViewDataSource {
-    
 }

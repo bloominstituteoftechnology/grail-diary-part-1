@@ -45,7 +45,7 @@ class AddPOIViewController: UIViewController {
         clues.append(clue3)
         }
         
-        let poi = POI(location: location, country: countryVC, clues: clues)
+        let poi = POI(location: location, country: country, clues: clues)
         
         delegate?.poiWasAdded(poi)
         
@@ -69,8 +69,27 @@ class AddPOIViewController: UIViewController {
 
 }
 
+// Step 1 Get text that was entered into the text field
+// Step 2 unwrap text we got from text field
+// Step 3 Return a boolean
+
 extension AddPOIViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
+        guard textField.text != nil else { return false }
+        switch textField {
+        case locationVC:
+            countryVC.becomeFirstResponder()
+        case countryVC:
+            clue1VC.becomeFirstResponder()
+        case clue1VC:
+            clue2VC.becomeFirstResponder()
+        case clue2VC:
+            clue3VC.becomeFirstResponder()
+        case clue3VC:
+            clue3VC.resignFirstResponder()
+        default:
+            break
+        }
+        return true 
     }
 }
