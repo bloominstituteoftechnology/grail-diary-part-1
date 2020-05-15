@@ -10,6 +10,9 @@ import UIKit
 
 class POIsTableViewController: UIViewController {
 
+    
+    var pois: [POI] = [POI(location: "Bermuda Triangle", country: "Middle fo the ocean", clues: ["Island of mystery"])]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
