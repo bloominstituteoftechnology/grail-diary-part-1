@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B1376148246B44DD00F7E217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1376147246B44DD00F7E217 /* AppDelegate.swift */; };
 		B137614A246B44DD00F7E217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1376149246B44DD00F7E217 /* SceneDelegate.swift */; };
-		B137614C246B44DD00F7E217 /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B137614B246B44DD00F7E217 /* POIsTableViewController.swift */; };
 		B137614F246B44DD00F7E217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B137614D246B44DD00F7E217 /* Main.storyboard */; };
 		B1376151246B44DE00F7E217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1376150246B44DE00F7E217 /* Assets.xcassets */; };
 		B1376154246B44DE00F7E217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1376152246B44DE00F7E217 /* LaunchScreen.storyboard */; };
@@ -17,13 +16,13 @@
 		B1CC426C246E1CCA0088DE6B /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC426B246E1CCA0088DE6B /* POIDetailViewController.swift */; };
 		B1CC426E246E1DB50088DE6B /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC426D246E1DB50088DE6B /* POITableViewCell.swift */; };
 		B1CC4271246E1E280088DE6B /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC4270246E1E280088DE6B /* POI.swift */; };
+		B1CC4274246E264B0088DE6B /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC4273246E264A0088DE6B /* POIsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B1376144246B44DD00F7E217 /* GrailDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrailDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1376147246B44DD00F7E217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1376149246B44DD00F7E217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B137614B246B44DD00F7E217 /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
 		B137614E246B44DD00F7E217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1376150246B44DE00F7E217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1376153246B44DE00F7E217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +31,7 @@
 		B1CC426B246E1CCA0088DE6B /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
 		B1CC426D246E1DB50088DE6B /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
 		B1CC4270246E1E280088DE6B /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
+		B1CC4273246E264A0088DE6B /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 		B1CC4267246E19FE0088DE6B /* Table View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B137614B246B44DD00F7E217 /* POIsTableViewController.swift */,
+				B1CC4273246E264A0088DE6B /* POIsTableViewController.swift */,
 			);
 			path = "Table View Controllers";
 			sourceTree = "<group>";
@@ -199,10 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1CC4271246E1E280088DE6B /* POI.swift in Sources */,
-				B137614C246B44DD00F7E217 /* POIsTableViewController.swift in Sources */,
 				B1CC4269246E1BEF0088DE6B /* AddPOIViewController.swift in Sources */,
 				B1376148246B44DD00F7E217 /* AppDelegate.swift in Sources */,
 				B137614A246B44DD00F7E217 /* SceneDelegate.swift in Sources */,
+				B1CC4274246E264B0088DE6B /* POIsTableViewController.swift in Sources */,
 				B1CC426E246E1DB50088DE6B /* POITableViewCell.swift in Sources */,
 				B1CC426C246E1CCA0088DE6B /* POIDetailViewController.swift in Sources */,
 			);

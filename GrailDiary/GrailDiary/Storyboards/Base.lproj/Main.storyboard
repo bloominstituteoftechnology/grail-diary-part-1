@@ -10,7 +10,7 @@
         <!--Grail Diary -->
         <scene sceneID="XV9-1R-6yz">
             <objects>
-                <viewController title="Grail Diary " id="dJ9-9a-VbH" sceneMemberID="viewController">
+                <viewController title="Grail Diary " id="dJ9-9a-VbH" customClass="POIsTableViewController" customModule="GrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GkB-mD-rdL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,14 +27,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="8At-67-bOj">
-                                                    <rect key="frame" x="0.0" y="5" width="93" height="50.333333333333336"/>
+                                                    <rect key="frame" x="0.0" y="5" width="73" height="50.333333333333336"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gb7-mU-xYj">
-                                                            <rect key="frame" x="0.0" y="0.0" width="93" height="28"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="73" height="28"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="28" id="beQ-f8-Nrb"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -62,6 +62,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesLabel" destination="grs-Nk-iz3" id="DGe-Qc-rR3"/>
+                                            <outlet property="countryLabel" destination="LAA-kL-9yn" id="Acj-s2-lOb"/>
+                                            <outlet property="locationLabel" destination="Gb7-mU-xYj" id="2Ru-uu-5bO"/>
                                             <segue destination="svO-eD-qOg" kind="show" identifier="ShowPOIDetailSegue" id="XTn-Di-NwK"/>
                                         </connections>
                                     </tableViewCell>
@@ -88,6 +91,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="POIsTableView" destination="Z8y-xa-jXR" id="EKf-U9-6lW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWN-C5-pnJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,9 +152,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2I-cK-0vR">
                                 <rect key="frame" x="0.0" y="675" width="375" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="Qsk-7N-20F"/>
+                                    <barButtonItem systemItem="cancel" id="Qsk-7N-20F">
+                                        <connections>
+                                            <action selector="cancel:" destination="4pp-yw-Mey" id="bg4-SJ-NvK"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="qT8-6i-ck0"/>
-                                    <barButtonItem systemItem="save" id="wgX-4t-2XB"/>
+                                    <barButtonItem systemItem="save" id="wgX-4t-2XB">
+                                        <connections>
+                                            <action selector="save:" destination="4pp-yw-Mey" id="8pu-Qb-p2W"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -164,6 +178,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LAX-bK-TLV"/>
                     </view>
+                    <connections>
+                        <outlet property="clue1TextField" destination="tHG-1Q-s1R" id="RkP-Uo-7Cg"/>
+                        <outlet property="clue2TextField" destination="wze-6p-tWu" id="0yP-Ej-1l3"/>
+                        <outlet property="clue3TextField" destination="GN1-ez-vYd" id="XhJ-W1-kM9"/>
+                        <outlet property="countryTextField" destination="dtk-Kp-6tz" id="rfJ-Gf-UyL"/>
+                        <outlet property="locationTextField" destination="iGb-Gc-pcz" id="ufk-vc-9LJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8O-i8-q3d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -236,6 +257,11 @@
                         <viewLayoutGuide key="safeArea" id="JUr-xp-MtG"/>
                     </view>
                     <navigationItem key="navigationItem" id="g2C-Qg-OYI"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="4MO-r0-d6c" id="10O-CC-9GP"/>
+                        <outlet property="countryLabel" destination="Fj5-Oo-hEC" id="ZId-WN-t6c"/>
+                        <outlet property="locationLabel" destination="ldN-5c-2VL" id="iQi-nk-V2E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLE-uT-ZL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

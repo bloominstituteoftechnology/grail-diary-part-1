@@ -10,6 +10,20 @@ import UIKit
 
 class POITableViewCell: UITableViewCell {
 
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    
+    @IBOutlet weak var cluesLabel: UILabel!
+    
+    var poi: POI? {
+        didSet{
+
+            updateViews()
+            }
+        }
+      
+    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
