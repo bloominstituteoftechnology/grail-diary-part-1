@@ -1,15 +1,5 @@
 # Grail Diary Part 1 - Auto Layout
 
-A student that completes this project shows that they can:
-
-- understand and explain what Auto Layout is, and the problems it solves
-- implement common layouts using constraints in Interface Builder
-- implement common layouts using UIStackView
-
-## Introduction
-
-Grail Diary is an app that allows the user to track locations of interest (POIs) and useful clues about those locations.
-
 ## Instructions
 
 Please fork and clone this repository. Create a new Xcode project inside of the cloned repository. Use the single view app template and name it "GrailDiary"
