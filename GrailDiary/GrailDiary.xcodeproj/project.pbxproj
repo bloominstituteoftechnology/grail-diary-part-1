@@ -13,6 +13,10 @@
 		31725D15247466CC007D2CA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31725D13247466CC007D2CA5 /* Main.storyboard */; };
 		31725D17247466CD007D2CA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31725D16247466CD007D2CA5 /* Assets.xcassets */; };
 		31725D1A247466CD007D2CA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31725D18247466CD007D2CA5 /* LaunchScreen.storyboard */; };
+		31725D2224747E4C007D2CA5 /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31725D2124747E4C007D2CA5 /* AddPOIViewController.swift */; };
+		31725D2424747E6B007D2CA5 /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31725D2324747E6B007D2CA5 /* POIDetailViewController.swift */; };
+		31725D2624747EC0007D2CA5 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31725D2524747EC0007D2CA5 /* POITableViewCell.swift */; };
+		31725D2824747ECE007D2CA5 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31725D2724747ECE007D2CA5 /* POI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		31725D16247466CD007D2CA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31725D19247466CD007D2CA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31725D1B247466CD007D2CA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31725D2124747E4C007D2CA5 /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		31725D2324747E6B007D2CA5 /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		31725D2524747EC0007D2CA5 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		31725D2724747ECE007D2CA5 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,10 @@
 				31725D0D247466CC007D2CA5 /* AppDelegate.swift */,
 				31725D0F247466CC007D2CA5 /* SceneDelegate.swift */,
 				31725D11247466CC007D2CA5 /* POIsTableViewController.swift */,
+				31725D2124747E4C007D2CA5 /* AddPOIViewController.swift */,
+				31725D2324747E6B007D2CA5 /* POIDetailViewController.swift */,
+				31725D2524747EC0007D2CA5 /* POITableViewCell.swift */,
+				31725D2724747ECE007D2CA5 /* POI.swift */,
 				31725D13247466CC007D2CA5 /* Main.storyboard */,
 				31725D16247466CD007D2CA5 /* Assets.xcassets */,
 				31725D18247466CD007D2CA5 /* LaunchScreen.storyboard */,
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31725D2824747ECE007D2CA5 /* POI.swift in Sources */,
 				31725D12247466CC007D2CA5 /* POIsTableViewController.swift in Sources */,
+				31725D2224747E4C007D2CA5 /* AddPOIViewController.swift in Sources */,
 				31725D0E247466CC007D2CA5 /* AppDelegate.swift in Sources */,
 				31725D10247466CC007D2CA5 /* SceneDelegate.swift in Sources */,
+				31725D2624747EC0007D2CA5 /* POITableViewCell.swift in Sources */,
+				31725D2424747E6B007D2CA5 /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
