@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		844531622478FC1900E249E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844531612478FC1900E249E7 /* AppDelegate.swift */; };
 		844531642478FC1900E249E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844531632478FC1900E249E7 /* SceneDelegate.swift */; };
-		844531662478FC1900E249E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844531652478FC1900E249E7 /* ViewController.swift */; };
+		844531662478FC1900E249E7 /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844531652478FC1900E249E7 /* POIsTableViewController.swift */; };
 		844531692478FC1900E249E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844531672478FC1900E249E7 /* Main.storyboard */; };
 		8445316B2478FC1B00E249E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8445316A2478FC1B00E249E7 /* Assets.xcassets */; };
 		8445316E2478FC1B00E249E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8445316C2478FC1B00E249E7 /* LaunchScreen.storyboard */; };
+		8449A5FF247B2585008ECE0A /* Grail Diary Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8449A5FE247B2585008ECE0A /* Grail Diary Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8445315E2478FC1900E249E7 /* Grail Diary Part 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grail Diary Part 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		844531612478FC1900E249E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844531632478FC1900E249E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		844531652478FC1900E249E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		844531652478FC1900E249E7 /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
 		844531682478FC1900E249E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8445316A2478FC1B00E249E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8445316D2478FC1B00E249E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8445316F2478FC1B00E249E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8449A5FE247B2585008ECE0A /* Grail Diary Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Grail Diary Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				844531612478FC1900E249E7 /* AppDelegate.swift */,
 				844531632478FC1900E249E7 /* SceneDelegate.swift */,
-				844531652478FC1900E249E7 /* ViewController.swift */,
+				844531652478FC1900E249E7 /* POIsTableViewController.swift */,
 				844531672478FC1900E249E7 /* Main.storyboard */,
+				8449A5FE247B2585008ECE0A /* Grail Diary Assets.xcassets */,
 				8445316A2478FC1B00E249E7 /* Assets.xcassets */,
 				8445316C2478FC1B00E249E7 /* LaunchScreen.storyboard */,
 				8445316F2478FC1B00E249E7 /* Info.plist */,
@@ -127,6 +130,7 @@
 			files = (
 				8445316E2478FC1B00E249E7 /* LaunchScreen.storyboard in Resources */,
 				8445316B2478FC1B00E249E7 /* Assets.xcassets in Resources */,
+				8449A5FF247B2585008ECE0A /* Grail Diary Assets.xcassets in Resources */,
 				844531692478FC1900E249E7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,7 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844531662478FC1900E249E7 /* ViewController.swift in Sources */,
+				844531662478FC1900E249E7 /* POIsTableViewController.swift in Sources */,
 				844531622478FC1900E249E7 /* AppDelegate.swift in Sources */,
 				844531642478FC1900E249E7 /* SceneDelegate.swift in Sources */,
 			);
@@ -293,7 +297,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Dojo.Grail-Diary-Part-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +314,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Dojo.Grail-Diary-Part-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
