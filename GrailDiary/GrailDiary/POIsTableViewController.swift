@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  POIsTableViewController.swift
 //  GrailDiary
 //
-//  Created by Sommi on 5/22/20.
+//  Created by Trencadi on 5/24/20.
 //  Copyright © 2020 ladonnamayfield. All rights reserved.
 //
 
