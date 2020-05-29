@@ -15,6 +15,24 @@ class POIsTableViewCell: UITableViewCell {
     @IBOutlet var countryLabel: UILabel!
     @IBOutlet var numberCluesLabel: UILabel!
     
+    
+    var poi: POI? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    private func updateViews() {
+        guard let poi = poi else { return }
+        
+        locationLabel.text = poi.location
+        countryLabel.text = poi.country
+        numberCluesLabel.text = "\(poi.clues.count) clues"
+    }
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
