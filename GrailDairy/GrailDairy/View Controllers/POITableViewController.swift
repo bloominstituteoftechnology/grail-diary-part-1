@@ -9,18 +9,32 @@
 import UIKit
 
 class POITableViewController: UIViewController {
-
-    var pointsOfInterest: [PointOfInterest] = []
     
-    let newPOI = PointOfInterest(location: "Los Angeles", country: "USA", clues: ["Has 50 States"])
-    
-    
+    @IBOutlet weak var POITableView: UITableView!
+   
+    var listOfPOIs: [PointOfInterest] = [PointOfInterest(location: "LA", country: "USA", clues: ["Country has 50 states"])]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        POITableView.delegate = self
+        POITableView.dataSource = self
+        
     }
-
-
 }
 
+extension POITableViewController: UITableViewDelegate {
+    
+}
+
+extension POITableViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listOfPOIs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = POITableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as? POITableViewCell else {return UITableViewCell()}
+        
+        return cell
+    }
+}

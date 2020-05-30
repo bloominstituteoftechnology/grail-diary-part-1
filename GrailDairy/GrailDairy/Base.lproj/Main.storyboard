@@ -86,6 +86,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="POITableView" destination="zJm-hT-JH7" id="B0n-LV-6Pl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,9 +147,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6c-vC-nj8">
                                 <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="scI-rF-IkP"/>
+                                    <barButtonItem systemItem="cancel" id="scI-rF-IkP">
+                                        <connections>
+                                            <action selector="CancelButtonTapped:" destination="WqK-ij-QH1" id="CpP-Nz-jrE"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="M57-6N-hIf"/>
-                                    <barButtonItem style="plain" systemItem="save" id="exO-tG-hHu"/>
+                                    <barButtonItem style="plain" systemItem="save" id="exO-tG-hHu">
+                                        <connections>
+                                            <action selector="SaveButtonTapped:" destination="WqK-ij-QH1" id="qIo-fy-t7a"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -161,6 +172,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RlY-Oc-6tP"/>
                     </view>
+                    <connections>
+                        <outlet property="Clue1TextLabel" destination="lz8-yf-7mM" id="Nwa-eu-GJ8"/>
+                        <outlet property="Clue2TextLabel" destination="v1P-s2-bSC" id="VGD-Iv-xzL"/>
+                        <outlet property="Clue3TextLabel" destination="tDJ-jk-tZE" id="t2r-Nj-Qyv"/>
+                        <outlet property="CountryTextLabel" destination="V4T-ie-jQi" id="a2Z-AE-Jgi"/>
+                        <outlet property="LocationTextLabel" destination="eqd-fX-lYY" id="SpI-B0-40g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1O-Ns-DWs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

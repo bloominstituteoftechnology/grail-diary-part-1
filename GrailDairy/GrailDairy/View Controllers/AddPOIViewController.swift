@@ -8,12 +8,34 @@
 
 import UIKit
 
+protocol AddPOIDelegate {
+    func poiWasAdded(_ poi: PointOfInterest)
+}
+
+var delegate: AddPOIDelegate?
+
 class AddPOIViewController: UIViewController {
 
+    
+    @IBOutlet weak var LocationTextLabel: UITextField!
+    @IBOutlet weak var CountryTextLabel: UITextField!
+    @IBOutlet weak var Clue1TextLabel: UITextField!
+    @IBOutlet weak var Clue2TextLabel: UITextField!
+    @IBOutlet weak var Clue3TextLabel: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func CancelButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func SaveButtonTapped(_ sender: Any) {
+        
     }
     
 
