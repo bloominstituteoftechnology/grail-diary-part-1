@@ -9,12 +9,32 @@
 import UIKit
 
 class POIDetailViewController: UIViewController {
-
+    @IBOutlet weak var countryImage: UIImageView!
+    @IBOutlet weak var locationName: UILabel!
+    @IBOutlet weak var countryName: UILabel!
+    @IBOutlet weak var cluesTextView: UITextView!
+    
+    var poi : POI?
     override func viewDidLoad() {
+        updateViews()
+     
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+   private func updateViews() {
+        guard let poi = poi else { return }
+        print("update views in POIDetailViewController is working")
+        locationName.text = poi.location
+        countryName.text = poi.country
+        var cluesText = ""
+        for clue in poi.clues {
+            cluesText += "∙ \(clue)\n"
+        }
+        cluesTextView.text = cluesText
+    }
+  
     
 
     /*

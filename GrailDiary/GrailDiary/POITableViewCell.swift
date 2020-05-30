@@ -10,12 +10,26 @@ import UIKit
 
 class POITableViewCell: UITableViewCell {
 
+   private func updateViews() {
+          guard let unwrappedPOI = poi else {
+              return
+          }
+        locationLabel.text = unwrappedPOI.location
+        countryLabel.text = unwrappedPOI.country
+        cluesLabel.text = "\(unwrappedPOI.clues.count) clues"
+        
+          
+      }
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var cluesLabel: UILabel!
     
-    
-    
+    var poi: POI? {
+           didSet {
+               updateViews()
+            print("the update views is working inside poi")
+           }
+       }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,5 +40,7 @@ class POITableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+ 
+    
 }
