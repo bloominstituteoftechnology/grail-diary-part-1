@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A04F3932481DB26005218D5 /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A04F3922481DB26005218D5 /* AddPOIViewController.swift */; };
+		1A04F3952481DB44005218D5 /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A04F3942481DB44005218D5 /* POIDetailViewController.swift */; };
+		1A04F3972481DB61005218D5 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A04F3962481DB61005218D5 /* POITableViewCell.swift */; };
+		1A04F3992481DB6F005218D5 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A04F3982481DB6F005218D5 /* POI.swift */; };
 		87BF475D24775ED200FCB6FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BF475C24775ED200FCB6FA /* AppDelegate.swift */; };
 		87BF475F24775ED200FCB6FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BF475E24775ED200FCB6FA /* SceneDelegate.swift */; };
-		87BF476124775ED200FCB6FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BF476024775ED200FCB6FA /* ViewController.swift */; };
+		87BF476124775ED200FCB6FA /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BF476024775ED200FCB6FA /* POIsTableViewController.swift */; };
 		87BF476424775ED200FCB6FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BF476224775ED200FCB6FA /* Main.storyboard */; };
 		87BF476624775ED300FCB6FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BF476524775ED300FCB6FA /* Assets.xcassets */; };
 		87BF476924775ED300FCB6FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BF476724775ED300FCB6FA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A04F3922481DB26005218D5 /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		1A04F3942481DB44005218D5 /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		1A04F3962481DB61005218D5 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		1A04F3982481DB6F005218D5 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 		87BF475924775ED200FCB6FA /* GrailDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrailDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BF475C24775ED200FCB6FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87BF475E24775ED200FCB6FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		87BF476024775ED200FCB6FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		87BF476024775ED200FCB6FA /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
 		87BF476324775ED200FCB6FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87BF476524775ED300FCB6FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87BF476824775ED300FCB6FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +45,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A04F39A2481DB78005218D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A04F3982481DB6F005218D5 /* POI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A04F39B2481DB8B005218D5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				87BF476024775ED200FCB6FA /* POIsTableViewController.swift */,
+				1A04F3922481DB26005218D5 /* AddPOIViewController.swift */,
+				1A04F3942481DB44005218D5 /* POIDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1A04F39C2481DBAA005218D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A04F3962481DB61005218D5 /* POITableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		87BF475024775ED200FCB6FA = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +92,9 @@
 			children = (
 				87BF475C24775ED200FCB6FA /* AppDelegate.swift */,
 				87BF475E24775ED200FCB6FA /* SceneDelegate.swift */,
-				87BF476024775ED200FCB6FA /* ViewController.swift */,
+				1A04F39A2481DB78005218D5 /* Model */,
+				1A04F39C2481DBAA005218D5 /* View */,
+				1A04F39B2481DB8B005218D5 /* ViewControllers */,
 				87BF476224775ED200FCB6FA /* Main.storyboard */,
 				87BF476524775ED300FCB6FA /* Assets.xcassets */,
 				87BF476724775ED300FCB6FA /* LaunchScreen.storyboard */,
@@ -138,9 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87BF476124775ED200FCB6FA /* ViewController.swift in Sources */,
+				1A04F3992481DB6F005218D5 /* POI.swift in Sources */,
+				87BF476124775ED200FCB6FA /* POIsTableViewController.swift in Sources */,
+				1A04F3932481DB26005218D5 /* AddPOIViewController.swift in Sources */,
 				87BF475D24775ED200FCB6FA /* AppDelegate.swift in Sources */,
 				87BF475F24775ED200FCB6FA /* SceneDelegate.swift in Sources */,
+				1A04F3972481DB61005218D5 /* POITableViewCell.swift in Sources */,
+				1A04F3952481DB44005218D5 /* POIDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
