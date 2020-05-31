@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		844531622478FC1900E249E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844531612478FC1900E249E7 /* AppDelegate.swift */; };
 		844531642478FC1900E249E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844531632478FC1900E249E7 /* SceneDelegate.swift */; };
-		844531662478FC1900E249E7 /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844531652478FC1900E249E7 /* POIsTableViewController.swift */; };
 		844531692478FC1900E249E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844531672478FC1900E249E7 /* Main.storyboard */; };
 		8445316B2478FC1B00E249E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8445316A2478FC1B00E249E7 /* Assets.xcassets */; };
 		8445316E2478FC1B00E249E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8445316C2478FC1B00E249E7 /* LaunchScreen.storyboard */; };
 		8449A5FF247B2585008ECE0A /* Grail Diary Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8449A5FE247B2585008ECE0A /* Grail Diary Assets.xcassets */; };
+		84A607082480B71200BFEDDA /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A607072480B71200BFEDDA /* AddPOIViewController.swift */; };
+		84A6070A2480B73000BFEDDA /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A607092480B73000BFEDDA /* POIDetailViewController.swift */; };
+		84A6070C2480B77300BFEDDA /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6070B2480B77300BFEDDA /* POITableViewCell.swift */; };
+		84A6070F2480B7A700BFEDDA /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6070E2480B7A700BFEDDA /* POI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8445315E2478FC1900E249E7 /* Grail Diary Part 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grail Diary Part 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		844531612478FC1900E249E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844531632478FC1900E249E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		844531652478FC1900E249E7 /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIsTableViewController.swift; sourceTree = "<group>"; };
 		844531682478FC1900E249E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8445316A2478FC1B00E249E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8445316D2478FC1B00E249E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8445316F2478FC1B00E249E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8449A5FE247B2585008ECE0A /* Grail Diary Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Grail Diary Assets.xcassets"; sourceTree = "<group>"; };
+		84A607072480B71200BFEDDA /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPOIViewController.swift; sourceTree = "<group>"; };
+		84A607092480B73000BFEDDA /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailViewController.swift; sourceTree = "<group>"; };
+		84A6070B2480B77300BFEDDA /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		84A6070E2480B7A700BFEDDA /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +66,41 @@
 			children = (
 				844531612478FC1900E249E7 /* AppDelegate.swift */,
 				844531632478FC1900E249E7 /* SceneDelegate.swift */,
-				844531652478FC1900E249E7 /* POIsTableViewController.swift */,
 				844531672478FC1900E249E7 /* Main.storyboard */,
+				84A607062480B6C500BFEDDA /* View Controllers */,
+				84A607102480B7B000BFEDDA /* Model */,
 				8449A5FE247B2585008ECE0A /* Grail Diary Assets.xcassets */,
 				8445316A2478FC1B00E249E7 /* Assets.xcassets */,
 				8445316C2478FC1B00E249E7 /* LaunchScreen.storyboard */,
 				8445316F2478FC1B00E249E7 /* Info.plist */,
 			);
 			path = "Grail Diary Part 1";
+			sourceTree = "<group>";
+		};
+		84A607062480B6C500BFEDDA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84A607072480B71200BFEDDA /* AddPOIViewController.swift */,
+				84A607092480B73000BFEDDA /* POIDetailViewController.swift */,
+				84A6070D2480B78000BFEDDA /* Table Views */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		84A6070D2480B78000BFEDDA /* Table Views */ = {
+			isa = PBXGroup;
+			children = (
+				84A6070B2480B77300BFEDDA /* POITableViewCell.swift */,
+			);
+			path = "Table Views";
+			sourceTree = "<group>";
+		};
+		84A607102480B7B000BFEDDA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84A6070E2480B7A700BFEDDA /* POI.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +175,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844531662478FC1900E249E7 /* POIsTableViewController.swift in Sources */,
 				844531622478FC1900E249E7 /* AppDelegate.swift in Sources */,
+				84A607082480B71200BFEDDA /* AddPOIViewController.swift in Sources */,
+				84A6070A2480B73000BFEDDA /* POIDetailViewController.swift in Sources */,
 				844531642478FC1900E249E7 /* SceneDelegate.swift in Sources */,
+				84A6070F2480B7A700BFEDDA /* POI.swift in Sources */,
+				84A6070C2480B77300BFEDDA /* POITableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

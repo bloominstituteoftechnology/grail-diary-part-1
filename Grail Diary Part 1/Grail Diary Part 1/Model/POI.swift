@@ -6,4 +6,13 @@
 //  Copyright © 2020 Dojo. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+struct POI {
+    let loacation: String
+    let country: String
+    let clues: [String]
+}
+
+
