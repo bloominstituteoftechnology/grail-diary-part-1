@@ -8,11 +8,8 @@
 
 import UIKit
 
-
 struct POI {
-    let loacation: String
+    let location: String
     let country: String
     let clues: [String]
 }
-
-
