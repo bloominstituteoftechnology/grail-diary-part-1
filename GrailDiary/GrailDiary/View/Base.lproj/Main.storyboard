@@ -19,11 +19,11 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="TXS-yV-9aN" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICell" id="TXS-yV-9aN" customClass="POITableViewCell" customModule="GrailDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="59.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TXS-yV-9aN" id="oTH-qn-pME">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="mNN-0g-F6d">
@@ -44,7 +44,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bq-oz-lHf">
-                                                    <rect key="frame" x="314.5" y="19" width="79.5" height="21.5"/>
+                                                    <rect key="frame" x="295.5" y="19" width="79.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -61,10 +61,17 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesLabel" destination="8Bq-oz-lHf" id="tI1-O1-wUR"/>
+                                            <outlet property="countryLabel" destination="gSM-oT-fXl" id="W6e-gr-LYj"/>
+                                            <outlet property="locationLabel" destination="FPt-AG-HNi" id="ZOB-Ix-rW0"/>
                                             <segue destination="qAj-Hb-3mr" kind="presentation" identifier="ShowPOIDetailSegue" modalPresentationStyle="fullScreen" id="3i9-i4-V9G"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zjG-bm-6y6" id="11s-fq-BLf"/>
+                                    <outlet property="delegate" destination="zjG-bm-6y6" id="Yu0-FU-sWH"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -84,6 +91,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="hFa-Qm-Tn9" id="zQu-Xt-WGX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PjV-CQ-rQ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,6 +162,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p0X-5D-N10"/>
                     </view>
+                    <connections>
+                        <outlet property="cluesTextView" destination="qD9-TB-pSQ" id="NU2-83-mr9"/>
+                        <outlet property="countryLabel" destination="2iC-rg-BE2" id="qbr-V6-sXv"/>
+                        <outlet property="locationLabel" destination="Zzh-HB-e6h" id="YDF-JG-v2q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JuX-HS-FiE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -181,6 +196,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="7Kw-j9-IdA" id="1SN-3E-t8Y"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z9X-Sj-34L">
                                         <rect key="frame" x="0.0" y="104" width="374" height="50"/>
@@ -189,6 +207,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="7Kw-j9-IdA" id="H40-ao-fCb"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UI-Wc-J9O">
                                         <rect key="frame" x="0.0" y="163" width="60.5" height="27.5"/>
@@ -203,6 +224,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="7Kw-j9-IdA" id="XuY-WN-wjH"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oxW-K9-Amz">
                                         <rect key="frame" x="0.0" y="258.5" width="374" height="50"/>
@@ -211,6 +235,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="7Kw-j9-IdA" id="6vO-19-0me"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yx8-CH-1Wu">
                                         <rect key="frame" x="0.0" y="317.5" width="374" height="50"/>
@@ -219,6 +246,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="7Kw-j9-IdA" id="906-hD-4O5"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -233,9 +263,17 @@
                                 <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Cancel" id="dQq-Qx-tXT"/>
+                                    <barButtonItem title="Cancel" id="dQq-Qx-tXT">
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="7Kw-j9-IdA" id="vY5-hd-Tdi"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Dqw-IU-ky8"/>
-                                    <barButtonItem title="Save" id="niU-db-oEo"/>
+                                    <barButtonItem title="Save" id="niU-db-oEo">
+                                        <connections>
+                                            <action selector="saveButtonPressed:" destination="7Kw-j9-IdA" id="QeA-Ib-Xfa"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -247,6 +285,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DXK-cO-Qiv"/>
                     </view>
+                    <connections>
+                        <outlet property="clueOneTextField" destination="5p4-r6-P7W" id="yHp-Yz-5gS"/>
+                        <outlet property="clueThreeTextField" destination="yx8-CH-1Wu" id="wCA-fC-X8x"/>
+                        <outlet property="clueTwoTextField" destination="oxW-K9-Amz" id="AGk-iz-XdJ"/>
+                        <outlet property="locationCountryTextField" destination="Z9X-Sj-34L" id="YlS-lF-xvc"/>
+                        <outlet property="locationNameTextField" destination="Ull-rP-InU" id="VwZ-Wz-YJd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NiN-0C-xE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

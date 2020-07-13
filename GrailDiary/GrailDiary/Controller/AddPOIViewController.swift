@@ -8,23 +8,74 @@
 
 import UIKit
 
+protocol AddPOIDelegate {
+    func poiWasCreated(_ poi: POI)
+}
+
 class AddPOIViewController: UIViewController {
+    
+    @IBOutlet weak var locationNameTextField: UITextField!
+    @IBOutlet weak var locationCountryTextField: UITextField!
+    @IBOutlet weak var clueOneTextField: UITextField!
+    @IBOutlet weak var clueTwoTextField: UITextField!
+    @IBOutlet weak var clueThreeTextField: UITextField!
+    
+    var delegate: AddPOIDelegate?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
-    */
+    
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        guard let location = locationNameTextField.text,
+        let country = locationCountryTextField.text,
+        !location.isEmpty,
+        !country.isEmpty else { return }
+        
+        var poi = POI(location: location, country: country, clues: [])
+        
+        if let clueOne = clueOneTextField.text,
+            !clueOne.isEmpty {
+            poi.clues.append(clueOne)
+        }
+        
+        if let clueTwo = clueTwoTextField.text,
+            !clueTwo.isEmpty{
+            poi.clues.append(clueTwo)
+        }
+        
+        if let clueThree = clueThreeTextField.text,
+            !clueThree.isEmpty {
+            poi.clues.append(clueThree)
+        }
+        delegate?.poiWasCreated(poi)
+    }
+}
 
+extension AddPOIViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text,
+            !text.isEmpty {
+            switch textField {
+            case locationCountryTextField:
+                locationCountryTextField.becomeFirstResponder()
+            case locationCountryTextField:
+                clueOneTextField.becomeFirstResponder()
+            case clueOneTextField:
+                clueTwoTextField.becomeFirstResponder()
+            case clueTwoTextField:
+                clueThreeTextField.becomeFirstResponder()
+            default:
+                textField.resignFirstResponder()
+            }
+        }
+        return false
+    }
 }
