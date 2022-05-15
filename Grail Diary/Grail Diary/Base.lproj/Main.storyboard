@@ -59,6 +59,9 @@
                                                 <constraint firstItem="67d-8h-4lz" firstAttribute="leading" secondItem="wRb-8P-ndn" secondAttribute="leadingMargin" id="x9R-0c-rZY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="LKr-7m-h29" kind="show" id="hxf-ni-XgY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -83,6 +86,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="958" y="115"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bow-AT-Wxr">
+            <objects>
+                <viewController id="LKr-7m-h29" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8o4-IC-czw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBa-OR-FWB">
+                                <rect key="frame" x="279.5" y="160" width="114.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIx-8L-KKs">
+                                <rect key="frame" x="333" y="189" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKC-TM-H7m">
+                                <rect key="frame" x="20" y="350" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lake with duck" translatesAutoresizingMaskIntoConstraints="NO" id="bXY-DI-b0S">
+                                <rect key="frame" x="20" y="160" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="7Pi-g3-tfI"/>
+                                    <constraint firstAttribute="width" secondItem="bXY-DI-b0S" secondAttribute="height" multiplier="1:1" id="kAO-oV-bE4"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mzx-JJ-lzd">
+                                <rect key="frame" x="20" y="379" width="374" height="483"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tk9-hR-Qzh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mzx-JJ-lzd" firstAttribute="top" secondItem="PKC-TM-H7m" secondAttribute="bottom" constant="8" id="1d3-LC-OXF"/>
+                            <constraint firstItem="PKC-TM-H7m" firstAttribute="leading" secondItem="bXY-DI-b0S" secondAttribute="leading" id="Db9-FE-g5T"/>
+                            <constraint firstItem="bBa-OR-FWB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bXY-DI-b0S" secondAttribute="trailing" constant="8" id="WjB-6G-hQ6"/>
+                            <constraint firstItem="Mzx-JJ-lzd" firstAttribute="leading" secondItem="PKC-TM-H7m" secondAttribute="leading" id="YR5-QO-OJX"/>
+                            <constraint firstItem="bXY-DI-b0S" firstAttribute="top" secondItem="bBa-OR-FWB" secondAttribute="top" id="hiz-JQ-m7h"/>
+                            <constraint firstItem="MIx-8L-KKs" firstAttribute="trailing" secondItem="bBa-OR-FWB" secondAttribute="trailing" id="j7p-qn-C9s"/>
+                            <constraint firstItem="bBa-OR-FWB" firstAttribute="top" secondItem="tk9-hR-Qzh" secondAttribute="top" constant="20" id="kcZ-mN-imJ"/>
+                            <constraint firstItem="MIx-8L-KKs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bXY-DI-b0S" secondAttribute="trailing" constant="8" id="lC9-xg-gVV"/>
+                            <constraint firstItem="PKC-TM-H7m" firstAttribute="top" secondItem="bXY-DI-b0S" secondAttribute="bottom" constant="40" id="oHM-kR-Kvk"/>
+                            <constraint firstItem="Mzx-JJ-lzd" firstAttribute="trailing" secondItem="MIx-8L-KKs" secondAttribute="trailing" id="p2O-N6-5gU"/>
+                            <constraint firstItem="tk9-hR-Qzh" firstAttribute="bottom" secondItem="Mzx-JJ-lzd" secondAttribute="bottom" id="pLs-tI-fRe"/>
+                            <constraint firstItem="bXY-DI-b0S" firstAttribute="leading" secondItem="tk9-hR-Qzh" secondAttribute="leading" constant="20" id="rON-RK-QK2"/>
+                            <constraint firstItem="MIx-8L-KKs" firstAttribute="top" secondItem="bBa-OR-FWB" secondAttribute="bottom" constant="8" id="wcF-HE-Zj7"/>
+                            <constraint firstItem="tk9-hR-Qzh" firstAttribute="trailing" secondItem="bBa-OR-FWB" secondAttribute="trailing" constant="20" id="zdr-jC-GfF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="f5t-qy-6fe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Hz-0x-B3g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725" y="422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gjI-J4-eC1">
@@ -153,7 +223,7 @@
                                 </subviews>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKi-vc-hYS">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
                                     <barButtonItem systemItem="cancel" id="ABZ-Rj-N6J"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="bDh-TY-20M"/>
@@ -175,10 +245,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSR-bx-T1i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1767" y="-204"/>
+            <point key="canvasLocation" x="1726" y="-222"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Lake with duck" width="1220" height="1220"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
