@@ -73,7 +73,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Grail Diary" id="7ks-vN-aER">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="y1p-a2-ajE"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="y1p-a2-ajE">
+                            <connections>
+                                <segue destination="wzR-YC-X6v" kind="presentation" identifier="AddPOIModalSegue" modalPresentationStyle="fullScreen" id="ojT-be-et3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,6 +101,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPF-ZE-IIk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="osT-g1-sj1">
+            <objects>
+                <viewController id="wzR-YC-X6v" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dwb-RE-3Y8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bp1-KA-I2S">
+                                <rect key="frame" x="20" y="64" width="374" height="320"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New POI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07L-7B-bJm">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="37"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3xP-DF-OLu">
+                                        <rect key="frame" x="0.0" y="53" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KmW-Xd-0Lo">
+                                        <rect key="frame" x="0.0" y="103" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9T7-a2-gxv">
+                                        <rect key="frame" x="0.0" y="153" width="374" height="17"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LHM-Xt-Kod">
+                                        <rect key="frame" x="0.0" y="186" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHt-xS-Jl2">
+                                        <rect key="frame" x="0.0" y="236" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6wK-jk-40J">
+                                        <rect key="frame" x="0.0" y="286" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKi-vc-hYS">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="ABZ-Rj-N6J"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bDh-TY-20M"/>
+                                    <barButtonItem systemItem="save" id="Wzt-I7-RhI"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TEs-Da-qjU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oKi-vc-hYS" firstAttribute="leading" secondItem="TEs-Da-qjU" secondAttribute="leading" id="PeX-B4-feO"/>
+                            <constraint firstItem="TEs-Da-qjU" firstAttribute="trailing" secondItem="bp1-KA-I2S" secondAttribute="trailing" constant="20" id="VJv-op-7IX"/>
+                            <constraint firstItem="TEs-Da-qjU" firstAttribute="bottom" secondItem="oKi-vc-hYS" secondAttribute="bottom" id="cf6-8S-7Nk"/>
+                            <constraint firstItem="bp1-KA-I2S" firstAttribute="leading" secondItem="TEs-Da-qjU" secondAttribute="leading" constant="20" id="siC-CP-0p6"/>
+                            <constraint firstItem="oKi-vc-hYS" firstAttribute="trailing" secondItem="TEs-Da-qjU" secondAttribute="trailing" id="uC4-C1-5rq"/>
+                            <constraint firstItem="bp1-KA-I2S" firstAttribute="top" secondItem="TEs-Da-qjU" secondAttribute="top" constant="20" id="uJ3-Y4-S6l"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSR-bx-T1i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1767" y="-204"/>
         </scene>
     </scenes>
     <resources>
